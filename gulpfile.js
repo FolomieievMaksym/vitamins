@@ -3,7 +3,6 @@ const sass = require('gulp-sass')(require('sass'))
 var gcmq = require('gulp-group-css-media-queries');
 const rename = require('gulp-rename')
 const cleanCSS = require('gulp-clean-css')
-const babel = require('gulp-babel')
 const uglify = require('gulp-uglify')
 const autoprefixer = require('gulp-autoprefixer')
 const imagemin = require('gulp-imagemin')
@@ -17,6 +16,7 @@ const fileInclude = require('gulp-file-include');
 const replace = require('gulp-replace');
 const fonter = require('gulp-fonter');
 const ttf2woff2 = require('gulp-ttf2woff2');
+// const babel = require('gulp-babel')
 // const concat = require('gulp-concat')
 // const htmlmin = require('gulp-htmlmin')
 
