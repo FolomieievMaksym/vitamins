@@ -1,0 +1,15 @@
+
+@import "./default/variables";
+@import "./default/null";
+@import "./default/fonts";
+@import "./default/mixins";
+@import "./default/global";
+
+// Подлкючение компонентов стилей
+@import "./components/header";
+@import "./components/footer";
+@import "./components/text";
+
+//Подключение стилей конкретной страницы
+// ! Переменовать текущий файл и файл подлючающий стили страницы ниже в "нужное имя", после чего удалить эту строку
+@import "./pages/renameMe";

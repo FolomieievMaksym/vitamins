@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!-- ! Изменить все "Start" на нужные данные, после чего удалить эту строку и переименовать текущий файл-->
+@@include('components/page-blocks/_head.html', {
+'lang':'en',
+'css': './css/start.min.css',
+'title': 'Start'
+})
+
+<body class="start">
+	<div class="wrapper">
+		@@include('components/page-blocks/_header.html')
+		<main class="start">
+			<section class="hero">
+				<div class="hero__container">
+					<h1 class="hero__title title">Main Title on this page</h1>
+				</div>
+			</section>
+		</main>
+		@@include('components/page-blocks/_footer.html')
+	</div>
+	@@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>
