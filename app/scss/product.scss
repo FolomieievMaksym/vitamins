@@ -12,9 +12,10 @@
 // Подключение других стилей
 @import "./default/text";
 @import './components/btn';
-@import './components/comment';
-
-
+@import './components/product/add-to-cart';
+@import './components/product/item-icon-row';
+@import './components/product/left-block';
+@import './components/product/right-block';
 
 //Подключение стилей конкретной страницы
-@import "./pages/home";
+@import "./pages/product";

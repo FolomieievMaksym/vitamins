@@ -12,9 +12,8 @@
 // Подключение других стилей
 @import "./default/text";
 @import './components/btn';
-@import './components/comment';
-
+@import './components/catalog/card-item.scss';
 
 
 //Подключение стилей конкретной страницы
-@import "./pages/home";
+@import "./pages/personal-pack";

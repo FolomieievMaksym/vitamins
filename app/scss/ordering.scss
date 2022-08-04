@@ -12,9 +12,11 @@
 // Подключение других стилей
 @import "./default/text";
 @import './components/btn';
-@import './components/comment';
+@import './components/ordering/ordering-form';
+@import './components/ordering/ordering-item';
+@import './components/ordering/order-done';
 
 
 
 //Подключение стилей конкретной страницы
-@import "./pages/home";
+@import "./pages/ordering";

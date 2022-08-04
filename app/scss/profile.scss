@@ -12,9 +12,12 @@
 // Подключение других стилей
 @import "./default/text";
 @import './components/btn';
-@import './components/comment';
-
-
+@import './components/profile/account-overview';
+@import './components/profile/change-password';
+@import './components/profile/orders';
+@import './components/profile/payment-methods';
+@import './components/profile/sidebar';
+@import './components/profile/subscriptions';
 
 //Подключение стилей конкретной страницы
-@import "./pages/home";
+@import "./pages/profile";

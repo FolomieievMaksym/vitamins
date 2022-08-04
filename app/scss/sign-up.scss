@@ -12,9 +12,9 @@
 // Подключение других стилей
 @import "./default/text";
 @import './components/btn';
-@import './components/comment';
-
-
+@import './components/sign-up/icons-row';
+@import './components/sign-up/sign-up-form';
+@import './components/sign-up/top-buttons';
 
 //Подключение стилей конкретной страницы
-@import "./pages/home";
+@import "./pages/sign-up";
