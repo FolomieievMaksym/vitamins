@@ -16,6 +16,7 @@ const fileInclude = require('gulp-file-include');
 const replace = require('gulp-replace');
 const fonter = require('gulp-fonter');
 const ttf2woff2 = require('gulp-ttf2woff2');
+const { dest } = require('gulp');
 // const babel = require('gulp-babel')
 // const concat = require('gulp-concat')
 // const htmlmin = require('gulp-htmlmin')
@@ -49,6 +50,7 @@ const paths = {
 		app: 'app/fonts/',
 		otf: 'app/fonts/*.otf',
 		ttf: 'app/fonts/*.ttf',
+		icons: 'app/fonts/icons/*.*',
 		dest: 'docs/fonts',
 	},
 
@@ -157,6 +159,8 @@ function fonts() {
 		.pipe(gulp.src(paths.fonts.ttf))
 		.pipe(ttf2woff2())
 		.pipe(gulp.dest(paths.fonts.dest))
+		.pipe(gulp.src(paths.fonts.icons))
+		.pipe(gulp.dest(paths.fonts.dest))
 }
 
 // Наблюдение за изменениями в исходных файлах
@@ -183,5 +187,8 @@ exports.img = img
 exports.fonts = fonts
 exports.watcher = watcher
 
-exports.default = gulp.series(clean, html, fonts, gulp.parallel(scss, js, img), watcher) //Production
+// exports.default = gulp.series(clean, html, fonts, gulp.parallel(scss, js, img), watcher) //Production
 // exports.default = gulp.series(clean, html, gulp.parallel(scss, js, img), watcher) //Что бы не ждать конвертацию шрифтов
+
+exports.default = gulp.series(html, gulp.parallel(scss, js), watcher)
+exports.build = gulp.series(clean, html, fonts, gulp.parallel(scss, js, img), watcher)

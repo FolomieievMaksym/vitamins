@@ -52,3 +52,18 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
+input {
+	color: inherit;
+	&::placeholder {
+		color: inherit;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+button {
+	color: inherit;
+	border: none;
+	background-color: transparent;
+	padding: 0;
+}
