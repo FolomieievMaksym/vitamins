@@ -9,8 +9,8 @@
 @import "./components/header";
 @import "./components/footer";
 
-// Подлкючение компонентов стилей
-@import "./components/text";
+// Подключение других стилей
+@import "./default/text";
 
 //Подключение стилей конкретной страницы
 @import "./pages/home";
