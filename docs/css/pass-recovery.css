@@ -711,6 +711,19 @@ input::placeholder {
   background-color: #ff6128;
 }
 
+body.pass-recovery [class*=__title] {
+  font-size: 1.5em;
+  line-height: 1.2058333333;
+}
+
+body.pass-recovery [class*=__text] {
+  font-family: "OpenSans";
+  font-size: 0.875em;
+  line-height: 1.3621428571;
+  opacity: 1;
+  font-weight: 400;
+}
+
 @media (min-width: 1441px) {
   [class*=__title] {
     font-size: 3.5em;
@@ -756,6 +769,16 @@ input::placeholder {
     height: 64px;
     font-size: 1.25em;
     line-height: 1.206;
+  }
+
+  body.pass-recovery [class*=__title] {
+    font-size: 1.625em;
+    line-height: 1.2061538462;
+  }
+
+  body.pass-recovery [class*=__text] {
+    font-size: 1em;
+    line-height: 1.75;
   }
 }
 

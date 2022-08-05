@@ -711,6 +711,25 @@ input::placeholder {
   background-color: #ff6128;
 }
 
+body.catalog [class*=__title] {
+  font-weight: 500;
+  font-size: 1.25em;
+  line-height: 1.206;
+}
+
+body.catalog .card__title {
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.20625;
+}
+
+body.catalog .card__summ {
+  font-family: "OpenSans";
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 1.361875;
+}
+
 main.subscriptions [class*=__subtitle-s] {
   font-weight: 500;
   font-size: 1.25em;
@@ -792,6 +811,21 @@ main.subscriptions .card__title {
     height: 64px;
     font-size: 1.25em;
     line-height: 1.206;
+  }
+
+  body.catalog [class*=__title] {
+    font-size: 1.875em;
+    line-height: 1.206;
+  }
+
+  body.catalog .card__title {
+    font-size: 1.25em;
+    line-height: 1.206;
+  }
+
+  body.catalog .card__summ {
+    font-size: 1.25em;
+    line-height: 1.362;
   }
 
   main.subscriptions [class*=__title] {

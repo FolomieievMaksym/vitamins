@@ -1,10 +1,37 @@
 body.catalog {
-	.card {
-		&__label {
-		}
-		&__text {
-	
+	[class*=__title] {
+		font-weight: 500;
+		@include fl(20, 24.12);
+ 		@media (min-width: 1441px) {
+			@include fl(30, 36.18);
 		}
 	}
+	.card {
+		// &__label {
+		// 	font-family: $ff2;
+		// 	@include fl(12, 16.34);
+		// 	font-weight: 600;
+		// 	opacity: 0.7; 
+		// 	@media (min-width: 1441px) {
+		// 		@include fl(14, 19.07);
+		// 	}
+		// }
+		&__title {
+			font-weight: 400;
+			@include fl(16, 19.3);
+			@media (min-width: 1441px) {
+				@include fl(20, 24.12);
+			}
+		}
+		&__summ { //personal pack
+			font-family: $ff2;
+			font-weight: 700;
+			@include fl(16, 21.79);
+			@media (min-width: 1441px) {
+				@include fl(20, 27.24);
+				
+			}
+		}
+	}
+
 }
-// ! Найти историю коммитов в VS Code

@@ -1,0 +1,22 @@
+.banner {
+	&__sublabel {
+		@include fl( 16, 19.3);
+		@media (min-width: 1441px) {
+			@include fl(20, 24.12);
+		}
+	}
+	&__title {
+		font-weight: 500;
+		@include fl(24, 28.94);
+		@media (min-width: 1441px) {
+			@include fl(50 , 60.3);
+ 		}
+	}
+	&__text {
+		font-family: $ff2;
+		@include fl(14, 19.07);
+		@media (min-width: 1441px) {
+			@include fl(18, 24.51);
+		}
+	}
+}
