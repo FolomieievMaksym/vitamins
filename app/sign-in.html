@@ -37,7 +37,10 @@
 				</div>
 			</section>
 		</main>
-		@@include('./components/other/_account-footer.html')
+		@@include('./components/other/_account-footer.html', {
+		'text': "Don't have an account?",
+		'link': 'Create one'
+		})
 	</div>
 	@@include('components/each-page-blocks/_scripts.html')
 </body>

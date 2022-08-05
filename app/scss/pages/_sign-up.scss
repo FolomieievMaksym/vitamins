@@ -1,3 +1,102 @@
-.hero {
-	padding-top: 48px;
+body.sign-up {
+	@media (min-width: 769px) {
+		background-color: #FAF8F6;
+	}
+	.hero {
+		padding-top: 49px;
+		padding-bottom: 38px;
+		@media (min-width: 569px) {
+			padding-top: calc(80 / 569 * 100%);
+			padding-bottom: calc(20 / 569 * 100%);
+			padding-left: calc(50 / 569 * 100%);
+			padding-right: calc(50 / 569 * 100%);
+		}
+		@media (min-width: 769px) {
+			padding-top: calc(160 / 768 * 100%);
+			padding-bottom: calc(20 / 768 * 100%);
+			padding-left: calc(50 / 768 * 100%);
+			padding-right: calc(50 / 768 * 100%);
+		}
+		@media (min-width: 1025px) {
+			padding-top: calc(120 / 1025 * 100%);
+			padding-bottom: calc(20 / 1025 * 100%);
+			padding-left: calc(110 / 1025 * 100%);
+			padding-right: calc(110 / 1025 * 100%);
+		}
+		@media (min-width: 1441px) {
+			padding-top: calc(163 / 1800 * 100%);
+			padding-bottom: calc(40 / 1800 * 100%);
+			padding-left: calc(440 / 1800 * 100%);
+			padding-right: calc(440 / 1800 * 100%);
+		}
+		&__container {
+			@media (min-width: 569px) {
+				padding: 0;
+			}
+		}
+		&__body {
+			@media (min-width: 769px) {
+				background-color: #fff;
+				padding-top: calc(20 / 500 * 100%);
+				padding-bottom: calc(20 / 500 * 100%);
+				padding-left: calc(20 / 500 * 100%);
+				padding-right: calc(20 / 500 * 100%);
+			}
+			@media (min-width: 1025px) {
+				background-color: #fff;
+				padding-top: calc(30 / 600 * 100%);
+				padding-bottom: calc(30 / 600 * 100%);
+				padding-left: calc(60 / 600 * 100%);
+				padding-right: calc(60 / 600 * 100%);
+			}
+			@media (min-width: 1441px) {
+				background-color: #fff;
+				padding-top: calc(60 / 960 * 100%);
+				padding-bottom: calc(60 / 960 * 100%);
+				padding-left: calc(119 / 960 * 100%);
+				padding-right: calc(119 / 960 * 100%);
+			}
+		}
+		.top-buttons {
+			margin-bottom: 40px;
+		}
+		&__link {
+			flex: 0 0 auto;
+			display: block;
+			text-align: center;
+			font-weight: 500;
+		}
+		&__decor {
+			&.first {
+				margin-bottom: 27px;
+				@include fl(24, 28.94);
+				@media (min-width: 569px) {
+					@include fl(26, 31.36);
+				}
+			}
+			&.last {
+				margin-bottom: 40px;
+				@include fl(16, 19.3);
+				@media (min-width: 569px) {
+					@include fl(20, 24.12);
+				}
+			}
+			@media (min-width: 769px) {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				column-gap: 30px;
+				margin-bottom: 40px;
+				span {
+					flex: 1 1 auto;
+					background-color: #F2F2F2;
+					height: 1px;
+					width: 100%;
+				}
+			}
+		}
+		.icons-row {
+			margin-bottom: 42px;
+		}
+	}
 }

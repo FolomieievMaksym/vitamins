@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- ! Изменить все "sign-up" на нужные данные, после чего удалить эту строку и переименовать текущий файл-->
 <html lang="en">
 
 <head>
@@ -26,19 +25,55 @@
 			<section class="hero">
 				<div class="hero__container">
 					<div class="top-buttons">
-	<button class="btn">Regular customer</button>
-	<button class="btn disabled">Wholesale customer</button>
+	<button class="btn left-btn">Regular customer</button>
+	<button class="btn right-btn disabled">Wholesale customer</button>
 </div>
+					<div class="hero__decor first">
+						<span></span>
+						<a class="hero__link" href="#">Sign up with</a>
+						<span></span>
+					</div>
+					<div class="icons-row">
+	<div class="icons-row__item">
+		<div class="icons-row__logo">
+			<i class="ic-google"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span
+					class="path4"></span></i>
+		</div>
+		<p class="icons-row__name">Google</p>
+	</div>
+	<div class="icons-row__item">
+		<div class="icons-row__logo"><i class="ic-apple"></i></div>
+		<p class="icons-row__name">Apple</p>
+	</div>
+	<div class="icons-row__item">
+		<div class="icons-row__logo"><i class="ic-facebook"></i></div>
+		<p class="icons-row__name">Facebook</p>
+	</div>
+</div>
+					<div class="hero__decor last">
+						<span></span>
+						<a class="hero__link" href="#">or sign up using your email address...</a>
+						<span></span>
+					</div>
+					<form action="#" class="sign-up-form">
+	<p><input placeholder="Email" type="text"></p>
+	<p><input placeholder="First Name" type="text"></p>
+	<p><input placeholder="Last Name" type="text"></p>
+	<p><input placeholder="Password" type="password"></p>
+	<p class="wholesale-input disabled"><input placeholder="Permission" type="text"><button class="btn">Upload</button>
+	</p>
+	<h6 class="wholesale-heading disabled">Please attach wholesale purchase permission</h6>
+	<button class="btn last-button">Create my account</button>
+</form>
 				</div>
 			</section>
-			
 		</main>
 		<footer class="account-footer">
 	<div class="account-footer__container">
 		<div class="account-footer__decor"></div>
 		<div class="account-footer__content">
-			<p class="account-footer__text">Don't have an account?</p>
-			<a class='link-text' href="#">Create one</a>
+			<p class="account-footer__text">Already have an account?</p>
+			<a class='link-text' href="#">Sign in</a>
 		</div>
 	</div>
 </footer>

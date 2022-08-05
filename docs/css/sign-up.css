@@ -692,6 +692,64 @@ input::placeholder {
   transform: translate(0, 2px);
 }
 
+.sign-up-form p {
+  background: #FAF8F6;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding-right: 10px;
+}
+
+.sign-up-form p input {
+  width: 100%;
+}
+
+.sign-up-form p {
+  margin-bottom: 10px;
+}
+
+.sign-up-form p:last-of-type {
+  transform: translate(0, 1px);
+}
+
+.sign-up-form p .btn {
+  flex: 0 0 104px;
+  max-height: 36px;
+  border-radius: 12px;
+  width: 104px;
+  margin-top: 0;
+  font-family: "OpenSans";
+  font-size: 0.75em;
+  line-height: 1.3616666667;
+}
+
+.sign-up-form p:last-of-type.disabled {
+  display: none;
+}
+
+.sign-up-form h6 {
+  font-family: "OpenSans";
+  font-size: 0.8125em;
+  line-height: 1.3615384615;
+  opacity: 0.3;
+  text-align: center;
+}
+
+.sign-up-form h6.disabled {
+  display: none;
+}
+
+.sign-up-form .btn {
+  margin-top: 19px;
+}
+
+.sign-up-form .btn.disabled {
+  background-color: #E1DEDA;
+  border-color: #E1DEDA;
+}
+
 .top-buttons {
   display: flex;
   justify-content: space-between;
@@ -700,14 +758,14 @@ input::placeholder {
   border-radius: 16px;
 }
 
-.btn {
+.top-buttons .btn {
   border-radius: 12px;
   padding: 0px 25px;
   min-height: 67px;
   font-weight: 500;
 }
 
-.btn.disabled {
+.top-buttons .btn.disabled {
   background-color: transparent;
   color: #000;
   border: none;
@@ -798,8 +856,36 @@ input::placeholder {
   color: #FF7D4E;
 }
 
-.hero {
-  padding-top: 48px;
+body.sign-up .hero {
+  padding-top: 49px;
+  padding-bottom: 38px;
+}
+
+body.sign-up .hero .top-buttons {
+  margin-bottom: 40px;
+}
+
+body.sign-up .hero__link {
+  flex: 0 0 auto;
+  display: block;
+  text-align: center;
+  font-weight: 500;
+}
+
+body.sign-up .hero__decor.first {
+  margin-bottom: 27px;
+  font-size: 1.5em;
+  line-height: 1.2058333333;
+}
+
+body.sign-up .hero__decor.last {
+  margin-bottom: 40px;
+  font-size: 1em;
+  line-height: 1.20625;
+}
+
+body.sign-up .hero .icons-row {
+  margin-bottom: 42px;
 }
 
 @media (min-width: 375px) {
@@ -819,9 +905,39 @@ input::placeholder {
     min-height: 65px;
   }
 
+  .sign-up-form p {
+    margin-bottom: 16px;
+  }
+
+  .sign-up-form p {
+    max-width: 444px;
+    margin: 0 auto;
+  }
+
   .account-footer {
     padding-top: 46px;
     padding-bottom: 38px;
+  }
+
+  body.sign-up .hero {
+    padding-top: 14.0597539543%;
+    padding-bottom: 3.5149384886%;
+    padding-left: 8.7873462214%;
+    padding-right: 8.7873462214%;
+  }
+
+  body.sign-up .hero__container {
+    padding: 0;
+  }
+
+  body.sign-up .hero__decor.first {
+    font-size: 1.625em;
+    line-height: 1.2061538462;
+  }
+
+  body.sign-up .hero__decor.last {
+    font-size: 1.25em;
+    line-height: 1.206;
   }
 }
 
@@ -866,6 +982,10 @@ input::placeholder {
   .icons-row__name {
     font-size: 1.25em;
     line-height: 1.206;
+  }
+
+  .sign-up-form h6 {
+    display: none;
   }
 
   .account-header__container {
@@ -915,12 +1035,62 @@ input::placeholder {
     font-size: 1em;
     line-height: 1.361875;
   }
+
+  body.sign-up {
+    background-color: #FAF8F6;
+  }
+
+  body.sign-up .hero {
+    padding-top: 20.8333333333%;
+    padding-bottom: 2.6041666667%;
+    padding-left: 6.5104166667%;
+    padding-right: 6.5104166667%;
+  }
+
+  body.sign-up .hero__body {
+    background-color: #fff;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  body.sign-up .hero__decor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  body.sign-up .hero__decor span {
+    flex: 1 1 auto;
+    background-color: #F2F2F2;
+    height: 1px;
+    width: 100%;
+  }
 }
 
 @media (min-width: 1025px) {
   .icons-row {
     -moz-column-gap: 32px;
     column-gap: 32px;
+  }
+
+  body.sign-up .hero {
+    padding-top: 11.7073170732%;
+    padding-bottom: 1.9512195122%;
+    padding-left: 10.7317073171%;
+    padding-right: 10.7317073171%;
+  }
+
+  body.sign-up .hero__body {
+    background-color: #fff;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 
@@ -929,6 +1099,21 @@ input::placeholder {
     height: 64px;
     font-size: 1.25em;
     line-height: 1.206;
+  }
+
+  body.sign-up .hero {
+    padding-top: 9.0555555556%;
+    padding-bottom: 2.2222222222%;
+    padding-left: 24.4444444444%;
+    padding-right: 24.4444444444%;
+  }
+
+  body.sign-up .hero__body {
+    background-color: #fff;
+    padding-top: 6.25%;
+    padding-bottom: 6.25%;
+    padding-left: 12.3958333333%;
+    padding-right: 12.3958333333%;
   }
 }
 
