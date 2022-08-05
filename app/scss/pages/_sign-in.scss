@@ -1,12 +1,71 @@
-
-.hero {
-	padding-top: 50px;
-	padding-bottom: 50px;
+body.sign-in {
+	@media (min-width: 769px) {
+		background-color: #FAF8F6;
+	}
+	.hero {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		@media (min-width: 569px) {
+			padding-top: calc(80 / 569 * 100%);
+			padding-bottom: calc(20 / 569 * 100%);
+			padding-left: calc(50 / 569 * 100%);
+			padding-right: calc(50 / 569 * 100%);
+		}
+		@media (min-width: 769px) {
+			padding-top: calc(160 / 768 * 100%);
+			padding-bottom: calc(20 / 768 * 100%);
+			padding-left: calc(50 / 768 * 100%);
+			padding-right: calc(50 / 768 * 100%);
+		}
+		@media (min-width: 1025px) {
+			padding-top: calc(120 / 1025 * 100%);
+			padding-bottom: calc(20 / 1025 * 100%);
+			padding-left: calc(110 / 1025 * 100%);
+			padding-right: calc(110 / 1025 * 100%);
+		}
+		@media (min-width: 1441px) {
+			padding-top: calc(163 / 1800 * 100%);
+			padding-bottom: calc(40 / 1800 * 100%);
+			padding-left: calc(440 / 1800 * 100%);
+			padding-right: calc(440 / 1800 * 100%);
+		}
+		&__container {
+			@media (min-width: 569px) {
+				padding: 0;
+			}
+		}
+		&__body {
+			@media (min-width: 769px) {
+				background-color: #fff;
+				padding-top: calc(20 / 500 * 100%);
+				padding-bottom: calc(20 / 500 * 100%);
+				padding-left: calc(20 / 500 * 100%);
+				padding-right: calc(20 / 500 * 100%);
+			}
+			@media (min-width: 1025px) {
+				background-color: #fff;
+				padding-top: calc(30 / 600 * 100%);
+				padding-bottom: calc(30 / 600 * 100%);
+				padding-left: calc(60 / 600 * 100%);
+				padding-right: calc(60 / 600 * 100%);
+			}
+			@media (min-width: 1441px) {
+				background-color: #fff;
+				padding-top: calc(60 / 960 * 100%);
+				padding-bottom: calc(60 / 960 * 100%);
+				padding-left: calc(119 / 960 * 100%);
+				padding-right: calc(119 / 960 * 100%);
+			}
+		}
 		&__title {
 			text-align: center;
 			margin-bottom: 10px;
 			@include fl(24, 28.94);
 			font-weight: 500;
+			@media (min-width: 569px) {
+				@include fl(26, 31.36);
+				margin-bottom: 8px;
+			}
 		}
 
 		&__text {
@@ -14,11 +73,14 @@
 			margin-bottom: 22px;	
 			font-family: $ff2;
 			@include fl(14, 19.07);
+			opacity: 1;
+			@media (min-width: 569px) {
+				@include fl(16, 28);
+				margin-bottom: 24px;
+			}
 		}
 
 		&__form {
-			input{
-			}
 			p{
 				background:$inputBg;
 				border-radius: 12px;
@@ -29,9 +91,16 @@
 				position: relative;
 				&:not(:last-of-type) {
 					margin-bottom: 10px;
+					@media (min-width: 569px) {
+						margin-bottom: 16px;
+					}
 				}
 				&:last-of-type {
 					margin-bottom:20px;
+				}
+				@media (min-width: 569px) {
+					max-width: 444px;
+					margin: 0 auto;
 				}
 			}
 			.hero__pass {
@@ -41,19 +110,49 @@
 				right: 24px;
 				opacity: .5;
 				font-family: $ff2;
+				@media (min-width: 569px) {
+					transform: translate(-1px, -1px);
+				}
 			}
 		}
-		// &__email {
-		// }
-		// &__pass {
-		// }
 		.btn {
 			margin-bottom: 41px;
+			@media (min-width: 569px) {
+				@media (min-width: 569px) {
+					max-width: 270px;
+					margin: 0 auto 40px;
+				}
+			}
+		}
+		&__decor {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			column-gap: 30px;
+			margin-bottom: 40px;
+			@media (min-width: 569px) {
+				margin-bottom: 42px;
+			}
+			span {
+				flex: 1 1 auto;
+				background-color: #F2F2F2;
+				height: 1px;
+				width: 100%;
+				@media (min-width: 569px) {
+					transform: translate(0, 4px);
+					
+				}
+			}
 		}
 		&__link {
+			flex: 0 0 auto;
 			display: block;
 			text-align: center;
 			font-weight: 500;
-			margin-bottom: 40px;
+			@media (min-width: 569px) {
+				@include fl(20, 24.12);
+				transform: translate(-2px, 1px);
+			}
 		}
+	}
 }

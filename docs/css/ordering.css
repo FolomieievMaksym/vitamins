@@ -157,10 +157,12 @@ input {
 
 input::-moz-placeholder {
   color: inherit;
+  font-size: 1em;
 }
 
 input::placeholder {
   color: inherit;
+  font-size: 1em;
 }
 
 input:focus {
@@ -605,84 +607,18 @@ input {
 
 input::-moz-placeholder {
   font-family: "OpenSans";
-  font-size: 1.125em;
-  line-height: 1.3616666667;
+  font-size: 1em;
+  line-height: 1.531875;
   color: #000000;
   opacity: 0.3;
 }
 
 input::placeholder {
   font-family: "OpenSans";
-  font-size: 1.125em;
-  line-height: 1.3616666667;
+  font-size: 1em;
+  line-height: 1.531875;
   color: #000000;
   opacity: 0.3;
-}
-
-[class*=__title] {
-  font-weight: 500;
-  font-size: 1.5em;
-  line-height: 1.2058333333;
-}
-
-[class*=__title] span {
-  color: #F27E58;
-}
-
-[class*=__subtitle] {
-  font-size: 0.875em;
-  line-height: 1.2057142857;
-  font-weight: 500;
-}
-
-[class*=__link] {
-  font-size: 0.875em;
-  line-height: 1.2057142857;
-  font-weight: 500;
-  color: #F27E58;
-}
-
-.card__label {
-  font-family: "OpenSans";
-  font-size: 0.75em;
-  line-height: 1.3616666667;
-  font-weight: 600;
-  opacity: 0.7;
-}
-
-.card__label.purpleLabel {
-  color: #6B5EBB;
-}
-
-.card__label.mintLabel {
-  color: #6BB0A4;
-}
-
-.card__sublabel {
-  font-family: "OpenSans";
-  font-size: 0.875em;
-  line-height: 1.3621428571;
-  opacity: 0.7;
-}
-
-.card__title {
-  font-size: 1.125em;
-  line-height: 1.2061111111;
-  font-weight: 500;
-}
-
-.card__text {
-  font-family: "OpenSans";
-  font-size: 0.875em;
-  line-height: 1.3621428571;
-  opacity: 0.7;
-}
-
-.card__summ {
-  font-family: "OpenSans";
-  font-weight: 600;
-  font-size: 1em;
-  line-height: 1.361875;
 }
 
 .btn {
@@ -772,47 +708,14 @@ input::placeholder {
   font-weight: 400;
 }
 
+@media (min-width: 375px) {
+  [class*=__container] {
+    padding-left: 5.3333333333%;
+    padding-right: 5.3333333333%;
+  }
+}
+
 @media (min-width: 1441px) {
-  [class*=__title] {
-    font-size: 3.5em;
-    line-height: 1.2060714286;
-  }
-
-  [class*=__subtitle] {
-    font-size: 1.875em;
-    line-height: 1.206;
-  }
-
-  [class*=__link] {
-    font-size: 1.25em;
-    line-height: 1.206;
-  }
-
-  .card__label {
-    font-size: 0.875em;
-    line-height: 1.3621428571;
-  }
-
-  .card__sublabel {
-    font-size: 1em;
-    line-height: 1.361875;
-  }
-
-  .card__title {
-    font-size: 1.5em;
-    line-height: 1.2058333333;
-  }
-
-  .card__text {
-    font-size: 1em;
-    line-height: 1.634375;
-  }
-
-  .card__summ {
-    font-size: 1.25em;
-    line-height: 1.362;
-  }
-
   .btn {
     height: 64px;
     font-size: 1.25em;

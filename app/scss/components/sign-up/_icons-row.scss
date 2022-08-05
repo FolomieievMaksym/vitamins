@@ -1,5 +1,13 @@
 .icons-row {
-	
+	@media (min-width: 769px) {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: 15px;
+	}
+	@media (min-width: 1025px) {
+		column-gap: 32px;
+	}
 	&__item {
 		position: relative;
 		display: flex;
@@ -9,25 +17,56 @@
 		background-color: #FAF8F6;
 		border-radius: 12px;
 		padding: 0 20px;
+		@media (min-width: 569px) {
+			min-height: 65px;
+		}
 		&:not(:last-child) {
 			margin-bottom: 10px;
+			@media (min-width: 769px) {
+				margin: 0;
+			}
 		}
 		&:nth-child(1) {
 			.icons-row__logo {
 				font-size: 22px;
 				transform: translate(1px, -37%);
+				@media (min-width: 769px) {
+				transform: translate(4px, -45%);
+				}
+			}
+			.icons-row__name {
+				@media (min-width: 769px) {
+					transform: translate(19px, -1px);
+				}
 			}
 		}
 		&:nth-child(2) {
 			.icons-row__logo {
 				font-size: 24px;
 				transform: translate(0, -42%);
+				@media (min-width: 769px) {
+					font-size: 24px;
+					transform: translate(1px, -52%);
+				}
+			}
+			.icons-row__name {
+				@media (min-width: 769px) {
+					transform: translate(15px, 0px);
+				}
 			}
 		}
 		&:nth-child(3) {
 			.icons-row__logo {
 				font-size: 24px;
 				transform: translate(0, -40%);
+				@media (min-width: 769px) {
+					transform: translate(-3px,-45%);
+				}
+			}
+			.icons-row__name {
+				@media (min-width: 769px) {
+					transform: translate(12px, -1px);
+				}
 			}
 		}
 	}
@@ -42,5 +81,9 @@
 		flex: 1 1 auto;
 		text-align: center;
 		transform: translate(0, 2px);
+		@media (min-width: 769px) {
+			@include fl(20, 24.12);
+			
+		}
 	}
 }

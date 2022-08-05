@@ -14,6 +14,10 @@ body {
 	margin: 0 auto;
 	padding-left: calc(20 / 320 * 100%);
 	padding-right: calc(20 / 320 * 100%);
+	@media (min-width: 375px) {
+		padding-left: calc(20 / 375 * 100%);
+		padding-right: calc(20 / 375 * 100%);
+	}
 }
 .wrapper {
 	display: flex;

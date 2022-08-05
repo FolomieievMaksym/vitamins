@@ -57,6 +57,7 @@ input {
 	font-family: inherit;
 	&::placeholder {
 		color: inherit;
+		font-size: 1em;
 	}
 	&:focus {
 		outline: none;

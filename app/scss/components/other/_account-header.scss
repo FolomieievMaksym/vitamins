@@ -12,6 +12,12 @@
 			padding-right: calc(30 / 375 * 100%);
 		}
 		@media (min-width: 769px) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: transparent;
+		}
+		@media (min-width: 769px) {
 			padding-top: 30px;
 			padding-bottom: 30px;
 		}

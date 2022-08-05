@@ -11,22 +11,29 @@
 		<main class="sign-in">
 			<section class="hero">
 				<div class="hero__container">
-					<h2 class="hero__title">Sign in with email</h2>
-					<p class="hero__text">Please enter your e-mail and password:</p>
-					<form action="" class="hero__form">
-						<p>
-							<input type="text" class="hero__email" placeholder="Email">
-						</p>
-						<p>
-							<input type="password" class="hero__email" placeholder="Password">
-							<a class="hero__pass" href="#">Forgot password?</a>
-						</p>
-						@@include('./components/_btn.html', {
-						'text': 'Sign in'
-						})
-						<a class="hero__link" href="#">or sign in with...</a>
-					</form>
-					@@include('./components/sign-up/icons-row.html')
+					<div class="hero__body">
+
+						<h2 class="hero__title">Sign in with email</h2>
+						<p class="hero__text">Please enter your e-mail and password:</p>
+						<form action="" class="hero__form">
+							<p>
+								<input type="text" class="hero__email" placeholder="Email">
+							</p>
+							<p>
+								<input type="password" class="hero__email" placeholder="Password">
+								<a class="hero__pass" href="#">Forgot password?</a>
+							</p>
+							@@include('./components/_btn.html', {
+							'text': 'Sign in'
+							})
+							<div class="hero__decor">
+								<span></span>
+								<a class="hero__link" href="#">or sign in with...</a>
+								<span></span>
+							</div>
+						</form>
+						@@include('./components/sign-up/icons-row.html')
+					</div>
 				</div>
 			</section>
 		</main>
