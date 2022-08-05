@@ -8,13 +8,16 @@
 
 <body class="sign-up">
 	<div class="wrapper">
-		@@include('components/each-page-blocks/_header.html')
+		@@include('./components/other/_account-header.html')
 		<main class="sign-up">
 			<section class="hero">
-
+				<div class="hero__container">
+					@@include('./components/sign-up/top-buttons.html')
+				</div>
 			</section>
+			<!-- @@include('./components/sign-up/icons-row.html') -->
 		</main>
-		@@include('components/each-page-blocks/_footer.html')
+		@@include('./components/other/_account-footer.html')
 	</div>
 	@@include('components/each-page-blocks/_scripts.html')
 </body>

@@ -692,16 +692,136 @@ input::placeholder {
   transform: translate(0, 2px);
 }
 
+.top-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #E6E6E6;
+  border-radius: 16px;
+}
+
+.btn {
+  border-radius: 12px;
+  padding: 0px 25px;
+  min-height: 67px;
+  font-weight: 500;
+}
+
+.btn.disabled {
+  background-color: transparent;
+  color: #000;
+  border: none;
+}
+
+.account-header {
+  position: relative;
+}
+
+.account-header__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  padding-left: 9.375%;
+  padding-right: 9.375%;
+}
+
+.account-header i.ic-arrow-back {
+  justify-items: flex-start;
+  font-size: 19.88px;
+  transform: translate(-4.5px, 2px);
+}
+
+.account-header i.ic-logo {
+  display: none;
+}
+
+.account-header__link {
+  font-size: 1.25em;
+  line-height: 1.206;
+  font-weight: 500;
+  text-align: center;
+  flex: 1 1 auto;
+  transform: translate(-10px, 0);
+}
+
+.account-header:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  opacity: 0.07;
+  background-color: #000;
+}
+
+.account-footer {
+  padding-top: 41px;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.account-footer__container {
+  text-align: center;
+  font-family: "OpenSans";
+}
+
+.account-footer__decor:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  opacity: 0.07;
+  background-color: #000;
+}
+
+.account-footer__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(2px, 0);
+}
+
+.account-footer__text {
+  font-size: 0.875em;
+  line-height: 1.3621428571;
+  margin-right: 4px;
+}
+
+.account-footer a {
+  font-size: 0.9375em;
+  line-height: 1.362;
+  color: #FF7D4E;
+}
+
+.hero {
+  padding-top: 48px;
+}
+
 @media (min-width: 375px) {
   [class*=__container] {
     padding-left: 5.3333333333%;
     padding-right: 5.3333333333%;
+  }
+
+  .account-header__container {
+    padding-left: 8%;
+    padding-right: 8%;
   }
 }
 
 @media (min-width: 569px) {
   .icons-row__item {
     min-height: 65px;
+  }
+
+  .account-footer {
+    padding-top: 46px;
+    padding-bottom: 38px;
   }
 }
 
@@ -746,6 +866,54 @@ input::placeholder {
   .icons-row__name {
     font-size: 1.25em;
     line-height: 1.206;
+  }
+
+  .account-header__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+  }
+
+  .account-header__container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .account-header i.ic-arrow-back {
+    display: none;
+  }
+
+  .account-header i.ic-logo {
+    display: block;
+    font-size: 50px;
+    transform: translate(-2px, 0);
+  }
+
+  .account-header__link {
+    display: none;
+  }
+
+  .account-header:after {
+    display: none;
+  }
+
+  .account-footer__decor:after {
+    display: none;
+  }
+
+  .account-footer__content {
+    transform: translate(-2px, 0);
+  }
+
+  .account-footer__text {
+    font-size: 1em;
+    line-height: 1.361875;
+  }
+
+  .account-footer a {
+    font-size: 1em;
+    line-height: 1.361875;
   }
 }
 

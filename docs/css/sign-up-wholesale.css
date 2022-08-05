@@ -692,6 +692,27 @@ input::placeholder {
   transform: translate(0, 2px);
 }
 
+.top-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #E6E6E6;
+  border-radius: 16px;
+}
+
+.btn {
+  border-radius: 12px;
+  padding: 0px 25px;
+  min-height: 67px;
+  font-weight: 500;
+}
+
+.btn.disabled {
+  background-color: transparent;
+  color: #000;
+  border: none;
+}
+
 @media (min-width: 375px) {
   [class*=__container] {
     padding-left: 5.3333333333%;
