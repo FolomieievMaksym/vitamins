@@ -1,0 +1,50 @@
+ // Text styles
+ .body.account-overview {
+	 .ordering__label {
+		 font-weight: 500;
+		 @include fl(16, 19.3);
+	 }
+	 .card__title {
+		 @include fl(14, 16.88);
+		font-weight: 400;
+		@media (min-width: 1441px) {
+			@include fl(16, 19.3);
+			
+		}
+	}
+	.card__text {
+		font-family: $ff2;
+		@include fl(14, 19.07);
+		opacity: 0.7;
+		@media (min-width: 1441px) {
+			@include fl(16, 26.15);
+		}
+	}
+	.card__summ { //personal pack
+		font-family: $ff2;
+		font-weight: 600;
+		@include fl(14, 19.07);
+		@media (min-width: 1441px) {
+			@include fl(16, 21.79);
+		}
+		&.discount {
+			color: #D32D2C;
+		}
+		&.small {
+			@include fl(10, 13.62);
+			opacity: 0.5;
+			@media (min-width: 1441px) {
+				@include fl(12, 16.34);
+				
+			}
+		}
+	}
+	[class*=__subtitle] {
+		font-family: $ff2;
+		@include fl(16, 21.79);
+		font-weight: 600;
+		@media (min-width: 1441px) {
+			@include fl(20, 27.24);
+		}
+	}
+} 

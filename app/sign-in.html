@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- ! Изменить все "sign-in" на нужные данные, после чего удалить эту строку и переименовать текущий файл-->
 @@include('components/each-page-blocks/_head.html', {
 'lang':'en',
 'css': './css/sign-in.min.css',
@@ -8,13 +7,30 @@
 
 <body class="sign-in">
 	<div class="wrapper">
-		@@include('components/each-page-blocks/_header.html')
+		@@include('./components/other/_account-header.html')
 		<main class="sign-in">
 			<section class="hero">
-
+				<div class="hero__container">
+					<h2 class="hero__title">Sign in with email</h2>
+					<p class="hero__text">Please enter your e-mail and password:</p>
+					<form action="" class="hero__form">
+						<p>
+							<input type="text" class="hero__email" placeholder="Email">
+						</p>
+						<p>
+							<input type="password" class="hero__email" placeholder="Password">
+							<a class="hero__pass" href="#">Forgot password?</a>
+						</p>
+						@@include('./components/_btn.html', {
+						'text': 'Sign in'
+						})
+						<a class="hero__link" href="#">or sign in with...</a>
+					</form>
+					@@include('./components/sign-up/icons-row.html')
+				</div>
 			</section>
 		</main>
-		@@include('components/each-page-blocks/_footer.html')
+		@@include('./components/other/_account-footer.html')
 	</div>
 	@@include('components/each-page-blocks/_scripts.html')
 </body>

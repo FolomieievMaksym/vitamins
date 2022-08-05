@@ -1,0 +1,37 @@
+// Text styles
+.quiz {
+	input {
+		padding: 18px 18px 18px 40px;
+		background-color: #fff;
+		border-radius: 16px;
+		@include fl( 16, 21.79);
+		@media (min-width: 1441px) {
+			@include fl(18, 24.51);
+		}
+	}
+	&__pages {
+		font-family: $ff2;
+		font-weight: 600;
+		@include fl(20, 27.24);
+		@media (min-width: 1441px) {
+			@include fl(30, 40.85);
+			
+		}
+	}
+	&__back {
+		font-family: $ff2;
+		font-weight: 600;
+		@include fl(16, 21.79);
+		@media (min-width: 1441px) {
+			color: #fff;
+		}
+	}
+	[class*=__title] {
+		// font-weight: 500;
+		// @include fl(24, 28.94);
+		@media (min-width: 1441px) {
+			@include fl(64, 77.18);
+			color: #fff;
+		}
+	}
+}

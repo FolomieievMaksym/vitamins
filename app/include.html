@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+@@include('components/each-page-blocks/_head.html', {
+'lang':'en',
+'css': './css/include.min.css',
+'title': 'Include'
+})
+
+<body class="include">
+	<div class="wrapper">
+		@@include('components/each-page-blocks/_header.html')
+
+		<main class="include">
+			<!-- ! btn -->
+			<div id="btns">
+				@@include('components/_btn.html', {
+				'text' : 'Take the quiz'
+				})
+				@@include('components/_btn.html', {
+				'text' : 'Recover'
+				})
+				@@include('components/_btn.html', {
+				'text' : 'Add to cart'
+				})
+			</div>
+			<!-- ! Icons row -->
+
+		</main>
+		@@include('components/each-page-blocks/_footer.html')
+	</div>
+	@@include('components/each-page-blocks/_scripts.html')
+</body>
+
+</html>

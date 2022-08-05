@@ -1,0 +1,9 @@
+main.home {
+	background-color: #6E5DDC;
+	.btn {
+		@media (min-width: 1441px) {
+			font-family: $ff2;
+			@include fl(20, 32.68);
+ 		}
+	}
+}

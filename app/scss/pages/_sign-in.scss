@@ -1,0 +1,59 @@
+
+.hero {
+	padding-top: 50px;
+	padding-bottom: 50px;
+		&__title {
+			text-align: center;
+			margin-bottom: 10px;
+			@include fl(24, 28.94);
+			font-weight: 500;
+		}
+
+		&__text {
+			text-align: center;
+			margin-bottom: 22px;	
+			font-family: $ff2;
+			@include fl(14, 19.07);
+		}
+
+		&__form {
+			input{
+			}
+			p{
+				background:$inputBg;
+				border-radius: 12px;
+				// padding-right: 24px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				position: relative;
+				&:not(:last-of-type) {
+					margin-bottom: 10px;
+				}
+				&:last-of-type {
+					margin-bottom:20px;
+				}
+			}
+			.hero__pass {
+				@include fl(14, 19);
+				position: absolute;
+				top: 17px;
+				right: 24px;
+				opacity: .5;
+				font-family: $ff2;
+			}
+		}
+		// &__email {
+		// }
+		// &__pass {
+		// }
+		.btn {
+			margin-bottom: 41px;
+		}
+		&__link {
+			display: block;
+			text-align: center;
+			font-weight: 500;
+			margin-bottom: 40px;
+		}
+}

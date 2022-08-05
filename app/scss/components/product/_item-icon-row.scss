@@ -1,0 +1,20 @@
+body.product {
+	.item-icon-row {
+		&__subtitle {
+			font-family: $ff2;
+			font-weight: 600;
+			@include fl(16, 21.79);
+		}
+		&__text {
+			font-family: $ff2;
+			font-weight: 400;
+			@include fl(14, 19.07);
+		}
+		&__num {
+			@include fl(16, 19.3);
+			@media (min-width: 1441px) {
+				@include fl(20, 27.24);
+			}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+// Text styles
+.body.error {
+	[class*=__title] {
+		// font-weight: 500;
+		// @include fl(24, 28.94);
+		@media (min-width: 1441px) {
+			@include fl(26, 31.36);
+		}
+	}
+	[class*=__text] {
+		// font-family: $ff2;
+		// @include fl(14, 19.07);
+		// color: $textContentColor;
+		@media (min-width: 1441px) {
+			 @include fl(16, 28);
+		}
+	}
+}

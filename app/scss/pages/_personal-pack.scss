@@ -1,0 +1,54 @@
+// Text styles
+main.subscriptions {
+	[class*=__title] {
+		// font-weight: 500;
+		// @include fl(24, 28.94);
+		@media (min-width: 1441px) {
+			@include fl(50, 60.3);
+		}
+	}
+	[class*=__subtitle-s] {
+		font-weight: 500;
+		@include fl(20, 24.12);
+		@media (min-width: 1441px) {
+			@include fl(26, 31.36);
+		}
+	}
+	[class*=__subtitle-l] {
+		font-weight: 500;
+		@include fl(20, 24.12);
+		@media (min-width: 1441px) {
+			@include fl(36, 43.42);
+		}
+	}
+	[class*=__text] {
+		// font-family: $ff2;
+		@include fl(14, 24);
+		opacity: 1;
+		@media (min-width: 1441px) {
+			 @include fl(18, 28 );
+		}
+	}
+	.card__label {
+		// font-family: $ff2;
+		@include fl(14, 24);
+		opacity: 1;
+		@media (min-width: 1441px) {
+			 @include fl(18, 28 );
+		}
+	}
+	.card__title {
+		@include fl(16, 19.3);
+		font-weight: 400;
+		@media (min-width: 1441px) {
+			@include fl(20, 24.12);
+		}
+	}
+	.card__title {
+		@include fl(16, 19.3);
+		font-weight: 400;
+		@media (min-width: 1441px) {
+			@include fl(20, 24.12);
+		}
+	}
+}

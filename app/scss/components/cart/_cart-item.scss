@@ -1,0 +1,43 @@
+// Text styles
+.cart {
+	[class*=__title] {
+		font-weight: 400;
+		@include fl(16, 19.3);
+		@media (min-width: 1441px) {
+			@include fl(20, 24.12);
+		}
+	}
+	[class*=__summ] { //personal pack
+		font-family: $ff2;
+		font-weight: 600;
+		@include fl(16, 21.79);
+		@media (min-width: 1441px) {
+			@include fl(18, 24/51);
+		}
+		&.small {
+			@include fl(10, 13.62);
+		}
+		&.red {
+			color: #D32D2C;
+		}
+	}
+	[class*=__text] { //personal pack
+		font-family: $ff2;
+		font-weight: 400;
+		@include fl(12, 16.34);
+		opacity: 0.5;
+		&.b {
+			font-weight: 600;
+			opacity: 1;
+			&.op {
+				opacity: 0.5;
+			}
+		}
+	}
+	.btn.grey {
+		background-color: #C4BDB6;;
+	}
+	.empty {
+		@include fl(16, 16);
+	}
+}

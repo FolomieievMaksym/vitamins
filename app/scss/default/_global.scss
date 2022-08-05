@@ -6,13 +6,14 @@ body.lock {
 body {
 	font-family: $ff1;
 	@include fz(16);
-	font-weight: 400;
 }
+
 [class*=__container] {
 	width: 100%;
-	max-width: 1230px;
+	max-width: none;
 	margin: 0 auto;
-	padding: 0 30px;
+	padding-left: calc(20 / 320 * 100%);
+	padding-right: calc(20 / 320 * 100%);
 }
 .wrapper {
 	display: flex;

@@ -1,3 +1,24 @@
+//Text styles
+.header {
+	[class*=__title] {
+		font-weight: 500;
+		@include fl(20, 24.12);
+	}
+	&__copy {
+		font-family: $ff2;
+		@include fl(12, 16.34);
+	}
+	&__text {
+		font-family: $ff2;
+		@include fl(14, 19.07);
+	}
+	&__subtitle {
+		@include fl(18, 21.71);
+	}
+}
+
+
+
 .header {
 	position: relative;
 	// width: 100%;

@@ -1,0 +1,46 @@
+.icons-row {
+	
+	&__item {
+		position: relative;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		min-height: 56px;
+		background-color: #FAF8F6;
+		border-radius: 12px;
+		padding: 0 20px;
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+		&:nth-child(1) {
+			.icons-row__logo {
+				font-size: 22px;
+				transform: translate(1px, -37%);
+			}
+		}
+		&:nth-child(2) {
+			.icons-row__logo {
+				font-size: 24px;
+				transform: translate(0, -42%);
+			}
+		}
+		&:nth-child(3) {
+			.icons-row__logo {
+				font-size: 24px;
+				transform: translate(0, -40%);
+			}
+		}
+	}
+	&__logo {
+		position: absolute;
+		left: 20px;
+		top: 50%;
+	}
+	&__name {
+		@include fl(16, 19.3);
+		font-weight: 500;
+		flex: 1 1 auto;
+		text-align: center;
+		transform: translate(0, 2px);
+	}
+}

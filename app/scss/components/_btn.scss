@@ -1,0 +1,26 @@
+.btn {
+	cursor: pointer;
+	width: 100%;
+	height: 56px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100px;
+	background-color: $orange;
+	border: 1px solid $orange;
+	color: #fff;
+	@include fl(16, 19.3);
+	font-weight: 700;
+	@media (min-width: 1441px) {
+		height: 64px;
+		@include fl(20, 24.12);
+	}
+	transition:all 0.3s ease;
+	&:hover {
+		background-color: $orangeBgColorHover;
+		transform: scale(1.05);
+	}
+	&:active {
+		background-color: $orangeBgColorActive;
+	}
+}

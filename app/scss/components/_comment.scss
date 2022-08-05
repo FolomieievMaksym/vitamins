@@ -1,0 +1,24 @@
+//Text style
+.comment {
+	&__title {
+		@include fl(16, 19.3);
+		@media (min-width: 1441px) {
+			@include fl(20, 24.12);
+		}
+	}
+	&__text {
+		font-family: $ff2;
+		@include fl(14, 24);
+		@media (min-width: 1441px) {
+			@include fl(16, 28);
+		}
+	}
+	&__name {
+		font-family: $ff2;
+		font-weight: 600;
+		@include fl(14, 19.07);
+		@media (min-width: 1441px) {
+			@include fl(16, 21.79);
+		}
+	}
+}

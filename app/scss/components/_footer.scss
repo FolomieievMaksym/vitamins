@@ -1,0 +1,15 @@
+ //Text styles
+ .footer {
+	&__title {
+		@include fl(18, 21.71);
+	}
+	&__text {
+		font-family: $ff2;
+		@include fl(14, 19.07);
+		opacity: 0.5;
+	}
+	&__copy {
+		font-family: $ff2;
+		@include fl(12, 16.34);
+ 	}
+}

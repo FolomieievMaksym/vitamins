@@ -1,0 +1,19 @@
+ body.product {
+	.card__sublabel {
+		font-family: $ff2;
+		@include fl(14, 19.07);
+		opacity: 1;
+		font-weight: 600; 
+		@media (min-width: 1441px) {
+			@include fl(16, 21.79);
+		}
+	}
+	 
+	[class*=__title] {
+		font-weight: 500;
+		@include fl(24, 28.94);
+		@media (min-width: 1441px) {
+			@include fl(40, 48.24);
+		 }
+	}
+ }
