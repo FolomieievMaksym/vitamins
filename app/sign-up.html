@@ -11,25 +11,30 @@
 		<main class="sign-up">
 			<section class="hero">
 				<div class="hero__container">
-					@@include('./components/sign-up/top-buttons.html')
-					<div class="hero__decor first">
-						<span></span>
-						<a class="hero__link" href="#">Sign up with</a>
-						<span></span>
+					<div class="hero__body">
+						<h2 class="hero__wholesale-title">Wholesale purchase permission</h2>
+						<p class="hero__wholesale-text">Please attach file to continue </p>
+						@@include('./components/sign-up/top-buttons.html')
+						<div class="hero__decor first">
+							<span></span>
+							<a class="hero__link" href="#">Sign up with</a>
+							<span></span>
+						</div>
+						@@include('./components/sign-up/icons-row.html')
+						<div class="hero__decor last">
+							<span></span>
+							<a class="hero__link" href="#">or sign up using your email address...</a>
+							<span></span>
+						</div>
+						@@include('./components/sign-up/sign-up-form.html')
 					</div>
-					@@include('./components/sign-up/icons-row.html')
-					<div class="hero__decor last">
-						<span></span>
-						<a class="hero__link" href="#">or sign up using your email address...</a>
-						<span></span>
-					</div>
-					@@include('./components/sign-up/sign-up-form.html')
 				</div>
 			</section>
 		</main>
 		@@include('./components/other/_account-footer.html', {
-		'text': 'Already have an account?',
-		'link': 'Sign in'
+		'text': "Already have an account?",
+		'link': 'Sign in',
+		'location': 'sign-in.html'
 		})
 	</div>
 	@@include('components/each-page-blocks/_scripts.html')

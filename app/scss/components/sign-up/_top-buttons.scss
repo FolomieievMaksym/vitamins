@@ -4,16 +4,36 @@
 	padding: 10px;
 	border: 1px solid #E6E6E6;
 	border-radius: 16px;
+	max-width: 682px;
 	.btn {
 		border-radius: 12px;
 		padding: 0px 25px;
 		min-height: 67px;
 		font-weight: 500;
+		// max-width: 323px;
 		&.disabled {
 			background-color: transparent;
 			color: #000;
 			border: none;
 		}
+		@media (min-width: 1441px) {
+			&.left-btn {
+				transform: translate(2px, 3px);
+				max-width: 323px;
+			}
+			&.right-btn {
+				transform: translate(0px, 3px);
+				max-width: 330px;
+				&.disabled {
+					transform: translate(-10px, 3px);
+					
+				}
+			}
+		}
 	}
-	
+}
+body.hide-content {
+	.top-buttons {
+		display: none;
+	}
 }

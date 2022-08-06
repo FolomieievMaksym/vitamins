@@ -55,16 +55,12 @@ window.addEventListener("load", () => {
 			lastButton = qs('.last-button'),
 			wholesaleInput = qs('.wholesale-input'),
 			wholesaleHeading = qs('.wholesale-heading');
-		console.log(leftButton);
-		console.log(rightButton);
 
-		leftButton.addEventListener('click', switchClasses)
-		rightButton.addEventListener('click', switchClasses)
+		body.addEventListener('click', switchClasses)
 
 		function switchClasses(e) {
 			if (e.target.closest('.left-btn')) {
 				if (leftButton.classList.contains('disabled')) {
-					console.log('Work');
 					leftButton.classList.remove('disabled')
 					lastButton.classList.remove('disabled')
 					rightButton.classList.add('disabled')
@@ -73,14 +69,29 @@ window.addEventListener("load", () => {
 				}
 			} else if (e.target.closest('.right-btn')) {
 				if (rightButton.classList.contains('disabled')) {
-					console.log('Work 2');
 					leftButton.classList.add('disabled')
 					lastButton.classList.add('disabled')
 					rightButton.classList.remove('disabled')
 					wholesaleInput.classList.remove('disabled')
 					wholesaleHeading.classList.remove('disabled')
+					const inputs = qa('input');
+					if (inputs[0].value && inputs[1].value && inputs[2].value && inputs[3].value && inputs[4].value) {
+						lastButton.classList.remove('disabled')
+					}
 				}
+			} else if (e.target.closest('.icons-row__item')) {
+				body.classList.add('hide-content')
+				lastButton.classList.add('disabled')
+				wholesaleInput.firstElementChild.setAttribute('value', '')
+				wholesaleInput.classList.remove('disabled')
+				wholesaleInput.addEventListener('change', () => {
+					lastButton.classList.remove('disabled')
+				})
 			}
+		}
+
+		if (window.innerWidth > 1441) {
+			wholesaleInput.firstElementChild.setAttribute('placeholder', 'Wholesale purchase permission')
 		}
 	}
 

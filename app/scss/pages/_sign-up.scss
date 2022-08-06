@@ -24,8 +24,9 @@ body.sign-up {
 			padding-right: calc(110 / 1025 * 100%);
 		}
 		@media (min-width: 1441px) {
-			padding-top: calc(163 / 1800 * 100%);
-			padding-bottom: calc(40 / 1800 * 100%);
+			padding-top: calc(110 / 1800 * 100%);
+			// padding-bottom: calc(40 / 1800 * 100%);
+			padding-bottom: 0px;
 			padding-left: calc(440 / 1800 * 100%);
 			padding-right: calc(440 / 1800 * 100%);
 		}
@@ -57,8 +58,30 @@ body.sign-up {
 				padding-right: calc(119 / 960 * 100%);
 			}
 		}
+		&__wholesale-title {
+			display: none;
+			font-weight: 500;
+			text-align: center;
+			@include fl(24, 28.94);
+			@media (min-width: 769px) {
+				@include fl(26, 31.36);
+				
+			}
+		}
+		&__wholesale-text {
+ 			display: none;
+			text-align: center;
+			font-family: $ff2;
+			@include fl(14, 28);
+			@media (min-width: 769px) {
+				@include fl(16, 28);
+			}
+		}
 		.top-buttons {
 			margin-bottom: 40px;
+			@media (min-width: 769px) {
+				margin: 0 auto 64px;
+			}
 		}
 		&__link {
 			flex: 0 0 auto;
@@ -72,6 +95,9 @@ body.sign-up {
 				@include fl(24, 28.94);
 				@media (min-width: 569px) {
 					@include fl(26, 31.36);
+				}
+				@media (min-width: 1441px) {
+					margin-bottom: 40px;
 				}
 			}
 			&.last {
@@ -97,6 +123,47 @@ body.sign-up {
 		}
 		.icons-row {
 			margin-bottom: 42px;
+			@media (min-width: 1441px) {
+				margin-bottom: 40px;
+			}
 		}
+		.sign-up-form > .btn {
+			@media (min-width: 569px) {
+				max-width: 444px;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+body.hide-content {
+	.wrapper {
+		display: block;
+		@media (min-width: 1441px) {
+			display: flex;
+		}
+	}
+	.hero {
+		padding-bottom: 0;
+		@media (min-width: 769px) {
+			padding-top: calc(274 / 1800 * 100%) !important;
+		}
+	}
+	.hero__wholesale-title {
+		transform: translate(0, 2px);
+		display: block;
+		margin-bottom: 7px;
+		@media (min-width: 769px) {
+			margin-bottom: 9px;
+		}
+	}
+	.hero__wholesale-text {
+		display: block;
+		margin-bottom: 16px;
+		@media (min-width: 769px) {
+			margin-bottom: 27px;
+		}
+	}
+	.hero__decor {
+		display: none !important;
 	}
 }

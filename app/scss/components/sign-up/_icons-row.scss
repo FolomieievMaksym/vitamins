@@ -1,14 +1,20 @@
 .icons-row {
+	@media (min-width: 569px) {
+		max-width: 444px;
+		margin: 0 auto;
+	}
 	@media (min-width: 769px) {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		column-gap: 15px;
+		max-width: none;
 	}
 	@media (min-width: 1025px) {
 		column-gap: 32px;
 	}
 	&__item {
+		cursor: pointer;
 		position: relative;
 		display: flex;
 		align-items: center;
@@ -17,6 +23,10 @@
 		background-color: #FAF8F6;
 		border-radius: 12px;
 		padding: 0 20px;
+		transition:all 0.3s ease;
+		&:hover {
+			transform: scale(1.1);
+		}
 		@media (min-width: 569px) {
 			min-height: 65px;
 		}
@@ -85,5 +95,10 @@
 			@include fl(20, 24.12);
 			
 		}
+	}
+}
+body.hide-content {
+	.icons-row {
+		display: none;
 	}
 }

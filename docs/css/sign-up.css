@@ -648,6 +648,7 @@ input::placeholder {
 }
 
 .icons-row__item {
+  cursor: pointer;
   position: relative;
   display: flex;
   align-items: center;
@@ -656,6 +657,11 @@ input::placeholder {
   background-color: #FAF8F6;
   border-radius: 12px;
   padding: 0 20px;
+  transition: all 0.3s ease;
+}
+
+.icons-row__item:hover {
+  transform: scale(1.1);
 }
 
 .icons-row__item:not(:last-child) {
@@ -692,6 +698,10 @@ input::placeholder {
   transform: translate(0, 2px);
 }
 
+body.hide-content .icons-row {
+  display: none;
+}
+
 .sign-up-form p {
   background: #FAF8F6;
   border-radius: 12px;
@@ -700,14 +710,11 @@ input::placeholder {
   justify-content: space-between;
   position: relative;
   padding-right: 10px;
+  margin-bottom: 10px;
 }
 
 .sign-up-form p input {
   width: 100%;
-}
-
-.sign-up-form p {
-  margin-bottom: 10px;
 }
 
 .sign-up-form p:last-of-type {
@@ -750,12 +757,22 @@ input::placeholder {
   border-color: #E1DEDA;
 }
 
+body.hide-content .sign-up-form p:not(:last-of-type) {
+  display: none;
+}
+
+body.hide-content .sign-up-form p:last-of-type input {
+  font-size: 0.875em;
+  line-height: 1.3621428571;
+}
+
 .top-buttons {
   display: flex;
   justify-content: space-between;
   padding: 10px;
   border: 1px solid #E6E6E6;
   border-radius: 16px;
+  max-width: 682px;
 }
 
 .top-buttons .btn {
@@ -769,6 +786,10 @@ input::placeholder {
   background-color: transparent;
   color: #000;
   border: none;
+}
+
+body.hide-content .top-buttons {
+  display: none;
 }
 
 .account-header {
@@ -856,9 +877,34 @@ input::placeholder {
   color: #FF7D4E;
 }
 
+body.hide-content .account-footer {
+  padding-top: 20px;
+  padding-bottom: 80px;
+}
+
+body.hide-content .account-footer__decor:after {
+  display: none;
+}
+
 body.sign-up .hero {
   padding-top: 49px;
   padding-bottom: 38px;
+}
+
+body.sign-up .hero__wholesale-title {
+  display: none;
+  font-weight: 500;
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 1.2058333333;
+}
+
+body.sign-up .hero__wholesale-text {
+  display: none;
+  text-align: center;
+  font-family: "OpenSans";
+  font-size: 0.875em;
+  line-height: 2;
 }
 
 body.sign-up .hero .top-buttons {
@@ -888,6 +934,29 @@ body.sign-up .hero .icons-row {
   margin-bottom: 42px;
 }
 
+body.hide-content .wrapper {
+  display: block;
+}
+
+body.hide-content .hero {
+  padding-bottom: 0;
+}
+
+body.hide-content .hero__wholesale-title {
+  transform: translate(0, 2px);
+  display: block;
+  margin-bottom: 7px;
+}
+
+body.hide-content .hero__wholesale-text {
+  display: block;
+  margin-bottom: 16px;
+}
+
+body.hide-content .hero__decor {
+  display: none !important;
+}
+
 @media (min-width: 375px) {
   [class*=__container] {
     padding-left: 5.3333333333%;
@@ -901,6 +970,11 @@ body.sign-up .hero .icons-row {
 }
 
 @media (min-width: 569px) {
+  .icons-row {
+    max-width: 444px;
+    margin: 0 auto;
+  }
+
   .icons-row__item {
     min-height: 65px;
   }
@@ -911,7 +985,7 @@ body.sign-up .hero .icons-row {
 
   .sign-up-form p {
     max-width: 444px;
-    margin: 0 auto;
+    margin: 0 auto 16px;
   }
 
   .account-footer {
@@ -939,6 +1013,11 @@ body.sign-up .hero .icons-row {
     font-size: 1.25em;
     line-height: 1.206;
   }
+
+  body.sign-up .hero .sign-up-form > .btn {
+    max-width: 444px;
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: 769px) {
@@ -948,6 +1027,7 @@ body.sign-up .hero .icons-row {
     align-items: center;
     -moz-column-gap: 15px;
     column-gap: 15px;
+    max-width: none;
   }
 
   .icons-row__item:not(:last-child) {
@@ -1036,6 +1116,10 @@ body.sign-up .hero .icons-row {
     line-height: 1.361875;
   }
 
+  body.hide-content .account-footer {
+    padding-bottom: 39px;
+  }
+
   body.sign-up {
     background-color: #FAF8F6;
   }
@@ -1055,6 +1139,20 @@ body.sign-up .hero .icons-row {
     padding-right: 4%;
   }
 
+  body.sign-up .hero__wholesale-title {
+    font-size: 1.625em;
+    line-height: 1.2061538462;
+  }
+
+  body.sign-up .hero__wholesale-text {
+    font-size: 1em;
+    line-height: 1.75;
+  }
+
+  body.sign-up .hero .top-buttons {
+    margin: 0 auto 64px;
+  }
+
   body.sign-up .hero__decor {
     display: flex;
     justify-content: space-between;
@@ -1069,6 +1167,18 @@ body.sign-up .hero .icons-row {
     background-color: #F2F2F2;
     height: 1px;
     width: 100%;
+  }
+
+  body.hide-content .hero {
+    padding-top: 15.2222222222% !important;
+  }
+
+  body.hide-content .hero__wholesale-title {
+    margin-bottom: 9px;
+  }
+
+  body.hide-content .hero__wholesale-text {
+    margin-bottom: 27px;
   }
 }
 
@@ -1101,9 +1211,32 @@ body.sign-up .hero .icons-row {
     line-height: 1.206;
   }
 
+  .sign-up-form p:last-of-type {
+    transform: translate(1px, -3px);
+  }
+
+  .sign-up-form p:last-of-type input {
+    font-size: 1em;
+    line-height: 1.361875;
+  }
+
+  .top-buttons .btn.left-btn {
+    transform: translate(2px, 3px);
+    max-width: 323px;
+  }
+
+  .top-buttons .btn.right-btn {
+    transform: translate(0px, 3px);
+    max-width: 330px;
+  }
+
+  .top-buttons .btn.right-btn.disabled {
+    transform: translate(-10px, 3px);
+  }
+
   body.sign-up .hero {
-    padding-top: 9.0555555556%;
-    padding-bottom: 2.2222222222%;
+    padding-top: 6.1111111111%;
+    padding-bottom: 0px;
     padding-left: 24.4444444444%;
     padding-right: 24.4444444444%;
   }
@@ -1114,6 +1247,18 @@ body.sign-up .hero .icons-row {
     padding-bottom: 6.25%;
     padding-left: 12.3958333333%;
     padding-right: 12.3958333333%;
+  }
+
+  body.sign-up .hero__decor.first {
+    margin-bottom: 40px;
+  }
+
+  body.sign-up .hero .icons-row {
+    margin-bottom: 40px;
+  }
+
+  body.hide-content .wrapper {
+    display: flex;
   }
 }
 

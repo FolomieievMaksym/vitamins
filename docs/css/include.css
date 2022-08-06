@@ -648,6 +648,7 @@ input::placeholder {
 }
 
 .icons-row__item {
+  cursor: pointer;
   position: relative;
   display: flex;
   align-items: center;
@@ -656,6 +657,11 @@ input::placeholder {
   background-color: #FAF8F6;
   border-radius: 12px;
   padding: 0 20px;
+  transition: all 0.3s ease;
+}
+
+.icons-row__item:hover {
+  transform: scale(1.1);
 }
 
 .icons-row__item:not(:last-child) {
@@ -692,6 +698,10 @@ input::placeholder {
   transform: translate(0, 2px);
 }
 
+body.hide-content .icons-row {
+  display: none;
+}
+
 #btns {
   display: flex;
   justify-content: space-around;
@@ -709,6 +719,11 @@ input::placeholder {
 }
 
 @media (min-width: 569px) {
+  .icons-row {
+    max-width: 444px;
+    margin: 0 auto;
+  }
+
   .icons-row__item {
     min-height: 65px;
   }
@@ -721,6 +736,7 @@ input::placeholder {
     align-items: center;
     -moz-column-gap: 15px;
     column-gap: 15px;
+    max-width: none;
   }
 
   .icons-row__item:not(:last-child) {

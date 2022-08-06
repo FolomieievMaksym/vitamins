@@ -49,3 +49,17 @@
 		}
 	}
 }
+body.hide-content {
+	.account-footer {
+		padding-top: 20px;
+		padding-bottom: 80px;
+		@media (min-width: 769px) {
+			padding-bottom: 39px;
+		}
+		&__decor {
+			&:after{
+				display: none;
+			}
+		}
+	}
+}
