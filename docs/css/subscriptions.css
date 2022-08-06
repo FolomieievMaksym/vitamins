@@ -647,9 +647,80 @@ input::placeholder {
   background-color: #ff6128;
 }
 
+body.subscriptions .hero {
+  padding-top: 51px;
+  padding-bottom: 60;
+}
+
+body.subscriptions .hero__container {
+  padding-right: 6.5625%;
+}
+
+body.subscriptions .hero__title {
+  font-weight: 500;
+  font-size: 1.5em;
+  line-height: 1.2058333333;
+  margin-bottom: 27px;
+  transform: translate(-2px, 0);
+}
+
+body.subscriptions .hero__text {
+  font-family: "OpenSans";
+  font-size: 0.875em;
+  line-height: 1.7142857143;
+  opacity: 0.5;
+}
+
+body.subscriptions .hero__text:not(:last-of-type) {
+  margin-bottom: 62px;
+}
+
+body.subscriptions .hero__text:last-of-type {
+  margin-bottom: 30px;
+}
+
+body.subscriptions .hero__subtitle {
+  font-weight: 500;
+  font-size: 1.25em;
+  line-height: 1.206;
+  margin-bottom: 29px;
+}
+
+body.subscriptions .hero__list {
+  margin-top: -32px;
+  margin-bottom: 30px;
+}
+
+body.subscriptions .hero__list li {
+  font-family: "OpenSans";
+  font-size: 0.875em;
+  line-height: 1.7142857143;
+  opacity: 0.5;
+  padding-left: 40px;
+  position: relative;
+}
+
+body.subscriptions .hero__list li:not(:last-of-type) {
+  margin-bottom: 25px;
+}
+
+body.subscriptions .hero__list li:before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background: #FF7D4E;
+}
+
 @media (min-width: 375px) {
   [class*=__container] {
     padding-left: 5.3333333333%;
+    padding-right: 5.3333333333%;
+  }
+
+  body.subscriptions .hero__container {
     padding-right: 5.3333333333%;
   }
 }
@@ -660,6 +731,14 @@ input::placeholder {
   }
 }
 
+@media (min-width: 769px) {
+  body.subscriptions .hero__container {
+    max-width: 681px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
 @media (min-width: 1441px) {
   .btn {
     height: 64px;
@@ -667,14 +746,49 @@ input::placeholder {
     line-height: 1.206;
   }
 
-  main.subscriptions [class*=__title] {
-    font-size: 2.5em;
-    line-height: 1.206;
+  body.subscriptions .hero {
+    padding-top: 6.6666666667%;
   }
 
-  main.subscriptions [class*=__text] {
+  body.subscriptions .hero__title {
+    transform: translate(-4px);
+    font-size: 2.5em;
+    line-height: 1.206;
+    margin-bottom: 38px;
+  }
+
+  body.subscriptions .hero__text:not(:last-of-type) {
+    margin-bottom: 63px;
+  }
+
+  body.subscriptions .hero__text {
     font-size: 1.125em;
     line-height: 1.7777777778;
+  }
+
+  body.subscriptions .hero__subtitle {
+    font-size: 1.625em;
+    line-height: 1.2061538462;
+    margin-bottom: 37px;
+  }
+
+  body.subscriptions .hero__list {
+    margin-top: -20px;
+    margin-bottom: 40px;
+  }
+
+  body.subscriptions .hero__list li:not(:last-of-type) {
+    margin-bottom: 14px;
+  }
+
+  body.subscriptions .hero__list li {
+    font-size: 1.125em;
+    line-height: 1.7777777778;
+    padding-left: 50px;
+  }
+
+  body.subscriptions .hero__list li:before {
+    width: 30px;
   }
 }
 
