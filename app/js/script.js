@@ -4,6 +4,7 @@ const burger = document.querySelector(".burger"),
 	header = document.querySelector(".header"),
 	headerAction = document.querySelector(".header-action"),
 	headerAside1 = document.querySelector(".header-aside-1"),
+	headerAside2 = document.querySelector(".header-aside-2"),
 	body = document.querySelector("body");
 
 window.addEventListener("load", () => {
@@ -25,7 +26,8 @@ window.addEventListener("load", () => {
 				burger.classList.toggle("active");
 				header.classList.toggle("active");
 				headerAction.classList.toggle("active");
-				headerAside1.classList.toggle("active");
+				// headerAside1.classList.toggle("active");
+				headerAside2.classList.toggle("active");
 				body.classList.toggle("lock");
 				window.addEventListener("scroll", closeBurger); // Закрывает бургер при скролле в том случае, когда для Body не задан класс 'lock'
 				// menu.classList.toggle("active");

@@ -257,7 +257,7 @@
 	}
 }
 
-.header-aside-1 {
+.header-aside {
 	width: 100%;
 	position: absolute;
 	top: 70px;
@@ -293,6 +293,11 @@
 			}
 		}
 	}
+	&.active {
+		left: 0;
+	}
+}
+.header-aside-1 {
 	.first-menu {
 		&__list {
 			li {
@@ -322,7 +327,5 @@
 			margin-bottom: 17px;
 		}
 	}
-	&.active {
-		left: 0;
-	}
+	
 }
