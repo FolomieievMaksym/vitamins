@@ -272,6 +272,10 @@ i {
   content: "\e902";
 }
 
+.ic-cart {
+  cursor: pointer;
+}
+
 .ic-cart:before {
   content: "\e9b3";
 }
@@ -463,118 +467,227 @@ main {
   line-height: 1.2061111111;
 }
 
-.header {
-  position: relative;
-  z-index: 50;
-}
-
-.header:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  z-index: 0;
-  transition: z-index 1s ease;
-  transition-delay: 1s;
-}
-
-.header.active:before {
-  background-color: #fff;
-  z-index: 3;
-  transition: z-index 0s ease;
-  transition-delay: 0s;
-}
-
 .header__body {
   display: flex;
   justify-content: space-between;
-  min-height: 70px;
   align-items: center;
-  position: relative;
 }
 
-.header__logo {
-  width: 50px;
-  height: 50px;
-}
-
-.header__logo img {
-  max-width: 100%;
-}
-
-.menu__list {
+.header-action {
   display: flex;
-  justify-content: space-between;
-  gap: 1em;
-  flex-wrap: wrap;
+  align-items: center;
 }
 
-.menu__list a {
-  padding: 7px 0;
+.header-action__item:not(:last-child) {
+  margin-right: 35px;
 }
 
 .burger {
-  display: none;
-  width: 30px;
-  height: 20px;
+  min-height: 40px;
+  width: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.burger:hover .burger__wrapper span,
+.burger:hover .burger__wrapper:before,
+.burger:hover .burger__wrapper:after {
+  background-color: #FF7D4E;
+}
+
+.burger__wrapper {
+  width: 100%;
+  height: 18px;
   position: relative;
 }
 
-.burger span,
-.burger:before,
-.burger:after {
+.burger__wrapper span,
+.burger__wrapper:before,
+.burger__wrapper:after {
   position: absolute;
   left: 0;
   width: 100%;
   height: 2px;
   background-color: #000;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
-.burger:before {
+.burger__wrapper:before {
   content: "";
   top: 0;
+  transform: translate(0, 0);
+  -webkit-animation: burgerTopDisabled 0.7s ease 0s 1;
+  animation: burgerTopDisabled 0.7s ease 0s 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
-.burger:after {
+.burger__wrapper:after {
   content: "";
-  bottom: 0;
+  top: 100%;
+  transform: translate(0, -100%);
+  -webkit-animation: burgerBottomDisabled 0.7s ease 0s 1;
+  animation: burgerBottomDisabled 0.7s ease 0s 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
-.burger span {
+.burger__wrapper span {
   position: absolute;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #000;
   top: 50%;
   transform: translate(0, -50%);
 }
 
-.burger.active:before {
-  top: 50%;
-  transform: translate(0, -50%) rotate(45deg);
-  background-color: #fff;
+@-webkit-keyframes burgerTopDisabled {
+  0% {
+    transform: translate(0, -50%) rotate(-45deg);
+    top: 50%;
+  }
+
+  50% {
+    transform: translate(0, -50%);
+    top: 50%;
+  }
+
+  100% {
+    top: 0;
+    transform: translate(0, 0);
+  }
 }
 
-.burger.active span {
-  transform: translate(0, -50%) scale(0);
+@keyframes burgerTopDisabled {
+  0% {
+    transform: translate(0, -50%) rotate(-45deg);
+    top: 50%;
+  }
+
+  50% {
+    transform: translate(0, -50%);
+    top: 50%;
+  }
+
+  100% {
+    top: 0;
+    transform: translate(0, 0);
+  }
 }
 
-.burger.active:after {
-  bottom: 50%;
-  transform: translate(0, 50%) rotate(-45deg);
-  background-color: #fff;
+@-webkit-keyframes burgerBottomDisabled {
+  0% {
+    transform: translate(0, -50%) rotate(45deg);
+    top: 50%;
+  }
+
+  50% {
+    transform: translate(0, -50%);
+    top: 50%;
+  }
+
+  100% {
+    top: 100%;
+    transform: translate(0, -100%);
+  }
 }
 
-.menu.active {
-  pointer-events: all;
-  top: 0;
-  right: 0;
-  transition: all 0.8s ease;
+@keyframes burgerBottomDisabled {
+  0% {
+    transform: translate(0, -50%) rotate(45deg);
+    top: 50%;
+  }
+
+  50% {
+    transform: translate(0, -50%);
+    top: 50%;
+  }
+
+  100% {
+    top: 100%;
+    transform: translate(0, -100%);
+  }
+}
+
+.burger.active .burger__wrapper:before {
+  -webkit-animation: burgerTopActive 0.7s ease 0s 1;
+  animation: burgerTopActive 0.7s ease 0s 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.burger.active .burger__wrapper span {
+  transform: scale(0);
+}
+
+.burger.active .burger__wrapper:after {
+  -webkit-animation: burgerBottomActive 0.7s ease 0s 1;
+  animation: burgerBottomActive 0.7s ease 0s 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes burgerTopActive {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    transform: translate(0, -50%);
+    top: 50%;
+  }
+
+  100% {
+    transform: translate(0, -50%) rotate(-45deg);
+    top: 50%;
+  }
+}
+
+@keyframes burgerTopActive {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    transform: translate(0, -50%);
+    top: 50%;
+  }
+
+  100% {
+    transform: translate(0, -50%) rotate(-45deg);
+    top: 50%;
+  }
+}
+
+@-webkit-keyframes burgerBottomActive {
+  0% {
+    top: 100%;
+    transform: translate(0, -100%);
+  }
+
+  50% {
+    transform: translate(0, -50%);
+    top: 50%;
+  }
+
+  100% {
+    transform: translate(0, -50%) rotate(45deg);
+    top: 50%;
+  }
+}
+
+@keyframes burgerBottomActive {
+  0% {
+    top: 100%;
+    transform: translate(0, -100%);
+  }
+
+  50% {
+    transform: translate(0, -50%);
+    top: 50%;
+  }
+
+  100% {
+    transform: translate(0, -50%) rotate(45deg);
+    top: 50%;
+  }
 }
 
 .footer__title {
@@ -721,6 +834,13 @@ input::placeholder {
   }
 }
 
+@media (min-width: 1025px) {
+  .header-action__item .btn {
+    width: 154px;
+    height: 50px;
+  }
+}
+
 @media (min-width: 1441px) {
   .btn {
     height: 64px;
@@ -766,44 +886,5 @@ input::placeholder {
   .body.account-overview [class*=__subtitle] {
     font-size: 1em;
     line-height: 1.75;
-  }
-}
-
-@media (max-width: 992px) {
-  .header__logo {
-    z-index: 4;
-    color: green;
-  }
-
-  .menu {
-    pointer-events: none;
-    position: fixed;
-    top: 0;
-    right: -320px;
-    width: auto;
-    height: auto;
-    padding: 27px 60px 27px 27px;
-    background-color: rgba(0, 0, 0, 0.9);
-    border-radius: 0 0 0 20px;
-    transition: all 0.7s ease;
-    z-index: 2;
-  }
-
-  .menu__list {
-    flex-direction: column;
-    color: #fff;
-  }
-
-  .menu__list a {
-    padding: 5px;
-  }
-
-  .menu__list li:not(:last-child) {
-    margin-bottom: 8px;
-  }
-
-  .burger {
-    display: block;
-    z-index: 4;
   }
 }

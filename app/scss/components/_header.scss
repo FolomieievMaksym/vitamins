@@ -17,146 +17,145 @@
 	}
 }
 
-
-
 .header {
-	position: relative;
-	// width: 100%;
-	z-index: 50; //Можно удалить?
-	&:before {
-		content: '';
-		position: absolute;
-		top:0;
-		left:0;
-		width: 100%;
-		height: 100%;
-		background-color:transparent; // Изменить на нужный
-		z-index:0;
-		transition: z-index  1s ease; //Анимация индекса при переходе с активного "3" на неактивный "0"
-		transition-delay: 1s; //Анимация индекса при переходе с активного "3" на неактивный "0"
-	}
-	&.active  {
-		&:before{
-			background-color: #fff;
-			z-index: 3;
-			transition: z-index 0s ease; //Анимация индекса при переходе с неактивного "0" на активный "3"
-			transition-delay: 0s; //Анимация индекса при переходе с неактивного "0" на активный "3"
-		}
-	}
 	&__body {
 		display: flex;
 		justify-content: space-between;
-		min-height: 70px;
 		align-items: center;
-		position: relative;
 	}
-	&__logo {
-		width: 50px;
-		height: 50px;
-		img {
-			max-width: 100%;
+}
+
+.header-action {
+	display: flex;
+	align-items: center;
+	&__item {
+		&:not(:last-child) {
+			margin-right: 35px;
+		}
+		.btn {
+			@media (min-width: 1025px) {
+				width: 154px;
+				height: 50px;
+			}
 		}
 	}
 }
 
-.menu {
-	&__list {
-		display: flex;
-		justify-content: space-between;
-		gap: 1em;
-		flex-wrap: wrap;
-		a {
-			padding: 7px 0;
-		}
-	}
-}
 .burger {
-	display: none;
-	width: 30px;
-	height: 20px;
-	position: relative; 
-	span,
-	&:before,
-	&:after {
-		position: absolute;
-		left: 0;
+	min-height: 40px; // Высота блока для удобства нажатия на иконку
+	width: 24px; // Макетная ширина бургера
+	display: flex;
+	align-items: center;
+	&:hover .burger__wrapper{
+			span,
+			&:before,
+			&:after {
+				background-color: $orange;
+			}
+	}
+	&__wrapper {
 		width: 100%;
-		height: 2px;
-		background-color: #000;
-		transition: all .5s ease;
-	}
-	&:before {
-		content: '';
-		top: 0;
-	}
-	&:after {
-		content: '';
-		bottom: 0;
-	}
-	span {
-		position: absolute;
-		left: 0;
-		width: 100%;
-		height: 2px;
-		background-color: #000;
-		top: 50%;
-		transform: translate(0, -50%);
-	}
-}
-@media (max-width: 992px) {
-	.header {
-		&__logo {
-			z-index: 4; // Навешивает над псевдоэлементом Хедера
-			color: green;
+		height: 18px; //Макетная высота бургера
+		position: relative;
+		span,
+		&:before,
+		&:after {
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			background-color: #000;
+			transition: all .3s ease;
+		}
+		&:before {
+			content: '';
+			top: 0;
+			transform: translate(0, 0);
+			animation: burgerTopDisabled .7s ease 0s 1;
+			animation-fill-mode: forwards;
+		}
+		&:after {
+			content: '';
+			top: 100%;
+			transform: translate(0, -100%);
+			animation: burgerBottomDisabled .7s ease 0s 1;
+			animation-fill-mode: forwards;
+		}
+		span {
+			position: absolute;
+			top: 50%;
+			transform: translate(0, -50%);
+		}
+		@keyframes burgerTopDisabled { // Closing burger animation
+			0% {
+				transform: translate(0, -50%) rotate(-45deg);
+				top: 50%;
+			}
+			50%{
+				transform: translate(0, -50%);
+				top: 50%;
+				
+			}
+			100% {
+				top: 0;
+				transform: translate(0, 0);
+			}
+		}
+		@keyframes burgerBottomDisabled { // Closing burger animation
+			0% {
+				transform: translate(0, -50%) rotate(45deg);
+				top: 50%;
+			}
+			50% {
+				transform: translate(0, -50%);
+				top: 50%;
+			}
+			100% {
+				top: 100%;
+				transform: translate(0, -100%);
+			}
 		}
 	}
-	.menu {
-		pointer-events: none;
-		position: fixed;
-		top: 0;
-		right: -320px;
-		width: auto;
-		height: auto;
-		padding: 27px 60px 27px 27px;
-		background-color: rgba(0, 0, 0, 0.9);
-		border-radius: 0 0 0 20px;
-		transition: all .7s ease;
-		z-index: 2; // Прячем под псевдоэлемтом хедера
-	}
-	.menu__list {
-		flex-direction: column;
-		color: #fff;
-		// align-items: flex-end; //Выравнивает текст справа (возле бургера)
-		a {
-			padding: 5px;
+	&.active { // Opening burger animation
+		.burger__wrapper {
+			&:before {
+				animation: burgerTopActive .7s ease 0s 1;
+				animation-fill-mode: forwards;
+			}
+			span {
+				transform: scale(0);
+			}
+			&:after{
+				animation: burgerBottomActive .7s ease 0s 1;
+				animation-fill-mode: forwards;
+			}
+			@keyframes burgerTopActive {
+				0% {
+					top: 0;
+				}
+				50%{
+					transform: translate(0, -50%);
+					top: 50%;
+				}
+				100% {
+					transform: translate(0, -50%) rotate(-45deg);
+					top: 50%;
+				}
+			}
+			@keyframes burgerBottomActive {
+				0% {
+					top: 100%;
+					transform: translate(0, -100%);
+				}
+				50% {
+					transform: translate(0, -50%);
+					top: 50%;
+				}
+				100% {
+					transform: translate(0, -50%) rotate(45deg);
+					top: 50%;
+				}
+			}
 		}
-		li:not(:last-child) {
-			margin-bottom: 8px;
-		}
 	}
-	.burger {
-		display: block;
-		z-index: 4; // Навешивает над псевдоэлементом Хедера
-	}
-}
-.burger.active {
-	&:before {
-		top: 50%;
-		transform: translate(0,-50%) rotate(45deg);	
-		background-color: #fff;		
-	}
-	span{
-		transform: translate(0, -50%) scale(0);
-	}
-	&:after {
-		bottom: 50%;
-		transform: translate(0,50%) rotate(-45deg);
-		background-color: #fff;
-	}
-}
-.menu.active {
-	pointer-events: all;
-	top: 0;
-	right: 0;
-	transition: all .8s ease;
 }
