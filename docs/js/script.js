@@ -3,8 +3,10 @@ const burger = document.querySelector(".burger"),
 	// menu = document.querySelector(".menu"),
 	header = document.querySelector(".header"),
 	headerAction = document.querySelector(".header-action"),
-	headerAside1 = document.querySelector(".header-aside-1"),
-	headerAside2 = document.querySelector(".header-aside-2"),
+	headerAside1 = document.querySelector(".header-aside_1"),
+	headerAside2 = document.querySelector(".header-aside_2"),
+	headerAside3 = document.querySelector(".header-aside_3"),
+	headerAside4 = document.querySelector(".header-aside_4"),
 	body = document.querySelector("body");
 
 window.addEventListener("load", () => {
@@ -21,26 +23,47 @@ window.addEventListener("load", () => {
 	if (burger) {
 		body.addEventListener("click", burgerToggle);
 		function burgerToggle(e) {
-			// alert("Click") // Для проверки вызова функции кликом
 			if (e.target.closest(".burger")) {
-				burger.classList.toggle("active");
-				header.classList.toggle("active");
-				headerAction.classList.toggle("active");
-				// headerAside1.classList.toggle("active");
-				headerAside2.classList.toggle("active");
-				body.classList.toggle("lock");
-				window.addEventListener("scroll", closeBurger); // Закрывает бургер при скролле в том случае, когда для Body не задан класс 'lock'
-				// menu.classList.toggle("active");
+				if (burger.classList.contains('active')) {
+					burger.classList.remove("active");
+					header.classList.remove("active");
+					headerAction.classList.remove("active");
+					body.classList.remove("lock");
+					headerAside1.classList.remove("active");
+					headerAside2.classList.remove("active");
+				} else {
+					burger.classList.add("active");
+					header.classList.add("active");
+					headerAction.classList.add("active");
+					headerAside1.classList.add("active");
+					body.classList.add("lock");
+					window.addEventListener("scroll", closeBurger); // Закрывает бургер при скролле в том случае, когда для Body не задан класс 'lock'
+				}
+			} else if (e.target.closest("#menu-shop")) {
+				headerAside1.classList.remove("active");
+				headerAside2.classList.add("active");
+			} else if (e.target.closest("#menu-information")) {
+				headerAside1.classList.remove("active");
+				headerAside3.classList.add("active");
+			} else if (e.target.closest("#menu-profile")) {
+				e.preventDefault()
+				headerAside1.classList.remove("active");
+				headerAside4.classList.add("active");
+			} else if (e.target.closest(".header-aside__top")) {
+				e.preventDefault()
+				headerAside1.classList.add("active");
+				headerAside2.classList.remove("active");
+				headerAside3.classList.remove("active");
+				headerAside4.classList.remove("active");
 			} else if (!e.target.closest(".burger")) {
 				// burger.classList.remove("active");
 				// header.classList.remove("active");
 				// headerAction.classList.remove("active");
 				// body.classList.remove("lock");
 				// window.removeEventListener("scroll", closeBurger);
-				// menu.classList.remove("active");
 			}
 		}
-
+		// menu-information
 		function closeBurger() {
 
 

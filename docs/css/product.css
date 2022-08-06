@@ -440,19 +440,10 @@ main {
   flex: 1 1 auto;
 }
 
-.header.active {
-  display: none;
-}
-
 .header .menu__title {
   font-weight: 500;
   font-size: 1.25em;
   line-height: 1.206;
-}
-
-.header .header-aside {
-  max-width: 375px;
-  background-color: lightgrey;
 }
 
 .header .header-aside-content {
@@ -485,7 +476,17 @@ main {
   left: 0;
   width: 100%;
   z-index: 10;
-  position: relative;
+}
+
+.header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 4;
 }
 
 .header:after {
@@ -496,6 +497,7 @@ main {
   width: 100%;
   height: 1px;
   background: rgba(0, 0, 0, 0.07);
+  z-index: 12;
 }
 
 .header__container {
@@ -515,6 +517,8 @@ main {
 }
 
 .header-action {
+  position: relative;
+  z-index: 5;
   display: flex;
   align-items: center;
 }
@@ -558,6 +562,8 @@ main {
 }
 
 .burger {
+  position: relative;
+  z-index: 5;
   min-height: 40px;
   width: 24px;
   display: flex;
@@ -772,23 +778,140 @@ main {
 }
 
 .header-aside {
+  overflow: auto;
+  min-height: 100vh;
+  background-color: #fff;
   width: 100%;
-  position: absolute;
-  top: 70px;
+  max-width: 375px;
+  position: fixed;
+  top: 0px;
   left: -100%;
+  z-index: 1;
   transition: all 0.7s ease;
+}
+
+.header-aside__body {
   padding-left: 6.25%;
   padding-right: 6.25%;
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+.header-aside__top {
+  font-weight: 500;
+  font-size: 1.25em;
+  line-height: 1.206;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.header-aside__top i {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(5px, -35%);
+}
+
+.header-aside_1 .header-aside__body {
+  top: 69px;
+}
+
+.header-aside_1 .first-menu__list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.header-aside_1 .first-menu__list li:last-child {
+  color: #FF7D4E;
+}
+
+.header-aside_1 .first-menu__list p {
+  flex: 1 1 auto;
+}
+
+.header-aside_1 .first-menu__list i {
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  right: -3px;
+  transform: translate(0, -50%);
+}
+
+.header-aside_1 .header-aside-content__text {
+  display: block;
+  margin-bottom: 17px;
+}
+
+.header-aside_2 {
+  z-index: 11;
+}
+
+.header-aside_2 .header-aside__body {
+  top: 0px;
+}
+
+.header-aside_2 .second-menu__list li:last-child {
+  color: #D32D2C;
+}
+
+.header-aside_2 .header-aside-content {
+  text-align: center;
+}
+
+.header-aside_2 .header-aside-content__subtitle {
+  margin-bottom: 15px;
+}
+
+.header-aside_2 .header-aside-content__text {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.header-aside_3 {
+  z-index: 11;
+}
+
+.header-aside_3 .header-aside__body {
+  top: 0px;
+}
+
+.header-aside_3 ul:after {
+  display: none;
+}
+
+.header-aside_4 {
+  z-index: 11;
+}
+
+.header-aside_4 .header-aside__body {
+  top: 0px;
+}
+
+.header-aside_4 .second-menu__list li:last-child {
+  color: #D32D2C;
 }
 
 .header-aside .menu__list {
-  padding-top: 40px;
-  padding-bottom: 42px;
+  padding-top: 32px;
+  padding-bottom: 34px;
   position: relative;
 }
 
 .header-aside .menu__list li:not(:last-child) {
-  margin-bottom: 31px;
+  margin-bottom: 15px;
+}
+
+.header-aside .menu__list li p,
+.header-aside .menu__list li a {
+  display: inline-block;
+  padding: 8px 0;
 }
 
 .header-aside .menu__list i {
@@ -807,34 +930,6 @@ main {
 
 .header-aside.active {
   left: 0;
-}
-
-.header-aside-1 .first-menu__list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
-
-.header-aside-1 .first-menu__list li:last-child {
-  color: #FF7D4E;
-}
-
-.header-aside-1 .first-menu__list p {
-  flex: 1 1 auto;
-}
-
-.header-aside-1 .first-menu__list i {
-  font-size: 16px;
-  position: absolute;
-  top: 50%;
-  right: -3px;
-  transform: translate(0, -50%);
-}
-
-.header-aside-1 .header-aside-content__text {
-  display: block;
-  margin-bottom: 17px;
 }
 
 .footer__title {
@@ -1006,7 +1101,7 @@ body.product .card__summ {
     padding-right: 6.1333333333%;
   }
 
-  .header-aside {
+  .header-aside__body {
     padding-left: 5.3333333333%;
     padding-right: 5.3333333333%;
   }
