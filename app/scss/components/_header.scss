@@ -1,5 +1,8 @@
 //Text styles
 .header {
+	&.active {
+		display: none;
+	}
 	.menu__title {
 		font-weight: 500;
 		@include fl(20, 24.12);

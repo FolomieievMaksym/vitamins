@@ -440,6 +440,10 @@ main {
   flex: 1 1 auto;
 }
 
+.header.active {
+  display: none;
+}
+
 .header .menu__title {
   font-weight: 500;
   font-size: 1.25em;
