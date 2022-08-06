@@ -1,7 +1,8 @@
 "use strict";
 const burger = document.querySelector(".burger"),
-	menu = document.querySelector(".menu"),
+	// menu = document.querySelector(".menu"),
 	header = document.querySelector(".header"),
+	headerAction = document.querySelector(".header-action"),
 	body = document.querySelector("body");
 
 window.addEventListener("load", () => {
@@ -21,16 +22,18 @@ window.addEventListener("load", () => {
 			// alert("Click") // Для проверки вызова функции кликом
 			if (e.target.closest(".burger")) {
 				burger.classList.toggle("active");
-				menu.classList.toggle("active");
 				header.classList.toggle("active");
+				headerAction.classList.toggle("active");
 				body.classList.toggle("lock");
 				window.addEventListener("scroll", closeBurger); // Закрывает бургер при скролле в том случае, когда для Body не задан класс 'lock'
+				// menu.classList.toggle("active");
 			} else if (!e.target.closest(".burger")) {
-				burger.classList.remove("active");
-				menu.classList.remove("active");
-				header.classList.remove("active");
-				body.classList.remove("lock");
-				window.removeEventListener("scroll", closeBurger);
+				// burger.classList.remove("active");
+				// header.classList.remove("active");
+				// headerAction.classList.remove("active");
+				// body.classList.remove("lock");
+				// window.removeEventListener("scroll", closeBurger);
+				// menu.classList.remove("active");
 			}
 		}
 
