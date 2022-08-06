@@ -63,3 +63,18 @@ body.hide-content {
 		}
 	}
 }
+body.pass-recovery {
+	.account-footer {
+		padding-top: 19px;
+		// padding-bottom: 80px;
+		@media (min-width: 769px) {
+			// padding-bottom: 39px;
+			padding-bottom: 12px;
+		}
+		&__decor {
+			&:after{
+				display: none;
+			}
+		}
+	}
+}

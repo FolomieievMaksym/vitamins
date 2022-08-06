@@ -647,23 +647,287 @@ input::placeholder {
   background-color: #ff6128;
 }
 
-body.pass-recovery [class*=__title] {
-  font-size: 1.5em;
-  line-height: 1.2058333333;
+.account-header {
+  position: relative;
 }
 
-body.pass-recovery [class*=__text] {
+.account-header__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  padding-left: 9.375%;
+  padding-right: 9.375%;
+}
+
+.account-header i.ic-arrow-back {
+  justify-items: flex-start;
+  font-size: 19.88px;
+  transform: translate(-4.5px, 2px);
+}
+
+.account-header i.ic-logo {
+  display: none;
+}
+
+.account-header__link {
+  font-size: 1.25em;
+  line-height: 1.206;
+  font-weight: 500;
+  text-align: center;
+  flex: 1 1 auto;
+  transform: translate(-10px, 0);
+}
+
+.account-header:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  opacity: 0.07;
+  background-color: #000;
+}
+
+.account-footer {
+  padding-top: 41px;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.account-footer__container {
+  text-align: center;
+  font-family: "OpenSans";
+}
+
+.account-footer__decor:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  opacity: 0.07;
+  background-color: #000;
+}
+
+.account-footer__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(2px, 0);
+}
+
+.account-footer__text {
+  font-size: 0.875em;
+  line-height: 1.3621428571;
+  margin-right: 4px;
+}
+
+.account-footer a {
+  font-size: 0.9375em;
+  line-height: 1.362;
+  color: #FF7D4E;
+}
+
+body.hide-content .account-footer {
+  padding-top: 20px;
+  padding-bottom: 80px;
+}
+
+body.hide-content .account-footer__decor:after {
+  display: none;
+}
+
+body.pass-recovery .account-footer {
+  padding-top: 19px;
+}
+
+body.pass-recovery .account-footer__decor:after {
+  display: none;
+}
+
+body.pass-recovery .wrapper {
+  display: block;
+}
+
+body.pass-recovery .hero {
+  padding-top: 51px;
+}
+
+body.pass-recovery .hero__title {
+  font-size: 1.5em;
+  line-height: 1.2058333333;
+  text-align: center;
+  margin-bottom: 9px;
+}
+
+body.pass-recovery .hero__text {
   font-family: "OpenSans";
   font-size: 0.875em;
   line-height: 1.3621428571;
   opacity: 1;
   font-weight: 400;
+  text-align: center;
+  margin-bottom: 21px;
+}
+
+body.pass-recovery .hero__form p {
+  background: #FAF8F6;
+  border-radius: 12px;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 375px) {
   [class*=__container] {
     padding-left: 5.3333333333%;
     padding-right: 5.3333333333%;
+  }
+
+  .account-header__container {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}
+
+@media (min-width: 420px) {
+  body.pass-recovery .hero__form .btn {
+    max-width: 270px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 569px) {
+  .btn {
+    max-width: 330px;
+  }
+
+  .account-footer {
+    padding-top: 46px;
+    padding-bottom: 38px;
+  }
+
+  body.pass-recovery .hero {
+    padding-top: 14.0597539543%;
+    padding-bottom: 3.5149384886%;
+    padding-left: 8.7873462214%;
+    padding-right: 8.7873462214%;
+  }
+
+  body.pass-recovery .hero__container {
+    padding: 0;
+  }
+
+  body.pass-recovery .hero__form p {
+    max-width: 444px;
+    margin: 0 auto 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  .account-header__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+  }
+
+  .account-header__container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .account-header i.ic-arrow-back {
+    display: none;
+  }
+
+  .account-header i.ic-logo {
+    display: block;
+    font-size: 50px;
+    transform: translate(-2px, 0);
+  }
+
+  .account-header__link {
+    display: none;
+  }
+
+  .account-header:after {
+    display: none;
+  }
+
+  .account-footer__decor:after {
+    display: none;
+  }
+
+  .account-footer__content {
+    transform: translate(-2px, 0);
+  }
+
+  .account-footer__text {
+    font-size: 1em;
+    line-height: 1.361875;
+  }
+
+  .account-footer a {
+    font-size: 1em;
+    line-height: 1.361875;
+  }
+
+  body.hide-content .account-footer {
+    padding-bottom: 39px;
+  }
+
+  body.pass-recovery .account-footer {
+    padding-bottom: 12px;
+  }
+
+  body.pass-recovery {
+    background-color: #FAF8F6;
+  }
+
+  body.pass-recovery .hero {
+    padding-top: 20.8333333333%;
+    padding-bottom: 2.6041666667%;
+    padding-left: 6.5104166667%;
+    padding-right: 6.5104166667%;
+  }
+
+  body.pass-recovery .hero__body {
+    background-color: #fff;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  body.pass-recovery .hero__title {
+    font-size: 1.625em;
+    line-height: 1.2061538462;
+    margin-bottom: 11px;
+  }
+
+  body.pass-recovery .hero__text {
+    font-size: 1em;
+    line-height: 1.75;
+  }
+}
+
+@media (min-width: 1025px) {
+  body.pass-recovery .hero {
+    padding-top: 11.7073170732%;
+    padding-bottom: 1.9512195122%;
+    padding-left: 10.7317073171%;
+    padding-right: 10.7317073171%;
+  }
+
+  body.pass-recovery .hero__body {
+    background-color: #fff;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 
@@ -674,14 +938,23 @@ body.pass-recovery [class*=__text] {
     line-height: 1.206;
   }
 
-  body.pass-recovery [class*=__title] {
-    font-size: 1.625em;
-    line-height: 1.2061538462;
+  body.pass-recovery .wrapper {
+    display: flex;
   }
 
-  body.pass-recovery [class*=__text] {
-    font-size: 1em;
-    line-height: 1.75;
+  body.pass-recovery .hero {
+    padding-top: 16.0555555556%;
+    padding-bottom: 0px;
+    padding-left: 24.4444444444%;
+    padding-right: 24.4444444444%;
+  }
+
+  body.pass-recovery .hero__body {
+    background-color: #fff;
+    padding-top: 6.25%;
+    padding-bottom: 6.25%;
+    padding-left: 12.3958333333%;
+    padding-right: 12.3958333333%;
   }
 }
 

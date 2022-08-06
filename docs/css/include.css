@@ -719,6 +719,10 @@ body.hide-content .icons-row {
 }
 
 @media (min-width: 569px) {
+  .btn {
+    max-width: 330px;
+  }
+
   .icons-row {
     max-width: 444px;
     margin: 0 auto;

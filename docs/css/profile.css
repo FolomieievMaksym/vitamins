@@ -754,6 +754,12 @@ main.subscriptions .btn {
   }
 }
 
+@media (min-width: 569px) {
+  .btn {
+    max-width: 330px;
+  }
+}
+
 @media (min-width: 1441px) {
   .btn {
     height: 64px;

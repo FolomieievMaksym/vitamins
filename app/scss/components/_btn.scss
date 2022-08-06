@@ -11,6 +11,9 @@
 	color: #fff;
 	@include fl(16, 19.3);
 	font-weight: 700;
+	@media (min-width: 569px) {
+		max-width: 330px;
+	}
 	@media (min-width: 1441px) {
 		height: 64px;
 		@include fl(20, 24.12);

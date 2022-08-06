@@ -886,6 +886,14 @@ body.hide-content .account-footer__decor:after {
   display: none;
 }
 
+body.pass-recovery .account-footer {
+  padding-top: 19px;
+}
+
+body.pass-recovery .account-footer__decor:after {
+  display: none;
+}
+
 body.sign-up .hero {
   padding-top: 49px;
   padding-bottom: 38px;
@@ -970,6 +978,10 @@ body.hide-content .hero__decor {
 }
 
 @media (min-width: 569px) {
+  .btn {
+    max-width: 330px;
+  }
+
   .icons-row {
     max-width: 444px;
     margin: 0 auto;
@@ -1118,6 +1130,10 @@ body.hide-content .hero__decor {
 
   body.hide-content .account-footer {
     padding-bottom: 39px;
+  }
+
+  body.pass-recovery .account-footer {
+    padding-bottom: 12px;
   }
 
   body.sign-up {
