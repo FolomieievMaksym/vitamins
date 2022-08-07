@@ -1,4 +1,3 @@
-
 @import "./default/variables";
 @import "./default/null";
 @import "./default/mixins";
@@ -11,14 +10,14 @@
 
 // Подключение других стилей
 @import "./default/text";
-@import './components/btn';
-@import './components/sign-up/icons-row';
-
+@import "./components/btn";
+@import "./components/sign-up/icons-row";
+@import "./components/quiz";
 
 #btns {
-	display: flex;
-	justify-content: space-around;
-	.btn {
-		flex: 0 0 20%;
-	}
+   display: flex;
+   justify-content: space-around;
+   .btn {
+      flex: 0 0 20%;
+   }
 }

@@ -75,6 +75,17 @@ window.addEventListener("load", () => {
       }
    }
 
+   body.addEventListener("click", switchQuiz);
+
+   function switchQuiz(e) {
+      if (e.target.innerHTML == "Take the quiz") {
+         console.log("Work");
+         qs(".quiz").classList.add("active");
+         body.classList.add("lock");
+      }
+      // }
+   }
+
    //Sign-up.html
    if (qs("body.sign-up")) {
       const leftButton = qs(".left-btn"),

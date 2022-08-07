@@ -1,31 +1,33 @@
-
 body.lock {
-	overflow: hidden
+   overflow: hidden;
 }
 
 body {
-	font-family: $ff1;
-	@include fz(16);
+   font-family: $ff1;
+   @include fz(16);
 }
 
-[class*=__container] {
-	width: 100%;
-	max-width: none;
-	margin: 0 auto;
-	padding-left: calc(20 / 320 * 100%);
-	padding-right: calc(20 / 320 * 100%);
-	@media (min-width: 375px) {
-		padding-left: calc(20 / 375 * 100%);
-		padding-right: calc(20 / 375 * 100%);
-	}
+[class*="__container"] {
+   width: 100%;
+   max-width: none;
+   margin: 0 auto;
+   // padding-left: calc(20 / 320 * 100%);
+   // padding-right: calc(20 / 320 * 100%);
+   padding-left: 20px;
+   padding-right: 20px;
+   @media (min-width: 375px) {
+      // padding-left: calc(20 / 375 * 100%);
+      // padding-right: calc(20 / 375 * 100%);
+   }
 }
 .wrapper {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	min-height: 100vh;
-	// overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   min-height: 100vh;
+   max-width: 100vw;
+   overflow: hidden;
 }
-main{
-	flex: 1 1 auto;
+main {
+   flex: 1 1 auto;
 }

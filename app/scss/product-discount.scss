@@ -1,4 +1,3 @@
-
 @import "./default/variables";
 @import "./default/null";
 @import "./default/mixins";
@@ -11,11 +10,12 @@
 
 // Подключение других стилей
 @import "./default/text";
-@import './components/btn';
-@import './components/product/add-to-cart';
-@import './components/product/item-icon-row';
-@import './components/product/left-block';
-@import './components/product/right-block';
+@import "./components/btn";
+@import "./components/product/add-to-cart";
+@import "./components/product/item-icon-row";
+@import "./components/product/left-block";
+@import "./components/product/right-block";
+@import "./components/quiz";
 
 //Подключение стилей конкретной страницы
 @import "./pages/product-discount";
