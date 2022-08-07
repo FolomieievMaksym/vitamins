@@ -444,6 +444,8 @@ main {
   font-weight: 500;
   font-size: 1.25em;
   line-height: 1.206;
+  font-size: 1.3125em;
+  line-height: 1;
 }
 
 .header .header-aside-content {
@@ -858,7 +860,7 @@ main {
 }
 
 .header-aside_2 .second-menu__list li:last-child {
-  color: #D32D2C;
+  color: #d32d2c;
 }
 
 .header-aside_2 .header-aside-content {
@@ -895,7 +897,7 @@ main {
 }
 
 .header-aside_4 .second-menu__list li:last-child {
-  color: #D32D2C;
+  color: #d32d2c;
 }
 
 .header-aside .menu__list {
