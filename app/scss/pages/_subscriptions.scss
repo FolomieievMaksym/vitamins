@@ -1,114 +1,111 @@
 // Text styles
 body.subscriptions {
-	.header {
-		transform: translate(0, 3px);
-		
-	}
-	.hero {
-		padding-top: 121px;
-		padding-bottom: 60;
-		@media (min-width: 1025px) {
-			padding-top: calc(190 / 1800 * 100%);
-		}
-		&__container {
-			padding-right: calc(21 / 320 * 100%);
-			@media (min-width: 375px) {
-				padding-right: calc(20 / 375 * 100%);
-			}
-			@media (min-width: 769px) {
-				max-width: 681px;
-				margin: 0 auto;
-				padding: 0;
-			}
-		}
-		&__title {
-			font-weight: 500;
-			@include fl(24, 28.94);
-			margin-bottom: 27px;
-			transform: translate(-2px, 0);
-			@media (min-width: 1025px) {
-				@include fl(32, 38);
-			}
-			@media (min-width: 1441px) {
-				transform: translate(-4px, );
-				@include fl(40, 48.24);
-				margin-bottom: 38px;
-			}
-		}
-		&__text {
-			font-family: $ff2;
-			@include fl(14, 24);
-			opacity: 0.5;
-			&:not(:last-of-type) {
-				margin-bottom: 62px;
-				@media (min-width: 1441px) {
-					margin-bottom: 63px;
-				}
-			}
-			&:last-of-type {
-				margin-bottom: 30px;
-			}
-			@media (min-width: 1025px) {
-				@include fl(16, 28);
-			}
-			@media (min-width: 1441px) {
-				@include fl(18, 32 );
-			}
-		}
-		&__subtitle {
-			font-weight: 500;
-			@include fl(20, 24.12);
-			margin-bottom: 29px;
-			@media (min-width: 1025px) {
-				@include fl(23, 27);
-				
-			}
-			@media (min-width: 1441px) {
-				@include fl(26, 31.36);
-				margin-bottom: 37px;
-			}
-		}
+   .header {
+      padding-top: 2px;
+   }
+   .hero {
+      padding-top: 121px;
+      padding-bottom: 60;
+      @media (min-width: 1025px) {
+         padding-top: calc(190 / 1800 * 100%);
+      }
+      &__container {
+         padding-right: calc(21 / 320 * 100%);
+         @media (min-width: 375px) {
+            padding-right: calc(20 / 375 * 100%);
+         }
+         @media (min-width: 769px) {
+            max-width: 681px;
+            margin: 0 auto;
+            padding: 0;
+         }
+      }
+      &__title {
+         font-weight: 500;
+         @include fl(24, 28.94);
+         margin-bottom: 27px;
+         transform: translate(-2px, 0);
+         @media (min-width: 1025px) {
+            @include fl(32, 38);
+         }
+         @media (min-width: 1441px) {
+            transform: translate(-4px);
+            @include fl(40, 48.24);
+            margin-bottom: 38px;
+         }
+      }
+      &__text {
+         font-family: $ff2;
+         @include fl(14, 24);
+         opacity: 0.5;
+         &:not(:last-of-type) {
+            margin-bottom: 62px;
+            @media (min-width: 1441px) {
+               margin-bottom: 63px;
+            }
+         }
+         &:last-of-type {
+            margin-bottom: 30px;
+         }
+         @media (min-width: 1025px) {
+            @include fl(16, 28);
+         }
+         @media (min-width: 1441px) {
+            @include fl(18, 32);
+         }
+      }
+      &__subtitle {
+         font-weight: 500;
+         @include fl(20, 24.12);
+         margin-bottom: 29px;
+         @media (min-width: 1025px) {
+            @include fl(23, 27);
+         }
+         @media (min-width: 1441px) {
+            @include fl(26, 31.36);
+            margin-bottom: 37px;
+         }
+      }
 
-		&__list {
-			margin-top: -32px;
-			margin-bottom: 30px;
-			@media (min-width: 1441px) {
-				margin-top: -20px;
-				margin-bottom: 40px;
-			}
-			li {
-				font-family: $ff2;
-				@include fl(14, 24);
-				opacity: 0.5;
-				&:not(:last-of-type) {
-					margin-bottom: 25px;
-					@media (min-width: 1441px) {
-						margin-bottom: 14px;
-					}
-				}
-				padding-left: 40px;
-				@media (min-width: 1025px) {
-					@include fl(16, 28);
-					
-				}
-				@media (min-width: 1441px) {
-					@include fl(18, 32 );
-					padding-left: 50px;
-				}
-				position: relative;
-				&:before{
-					content: '';
-					position: absolute;
-					top: 12px;
-					left: 0;
-					width: 20px;
-					height: 2px;
-					background: $orange;
-					@media (min-width: 1441px) {
-						width: 30px;
-					}
-				}
-			}
-		}
-	}
+      &__list {
+         margin-top: -32px;
+         margin-bottom: 30px;
+         @media (min-width: 1441px) {
+            margin-top: -20px;
+            margin-bottom: 40px;
+         }
+         li {
+            font-family: $ff2;
+            @include fl(14, 24);
+            opacity: 0.5;
+            &:not(:last-of-type) {
+               margin-bottom: 25px;
+               @media (min-width: 1441px) {
+                  margin-bottom: 14px;
+               }
+            }
+            padding-left: 40px;
+            @media (min-width: 1025px) {
+               @include fl(16, 28);
+            }
+            @media (min-width: 1441px) {
+               @include fl(18, 32);
+               padding-left: 50px;
+            }
+            position: relative;
+            &:before {
+               content: "";
+               position: absolute;
+               top: 12px;
+               left: 0;
+               width: 20px;
+               height: 2px;
+               background: $orange;
+               @media (min-width: 1441px) {
+                  width: 30px;
+               }
+            }
+         }
+      }
+   }
 }
