@@ -1148,7 +1148,7 @@ body.hide-content .icons-row {
   font-weight: 500;
   font-size: 1.5em;
   line-height: 1.2058333333;
-  margin-bottom: 30px;
+  margin-bottom: 30px !important;
   text-align: center;
 }
 
@@ -1273,6 +1273,7 @@ body.hide-content .icons-row {
   .quiz__left > *,
   .quiz__right > * {
     max-width: 496px;
+    margin: 0 auto;
   }
 }
 
@@ -1318,11 +1319,6 @@ body.hide-content .icons-row {
   .icons-row__name {
     font-size: 1.25em;
     line-height: 1.206;
-  }
-
-  .quiz__title {
-    -moz-text-align-last: left;
-    text-align-last: left;
   }
 }
 
@@ -1432,6 +1428,12 @@ body.hide-content .icons-row {
     width: 100%;
   }
 
+  .quiz__title {
+    text-align: left;
+    color: #fff;
+    padding-top: 29px;
+  }
+
   .quiz__line {
     min-height: 105px;
   }
@@ -1463,6 +1465,7 @@ body.hide-content .icons-row {
 
   .quiz__footer i {
     margin-right: 13px;
+    color: #fff;
   }
 }
 
@@ -1481,7 +1484,6 @@ body.hide-content .icons-row {
   .quiz__title {
     font-size: 4em;
     line-height: 1.2059375;
-    color: #fff;
   }
 
   .quiz input {

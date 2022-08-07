@@ -79,7 +79,6 @@ window.addEventListener("load", () => {
 
    function switchQuiz(e) {
       if (e.target.innerHTML == "Take the quiz") {
-         console.log("Work");
          qs(".quiz").classList.add("active");
          body.classList.add("lock");
       }

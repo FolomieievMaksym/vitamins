@@ -1195,7 +1195,7 @@ body.pass-recovery .account-footer__decor:after {
   font-weight: 500;
   font-size: 1.5em;
   line-height: 1.2058333333;
-  margin-bottom: 30px;
+  margin-bottom: 30px !important;
   text-align: center;
 }
 
@@ -1350,6 +1350,7 @@ body.pass-recovery .hero__form p {
   .quiz__left > *,
   .quiz__right > * {
     max-width: 496px;
+    margin: 0 auto;
   }
 
   body.pass-recovery .hero {
@@ -1424,11 +1425,6 @@ body.pass-recovery .hero__form p {
 
   body.pass-recovery .account-footer {
     padding-bottom: 12px;
-  }
-
-  .quiz__title {
-    -moz-text-align-last: left;
-    text-align-last: left;
   }
 
   body.pass-recovery {
@@ -1563,6 +1559,12 @@ body.pass-recovery .hero__form p {
     width: 100%;
   }
 
+  .quiz__title {
+    text-align: left;
+    color: #fff;
+    padding-top: 29px;
+  }
+
   .quiz__line {
     min-height: 105px;
   }
@@ -1594,6 +1596,7 @@ body.pass-recovery .hero__form p {
 
   .quiz__footer i {
     margin-right: 13px;
+    color: #fff;
   }
 
   body.pass-recovery .hero {
@@ -1627,7 +1630,6 @@ body.pass-recovery .hero__form p {
   .quiz__title {
     font-size: 4em;
     line-height: 1.2059375;
-    color: #fff;
   }
 
   .quiz input {

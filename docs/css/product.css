@@ -1154,7 +1154,7 @@ body.product [class*=__title] {
   font-weight: 500;
   font-size: 1.5em;
   line-height: 1.2058333333;
-  margin-bottom: 30px;
+  margin-bottom: 30px !important;
   text-align: center;
 }
 
@@ -1288,13 +1288,7 @@ body.product .card__summ {
   .quiz__left > *,
   .quiz__right > * {
     max-width: 496px;
-  }
-}
-
-@media (min-width: 769px) {
-  .quiz__title {
-    -moz-text-align-last: left;
-    text-align-last: left;
+    margin: 0 auto;
   }
 }
 
@@ -1399,6 +1393,12 @@ body.product .card__summ {
     width: 100%;
   }
 
+  .quiz__title {
+    text-align: left;
+    color: #fff;
+    padding-top: 29px;
+  }
+
   .quiz__line {
     min-height: 105px;
   }
@@ -1430,6 +1430,7 @@ body.product .card__summ {
 
   .quiz__footer i {
     margin-right: 13px;
+    color: #fff;
   }
 }
 
@@ -1473,7 +1474,6 @@ body.product .card__summ {
   .quiz__title {
     font-size: 4em;
     line-height: 1.2059375;
-    color: #fff;
   }
 
   .quiz input {

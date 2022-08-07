@@ -85,6 +85,7 @@
       @media (min-width: 569px) {
          & > * {
             max-width: 496px;
+            margin: 0 auto;
          }
       }
       @media (min-width: 569px) {
@@ -120,14 +121,15 @@
    &__title {
       font-weight: 500;
       @include fl(24, 28.94);
-      margin-bottom: 30px;
+      margin-bottom: 30px !important;
       text-align: center;
-      @media (min-width: 769px) {
-         text-align-last: left;
+      @media (min-width: 1025px) {
+         text-align: left;
+         color: #fff;
+         padding-top: 29px;
       }
       @media (min-width: 1441px) {
          @include fl(64, 77.18);
-         color: #fff;
       }
    }
 
@@ -221,6 +223,7 @@
          margin-right: 10px;
          @media (min-width: 1025px) {
             margin-right: 13px;
+            color: #fff;
          }
       }
    }

@@ -1250,7 +1250,7 @@ body.pass-recovery .account-footer__decor:after {
   font-weight: 500;
   font-size: 1.5em;
   line-height: 1.2058333333;
-  margin-bottom: 30px;
+  margin-bottom: 30px !important;
   text-align: center;
 }
 
@@ -1452,6 +1452,7 @@ body.sign-in .hero__link {
   .quiz__left > *,
   .quiz__right > * {
     max-width: 496px;
+    margin: 0 auto;
   }
 
   body.sign-in .hero {
@@ -1612,11 +1613,6 @@ body.sign-in .hero__link {
     padding-bottom: 12px;
   }
 
-  .quiz__title {
-    -moz-text-align-last: left;
-    text-align-last: left;
-  }
-
   body.sign-in {
     background-color: #FAF8F6;
   }
@@ -1743,6 +1739,12 @@ body.sign-in .hero__link {
     width: 100%;
   }
 
+  .quiz__title {
+    text-align: left;
+    color: #fff;
+    padding-top: 29px;
+  }
+
   .quiz__line {
     min-height: 105px;
   }
@@ -1774,6 +1776,7 @@ body.sign-in .hero__link {
 
   .quiz__footer i {
     margin-right: 13px;
+    color: #fff;
   }
 
   body.sign-in .hero {
@@ -1807,7 +1810,6 @@ body.sign-in .hero__link {
   .quiz__title {
     font-size: 4em;
     line-height: 1.2059375;
-    color: #fff;
   }
 
   .quiz input {
