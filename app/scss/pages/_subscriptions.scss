@@ -1,12 +1,14 @@
 // Text styles
 body.subscriptions {
+	.header {
+		transform: translate(0, 3px);
+		
+	}
 	.hero {
-		// padding-top: 120px;
-		padding-top: 51px;// сменитиь на верхний когда сверстаю шапку
+		padding-top: 121px;
 		padding-bottom: 60;
-		@media (min-width: 1441px) {
-			// padding-top: calc(190 / 1800 * 100%);
-			padding-top: calc(120 / 1800 * 100%); // сменитиь на верхний когда сверстаю шапку
+		@media (min-width: 1025px) {
+			padding-top: calc(190 / 1800 * 100%);
 		}
 		&__container {
 			padding-right: calc(21 / 320 * 100%);
@@ -24,6 +26,9 @@ body.subscriptions {
 			@include fl(24, 28.94);
 			margin-bottom: 27px;
 			transform: translate(-2px, 0);
+			@media (min-width: 1025px) {
+				@include fl(32, 38);
+			}
 			@media (min-width: 1441px) {
 				transform: translate(-4px, );
 				@include fl(40, 48.24);
@@ -43,6 +48,9 @@ body.subscriptions {
 			&:last-of-type {
 				margin-bottom: 30px;
 			}
+			@media (min-width: 1025px) {
+				@include fl(16, 28);
+			}
 			@media (min-width: 1441px) {
 				@include fl(18, 32 );
 			}
@@ -51,6 +59,10 @@ body.subscriptions {
 			font-weight: 500;
 			@include fl(20, 24.12);
 			margin-bottom: 29px;
+			@media (min-width: 1025px) {
+				@include fl(23, 27);
+				
+			}
 			@media (min-width: 1441px) {
 				@include fl(26, 31.36);
 				margin-bottom: 37px;
@@ -75,6 +87,10 @@ body.subscriptions {
 					}
 				}
 				padding-left: 40px;
+				@media (min-width: 1025px) {
+					@include fl(16, 28);
+					
+				}
 				@media (min-width: 1441px) {
 					@include fl(18, 32 );
 					padding-left: 50px;
