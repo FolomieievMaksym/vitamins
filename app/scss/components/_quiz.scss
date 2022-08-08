@@ -10,40 +10,12 @@
    position: fixed;
    min-height: 100vh;
    min-width: 100vw;
-   &__body {
-      background-color: #faf8f6;
-      position: absolute;
-      top: 0;
-      left: 0;
-      min-width: 100vw;
-      min-height: 100vh;
-   }
-   &__content {
-      padding-left: calc(20 / 320 * 100%);
-      padding-right: calc(20 / 320 * 100%);
-      padding-top: 50px;
-      padding-bottom: 50px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-width: 100vw;
-      min-height: 100vh;
-      @media (min-width: 375px) {
-         padding-left: calc(20 / 375 * 100%);
-         padding-right: calc(20 / 375 * 100%);
-      }
-      @media (min-width: 1025px) {
-         padding: 0;
-         flex-direction: row;
-      }
-   }
    &__header {
       display: flex;
       align-items: center;
       justify-content: space-between;
       position: absolute;
-      z-index: 1;
+      z-index: 111;
       top: 15px;
       left: 0;
       width: 100%;
@@ -56,8 +28,64 @@
       }
    }
 
+   &__footer {
+      position: absolute;
+      z-index: 111;
+      bottom: 19px;
+      // top: 100%;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding-left: 17px;
+      padding-right: 20px;
+      background-color: #faf8f6;
+      min-height: 41px;
+      @media (min-width: 1025px) {
+         bottom: 29px;
+         padding-left: 29px;
+         background-color: transparent;
+      }
+      & > div {
+         cursor: pointer;
+         display: inline-flex;
+         align-items: center;
+         transition: all 0.3s ease;
+         &:hover {
+            transform: scale(1.05);
+         }
+      }
+      i {
+         margin-right: 10px;
+         @media (min-width: 1025px) {
+            margin-right: 13px;
+            color: #fff;
+         }
+      }
+   }
+
+   &__back {
+      font-family: $ff2;
+      font-weight: 600;
+      @include fl(16, 21.79);
+      @media (min-width: 1025px) {
+         color: #fff;
+      }
+   }
+   &__body {
+      background-color: #faf8f6;
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100vw;
+      min-height: 100vh;
+   }
+
    &__logo {
       font-size: 40px;
+      transition: all 0.3s ease;
+      &:hover {
+         transform: scale(1.1);
+      }
       @media (min-width: 1025px) {
          font-size: 55px;
          .path1:before,
@@ -79,6 +107,48 @@
       }
    }
 
+   &__content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      padding-left: calc(20 / 320 * 100%);
+      padding-right: calc(20 / 320 * 100%);
+      padding-top: 50px;
+      padding-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-width: 100vw;
+      min-height: 100vh;
+      @media (max-width: 1024px) {
+         background-color: #faf8f6;
+      }
+      @media (min-width: 375px) {
+         padding-left: calc(20 / 375 * 100%);
+         padding-right: calc(20 / 375 * 100%);
+      }
+      @media (min-width: 1025px) {
+         padding: 0;
+         flex-direction: row;
+      }
+      &_2 {
+         .quiz__title {
+            @media (min-width: 1025px) {
+               transform: translate(-33px, 0);
+            }
+         }
+         .quiz__question {
+            @media (min-width: 1025px) {
+               margin-top: -3px;
+            }
+         }
+      }
+      &_3 {
+         padding-top: 83px;
+      }
+   }
    &__left,
    &__right {
       width: 100%;
@@ -118,6 +188,49 @@
          }
       }
    }
+   &__question {
+      display: flex;
+      &_column {
+         flex-direction: row;
+         column-gap: 16px;
+         p {
+            padding: 38px 37px;
+         }
+      }
+      &_row {
+         flex-direction: column;
+         row-gap: 10px;
+         p {
+            padding: 17px 20px;
+         }
+      }
+      font-family: $ff2;
+      font-weight: 600;
+      @include fl(16, 21.79);
+      @media (min-width: 1025px) {
+         flex-direction: column;
+         @include fl(18, 24.51);
+      }
+      p {
+         width: 100%;
+         text-align: center;
+         cursor: pointer;
+         background-color: #fff;
+         border-radius: 16px;
+         // padding: 38px 37px;
+         transition: all 0.3s ease;
+         border: 2px solid #fff;
+         &:not(:last-child) {
+            // margin-bottom: 20px;
+         }
+         @media (min-width: 1025px) {
+            text-align: left;
+         }
+         &.active {
+            border-color: #8172dd;
+         }
+      }
+   }
    &__title {
       font-weight: 500;
       @include fl(24, 28.94);
@@ -151,6 +264,7 @@
       }
    }
    &__circle {
+      cursor: pointer;
       position: absolute;
       top: 50%;
       right: 12px;
@@ -164,6 +278,10 @@
       justify-content: center;
       z-index: 1;
       background-color: $orange;
+      transition: all 0.3s ease;
+      &:hover {
+         transform: translate(0, -50%) scale(1.1);
+      }
       i {
          color: #fff;
          font-size: 12px;
@@ -196,44 +314,64 @@
       padding-left: 40px;
       background-color: #fff;
       @include fl(16, 21.79);
-      @media (min-width: 1441px) {
+      @media (min-width: 1025px) {
          @include fl(18, 24.51);
       }
    }
-
-   &__footer {
-      position: absolute;
-      z-index: 1;
-      bottom: 19px;
-      left: 0;
-      width: 100%;
-      // padding-left: calc(17 / 320 * 100%);
-      padding-left: 17px;
-      // padding-right: calc(20 / 320 * 100%);
-      padding-right: 20px;
-      @media (min-width: 1025px) {
-         bottom: 29px;
-         padding-left: 29px;
-      }
-      & > div {
-         display: flex;
-         align-items: center;
-      }
-      i {
-         margin-right: 10px;
-         @media (min-width: 1025px) {
-            margin-right: 13px;
-            color: #fff;
+   &__content {
+      &_1 {
+         z-index: 9;
+         &.active {
+            z-index: 10;
          }
       }
-   }
-
-   &__back {
-      font-family: $ff2;
-      font-weight: 600;
-      @include fl(16, 21.79);
-      @media (min-width: 1441px) {
-         color: #fff;
+      &_2 {
+         z-index: 8;
+         &.active {
+            z-index: 10;
+         }
+      }
+      &_3 {
+         z-index: 17;
+         &.active {
+            z-index: 10;
+         }
+      }
+      &_4 {
+         z-index: 6;
+         &.active {
+            z-index: 10;
+         }
+      }
+      &_5 {
+         z-index: 5;
+         &.active {
+            z-index: 10;
+         }
+      }
+      &_6 {
+         z-index: 4;
+         &.active {
+            z-index: 10;
+         }
+      }
+      &_7 {
+         z-index: 3;
+         &.active {
+            z-index: 10;
+         }
+      }
+      &_8 {
+         z-index: 2;
+         &.active {
+            z-index: 10;
+         }
+      }
+      &_9 {
+         z-index: 1;
+         &.active {
+            z-index: 10;
+         }
       }
    }
 }

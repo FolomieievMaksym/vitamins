@@ -75,14 +75,26 @@ window.addEventListener("load", () => {
       }
    }
 
-   body.addEventListener("click", switchQuiz);
+   body.addEventListener("click", quiz);
 
-   function switchQuiz(e) {
+   function quiz(e) {
       if (e.target.innerHTML == "Take the quiz") {
          qs(".quiz").classList.add("active");
          body.classList.add("lock");
       }
-      // }
+   }
+   body.addEventListener("mousedown", borderAdd);
+
+   function borderAdd(e) {
+      if (e.target.closest(".quiz__question p")) {
+         e.target.classList.add("active");
+         body.addEventListener("mouseup", borderRemove);
+         function borderRemove(e) {
+            qa(".quiz__question p").forEach((el) => {
+               el.classList.remove("active");
+            });
+         }
+      }
    }
 
    //Sign-up.html
