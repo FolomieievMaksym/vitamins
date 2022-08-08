@@ -58,6 +58,7 @@
       }
       i {
          margin-right: 10px;
+         color: #8172dd;
          @media (min-width: 1025px) {
             margin-right: 13px;
             color: #fff;
@@ -139,7 +140,10 @@
    }
    &__steps {
       width: 100%;
-      padding: 48px 0;
+      padding: 35px 0;
+      @media (min-width: 1025px) {
+         padding: 0;
+      }
    }
    &__step {
       display: flex;
@@ -163,10 +167,75 @@
          }
       }
       &_3 {
-         // padding-top: 43px;
+         @media (min-width: 1025px) {
+            .padding30 {
+               padding-top: 30px;
+               padding-bottom: 30px;
+               padding-right: 40px;
+            }
+            .quiz__right {
+               & > div {
+                  margin-top: 0px;
+               }
+            }
+         }
+      }
+      &_4 {
+         margin-top: -9px; // ! УДАЛИТЬ
+         margin-bottom: -9px; // ! УДАЛИТЬ
+         @media (min-width: 1025px) {
+            margin: 0;
+            .quiz__right {
+               padding-top: 14px;
+            }
+         }
+      }
+      &_5 {
+         @media (min-width: 1025px) {
+            .quiz__right {
+               padding-top: 14px;
+            }
+         }
+      }
+      &_6 {
+         @media (min-width: 1025px) {
+            .quiz__right {
+               padding-top: 14px;
+            }
+         }
+      }
+      &_7 {
+         @media (min-width: 1025px) {
+            .quiz__right {
+               padding-top: 14px;
+            }
+         }
+      }
+      &_8 {
+         @media (max-width: 374px) {
+            padding-top: 13px;
+         }
+         @media (min-width: 1025px) {
+            .quiz__right {
+               padding-top: 14px;
+               & > * {
+                  max-width: 680px;
+               }
+            }
+         }
+         p.active {
+            border-color: #fff !important;
+         }
+      }
+      &_9 {
+         .quiz__title {
+            @media (min-width: 569px) {
+               max-width: 503px;
+            }
+         }
       }
       display: none;
-      &_3 {
+      &_7 {
          display: flex;
       }
       &.active {
@@ -213,8 +282,8 @@
       }
    }
    &__question {
-      display: flex;
       &_column {
+         display: flex;
          flex-direction: row;
          column-gap: 16px;
          p {
@@ -225,10 +294,43 @@
          }
       }
       &_row {
+         display: flex;
          flex-direction: column;
          row-gap: 10px;
          p {
             padding: 17px 20px;
+         }
+         @media (min-width: 1025px) {
+            row-gap: 20px;
+            p {
+               padding: 38px 37px;
+            }
+         }
+      }
+      &_grid {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         column-gap: 16px;
+         row-gap: 10px;
+         div {
+            min-height: 104px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 10px;
+            @media (min-width: 375px) {
+               padding: 10px 18px;
+            }
+            @media (min-width: 1025px) {
+               border-radius: 16px;
+               padding: 20px 40px;
+            }
+         }
+
+         @media (min-width: 1025px) {
+            row-gap: 20px;
          }
       }
       font-family: $ff2;
@@ -243,12 +345,20 @@
          text-align: center;
          cursor: pointer;
          background-color: #fff;
-         border-radius: 16px;
          // padding: 38px 37px;
          transition: all 0.3s ease;
          border: 2px solid #fff;
+         border-radius: 10px;
          @media (min-width: 1025px) {
+            border-radius: 16px;
             text-align: left;
+         }
+         transition: all 0.3s ease;
+         &:hover {
+            transform: scale(1.1);
+            @media (max-width: 568px) {
+               transform: scale(1.05);
+            }
          }
          &.active {
             border-color: #8172dd;
