@@ -31,3 +31,14 @@ body {
 main {
    flex: 1 1 auto;
 }
+
+.decor-circle {
+   border-radius: 50%;
+   position: absolute;
+   &_o {
+      background-color: #ffca78;
+   }
+   &_r {
+      background-color: #f7906e;
+   }
+}

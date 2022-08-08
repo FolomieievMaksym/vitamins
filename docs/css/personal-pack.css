@@ -442,6 +442,19 @@ main {
   flex: 1 1 auto;
 }
 
+.decor-circle {
+  border-radius: 50%;
+  position: absolute;
+}
+
+.decor-circle_o {
+  background-color: #ffca78;
+}
+
+.decor-circle_r {
+  background-color: #f7906e;
+}
+
 .header .menu__title {
   font-weight: 500;
   font-size: 1.25em;
@@ -1176,6 +1189,8 @@ body.catalog .card__summ {
 }
 
 .quiz__question {
+  position: relative;
+  z-index: 2;
   font-family: "OpenSans";
   font-weight: 600;
   font-size: 1em;
@@ -1307,14 +1322,12 @@ body.catalog .card__summ {
   line-height: 1.361875;
 }
 
-.quiz {
-  z-index: 111;
-  pointer-events: all;
-  opacity: 1;
+.quiz__right .decor-circle {
+  display: none;
 }
 
-.quiz__step_1 {
-  display: flex;
+.quiz__right svg {
+  display: none;
 }
 
 main.subscriptions [class*=__subtitle-s] {
@@ -1562,7 +1575,7 @@ main.subscriptions .card__title {
     margin-top: -15px;
   }
 
-  .quiz__right p {
+  .quiz__right p:not(.quiz__right > p) {
     width: 100%;
   }
 
@@ -1632,6 +1645,174 @@ main.subscriptions .card__title {
     font-size: 1.125em;
     line-height: 1.3616666667;
   }
+
+  .quiz__step_1 .quiz__title {
+    transform: translate(0, 15px);
+  }
+
+  .quiz__step_1 .decor-circle {
+    width: 156px;
+    height: 156px;
+    top: 13.6470588235%;
+    left: 5.1111111111%;
+  }
+
+  .quiz__step_1 svg {
+    top: 63.8823529412%;
+    right: 1.1111111111%;
+  }
+
+  .quiz__step_2 .quiz__title {
+    transform: translate(-32px, 16px);
+  }
+
+  .quiz__step_2 .decor-circle {
+    width: 85px;
+    height: 85px;
+    top: 74.2352941176%;
+    left: 79.6666666667%;
+  }
+
+  .quiz__step_2 svg {
+    top: 12.7058823529%;
+    left: 7.8888888889%;
+  }
+
+  .quiz__step_3 .quiz__title {
+    transform: translate(-1px, 16px);
+  }
+
+  .quiz__step_3 .decor-circle {
+    width: 155px;
+    height: 155px;
+    top: 12.4705882353%;
+    left: 67.8888888889%;
+  }
+
+  .quiz__step_3 svg {
+    top: 68.9411764706%;
+    left: 10%;
+  }
+
+  .quiz__step_4 .quiz__title {
+    transform: translate(-1px, 16px);
+  }
+
+  .quiz__step_4 .decor-circle {
+    width: 177px;
+    height: 177px;
+    top: 66.4705882353%;
+    left: 11.4444444444%;
+  }
+
+  .quiz__step_4 svg {
+    top: 0;
+    left: 63.6666666667%;
+  }
+
+  .quiz__step_5 {
+    overflow: hidden;
+  }
+
+  .quiz__step_5 .quiz__title {
+    transform: translate(-1px, 16px);
+  }
+
+  .quiz__step_5 .decor-circle {
+    width: 308px;
+    height: 308px;
+    top: 47.2941176471%;
+    left: 87.6666666667%;
+  }
+
+  .quiz__step_5 svg {
+    top: 15.0588235294%;
+    left: 8.3333333333%;
+  }
+
+  .quiz__step_6 .quiz__title {
+    transform: translate(-1px, 16px);
+  }
+
+  .quiz__step_6 .decor-circle {
+    width: 154px;
+    height: 154px;
+    top: 18.9411764706%;
+    left: 70.2222222222%;
+  }
+
+  .quiz__step_6 svg {
+    top: 73.6470588235%;
+    left: 5.6666666667%;
+  }
+
+  .quiz__step_7 .quiz__title {
+    transform: translate(-1px, 16px);
+  }
+
+  .quiz__step_7 .decor-circle {
+    width: 113px;
+    height: 113px;
+    top: 77.0588235294%;
+    left: 11.4444444444%;
+  }
+
+  .quiz__step_7 svg {
+    top: 12.1176470588%;
+    left: 76.4444444444%;
+  }
+
+  .quiz__step_8 .quiz__title {
+    transform: translate(-1px, 16px);
+  }
+
+  .quiz__step_8 .decor-circle {
+    width: 148px;
+    height: 148px;
+    top: 76.4705882353%;
+    left: 77.2222222222%;
+  }
+
+  .quiz__step_8 svg {
+    top: 17.0588235294%;
+    left: 4.2222222222%;
+  }
+
+  .quiz__step_9 .quiz__title {
+    transform: translate(-1px, 16px);
+  }
+
+  .quiz__step_9 .decor-circle {
+    width: 156px;
+    height: 156px;
+    top: 13.6470588235%;
+    left: 5.1111111111%;
+  }
+
+  .quiz__step_9 svg {
+    top: 63.8823529412%;
+    right: 1.1111111111%;
+  }
+
+  .quiz__right {
+    position: relative;
+  }
+
+  .quiz__right .decor-circle {
+    display: block;
+    z-index: 0;
+  }
+
+  .quiz__right svg {
+    display: block;
+    position: absolute;
+    z-index: 0;
+  }
+
+  .quiz__title {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 @media (min-width: 1441px) {
@@ -1664,6 +1845,10 @@ main.subscriptions .card__title {
   .quiz__title {
     font-size: 4em;
     line-height: 1.2059375;
+  }
+
+  .quiz__title {
+    padding: 0;
   }
 
   main.subscriptions [class*=__title] {
