@@ -14,14 +14,13 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      position: absolute;
+      position: relative;
       z-index: 111;
       top: 15px;
       left: 0;
       width: 100%;
-      padding-left: 17px;
-      padding-right: 20px;
       @media (min-width: 1025px) {
+         position: absolute;
          top: 28px;
          padding-left: 28px;
          padding-right: 36px;
@@ -29,19 +28,18 @@
    }
 
    &__footer {
-      position: absolute;
+      position: relative;
       z-index: 111;
       bottom: 19px;
       // top: 100%;
       bottom: 0;
       left: 0;
       width: 100%;
-      padding-left: 17px;
-      padding-right: 20px;
       background-color: #faf8f6;
       min-height: 41px;
       @media (min-width: 1025px) {
-         bottom: 29px;
+         position: absolute;
+         min-height: 51px;
          padding-left: 29px;
          background-color: transparent;
       }
@@ -50,6 +48,10 @@
          display: inline-flex;
          align-items: center;
          transition: all 0.3s ease;
+         margin-left: -3px;
+         @media (min-width: 1025px) {
+            margin-left: 0;
+         }
          &:hover {
             transform: scale(1.05);
          }
@@ -83,10 +85,12 @@
    &__logo {
       font-size: 40px;
       transition: all 0.3s ease;
+      margin-left: -3px;
       &:hover {
          transform: scale(1.1);
       }
       @media (min-width: 1025px) {
+         margin-left: 0;
          font-size: 55px;
          .path1:before,
          .path2:before,
@@ -114,11 +118,11 @@
       z-index: 1;
       padding-left: calc(20 / 320 * 100%);
       padding-right: calc(20 / 320 * 100%);
-      padding-top: 50px;
-      padding-bottom: 50px;
+      // padding-top: 50px;
+      // padding-bottom: 50px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       min-width: 100vw;
       min-height: 100vh;
@@ -129,6 +133,18 @@
          padding-left: calc(20 / 375 * 100%);
          padding-right: calc(20 / 375 * 100%);
       }
+      @media (min-width: 1025px) {
+         padding: 0;
+      }
+   }
+   &__steps {
+      width: 100%;
+   }
+   &__step {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       @media (min-width: 1025px) {
          padding: 0;
          flex-direction: row;
@@ -147,6 +163,13 @@
       }
       &_3 {
          padding-top: 83px;
+      }
+      display: none;
+      &_3 {
+         display: flex;
+      }
+      &.active {
+         display: flex;
       }
    }
    &__left,
@@ -196,6 +219,9 @@
          p {
             padding: 38px 37px;
          }
+         @media (min-width: 1025px) {
+            row-gap: 20px;
+         }
       }
       &_row {
          flex-direction: column;
@@ -220,9 +246,6 @@
          // padding: 38px 37px;
          transition: all 0.3s ease;
          border: 2px solid #fff;
-         &:not(:last-child) {
-            // margin-bottom: 20px;
-         }
          @media (min-width: 1025px) {
             text-align: left;
          }
@@ -316,62 +339,6 @@
       @include fl(16, 21.79);
       @media (min-width: 1025px) {
          @include fl(18, 24.51);
-      }
-   }
-   &__content {
-      &_1 {
-         z-index: 9;
-         &.active {
-            z-index: 10;
-         }
-      }
-      &_2 {
-         z-index: 8;
-         &.active {
-            z-index: 10;
-         }
-      }
-      &_3 {
-         z-index: 17;
-         &.active {
-            z-index: 10;
-         }
-      }
-      &_4 {
-         z-index: 6;
-         &.active {
-            z-index: 10;
-         }
-      }
-      &_5 {
-         z-index: 5;
-         &.active {
-            z-index: 10;
-         }
-      }
-      &_6 {
-         z-index: 4;
-         &.active {
-            z-index: 10;
-         }
-      }
-      &_7 {
-         z-index: 3;
-         &.active {
-            z-index: 10;
-         }
-      }
-      &_8 {
-         z-index: 2;
-         &.active {
-            z-index: 10;
-         }
-      }
-      &_9 {
-         z-index: 1;
-         &.active {
-            z-index: 10;
-         }
       }
    }
 }

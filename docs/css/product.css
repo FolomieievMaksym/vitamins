@@ -1098,24 +1098,20 @@ body.product [class*=__title] {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
+  position: relative;
   z-index: 111;
   top: 15px;
   left: 0;
   width: 100%;
-  padding-left: 17px;
-  padding-right: 20px;
 }
 
 .quiz__footer {
-  position: absolute;
+  position: relative;
   z-index: 111;
   bottom: 19px;
   bottom: 0;
   left: 0;
   width: 100%;
-  padding-left: 17px;
-  padding-right: 20px;
   background-color: #faf8f6;
   min-height: 41px;
 }
@@ -1125,6 +1121,7 @@ body.product [class*=__title] {
   display: inline-flex;
   align-items: center;
   transition: all 0.3s ease;
+  margin-left: -3px;
 }
 
 .quiz__footer > div:hover {
@@ -1154,6 +1151,7 @@ body.product [class*=__title] {
 .quiz__logo {
   font-size: 40px;
   transition: all 0.3s ease;
+  margin-left: -3px;
 }
 
 .quiz__logo:hover {
@@ -1175,18 +1173,36 @@ body.product [class*=__title] {
   z-index: 1;
   padding-left: 6.25%;
   padding-right: 6.25%;
-  padding-top: 50px;
-  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   min-width: 100vw;
   min-height: 100vh;
 }
 
-.quiz__content_3 {
+.quiz__steps {
+  width: 100%;
+}
+
+.quiz__step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.quiz__step_3 {
   padding-top: 83px;
+}
+
+.quiz__step_3 {
+  display: flex;
+}
+
+.quiz__step.active {
+  display: flex;
 }
 
 .quiz__left,
@@ -1306,78 +1322,6 @@ body.product [class*=__title] {
   line-height: 1.361875;
 }
 
-.quiz__content_1 {
-  z-index: 9;
-}
-
-.quiz__content_1.active {
-  z-index: 10;
-}
-
-.quiz__content_2 {
-  z-index: 8;
-}
-
-.quiz__content_2.active {
-  z-index: 10;
-}
-
-.quiz__content_3 {
-  z-index: 17;
-}
-
-.quiz__content_3.active {
-  z-index: 10;
-}
-
-.quiz__content_4 {
-  z-index: 6;
-}
-
-.quiz__content_4.active {
-  z-index: 10;
-}
-
-.quiz__content_5 {
-  z-index: 5;
-}
-
-.quiz__content_5.active {
-  z-index: 10;
-}
-
-.quiz__content_6 {
-  z-index: 4;
-}
-
-.quiz__content_6.active {
-  z-index: 10;
-}
-
-.quiz__content_7 {
-  z-index: 3;
-}
-
-.quiz__content_7.active {
-  z-index: 10;
-}
-
-.quiz__content_8 {
-  z-index: 2;
-}
-
-.quiz__content_8.active {
-  z-index: 10;
-}
-
-.quiz__content_9 {
-  z-index: 1;
-}
-
-.quiz__content_9.active {
-  z-index: 10;
-}
-
 body.product .products__title {
   font-weight: 500;
   font-size: 1.25em;
@@ -1489,15 +1433,21 @@ body.product .card__summ {
   }
 
   .quiz__header {
+    position: absolute;
     top: 28px;
     padding-left: 28px;
     padding-right: 36px;
   }
 
   .quiz__footer {
-    bottom: 29px;
+    position: absolute;
+    min-height: 51px;
     padding-left: 29px;
     background-color: transparent;
+  }
+
+  .quiz__footer > div {
+    margin-left: 0;
   }
 
   .quiz__footer i {
@@ -1510,6 +1460,7 @@ body.product .card__summ {
   }
 
   .quiz__logo {
+    margin-left: 0;
     font-size: 55px;
   }
 
@@ -1521,14 +1472,18 @@ body.product .card__summ {
 
   .quiz__content {
     padding: 0;
+  }
+
+  .quiz__step {
+    padding: 0;
     flex-direction: row;
   }
 
-  .quiz__content_2 .quiz__title {
+  .quiz__step_2 .quiz__title {
     transform: translate(-33px, 0);
   }
 
-  .quiz__content_2 .quiz__question {
+  .quiz__step_2 .quiz__question {
     margin-top: -3px;
   }
 
@@ -1555,6 +1510,10 @@ body.product .card__summ {
 
   .quiz__right p {
     width: 100%;
+  }
+
+  .quiz__question_column {
+    row-gap: 20px;
   }
 
   .quiz__question {
