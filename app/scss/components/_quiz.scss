@@ -139,6 +139,7 @@
    }
    &__steps {
       width: 100%;
+      padding: 48px 0;
    }
    &__step {
       display: flex;
@@ -162,7 +163,7 @@
          }
       }
       &_3 {
-         padding-top: 83px;
+         // padding-top: 43px;
       }
       display: none;
       &_3 {

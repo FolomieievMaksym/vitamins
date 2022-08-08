@@ -1267,6 +1267,7 @@ body.hide-content .top-buttons {
 
 .quiz__steps {
   width: 100%;
+  padding: 48px 0;
 }
 
 .quiz__step {
@@ -1275,10 +1276,6 @@ body.hide-content .top-buttons {
   justify-content: center;
   align-items: center;
   display: none;
-}
-
-.quiz__step_3 {
-  padding-top: 83px;
 }
 
 .quiz__step_3 {

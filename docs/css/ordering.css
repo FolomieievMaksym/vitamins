@@ -1183,6 +1183,7 @@ input::placeholder {
 
 .quiz__steps {
   width: 100%;
+  padding: 48px 0;
 }
 
 .quiz__step {
@@ -1191,10 +1192,6 @@ input::placeholder {
   justify-content: center;
   align-items: center;
   display: none;
-}
-
-.quiz__step_3 {
-  padding-top: 83px;
 }
 
 .quiz__step_3 {
