@@ -1405,6 +1405,10 @@ body.pass-recovery .account-footer__decor:after {
   line-height: 1.361875;
 }
 
+.quiz__right {
+  overflow: hidden;
+}
+
 .quiz__right .decor-circle {
   display: none;
 }
