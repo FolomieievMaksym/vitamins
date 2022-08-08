@@ -1288,6 +1288,16 @@ input::placeholder {
   line-height: 1.361875;
 }
 
+.quiz {
+  z-index: 111;
+  pointer-events: all;
+  opacity: 1;
+}
+
+.quiz__step_1 {
+  display: flex;
+}
+
 body.subscriptions .header {
   padding-top: 2px;
 }

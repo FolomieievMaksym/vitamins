@@ -1307,6 +1307,16 @@ body.catalog .card__summ {
   line-height: 1.361875;
 }
 
+.quiz {
+  z-index: 111;
+  pointer-events: all;
+  opacity: 1;
+}
+
+.quiz__step_1 {
+  display: flex;
+}
+
 main.subscriptions [class*=__subtitle-s] {
   font-weight: 500;
   font-size: 1.25em;

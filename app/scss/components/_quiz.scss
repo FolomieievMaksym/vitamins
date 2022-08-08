@@ -450,3 +450,15 @@
       }
    }
 }
+.quiz {
+   z-index: 111;
+   pointer-events: all;
+   opacity: 1;
+   &__step {
+      &_1 {
+         display: flex;
+      }
+   }
+   &__right {
+   }
+}

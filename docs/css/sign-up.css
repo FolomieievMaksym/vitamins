@@ -1535,6 +1535,16 @@ body.pass-recovery .account-footer__decor:after {
   line-height: 1.361875;
 }
 
+.quiz {
+  z-index: 111;
+  pointer-events: all;
+  opacity: 1;
+}
+
+.quiz__step_1 {
+  display: flex;
+}
+
 body.sign-up .hero {
   padding-top: 49px;
   padding-bottom: 38px;
