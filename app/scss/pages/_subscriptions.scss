@@ -46,6 +46,15 @@ body.subscriptions {
          }
          &:last-of-type {
             margin-bottom: 30px;
+            @media (min-width: 769px) {
+               margin-bottom: 50px;
+            }
+            @media (min-width: 1025px) {
+               margin-bottom: 70px;
+            }
+            @media (min-width: 1441px) {
+               margin-bottom: 101px;
+            }
          }
          @media (min-width: 1025px) {
             @include fl(16, 28);
