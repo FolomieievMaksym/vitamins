@@ -1162,10 +1162,6 @@ body.catalog .card__summ {
   border-color: #fff !important;
 }
 
-.quiz__step_7 {
-  display: flex;
-}
-
 .quiz__step.active {
   display: flex;
 }

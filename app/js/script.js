@@ -78,11 +78,62 @@ window.addEventListener("load", () => {
    body.addEventListener("click", quiz);
 
    function quiz(e) {
+      let steps = qa(".quiz__step");
+      let backButton = qs(".quiz__footer > div");
       if (e.target.innerHTML == "Take the quiz") {
          qs(".quiz").classList.add("active");
+         steps[0].classList.add("active");
          body.classList.add("lock");
       }
+      if (e.target.closest(".quiz__footer > div")) {
+         qs(".quiz").classList.remove("active");
+         qs(".quiz__pages").innerHTML = "1/9";
+         body.classList.remove("lock");
+         steps.forEach((el) => {
+            el.classList.remove("active");
+         });
+      } else if (e.target.closest(".quiz__pages")) {
+         if (e.target.closest(".quiz__pages").innerHTML == "1/9") {
+            steps[0].classList.remove("active");
+            steps[1].classList.add("active");
+            qs(".quiz__pages").innerHTML = "2/9";
+         } else if (e.target.closest(".quiz__pages").innerHTML == "2/9") {
+            steps[1].classList.remove("active");
+            steps[2].classList.add("active");
+            qs(".quiz__pages").innerHTML = "3/9";
+         } else if (e.target.closest(".quiz__pages").innerHTML == "3/9") {
+            steps[2].classList.remove("active");
+            steps[3].classList.add("active");
+            qs(".quiz__pages").innerHTML = "4/9";
+         } else if (e.target.closest(".quiz__pages").innerHTML == "4/9") {
+            steps[3].classList.remove("active");
+            steps[4].classList.add("active");
+            qs(".quiz__pages").innerHTML = "5/9";
+         } else if (e.target.closest(".quiz__pages").innerHTML == "5/9") {
+            steps[4].classList.remove("active");
+            steps[5].classList.add("active");
+            qs(".quiz__pages").innerHTML = "6/9";
+         } else if (e.target.closest(".quiz__pages").innerHTML == "6/9") {
+            steps[5].classList.remove("active");
+            steps[6].classList.add("active");
+            qs(".quiz__pages").innerHTML = "7/9";
+         } else if (e.target.closest(".quiz__pages").innerHTML == "7/9") {
+            steps[6].classList.remove("active");
+            steps[7].classList.add("active");
+            qs(".quiz__pages").innerHTML = "8/9";
+         } else if (e.target.closest(".quiz__pages").innerHTML == "8/9") {
+            steps[7].classList.remove("active");
+            steps[8].classList.add("active");
+            qs(".quiz__pages").innerHTML = "9/9";
+         } else if (e.target.closest(".quiz__pages").innerHTML == "9/9") {
+            steps[8].classList.remove("active");
+            qs(".quiz").classList.remove("active");
+            qs(".quiz__pages").innerHTML = "1/9";
+            body.classList.remove("lock");
+         }
+      }
    }
+
    body.addEventListener("mousedown", borderAdd);
 
    function borderAdd(e) {

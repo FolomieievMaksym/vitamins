@@ -1390,10 +1390,6 @@ body.pass-recovery .account-footer__decor:after {
   border-color: #fff !important;
 }
 
-.quiz__step_7 {
-  display: flex;
-}
-
 .quiz__step.active {
   display: flex;
 }
