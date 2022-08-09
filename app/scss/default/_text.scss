@@ -1,21 +1,21 @@
-input{
-	padding: 15px 24px 16px 24px;
-	border-radius: 12px;
-	background-color: $inputBg;
-	min-height: 56px;
-	font-family: $ff2; 
-	@include fl(18, 24.51);
-	&::placeholder {
-		font-family: $ff2;
-		@include fl(16, 24.51);
-		color: #000000;
-		opacity: 0.3;
-	}
+input {
+   padding: 15px 24px 16px 24px;
+   border-radius: 12px;
+   background-color: $inputBg;
+   min-height: 56px;
+   font-family: $ff2;
+   @include fl(18, 24.51);
+   &::placeholder {
+      font-family: $ff2;
+      @include fl(16, 24.51);
+      color: #000000;
+      opacity: 0.3;
+   }
 }
 // [class*=__title] {
 // 	font-weight: 500;
 // 	@include fl(24, 28.94);
-// 	span { 
+// 	span {
 // 		color: $orangeSpan;
 // 	}
 // 	@media (min-width: 1441px) {
@@ -28,7 +28,7 @@ input{
 // 	@media (min-width: 1441px) {
 // 	@include fl(30, 36.18);
 // 	}
-// } 
+// }
 // [class*=__link] {
 // 	@include fl(14, 16.88);
 // 	font-weight: 500;
@@ -41,21 +41,21 @@ input{
 // 	font-family: $ff2;
 // 	@include fl(12, 16.34);
 // 	font-weight: 600;
-// 	opacity: 0.7; 
+// 	opacity: 0.7;
 // 	@media (min-width: 1441px) {
 // 		@include fl(14, 19.07);
 // 	}
-// 	&.purpleLabel {
-// 		color: $purpleLabel
-// 	}
-// 	&.mintLabel {
-// 		color: $mintLabel;
-// 	}
+// &.purpleLabel {
+//    color: $purpleLabel;
+// }
+// &.mintLabel {
+//    color: $mintLabel;
+// }
 // }
 // .card__sublabel {//profile
 // 	font-family: $ff2;
 // 	@include fl(14, 19.07);
-// 	opacity: 0.7; 
+// 	opacity: 0.7;
 // 	@media (min-width: 1441px) {
 // 		@include fl(16, 21.79);
 // 	}
@@ -87,9 +87,7 @@ input{
 // Home
 // =========================================================================
 
-[class*=card__text ] {
-
-	@media (min-width: 1441px) {
-	
-	}
+[class*="card__text"] {
+   @media (min-width: 1441px) {
+   }
 }
