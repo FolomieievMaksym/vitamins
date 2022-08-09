@@ -1414,6 +1414,10 @@ input::placeholder {
   background-color: #8172dd;
 }
 
+.banner__slide_1 .banner__slide-body svg:last-of-type {
+  display: none;
+}
+
 .banner__slide_1 .banner__sublabel {
   display: none;
 }
@@ -1459,10 +1463,6 @@ input::placeholder {
   right: 0;
 }
 
-.banner__slide-body svg:last-of-type {
-  display: none;
-}
-
 .banner__content {
   color: #fff;
   text-align: center;
@@ -1506,6 +1506,35 @@ input::placeholder {
   object-fit: contain;
 }
 
+.banner .swiper-button-next,
+.banner .swiper-button-prev {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.banner .swiper-button-next:after,
+.banner .swiper-button-prev:after {
+  color: #000;
+  font-size: 16px;
+}
+
+.banner .swiper-pagination {
+  bottom: 30px !important;
+  left: 0;
+}
+
+.banner .swiper-pagination span {
+  background-color: #fff;
+}
+
+.banner .swiper-pagination span:not(:last-child) {
+  margin-right: 20px;
+}
+
 body.catalog .card__title {
   font-weight: 400;
   font-size: 1em;
@@ -1517,12 +1546,6 @@ body.catalog .card__summ {
   font-weight: 700;
   font-size: 1em;
   line-height: 1.361875;
-}
-
-@media (min-width: 321px) {
-  .banner__slide-body {
-    border-radius: 20px;
-  }
 }
 
 @media (min-width: 375px) {
@@ -1542,6 +1565,12 @@ body.catalog .card__summ {
 
   .quiz__question_grid div {
     padding: 10px 18px;
+  }
+}
+
+@media (min-width: 376px) {
+  .banner__slide-body {
+    border-radius: 20px;
   }
 }
 
@@ -1760,6 +1789,10 @@ body.catalog .card__summ {
   .banner__image img {
     -o-object-fit: cover;
     object-fit: cover;
+  }
+
+  .banner .swiper-pagination {
+    display: none;
   }
 }
 
@@ -2243,7 +2276,7 @@ body.catalog .card__summ {
     pointer-events: none;
   }
 
-  .banner__slide-body svg:last-of-type {
+  .banner__slide_1 .banner__slide-body svg:last-of-type {
     display: block;
     position: absolute;
     top: 72.6694915254%;
@@ -2274,6 +2307,16 @@ body.catalog .card__summ {
   .banner__text {
     font-size: 1.125em;
     line-height: 1.3616666667;
+  }
+}
+
+@media (min-width: 1399px) {
+  .banner .swiper-button-next {
+    right: 9.3333333333%;
+  }
+
+  .banner .swiper-button-prev {
+    left: 9.3333333333%;
   }
 }
 
@@ -2349,6 +2392,13 @@ body.catalog .card__summ {
   }
 }
 
+@media (max-width: 1000px) {
+  .banner .swiper-button-next,
+  .banner .swiper-button-prev {
+    display: none;
+  }
+}
+
 @media (max-width: 999px) {
   .banner .btn {
     width: auto;
@@ -2368,6 +2418,7 @@ body.catalog .card__summ {
 
   .banner__slide-body {
     max-width: 320px;
+    max-width: 375px;
   }
 
   .banner__content {

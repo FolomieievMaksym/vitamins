@@ -212,11 +212,16 @@ window.addEventListener("load", () => {
          slideToClickedSlide: true,
          slidesPerView: 1,
          spaceBetween: 15,
+         navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+         },
+         pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+         },
          breakpoints: {
-            321: {
-               slidesPerView: 1.1,
-            },
-            370: {
+            376: {
                slidesPerView: 1.2,
             },
             400: {

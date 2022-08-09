@@ -43,6 +43,17 @@
                      right: calc(-694 / 1396 * 100%);
                   }
                }
+
+               svg:last-of-type {
+                  display: none;
+                  @media (min-width: 1025px) {
+                     display: block;
+                     position: absolute;
+                     top: calc(343 / 472 * 100%);
+                     left: calc(476 / 1396 * 100%);
+                     // top: 343px;
+                  }
+               }
             }
             &__content {
                @media (max-width: 999px) {
@@ -171,16 +182,6 @@
             right: calc(-281 / 1396 * 100%);
          }
       }
-      svg:last-of-type {
-         display: none;
-         @media (min-width: 1025px) {
-            display: block;
-            position: absolute;
-            top: calc(343 / 472 * 100%);
-            left: calc(476 / 1396 * 100%);
-            // top: 343px;
-         }
-      }
       .decor-circle {
          @media (min-width: 1000px) {
             left: 826px;
@@ -189,11 +190,12 @@
             height: 100px;
          }
       }
-      @media (min-width: 321px) {
+      @media (min-width: 376px) {
          border-radius: 20px;
       }
       @media (max-width: 999px) {
          max-width: 320px;
+         max-width: 375px;
       }
       @media (min-width: 1000px) {
          width: 100%;
@@ -325,6 +327,45 @@
          @media (min-width: 1000px) {
             object-fit: cover;
          }
+      }
+   }
+   .swiper-button-next,
+   .swiper-button-prev {
+      @media (max-width: 1000px) {
+         display: none;
+      }
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: #fff;
+      cursor: pointer;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+      &:after {
+         color: #000;
+         font-size: 16px;
+      }
+   }
+   .swiper-button-next {
+      @media (min-width: 1399px) {
+         right: calc(168 / 1800 * 100%);
+      }
+   }
+   .swiper-button-prev {
+      @media (min-width: 1399px) {
+         left: calc(168 / 1800 * 100%);
+      }
+   }
+   .swiper-pagination {
+      bottom: 30px !important;
+      left: 0;
+      span {
+         background-color: #fff;
+         &:not(:last-child) {
+            margin-right: 20px;
+         }
+      }
+      @media (min-width: 1000px) {
+         display: none;
       }
    }
 }
