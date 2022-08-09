@@ -8,12 +8,23 @@
       color: #000;
       background-color: #fff;
       border-color: #fff;
-      max-width: 255px;
-      min-height: 65px;
+      display: inline-block;
+      // max-width: 166px;
+      @media (max-width: 1000px) {
+         width: auto;
+         margin: 0 auto;
+         padding-left: 30.5px;
+         padding-right: 30.5px;
+         height: 50px;
+      }
+      @media (min-width: 1000px) {
+         max-width: 255px;
+         min-height: 65px;
+      }
    }
    // padding-left: 202px;
    padding-top: 70px;
-   @media (min-width: 1025px) {
+   @media (min-width: 1000px) {
       padding-top: 100px;
    }
    &__slider {
@@ -22,23 +33,42 @@
    &__slide {
       pointer-events: all;
       &_1 {
+         .btn {
+            @media (max-width: 1000px) {
+               // max-width: 154px;
+               // padding-left: 20px;
+               // padding-right: 20px;
+            }
+         }
          .banner {
             &__slide-body {
                background-color: #8172dd;
+            }
+            &__content {
+               @media (max-width: 1000px) {
+                  margin-top: -64px;
+               }
             }
             &__sublabel {
                display: none;
             }
             &__images {
-               height: 100%;
-               width: calc(970 / 1396 * 100%);
+               @media (min-width: 1000px) {
+                  height: 100%;
+                  width: calc(970 / 1396 * 100%);
+               }
             }
 
             &__image {
-               position: absolute;
-               top: -14px;
-               width: 100%;
-               height: 100%;
+               padding-bottom: calc(259 / 320 * 100%);
+               top: -61px;
+               @media (min-width: 1000px) {
+                  // position: absolute;
+                  padding-bottom: 0;
+                  top: -14px;
+                  width: 100%;
+                  height: 100%;
+               }
             }
          }
       }
@@ -50,18 +80,27 @@
             }
 
             &__images {
-               height: calc(406 / 472 * 100%);
-               width: calc(363 / 1396 * 100%);
-               top: 50%;
-               transform: translate(0, -50%);
-               right: 73px;
+               @media (min-width: 1000px) {
+                  height: calc(406 / 472 * 100%);
+                  width: calc(363 / 1396 * 100%);
+                  top: 50%;
+                  transform: translate(0, -50%);
+                  right: 73px;
+               }
             }
 
             &__image {
-               position: absolute;
-               top: 9px;
-               width: 100%;
-               height: 100%;
+               padding-bottom: calc(189 / 320 * 100%);
+               top: 56%;
+               transform: translate(0, -50%);
+               @media (min-width: 1000px) {
+                  padding-bottom: 0;
+                  transform: translate(0, 0);
+                  // position: absolute;
+                  top: 9px;
+                  width: 100%;
+                  height: 100%;
+               }
             }
          }
       }
@@ -73,91 +112,179 @@
             }
 
             &__images {
-               height: calc(252 / 472 * 100%);
-               width: calc(414 / 1396 * 100%);
-               top: 50%;
-               transform: translate(0, -50%);
-               right: 35px;
+               @media (min-width: 1000px) {
+                  height: calc(252 / 472 * 100%);
+                  width: calc(414 / 1396 * 100%);
+                  top: 50%;
+                  transform: translate(0, -50%);
+                  right: 35px;
+               }
             }
 
             &__image {
-               position: absolute;
-               top: 10px;
-               width: 100%;
-               height: 100%;
+               padding-bottom: calc(117 / 320 * 100%);
+               top: 56%;
+               transform: translate(6px, -50%);
+               @media (min-width: 1000px) {
+                  padding-bottom: 0;
+                  transform: translate(0, 0);
+                  top: 10px;
+                  width: 100%;
+                  height: 100%;
+               }
             }
          }
       }
-      padding-top: calc(500 / 1800 * 100%) !important;
+      padding-bottom: calc(521 / 320 * 100%);
+      // height: 521px !important;
+      // max-height: 521px;
+      @media (min-width: 1000px) {
+         padding-bottom: 0;
+         padding-top: calc(650 / 1800 * 100%) !important;
+      }
+      @media (min-width: 1339px) {
+         padding-top: calc(500 / 1800 * 100%) !important;
+      }
    }
 
    &__slide-body {
       display: flex;
-      justify-content: space-between;
-      height: 100%;
-      height: calc(472 / 500 * 100%);
-      border-radius: 24px;
+      flex-direction: column;
       position: absolute;
       bottom: 0;
       left: 0;
+      height: 100%;
       width: 100%;
+
+      @media (min-width: 1000px) {
+         border-radius: 24px;
+         justify-content: space-between;
+         flex-direction: row;
+         height: calc(472 / 500 * 100%);
+      }
    }
 
    &__content {
-      flex: 0 0 660px;
-      padding-left: 70px;
-      padding: 30px 0 30px 70px;
       color: #fff;
-      align-self: center;
+      text-align: center;
+      order: 2;
+      @media (max-width: 1000px) {
+         padding-left: 20px;
+         padding-right: 20px;
+      }
+      @media (min-width: 1000px) {
+         order: 1;
+         align-self: center;
+         text-align: left;
+         flex: 0 0 600px;
+         padding-left: 55px;
+         padding-bottom: 30px;
+         padding-top: 30px;
+      }
+      @media (min-width: 1339px) {
+         flex: 0 0 660px;
+         padding-left: 70px;
+      }
    }
 
    &__sublabel {
       @include fl(16, 19.3);
-      @media (min-width: 1441px) {
-         @include fl(20, 24.12);
+      margin-bottom: 11px;
+      @media (min-width: 569px) {
+         @include fl(17, 20);
+      }
+      @media (min-width: 769px) {
+         @include fl(18, 21);
+      }
+      @media (min-width: 1000px) {
+         @include fl(19, 22);
+
          margin-bottom: 15px;
+      }
+      @media (min-width: 1339px) {
+         @include fl(20, 24.12);
       }
    }
 
    &__title {
       font-weight: 500;
       @include fl(24, 28.94);
-      max-width: 660px;
-      @media (min-width: 1441px) {
-         @include fl(50, 60.3);
+      margin-bottom: 15px;
+      @media (min-width: 569px) {
+         @include fl(30, 37);
+      }
+      @media (min-width: 769px) {
+         @include fl(36, 45);
+      }
+      @media (min-width: 1000px) {
+         max-width: 660px;
+         @include fl(42, 53);
          margin-bottom: 20px;
+      }
+      @media (min-width: 1339px) {
+         @include fl(50, 60.3);
       }
    }
 
    &__text {
       font-family: $ff2;
       @include fl(14, 19.07);
-      max-width: 440px;
       opacity: 0.7;
-      @media (min-width: 1441px) {
-         @include fl(18, 24.51);
+      margin-bottom: 20px;
+      @media (min-width: 569px) {
+         @include fl(15, 20);
+      }
+      @media (min-width: 769px) {
+         @include fl(16, 21);
+      }
+      @media (min-width: 1000px) {
+         max-width: 440px;
+         @include fl(17, 22);
          margin-bottom: 30px;
+      }
+      @media (min-width: 1339px) {
+         @include fl(18, 24.51);
       }
    }
 
    &__images {
-      flex: 1 1 auto;
-      position: absolute;
-      bottom: 0;
-      right: 0;
+      @media (max-width: 1000px) {
+         order: 1;
+         position: relative;
+         top: 0;
+         left: 0;
+         width: 100%;
+         padding-bottom: calc(240 / 320 * 100%);
+         margin-bottom: 20px;
+      }
+      @media (min-width: 1000px) {
+         order: 2;
+         flex: 1 1 auto;
+         position: absolute;
+         bottom: 0;
+         right: 0;
+      }
    }
 
    &__image {
       position: absolute;
-      bottom: 0;
-      right: 0;
+      top: 0;
+      left: 0;
+      @media (max-width: 1000px) {
+         position: absolute;
+         bottom: 0;
+         right: 0;
+      }
       img {
          position: absolute;
          top: 0;
          left: 0;
          width: 100%;
          height: 100%;
-         object-fit: cover;
+         object-fit: contain;
+         @media (min-width: 1000px) {
+            object-fit: cover;
+         }
       }
    }
 }

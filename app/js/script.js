@@ -210,26 +210,18 @@ window.addEventListener("load", () => {
          initialSlide: 0,
          centeredSlides: true,
          slideToClickedSlide: true,
-         slidesPerView: 1.28,
-         spaceBetween: 50,
-         // breakpoints: {
-         //    992: {
-         //       slidesPerView: 3,
-         //       spaceBetween: 150,
-         //    },
-         //    1200: {
-         //       slidesPerView: 3,
-         //       spaceBetween: 180,
-         //    },
-         //    1400: {
-         //       slidesPerView: 3,
-         //       spaceBetween: 220,
-         //    },
-         //    1770: {
-         //       slidesPerView: 1,
-         //       spaceBetween: 250,
-         //    },
-         // },
+         slidesPerView: 1,
+         spaceBetween: 25,
+         breakpoints: {
+            1000: {
+               slidesPerView: 1.12,
+               spaceBetween: 30,
+            },
+            1400: {
+               slidesPerView: 1.28,
+               spaceBetween: 50,
+            },
+         },
          // navigation: {
          //    nextEl: ".swiper-button-next",
          //    prevEl: ".swiper-button-prev",
