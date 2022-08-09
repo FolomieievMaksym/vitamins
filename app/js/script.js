@@ -208,16 +208,62 @@ window.addEventListener("load", () => {
       const swiper = new Swiper(".swiper", {
          loop: true,
          initialSlide: 0,
-         centeredSlides: true,
+         // centeredSlides: false,
          slideToClickedSlide: true,
          slidesPerView: 1,
-         spaceBetween: 25,
+         spaceBetween: 15,
          breakpoints: {
+            321: {
+               slidesPerView: 1.1,
+            },
+            370: {
+               slidesPerView: 1.2,
+            },
+            400: {
+               slidesPerView: 1.3,
+               spaceBetween: 20,
+            },
+            450: {
+               slidesPerView: 1.4,
+            },
+            500: {
+               // centeredSlides: true,
+               slidesPerView: 1.5,
+            },
+            550: {
+               slidesPerView: 1.6,
+            },
+            600: {
+               slidesPerView: 1.8,
+            },
+            650: {
+               slidesPerView: 1.9,
+            },
+            700: {
+               slidesPerView: 2,
+            },
+            750: {
+               slidesPerView: 2.1,
+            },
+            800: {
+               slidesPerView: 2.2,
+            },
+            850: {
+               slidesPerView: 2.3,
+            },
+            900: {
+               slidesPerView: 2.4,
+            },
+            950: {
+               slidesPerView: 2.5,
+            },
             1000: {
+               centeredSlides: true,
                slidesPerView: 1.12,
                spaceBetween: 30,
             },
             1400: {
+               centeredSlides: true,
                slidesPerView: 1.28,
                spaceBetween: 50,
             },

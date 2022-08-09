@@ -1408,7 +1408,6 @@ input::placeholder {
 
 .banner__slide {
   pointer-events: all;
-  padding-bottom: 162.8125%;
 }
 
 .banner__slide_1 .banner__slide-body {
@@ -1420,8 +1419,8 @@ input::placeholder {
 }
 
 .banner__slide_1 .banner__image {
-  padding-bottom: 80.9375%;
-  top: -61px;
+  height: 259px;
+  top: -41px;
 }
 
 .banner__slide_2 .banner__slide-body {
@@ -1429,7 +1428,7 @@ input::placeholder {
 }
 
 .banner__slide_2 .banner__image {
-  padding-bottom: 59.0625%;
+  height: 189px;
   top: 56%;
   transform: translate(0, -50%);
 }
@@ -1439,7 +1438,7 @@ input::placeholder {
 }
 
 .banner__slide_3 .banner__image {
-  padding-bottom: 36.5625%;
+  height: 117px;
   top: 56%;
   transform: translate(6px, -50%);
 }
@@ -1451,7 +1450,17 @@ input::placeholder {
   bottom: 0;
   left: 0;
   height: 100%;
+}
+
+.banner__slide-body svg:first-of-type {
+  position: absolute;
   width: 100%;
+  top: 0;
+  right: 0;
+}
+
+.banner__slide-body svg:last-of-type {
+  display: none;
 }
 
 .banner__content {
@@ -1510,6 +1519,12 @@ body.catalog .card__summ {
   line-height: 1.361875;
 }
 
+@media (min-width: 321px) {
+  .banner__slide-body {
+    border-radius: 20px;
+  }
+}
+
 @media (min-width: 375px) {
   .header-aside {
     max-width: 375px;
@@ -1543,21 +1558,6 @@ body.catalog .card__summ {
   .quiz__right > * {
     max-width: 496px;
     margin: 0 auto;
-  }
-
-  .banner__sublabel {
-    font-size: 1.0625em;
-    line-height: 1.1764705882;
-  }
-
-  .banner__title {
-    font-size: 1.875em;
-    line-height: 1.2333333333;
-  }
-
-  .banner__text {
-    font-size: 0.9375em;
-    line-height: 1.3333333333;
   }
 }
 
@@ -1630,21 +1630,6 @@ body.catalog .card__summ {
   .menu-footer__list_2 li:nth-child(5) {
     order: 5;
   }
-
-  .banner__sublabel {
-    font-size: 1.125em;
-    line-height: 1.1666666667;
-  }
-
-  .banner__title {
-    font-size: 2.25em;
-    line-height: 1.25;
-  }
-
-  .banner__text {
-    font-size: 1em;
-    line-height: 1.3125;
-  }
 }
 
 @media (min-width: 1000px) {
@@ -1655,6 +1640,12 @@ body.catalog .card__summ {
 
   .banner {
     padding-top: 100px;
+  }
+
+  .banner__slide_1 .banner__slide-body svg:first-of-type {
+    width: 94%;
+    top: -5.7203389831%;
+    right: -49.7134670487%;
   }
 
   .banner__slide_1 .banner__images {
@@ -1706,7 +1697,22 @@ body.catalog .card__summ {
     padding-top: 36.1111111111% !important;
   }
 
+  .banner__slide-body svg:first-of-type {
+    width: 960px;
+    height: 1019px;
+    top: -47.4576271186%;
+    right: -20.1289398281%;
+  }
+
+  .banner__slide-body .decor-circle {
+    left: 826px;
+    top: -28px;
+    width: 100px;
+    height: 100px;
+  }
+
   .banner__slide-body {
+    width: 100%;
     border-radius: 24px;
     justify-content: space-between;
     flex-direction: row;
@@ -2236,6 +2242,13 @@ body.catalog .card__summ {
     z-index: 11;
     pointer-events: none;
   }
+
+  .banner__slide-body svg:last-of-type {
+    display: block;
+    position: absolute;
+    top: 72.6694915254%;
+    left: 34.0974212034%;
+  }
 }
 
 @media (min-width: 1339px) {
@@ -2336,7 +2349,7 @@ body.catalog .card__summ {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 999px) {
   .banner .btn {
     width: auto;
     margin: 0 auto;
@@ -2347,6 +2360,14 @@ body.catalog .card__summ {
 
   .banner__slide_1 .banner__content {
     margin-top: -64px;
+  }
+
+  .banner__slide {
+    height: 521px !important;
+  }
+
+  .banner__slide-body {
+    max-width: 320px;
   }
 
   .banner__content {
@@ -2360,7 +2381,7 @@ body.catalog .card__summ {
     top: 0;
     left: 0;
     width: 100%;
-    padding-bottom: 75%;
+    height: 240px;
     margin-bottom: 20px;
   }
 
