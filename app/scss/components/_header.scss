@@ -1,4 +1,9 @@
 //Text styles
+body.catalog {
+   .header:after {
+      display: none;
+   }
+}
 .header {
    .menu__title {
       font-weight: 500;

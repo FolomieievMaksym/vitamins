@@ -12,6 +12,9 @@
 @import "./default/text";
 @import "./components/btn";
 @import "./components/quiz";
+@import "./components/catalog/banner";
+@import "./components/catalog/card-item";
+@import "./components/catalog/shop-menu";
 
 //Подключение стилей конкретной страницы
 @import "./pages/catalog";

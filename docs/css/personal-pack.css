@@ -455,6 +455,10 @@ main {
   background-color: #f7906e;
 }
 
+body.catalog .header:after {
+  display: none;
+}
+
 .header .menu__title {
   font-weight: 500;
   font-size: 1.25em;
@@ -1105,12 +1109,6 @@ input::placeholder {
 
 .btn:active {
   background-color: #ff6128;
-}
-
-body.catalog [class*=__title] {
-  font-weight: 500;
-  font-size: 1.25em;
-  line-height: 1.206;
 }
 
 body.catalog .card__title {
@@ -2060,11 +2058,6 @@ main.subscriptions .card__title {
   .btn {
     height: 64px;
     font-size: 1.25em;
-    line-height: 1.206;
-  }
-
-  body.catalog [class*=__title] {
-    font-size: 1.875em;
     line-height: 1.206;
   }
 
