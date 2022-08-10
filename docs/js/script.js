@@ -206,7 +206,7 @@ window.addEventListener("load", () => {
 
    if (qs("body.catalog")) {
       const swiper = new Swiper(".swiper", {
-         loop: true,
+         // loop: true,
          initialSlide: 0,
          // centeredSlides: false,
          slideToClickedSlide: true,

@@ -74,6 +74,9 @@
                // padding-bottom: calc(259 / 320 * 100%);
                height: 259px;
                top: -41px;
+               @media (min-width: 374px) {
+                  top: -24px;
+               }
                @media (min-width: 1000px) {
                   // position: absolute;
                   padding-bottom: 0;
@@ -290,14 +293,18 @@
    }
 
    &__images {
+      @media (max-width: 374px) {
+         height: 240px;
+         margin-bottom: 8px;
+      }
       @media (max-width: 999px) {
          order: 1;
          position: relative;
          top: 0;
          left: 0;
          width: 100%;
-         height: 240px;
-         margin-bottom: 20px;
+         height: 300px;
+         margin-bottom: -8px;
       }
       @media (min-width: 1000px) {
          order: 2;

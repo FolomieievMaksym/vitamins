@@ -1762,6 +1762,10 @@ body.catalog .comments__items {
 }
 
 @media (min-width: 374px) {
+  .banner__slide_1 .banner__image {
+    top: -24px;
+  }
+
   body.catalog .card-item:nth-child(1) {
     order: 5;
   }
@@ -2984,8 +2988,8 @@ body.catalog .comments__items {
     top: 0;
     left: 0;
     width: 100%;
-    height: 240px;
-    margin-bottom: 20px;
+    height: 300px;
+    margin-bottom: -8px;
   }
 
   .banner__image {
@@ -3037,6 +3041,11 @@ body.catalog .comments__items {
 @media (max-width: 374px) {
   .quiz__step_8 {
     padding-top: 13px;
+  }
+
+  .banner__images {
+    height: 240px;
+    margin-bottom: 8px;
   }
 
   body.catalog .products .card-item:nth-child(5) {
