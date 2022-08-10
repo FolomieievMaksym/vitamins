@@ -207,7 +207,6 @@ window.addEventListener("load", () => {
    if (qs("body.catalog")) {
       const swiper = new Swiper(".banner__slider", {
          // loop: true,
-         initialSlide: 0,
          // centeredSlides: false,
          slideToClickedSlide: true,
          slidesPerView: 1,
@@ -264,6 +263,8 @@ window.addEventListener("load", () => {
             },
             1000: {
                centeredSlides: true,
+               initialSlide: 0,
+               loop: true,
                slidesPerView: 1.12,
                spaceBetween: 30,
             },
@@ -285,9 +286,7 @@ window.addEventListener("load", () => {
       });
 
       const swiperComments = new Swiper(".comments__slider", {
-         // loop: true,
          initialSlide: 0,
-         // centeredSlides: false,
          slideToClickedSlide: true,
          slidesPerView: 1.07,
          spaceBetween: 10,
@@ -303,7 +302,6 @@ window.addEventListener("load", () => {
                slidesPerView: 1.4,
             },
             500: {
-               // centeredSlides: true,
                slidesPerView: 1.5,
             },
             550: {
@@ -338,15 +336,6 @@ window.addEventListener("load", () => {
                spaceBetween: 32,
             },
          },
-         // navigation: {
-         //    nextEl: ".swiper-button-next",
-         //    prevEl: ".swiper-button-prev",
-         // },
-         // autoplay: {
-         //    delay: 4000,
-         //    stopOnLastSlide: false,
-         //    disableOnIteraction: false,
-         // },
       });
    }
 });
