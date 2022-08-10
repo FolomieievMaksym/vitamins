@@ -205,7 +205,7 @@ window.addEventListener("load", () => {
    }
 
    if (qs("body.catalog")) {
-      const swiper = new Swiper(".swiper", {
+      const swiper = new Swiper(".banner__slider", {
          // loop: true,
          initialSlide: 0,
          // centeredSlides: false,
@@ -271,6 +271,71 @@ window.addEventListener("load", () => {
                centeredSlides: true,
                slidesPerView: 1.28,
                spaceBetween: 50,
+            },
+         },
+         // navigation: {
+         //    nextEl: ".swiper-button-next",
+         //    prevEl: ".swiper-button-prev",
+         // },
+         // autoplay: {
+         //    delay: 4000,
+         //    stopOnLastSlide: false,
+         //    disableOnIteraction: false,
+         // },
+      });
+
+      const swiperComments = new Swiper(".comments__slider", {
+         // loop: true,
+         initialSlide: 0,
+         // centeredSlides: false,
+         slideToClickedSlide: true,
+         slidesPerView: 1.07,
+         spaceBetween: 10,
+         breakpoints: {
+            375: {
+               slidesPerView: 1.06,
+            },
+            400: {
+               slidesPerView: 1.3,
+               spaceBetween: 20,
+            },
+            450: {
+               slidesPerView: 1.4,
+            },
+            500: {
+               // centeredSlides: true,
+               slidesPerView: 1.5,
+            },
+            550: {
+               slidesPerView: 1.6,
+            },
+            600: {
+               slidesPerView: 1.8,
+            },
+            650: {
+               slidesPerView: 1.9,
+            },
+            700: {
+               slidesPerView: 2,
+            },
+            750: {
+               slidesPerView: 2.1,
+            },
+            800: {
+               slidesPerView: 2.2,
+            },
+            850: {
+               slidesPerView: 2.3,
+            },
+            900: {
+               slidesPerView: 2.4,
+            },
+            950: {
+               slidesPerView: 2.5,
+            },
+            1000: {
+               slidesPerView: 3,
+               spaceBetween: 32,
             },
          },
          // navigation: {

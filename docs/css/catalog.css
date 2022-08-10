@@ -967,7 +967,7 @@ body.catalog .header:after {
 
 .footer {
   background-color: #faf8f6;
-  padding-top: 74px;
+  padding-top: 44px;
   padding-bottom: 40px;
 }
 
@@ -1643,7 +1643,7 @@ body.catalog .card-item__discount-price {
   background-color: #faf8f6;
   padding: 30px 20px 20px;
   display: grid;
-  grid-template-rows: auto auto 1fr auto;
+  grid-template-rows: auto minmax(25px, 50px) 1fr auto;
 }
 
 .comment__stars {
@@ -1665,7 +1665,7 @@ body.catalog .card-item__discount-price {
   font-family: "OpenSans";
   font-size: 0.875em;
   line-height: 1.7142857143;
-  margin-bottom: 79px;
+  margin-bottom: 82px;
 }
 
 .comment__bottom {
@@ -1788,8 +1788,9 @@ body.catalog .catalog__body + .banner .banner__images {
 }
 
 body.catalog .comments {
-  margin-bottom: 60px;
-  padding: 60px 20px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 20px;
 }
 
 body.catalog .comments__title {
@@ -1798,13 +1799,6 @@ body.catalog .comments__title {
   font-weight: 500;
   margin-bottom: 30px;
   max-width: 272px;
-}
-
-body.catalog .comments__items {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: 1fr;
-  gap: 10px;
 }
 
 @media (min-width: 100px) {
@@ -1864,6 +1858,10 @@ body.catalog .comments__items {
     padding-right: 5.3333333333%;
   }
 
+  .footer {
+    padding-top: 42px;
+  }
+
   .quiz__content {
     padding-left: 5.3333333333%;
     padding-right: 5.3333333333%;
@@ -1884,6 +1882,14 @@ body.catalog .comments__items {
     margin-bottom: 16px;
   }
 
+  .comment {
+    grid-template-rows: auto auto 1fr auto;
+  }
+
+  .comment__text {
+    margin-bottom: 123px;
+  }
+
   body.catalog .products__body {
     grid-template-columns: 1fr 1fr;
     gap: 15px;
@@ -1901,6 +1907,10 @@ body.catalog .comments__items {
 @media (min-width: 376px) {
   .banner__slide-body {
     border-radius: 20px;
+  }
+
+  .comment__text {
+    margin-bottom: 80px;
   }
 }
 
@@ -1921,11 +1931,6 @@ body.catalog .comments__items {
 
   .comment {
     max-width: 444px;
-  }
-
-  body.catalog .comments__items {
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
   }
 }
 
@@ -2158,6 +2163,10 @@ body.catalog .comments__items {
 }
 
 @media (min-width: 1000px) {
+  .footer {
+    padding-top: 74px;
+  }
+
   .banner .btn {
     max-width: 255px;
     min-height: 65px;
@@ -2292,7 +2301,7 @@ body.catalog .comments__items {
   }
 
   .comment {
-    padding: 40px 34px 40px 30px;
+    padding: 40px 34px 28px 30px;
   }
 
   .comment__stars {
@@ -2306,7 +2315,7 @@ body.catalog .comments__items {
   }
 
   .comment__text {
-    margin-bottom: 52px;
+    margin-bottom: 50px;
     font-size: 1em;
     line-height: 1.75;
   }
@@ -2834,12 +2843,6 @@ body.catalog .comments__items {
     position: absolute;
     top: 72.6694915254%;
     left: 34.0974212034%;
-  }
-}
-
-@media (min-width: 1125px) {
-  body.catalog .comments__items {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 

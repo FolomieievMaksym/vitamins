@@ -967,7 +967,7 @@ body.catalog .header:after {
 
 .footer {
   background-color: #faf8f6;
-  padding-top: 74px;
+  padding-top: 44px;
   padding-bottom: 40px;
 }
 
@@ -1723,6 +1723,10 @@ body.hide-content .hero__decor {
     padding-right: 5.3333333333%;
   }
 
+  .footer {
+    padding-top: 42px;
+  }
+
   .account-header__container {
     padding-left: 8%;
     padding-right: 8%;
@@ -2035,6 +2039,12 @@ body.hide-content .hero__decor {
 
   body.hide-content .hero__wholesale-text {
     margin-bottom: 27px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .footer {
+    padding-top: 74px;
   }
 }
 

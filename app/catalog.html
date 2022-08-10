@@ -334,23 +334,33 @@
 			</section>
 			<section class="comments">
 				<h3 class="comments__title">What healthy and happy customer says</h3>
-				<div class="swiper-wrapper comments__items">
-					<!-- ! 1 -->
-					@@include('./components/_comment.html', {
-					'title': 'Easy monitoring your weight goal!',
-					'photo': '01',
-					'name': 'David S.'
-					})
-					@@include('./components/_comment.html', {
-					'title': 'High quality vitamins & supplements',
-					'photo': '02',
-					'name': 'Bridget T.'
-					})
-					@@include('./components/_comment.html', {
-					'title': 'I love it',
-					'photo': '03',
-					'name': 'Jenna Y.'
-					})
+				<div class="swiper comments__slider">
+					<div class="swiper-wrapper comments__items">
+						<div class="swiper-slide comments__slide">
+							<!-- ! 1 -->
+							@@include('./components/_comment.html', {
+							'title': 'Easy monitoring your weight goal!',
+							'photo': '01',
+							'name': 'David S.'
+							})
+						</div>
+						<!-- ! 2 -->
+						<div class="swiper-slide comments__slide">
+							@@include('./components/_comment.html', {
+							'title': 'High quality vitamins & supplements',
+							'photo': '02',
+							'name': 'Bridget T.'
+							})
+						</div>
+						<!-- ! 3 -->
+						<div class="swiper-slide comments__slide">
+							@@include('./components/_comment.html', {
+							'title': 'I love it',
+							'photo': '03',
+							'name': 'Jenna Y.'
+							})
+						</div>
+					</div>
 				</div>
 			</section>
 		</main>

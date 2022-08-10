@@ -4,12 +4,15 @@
    background-color: #faf8f6;
    padding: 30px 20px 20px;
    display: grid;
-   grid-template-rows: auto auto 1fr auto;
+   grid-template-rows: auto minmax(25px, 50px) 1fr auto;
+   @media (min-width: 375px) {
+      grid-template-rows: auto auto 1fr auto;
+   }
    @media (min-width: 569px) {
       max-width: 444px;
    }
    @media (min-width: 1000px) {
-      padding: 40px 34px 40px 30px;
+      padding: 40px 34px 28px 30px;
    }
    &__stars {
       margin-bottom: 14px;
@@ -32,9 +35,15 @@
    &__text {
       font-family: $ff2;
       @include fl(14, 24);
-      margin-bottom: 79px;
+      margin-bottom: 82px;
+      @media (min-width: 375px) {
+         margin-bottom: 123px;
+      }
+      @media (min-width: 376px) {
+         margin-bottom: 80px;
+      }
       @media (min-width: 1000px) {
-         margin-bottom: 52px;
+         margin-bottom: 50px;
          @include fl(16, 28);
       }
    }

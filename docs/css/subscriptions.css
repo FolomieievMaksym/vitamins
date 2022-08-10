@@ -967,7 +967,7 @@ body.catalog .header:after {
 
 .footer {
   background-color: #faf8f6;
-  padding-top: 74px;
+  padding-top: 44px;
   padding-bottom: 40px;
 }
 
@@ -1476,6 +1476,10 @@ body.subscriptions .hero__list li:before {
     padding-right: 5.3333333333%;
   }
 
+  .footer {
+    padding-top: 42px;
+  }
+
   .quiz__content {
     padding-left: 5.3333333333%;
     padding-right: 5.3333333333%;
@@ -1584,6 +1588,12 @@ body.subscriptions .hero__list li:before {
 
   body.subscriptions .hero__text:last-of-type {
     margin-bottom: 50px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .footer {
+    padding-top: 74px;
   }
 }
 

@@ -967,7 +967,7 @@ body.catalog .header:after {
 
 .footer {
   background-color: #faf8f6;
-  padding-top: 74px;
+  padding-top: 44px;
   padding-bottom: 40px;
 }
 
@@ -1505,6 +1505,10 @@ main.subscriptions .btn {
     padding-right: 5.3333333333%;
   }
 
+  .footer {
+    padding-top: 42px;
+  }
+
   .quiz__content {
     padding-left: 5.3333333333%;
     padding-right: 5.3333333333%;
@@ -1599,6 +1603,12 @@ main.subscriptions .btn {
 
   .menu-footer__list_2 li:nth-child(5) {
     order: 5;
+  }
+}
+
+@media (min-width: 1000px) {
+  .footer {
+    padding-top: 74px;
   }
 }
 

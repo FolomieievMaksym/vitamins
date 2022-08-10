@@ -967,7 +967,7 @@ body.catalog .header:after {
 
 .footer {
   background-color: #faf8f6;
-  padding-top: 74px;
+  padding-top: 44px;
   padding-bottom: 40px;
 }
 
@@ -1116,7 +1116,7 @@ input::placeholder {
   background-color: #faf8f6;
   padding: 30px 20px 20px;
   display: grid;
-  grid-template-rows: auto auto 1fr auto;
+  grid-template-rows: auto minmax(25px, 50px) 1fr auto;
 }
 
 .comment__stars {
@@ -1138,7 +1138,7 @@ input::placeholder {
   font-family: "OpenSans";
   font-size: 0.875em;
   line-height: 1.7142857143;
-  margin-bottom: 79px;
+  margin-bottom: 82px;
 }
 
 .comment__bottom {
@@ -1538,6 +1538,18 @@ main.home .card__summ {
     padding-right: 5.3333333333%;
   }
 
+  .footer {
+    padding-top: 42px;
+  }
+
+  .comment {
+    grid-template-rows: auto auto 1fr auto;
+  }
+
+  .comment__text {
+    margin-bottom: 123px;
+  }
+
   .quiz__content {
     padding-left: 5.3333333333%;
     padding-right: 5.3333333333%;
@@ -1545,6 +1557,12 @@ main.home .card__summ {
 
   .quiz__question_grid div {
     padding: 10px 18px;
+  }
+}
+
+@media (min-width: 376px) {
+  .comment__text {
+    margin-bottom: 80px;
   }
 }
 
@@ -1640,8 +1658,12 @@ main.home .card__summ {
 }
 
 @media (min-width: 1000px) {
+  .footer {
+    padding-top: 74px;
+  }
+
   .comment {
-    padding: 40px 34px 40px 30px;
+    padding: 40px 34px 28px 30px;
   }
 
   .comment__stars {
@@ -1655,7 +1677,7 @@ main.home .card__summ {
   }
 
   .comment__text {
-    margin-bottom: 52px;
+    margin-bottom: 50px;
     font-size: 1em;
     line-height: 1.75;
   }

@@ -967,7 +967,7 @@ body.catalog .header:after {
 
 .footer {
   background-color: #faf8f6;
-  padding-top: 74px;
+  padding-top: 44px;
   padding-bottom: 40px;
 }
 
@@ -1538,6 +1538,10 @@ body.pass-recovery .hero__form p {
     padding-right: 5.3333333333%;
   }
 
+  .footer {
+    padding-top: 42px;
+  }
+
   .account-header__container {
     padding-left: 8%;
     padding-right: 8%;
@@ -1751,6 +1755,12 @@ body.pass-recovery .hero__form p {
   body.pass-recovery .hero__text {
     font-size: 1em;
     line-height: 1.75;
+  }
+}
+
+@media (min-width: 1000px) {
+  .footer {
+    padding-top: 74px;
   }
 }
 
