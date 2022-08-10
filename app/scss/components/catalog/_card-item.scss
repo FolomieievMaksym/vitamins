@@ -124,6 +124,7 @@ body.catalog {
             -webkit-box-orient: vertical;
          }
          @media (min-width: 1441px) {
+            margin-bottom: 17px;
             @include fl(20, 24.12);
          }
       }

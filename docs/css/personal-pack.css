@@ -2323,6 +2323,7 @@ main.subscriptions .card__title {
   }
 
   body.catalog .card-item__title {
+    margin-bottom: 17px;
     font-size: 1.25em;
     line-height: 1.206;
   }
