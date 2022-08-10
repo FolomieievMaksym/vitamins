@@ -14,7 +14,10 @@
 			<div class="catalog__body">
 				<aside class="catalog__menu">
 					<ul class="catalog__list">
-						<li>All categories</li>
+						<li class="active">
+							<p>All categories</p>
+							<i class="ic-arrow-orange-down"></i>
+						</li>
 						<li>Vitamins & Dietary Supplements</li>
 						<li>Weight Loss</li>
 						<li>Minerals</li>
@@ -26,259 +29,268 @@
 					</ul>
 				</aside>
 				<section class="products">
-					<!-- ! 1  -->
-					@@include('./components/catalog/card-item.html', {
-					'class-card' : '',
-					'discount-amount' : '',
-					'image' : '01',
-					'label' : 'Vitamins & Dietary Supplements',
-					'class-label': '_purple',
-					'title' : 'Ortho B Complex',
-					'full-price' : '$61.98',
-					'discount-price' : '',
-					})
-					<!-- ! 2 -->
-					@@include('./components/catalog/card-item.html', {
-					'class-card' : '',
-					'discount-amount' : '',
-					'image' : '02',
-					'label' : 'Vitamins & Dietary Supplements',
-					'class-label' : '_purple',
-					'title' : 'Metagenics - 500-C Methoxyflavone',
-					'full-price' : '$61.98',
-					'discount-price' : '',
-					})
-					<!-- ! 3  -->
-					@@include('./components/catalog/card-item.html', {
-					'class-card' : '_discount',
-					'discount-amount' : '-45%',
-					'image' : '03',
-					'label' : 'Vitamins & Dietary Supplements',
-					'class-label' : '_purple',
-					'title' : 'Ortho Molecular - Vitamin D',
-					'full-price' : '$61.98',
-					'discount-price' : '$61.98',
-					})
-					<!-- ! 4 -->
-					@@include('./components/catalog/card-item.html', {
-					'class-card' : '',
-					'discount-amount' : '',
-					'image' : '04',
-					'label' : 'Vitamins & Dietary Supplements',
-					'class-label' : '_purple',
-					'title' : 'Ortho Molecular - Vitamin K2',
-					'full-price' : '$61.98',
-					'discount-price' : '',
-					})
-					<!-- ! 5  -->
-					@@include('./components/catalog/card-item.html', {
-					'class-card' : '',
-					'discount-amount' : '',
-					'image' : '09',
-					'label' : 'Vitamins & Dietary Supplements',
-					'class-label' : '_purple',
-					'title' : 'Ortho B Complex',
-					'full-price' : '$61.98',
-					'discount-price' : '',
-					})
-					<!-- ! 6 -->
-					@@include('./components/catalog/card-item.html', {
-					'class-card' : '',
-					'discount-amount' : '',
-					'image' : '05',
-					'label' : 'Weight Loss',
-					'class-label' : '_catalog-green',
-					'title' : 'Core Restore BT 1 Kit',
-					'full-price' : '$61.98',
-					'discount-price' : '',
-					})
-					<!-- ! 7 -->
-					@@include('./components/catalog/card-item.html', {
-					'class-card' : '',
-					'discount-amount' : '',
-					'image' : '06',
-					'label' : 'Vitamins & Dietary Supplements',
-					'class-label' : '',
-					'title' : 'Ortho Molecular - Reacted Magnesium',
-					'full-price' : '$61.98',
-					'discount-price' : '',
-					})
-					<!-- ! 8 -->
-					@@include('./components/catalog/card-item.html', {
-					'class-card' : '_discount',
-					'discount-amount' : '-45%',
-					'image' : '07',
-					'label' : 'Vitamins & Dietary Supplements',
-					'class-label' : '',
-					'title' : 'Ortho Molecular - Buffered C Capsules',
-					'full-price' : '$61.98',
-					'discount-price' : '$32.45',
-					})
-					<!-- ! 9 -->
-					@@include('./components/catalog/card-item.html', {
-					'class-card' : '',
-					'discount-amount' : '',
-					'image' : '08',
-					'label' : 'Minerals',
-					'class-label' : '',
-					'title' : 'Reacted Zinc',
-					'full-price' : '$61.98',
-					'discount-price' : '',
-					})
-					<!-- !  10-->
-					@@include('./components/catalog/card-item.html', {
-					'class-card' : '',
-					'discount-amount' : '',
-					'image' : '10',
-					'label' : 'Minerals',
-					'class-label' : '',
-					'title' : 'Ortho Molecular Products CereVive Capsules',
-					'full-price' : '$61.98',
-					'discount-price' : '',
-					})
-					<!-- ! 11 -->
-					@@include('./components/catalog/card-item.html', {
-					'class-card' : '',
-					'discount-amount' : '',
-					'image' : '11',
-					'label' : 'Vitamins & Dietary Supplements',
-					'class-label' : '',
-					'title' : 'Ortho Molecular Products Diaxinol',
-					'full-price' : '$61.98',
-					'discount-price' : '',
-					})
-					<!-- ! 12 -->
-					@@include('./components/catalog/card-item.html', {
-					'class-card' : '',
-					'discount-amount' : '',
-					'image' : '12',
-					'label' : 'Vitamins & Dietary Supplements',
-					'class-label' : '',
-					'title' : 'Ortho Molecular Products 5-HTP Capsules',
-					'full-price' : '$61.98',
-					'discount-price' : '',
-					})
-					<!-- ! 13 -->
-					@@include('./components/catalog/card-item.html', {
-					'class-card' : '',
-					'discount-amount' : '',
-					'image' : '13',
-					'label' : 'Minerals',
-					'class-label' : '',
-					'title' : 'Ortho Molecular Products, Reacted Chromium',
-					'full-price' : '$61.98',
-					'discount-price' : '',
-					})
-					<!-- !  14-->
-					@@include('./components/catalog/card-item.html', {
-					'class-card' : '',
-					'discount-amount' : '',
-					'image' : '14',
-					'label' : 'Vitamins & Dietary Supplements',
-					'class-label' : '',
-					'title' : 'Standard Process Thymus PMG 90 Tablets',
-					'full-price' : '$61.98',
-					'discount-price' : '',
-					})
-					<!-- ! 15 -->
-					@@include('./components/catalog/card-item.html', {
-					'class-card' : '',
-					'discount-amount' : '',
-					'image' : '15',
-					'label' : 'Vitamins & Dietary Supplements',
-					'class-label' : '',
-					'title' : 'Ortho Molecular Product Vitamin D3',
-					'full-price' : '$61.98',
-					'discount-price' : '',
-					})
-					<!-- ! 16 -->
-					@@include('./components/catalog/card-item.html', {
-					'class-card' : '',
-					'discount-amount' : '',
-					'image' : '16',
-					'label' : 'Minerals',
-					'class-label' : '',
-					'title' : 'Ortho Molecular - Reacted Magnesium',
-					'full-price' : '$61.98',
-					'discount-price' : '',
-					})
-					<!-- ! 17 -->
-					@@include('./components/catalog/card-item.html', {
-					'class-card' : '',
-					'discount-amount' : '',
-					'image' : '17',
-					'label' : 'Vitamins & Dietary Supplements',
-					'class-label' : '',
-					'title' : 'Ortho Molecular Products Orthomega 820',
-					'full-price' : '$61.98',
-					'discount-price' : '',
-					})
-					<!-- ! 18 -->
-					@@include('./components/catalog/card-item.html', {
-					'class-card' : '',
-					'discount-amount' : '',
-					'image' : '18',
-					'label' : 'Vitamins & Dietary Supplements',
-					'class-label' : '',
-					'title' : 'Ortho Molecular Products - Reacted Selenium',
-					'full-price' : '$61.98',
-					'discount-price' : '',
-					})
-					<!-- ! 19 -->
-					@@include('./components/catalog/card-item.html', {
-					'class-card' : '',
-					'discount-amount' : '',
-					'image' : '19',
-					'label' : 'Antioxidants',
-					'class-label' : '',
-					'title' : 'Ortho Molecular - CoQ-10 300 MG',
-					'full-price' : '$61.98',
-					'discount-price' : '',
-					})
-					<!-- ! 20 -->
-					@@include('./components/catalog/card-item.html', {
-					'class-card' : '',
-					'discount-amount' : '',
-					'image' : '20',
-					'label' : 'Probiotics',
-					'class-label' : '',
-					'title' : 'Ortho Molecular Products - PRObiotic 225',
-					'full-price' : '$61.98',
-					'discount-price' : '',
-					})
-					<!-- ! 21 -->
-					@@include('./components/catalog/card-item.html', {
-					'class-card' : '',
-					'discount-amount' : '',
-					'image' : '21',
-					'label' : 'Vitamins & Dietary Supplements',
-					'class-label' : '',
-					'title' : 'Ortho Molecular - Ortho Digestzyme',
-					'full-price' : '$61.98',
-					'discount-price' : '',
-					})
-					<!-- ! 22 -->
-					@@include('./components/catalog/card-item.html', {
-					'class-card' : '',
-					'discount-amount' : '',
-					'image' : '22',
-					'label' : 'Pain Relief',
-					'class-label' : '',
-					'title' : 'Metagenics Acute Phase',
-					'full-price' : '$61.98',
-					'discount-price' : '',
-					})
-					<!-- ! 23 -->
-					@@include('./components/catalog/card-item.html', {
-					'class-card' : '',
-					'discount-amount' : '',
-					'image' : '23',
-					'label' : 'Prenatal Vitamins',
-					'class-label' : '',
-					'title' : 'Ortho Molecular - Prenatal Complete with DHA',
-					'full-price' : '$61.98',
-					'discount-price' : '',
-					})
+					<div class="products__body">
+
+						<!-- ! 1  -->
+						@@include('./components/catalog/card-item.html', {
+						'class-card' : '',
+						'discount-amount' : '',
+						'image' : '01',
+						'label' : 'Vitamins & Dietary Supplements',
+						'class-label': '_purple',
+						'title' : 'Ortho B Complex',
+						'full-price' : '$61.98',
+						'discount-price' : '',
+						})
+						<!-- ! 2 -->
+						@@include('./components/catalog/card-item.html', {
+						'class-card' : '',
+						'discount-amount' : '',
+						'image' : '02',
+						'label' : 'Vitamins & Dietary Supplements',
+						'class-label' : '_purple',
+						'title' : 'Metagenics - 500-C Methoxyflavone',
+						'full-price' : '$61.98',
+						'discount-price' : '',
+						})
+						<!-- ! 3  -->
+						@@include('./components/catalog/card-item.html', {
+						'class-card' : '_discount',
+						'discount-amount' : '-45%',
+						'image' : '03',
+						'label' : 'Vitamins & Dietary Supplements',
+						'class-label' : '_purple',
+						'title' : 'Ortho Molecular - Vitamin D',
+						'full-price' : '$61.98',
+						'discount-price' : '$61.98',
+						})
+						<!-- ! 4 -->
+						@@include('./components/catalog/card-item.html', {
+						'class-card' : '',
+						'discount-amount' : '',
+						'image' : '04',
+						'label' : 'Vitamins & Dietary Supplements',
+						'class-label' : '_purple',
+						'title' : 'Ortho Molecular - Vitamin K2',
+						'full-price' : '$61.98',
+						'discount-price' : '',
+						})
+
+						<!-- ! 5  -->
+						@@include('./components/catalog/card-item.html', {
+						'class-card' : '',
+						'discount-amount' : '',
+						'image' : '09',
+						'label' : 'Vitamins & Dietary Supplements',
+						'class-label' : '_purple',
+						'title' : 'Ortho B Complex',
+						'full-price' : '$61.98',
+						'discount-price' : '',
+						})
+						<!-- ! 6 -->
+						@@include('./components/catalog/card-item.html', {
+						'class-card' : '',
+						'discount-amount' : '',
+						'image' : '05',
+						'label' : 'Weight Loss',
+						'class-label' : '_catalog-green',
+						'title' : 'Core Restore BT 1 Kit',
+						'full-price' : '$61.98',
+						'discount-price' : '',
+						})
+						<!-- ! 7 -->
+						@@include('./components/catalog/card-item.html', {
+						'class-card' : '',
+						'discount-amount' : '',
+						'image' : '06',
+						'label' : 'Vitamins & Dietary Supplements',
+						'class-label' : '',
+						'title' : 'Ortho Molecular - Reacted Magnesium',
+						'full-price' : '$61.98',
+						'discount-price' : '',
+						})
+						<!-- ! 8 -->
+						@@include('./components/catalog/card-item.html', {
+						'class-card' : '_discount',
+						'discount-amount' : '-45%',
+						'image' : '07',
+						'label' : 'Vitamins & Dietary Supplements',
+						'class-label' : '',
+						'title' : 'Ortho Molecular - Buffered C Capsules',
+						'full-price' : '$61.98',
+						'discount-price' : '$32.45',
+						})
+						<!-- ! 9 -->
+						@@include('./components/catalog/card-item.html', {
+						'class-card' : '',
+						'discount-amount' : '',
+						'image' : '08',
+						'label' : 'Minerals',
+						'class-label' : '',
+						'title' : 'Reacted Zinc',
+						'full-price' : '$61.98',
+						'discount-price' : '',
+						})
+						<!-- !  10-->
+						@@include('./components/catalog/card-item.html', {
+						'class-card' : '',
+						'discount-amount' : '',
+						'image' : '10',
+						'label' : 'Minerals',
+						'class-label' : '',
+						'title' : 'Ortho Molecular Products CereVive Capsules',
+						'full-price' : '$61.98',
+						'discount-price' : '',
+						})
+						<!-- ! 11 -->
+						@@include('./components/catalog/card-item.html', {
+						'class-card' : '',
+						'discount-amount' : '',
+						'image' : '11',
+						'label' : 'Vitamins & Dietary Supplements',
+						'class-label' : '',
+						'title' : 'Ortho Molecular Products Diaxinol',
+						'full-price' : '$61.98',
+						'discount-price' : '',
+						})
+						<!-- ! 12 -->
+						@@include('./components/catalog/card-item.html', {
+						'class-card' : '',
+						'discount-amount' : '',
+						'image' : '12',
+						'label' : 'Vitamins & Dietary Supplements',
+						'class-label' : '',
+						'title' : 'Ortho Molecular Products 5-HTP Capsules',
+						'full-price' : '$61.98',
+						'discount-price' : '',
+						})
+						<!-- ! 13 -->
+						@@include('./components/catalog/card-item.html', {
+						'class-card' : '',
+						'discount-amount' : '',
+						'image' : '13',
+						'label' : 'Minerals',
+						'class-label' : '',
+						'title' : 'Ortho Molecular Products, Reacted Chromium',
+						'full-price' : '$61.98',
+						'discount-price' : '',
+						})
+						<!-- !  14-->
+						@@include('./components/catalog/card-item.html', {
+						'class-card' : '',
+						'discount-amount' : '',
+						'image' : '14',
+						'label' : 'Vitamins & Dietary Supplements',
+						'class-label' : '',
+						'title' : 'Standard Process Thymus PMG 90 Tablets',
+						'full-price' : '$61.98',
+						'discount-price' : '',
+						})
+						<!-- ! 15 -->
+						@@include('./components/catalog/card-item.html', {
+						'class-card' : '',
+						'discount-amount' : '',
+						'image' : '15',
+						'label' : 'Vitamins & Dietary Supplements',
+						'class-label' : '',
+						'title' : 'Ortho Molecular Product Vitamin D3',
+						'full-price' : '$61.98',
+						'discount-price' : '',
+						})
+						<!-- ! 16 -->
+						@@include('./components/catalog/card-item.html', {
+						'class-card' : '',
+						'discount-amount' : '',
+						'image' : '16',
+						'label' : 'Minerals',
+						'class-label' : '',
+						'title' : 'Ortho Molecular - Reacted Magnesium',
+						'full-price' : '$61.98',
+						'discount-price' : '',
+						})
+						<!-- ! 17 -->
+						@@include('./components/catalog/card-item.html', {
+						'class-card' : '',
+						'discount-amount' : '',
+						'image' : '17',
+						'label' : 'Vitamins & Dietary Supplements',
+						'class-label' : '',
+						'title' : 'Ortho Molecular Products Orthomega 820',
+						'full-price' : '$61.98',
+						'discount-price' : '',
+						})
+						<!-- ! 18 -->
+						@@include('./components/catalog/card-item.html', {
+						'class-card' : '',
+						'discount-amount' : '',
+						'image' : '18',
+						'label' : 'Vitamins & Dietary Supplements',
+						'class-label' : '',
+						'title' : 'Ortho Molecular Products - Reacted Selenium',
+						'full-price' : '$61.98',
+						'discount-price' : '',
+						})
+						<!-- ! 19 -->
+						@@include('./components/catalog/card-item.html', {
+						'class-card' : '',
+						'discount-amount' : '',
+						'image' : '19',
+						'label' : 'Antioxidants',
+						'class-label' : '',
+						'title' : 'Ortho Molecular - CoQ-10 300 MG',
+						'full-price' : '$61.98',
+						'discount-price' : '',
+						})
+						<!-- ! 20 -->
+						@@include('./components/catalog/card-item.html', {
+						'class-card' : '',
+						'discount-amount' : '',
+						'image' : '20',
+						'label' : 'Probiotics',
+						'class-label' : '',
+						'title' : 'Ortho Molecular Products - PRObiotic 225',
+						'full-price' : '$61.98',
+						'discount-price' : '',
+						})
+						<!-- ! 21 -->
+						@@include('./components/catalog/card-item.html', {
+						'class-card' : '',
+						'discount-amount' : '',
+						'image' : '21',
+						'label' : 'Vitamins & Dietary Supplements',
+						'class-label' : '',
+						'title' : 'Ortho Molecular - Ortho Digestzyme',
+						'full-price' : '$61.98',
+						'discount-price' : '',
+						})
+						<!-- ! 22 -->
+						@@include('./components/catalog/card-item.html', {
+						'class-card' : '',
+						'discount-amount' : '',
+						'image' : '22',
+						'label' : 'Pain Relief',
+						'class-label' : '',
+						'title' : 'Metagenics Acute Phase',
+						'full-price' : '$61.98',
+						'discount-price' : '',
+						})
+						<!-- ! 23 -->
+						@@include('./components/catalog/card-item.html', {
+						'class-card' : '',
+						'discount-amount' : '',
+						'image' : '23',
+						'label' : 'Prenatal Vitamins',
+						'class-label' : '',
+						'title' : 'Ortho Molecular - Prenatal Complete with DHA',
+						'full-price' : '$61.98',
+						'discount-price' : '',
+						})
+					</div>
+					<div class="products__button">
+						<p>View more</p>
+						<i class="ic-arrow-orange-down"></i>
+					</div>
+
 				</section>
 			</div>
 			<section class="banner">
