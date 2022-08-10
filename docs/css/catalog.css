@@ -1600,7 +1600,7 @@ body.catalog .card-item__label {
   line-height: 1.3616666667;
   font-weight: 600;
   opacity: 0.7;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 
 body.catalog .card-item__label_purple {
@@ -1655,6 +1655,7 @@ body.catalog .card-item__discount-price {
 }
 
 .comment__title {
+  font-weight: 500;
   font-size: 1em;
   line-height: 1.20625;
   margin-bottom: 14px;
@@ -1775,7 +1776,7 @@ body.catalog .products__button i {
 body.catalog .catalog__body + .banner {
   position: relative;
   max-width: 375px;
-  margin: 60px auto 0px;
+  margin: 10px auto 0px;
 }
 
 body.catalog .catalog__body + .banner .banner__slide {
@@ -1809,10 +1810,10 @@ body.catalog .comments__items {
 @media (min-width: 100px) {
   body.catalog .catalog__body {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     -moz-column-gap: 50px;
     column-gap: 50px;
-    padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 20px;
     padding-right: 20px;
@@ -1933,6 +1934,12 @@ body.catalog .comments__items {
     grid-template-columns: 1fr 1fr 1fr;
     -moz-column-gap: 50px;
     column-gap: 50px;
+  }
+}
+
+@media (min-width: 765px) {
+  body.catalog .catalog__body {
+    flex-direction: row;
   }
 }
 
