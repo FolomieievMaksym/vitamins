@@ -298,16 +298,17 @@ body.catalog {
          }
       }
       &__items {
-         // display: grid;
-         // grid-template-columns: repeat(3, minmax(280px, 444px));
-         // grid-auto-rows: 1fr;
-         // gap: 10px;
-         // @media (min-width: 569px) {
-         //    gap: 32px;
-         // }
-         // @media (min-width: 1125px) {
-         //    grid-template-columns: repeat(3, 1fr);
-         // }
+         // align-items: stretch !important;
+         //    display: grid;
+         //    grid-template-columns: repeat(3, minmax(280px, 444px)) !important;
+         //    grid-auto-rows: 1fr;
+         //    gap: 10px;
+         //    @media (min-width: 569px) {
+         //       gap: 32px;
+         //    }
+         //    @media (min-width: 1125px) {
+         //       grid-template-columns: repeat(3, 1fr);
+         //    }
       }
    }
 }
