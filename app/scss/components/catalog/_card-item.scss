@@ -106,8 +106,23 @@ body.catalog {
          &_mint {
             color: $mintLabel;
          }
+         &_blue {
+            color: $blueLabel;
+         }
+         &_red {
+            color: $redLabel;
+         }
+         &_gold {
+            color: $goldLabel;
+         }
+         &_pink {
+            color: $pinkLabel;
+         }
+         &_green-label {
+            color: $greenLabel;
+         }
          &_catalog-green {
-            color: $catalogGreenLalbel;
+            color: #71bb5e;
          }
       }
 

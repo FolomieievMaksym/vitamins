@@ -1187,6 +1187,26 @@ body.catalog .card-item__label_mint {
   color: #6bb0a4;
 }
 
+body.catalog .card-item__label_blue {
+  color: #5f9dca;
+}
+
+body.catalog .card-item__label_red {
+  color: #e6463b;
+}
+
+body.catalog .card-item__label_gold {
+  color: #e6ac3b;
+}
+
+body.catalog .card-item__label_pink {
+  color: #9448a0;
+}
+
+body.catalog .card-item__label_green-label {
+  color: #5e73bb;
+}
+
 body.catalog .card-item__label_catalog-green {
   color: #71bb5e;
 }
