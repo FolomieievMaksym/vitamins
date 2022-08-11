@@ -338,15 +338,19 @@ window.addEventListener("load", () => {
             },
             1100: {
                slidesPerView: 2.7,
+               spaceBetween: 32,
             },
             1200: {
                slidesPerView: 2.8,
+               spaceBetween: 32,
             },
             1300: {
                slidesPerView: 2.9,
+               spaceBetween: 32,
             },
             1400: {
                slidesPerView: 3,
+               spaceBetween: 32,
             },
          },
       });
