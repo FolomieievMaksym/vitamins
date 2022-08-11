@@ -1,0 +1,169 @@
+[
+	{
+		"image" : "01",
+		"label" : "Vitamins & Dietary Supplements",
+		"classLabel": "_purple",
+		"title" : "Ortho B Complex",
+		"fullPrice" : "$61.98"
+	},
+	{
+		"image" : "02",
+		"label" : "Vitamins & Dietary Supplements",
+		"classLabel" : "_purple",
+		"title" : "Metagenics - 500-C Methoxyflavone",
+		"fullPrice" : "$61.98"
+	},
+	{
+		"classCard" : "_discount",
+		"discountAmount" : "-45%",
+		"image" : "03",
+		"label" : "Vitamins & Dietary Supplements",
+		"classLabel" : "_purple",
+		"title" : "Ortho Molecular - Vitamin D",
+		"fullPrice" : "$61.98",
+		"discountPrice" : "$61.98"
+	},
+	{
+		"image" : "04",
+		"label" : "Vitamins & Dietary Supplements",
+		"classLabel" : "_purple",
+		"title" : "Ortho Molecular - Vitamin K2",
+		"fullPrice" : "$61.98"
+	},
+	{
+		"image" : "09",
+		"label" : "Vitamins & Dietary Supplements",
+		"classLabel" : "_purple",
+		"title" : "Ortho B Complex",
+		"fullPrice" : "$61.98"
+	},
+	{
+		"image" : "05",
+		"label" : "Weight Loss",
+		"classLabel" : "_green-label",
+		"title" : "Core Restore BT 1 Kit",
+		"fullPrice" : "$61.98"
+	},
+	{
+		"image" : "06",
+		"label" : "Vitamins & Dietary Supplements",
+		"classLabel" : "_purple",
+		"title" : "Ortho Molecular - Reacted Magnesium",
+		"fullPrice" : "$61.98"
+	},
+	{
+		"classCard" : "_discount",
+		"discountAmount" : "-45%",
+		"image" : "07",
+		"label" : "Vitamins & Dietary Supplements",
+		"classLabel" : "_purple",
+		"title" : "Ortho Molecular - Buffered C Capsules",
+		"fullPrice" : "$61.98",
+		"discountPrice" : "$32.45"
+	},
+	{
+		"image" : "08",
+		"label" : "Minerals",
+		"classLabel" : "_mint",
+		"title" : "Reacted Zinc",
+		"fullPrice" : "$61.98"
+	},
+	{
+		"image" : "10",
+		"label" : "Minerals",
+		"classLabel" : "_mint",
+		"title" : "Ortho Molecular Products CereVive Capsules",
+		"fullPrice" : "$61.98"
+	},
+	{
+		"image" : "11",
+		"label" : "Vitamins & Dietary Supplements",
+		"classLabel" : "_purple",
+		"title" : "Ortho Molecular Products Diaxinol",
+		"fullPrice" : "$61.98"
+	},
+	{
+		"image" : "12",
+		"label" : "Vitamins & Dietary Supplements",
+		"classLabel" : "_purple",
+		"title" : "Ortho Molecular Products 5-HTP Capsules",
+		"fullPrice" : "$61.98"
+	},
+	{
+		"image" : "13",
+		"label" : "Minerals",
+		"classLabel" : "_mint",
+		"title" : "Ortho Molecular Products, Reacted Chromium",
+		"fullPrice" : "$61.98"
+	},
+	{
+		"image" : "14",
+		"label" : "Vitamins & Dietary Supplements",
+		"classLabel" : "_purple",
+		"title" : "Standard Process Thymus PMG 90 Tablets",
+		"fullPrice" : "$61.98"
+	},
+	{
+		"image" : "15",
+		"label" : "Vitamins & Dietary Supplements",
+		"classLabel" : "_purple",
+		"title" : "Ortho Molecular Product Vitamin D3",
+		"fullPrice" : "$61.98"
+	},
+	{
+		"image" : "16",
+		"label" : "Minerals",
+		"classLabel" : "_mint",
+		"title" : "Ortho Molecular - Reacted Magnesium",
+		"fullPrice" : "$61.98"
+	},
+	{
+		"image" : "17",
+		"label" : "Vitamins & Dietary Supplements",
+		"classLabel" : "_purple",
+		"title" : "Ortho Molecular Products Orthomega 820",
+		"fullPrice" : "$61.98"
+	},
+	{
+		"image" : "18",
+		"label" : "Vitamins & Dietary Supplements",
+		"classLabel" : "_purple",
+		"title" : "Ortho Molecular Products - Reacted Selenium",
+		"fullPrice" : "$61.98"
+	},
+	{
+		"image" : "19",
+		"label" : "Antioxidants",
+		"classLabel" : "_gold",
+		"title" : "Ortho Molecular - CoQ-10 300 MG",
+		"fullPrice" : "$61.98"
+	},
+	{
+		"image" : "20",
+		"label" : "Probiotics",
+		"classLabel" : "_red",
+		"title" : "Ortho Molecular Products - PRObiotic 225",
+		"fullPrice" : "$61.98"
+	},
+	{
+		"image" : "21",
+		"label" : "Vitamins & Dietary Supplements",
+		"classLabel" : "_purple",
+		"title" : "Ortho Molecular - Ortho Digestzyme",
+		"fullPrice" : "$61.98"
+	},
+	{
+		"image" : "22",
+		"label" : "Pain Relief",
+		"classLabel" : "_blue",
+		"title" : "Metagenics Acute Phase",
+		"fullPrice" : "$61.98"
+	},
+	{
+		"image" : "23",
+		"label" : "Prenatal Vitamins",
+		"classLabel" : "_pink",
+		"title" : "Ortho Molecular - Prenatal Complete with DHA",
+		"fullPrice" : "$61.98"
+	}
+]
