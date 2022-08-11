@@ -4,6 +4,45 @@ body.catalog {
       display: none;
    }
 }
+body.product {
+   .header {
+      padding-top: 2px;
+      &:before {
+         background-color: transparent;
+      }
+      &:after {
+         display: none;
+      }
+      .ic-logo {
+         .path1:before,
+         .path2:before,
+         .path3:before {
+            color: #fff;
+         }
+      }
+      .ic-cart:before {
+         color: #fff;
+      }
+      .burger {
+         &__wrapper {
+            span,
+            &:before,
+            &:after {
+               background-color: #fff;
+            }
+         }
+         &.active {
+            .burger__wrapper {
+               span,
+               &:before,
+               &:after {
+                  background-color: #000;
+               }
+            }
+         }
+      }
+   }
+}
 .header {
    .menu__title {
       font-weight: 500;

@@ -1,30 +1,30 @@
 body.product {
-	.add-to-cart {
-		&__summ {
-			font-family: $ff2;
-			font-weight: 700;
-			@include fl(20, 27.24);
-			@media (min-width: 1441px) {
-				@include fl(30, 40.85);
-			}
-			&.red {
-				color: #D32D2C;
-			}
-			&.small {
-				font-weight: 600;
-				@include fl(12, 16.34);
-				@media (min-width: 1441px) {
-					@include fl(16, 21.79);
-				}
-			}
-		}
-		&__text {
-			font-family: $ff2;
-			font-weight: 400;
-			@include fl(14, 19.07);
-			&.b{
-				font-weight: 600;
-			}
-		}
-	}
+   .add-to-cart {
+      &__summ {
+         font-family: $ff2;
+         font-weight: 700;
+         @include fl(20, 27.24);
+         @media (min-width: 1441px) {
+            @include fl(30, 40.85);
+         }
+         &.red {
+            color: #d32d2c;
+         }
+         &.small {
+            font-weight: 600;
+            @include fl(12, 16.34);
+            @media (min-width: 1441px) {
+               @include fl(16, 21.79);
+            }
+         }
+      }
+      &__text {
+         font-family: $ff2;
+         font-weight: 400;
+         @include fl(14, 19.07);
+         &.b {
+            font-weight: 600;
+         }
+      }
+   }
 }

@@ -8,6 +8,7 @@ body.catalog {
    // }
 
    .card-item {
+      cursor: pointer;
       background-color: #faf8f6;
       border-radius: 16px;
       padding: 50px 20px 20px;
@@ -28,6 +29,20 @@ body.catalog {
          padding-right: 30px;
          padding-bottom: 30px;
          border-radius: 16px;
+      }
+      transition: all 0.3s ease;
+      &:hover {
+         overflow: hidden;
+         background-color: rgba(250, 248, 246, 0.85);
+         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+         img {
+            transform: scale(1.2);
+         }
+         &:nth-child(6) {
+            img {
+               transform: translate(0, 11px) scale(1.2);
+            }
+         }
       }
       &_discount {
          .card-item {
@@ -74,6 +89,7 @@ body.catalog {
             margin-bottom: 51px;
          }
          img {
+            transition: all 0.3s ease;
             position: absolute;
             top: 0;
             left: 0;

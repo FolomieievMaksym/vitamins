@@ -9,10 +9,11 @@
 	<div class="wrapper">
 		@@include('components/each-page-blocks/_header.html')
 		<main class="product">
-			<section class="hero">
-				@@include('./components/_quiz.html')
-				title new
-			</section>
+			@@include('./components/_quiz.html')
+			@@include('./components/product/left-block.html', {
+			'image': '02',
+			'modify': 'purple'
+			})
 		</main>
 		@@include('components/each-page-blocks/_footer.html')
 	</div>

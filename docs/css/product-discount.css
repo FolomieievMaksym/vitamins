@@ -442,6 +442,28 @@ main {
   flex: 1 1 auto;
 }
 
+.image {
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 100%;
+  width: 100%;
+}
+
+.image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.image.hv:hover img {
+  transform: scale(1.2);
+}
+
 .decor-circle {
   border-radius: 50%;
   position: absolute;
@@ -457,6 +479,40 @@ main {
 
 body.catalog .header:after {
   display: none;
+}
+
+body.product .header {
+  padding-top: 2px;
+}
+
+body.product .header:before {
+  background-color: transparent;
+}
+
+body.product .header:after {
+  display: none;
+}
+
+body.product .header .ic-logo .path1:before,
+body.product .header .ic-logo .path2:before,
+body.product .header .ic-logo .path3:before {
+  color: #fff;
+}
+
+body.product .header .ic-cart:before {
+  color: #fff;
+}
+
+body.product .header .burger__wrapper span,
+body.product .header .burger__wrapper:before,
+body.product .header .burger__wrapper:after {
+  background-color: #fff;
+}
+
+body.product .header .burger.active .burger__wrapper span,
+body.product .header .burger.active .burger__wrapper:before,
+body.product .header .burger.active .burger__wrapper:after {
+  background-color: #000;
 }
 
 .header .menu__title {
@@ -1119,7 +1175,7 @@ body.product .add-to-cart__summ {
 }
 
 body.product .add-to-cart__summ.red {
-  color: #D32D2C;
+  color: #d32d2c;
 }
 
 body.product .add-to-cart__summ.small {
@@ -1156,6 +1212,19 @@ body.product .item-icon-row__text {
 body.product .item-icon-row__num {
   font-size: 1em;
   line-height: 1.20625;
+}
+
+.product-left {
+  background-color: #9c91e0;
+  padding-bottom: 120.625%;
+  position: relative;
+}
+
+.product-left__image {
+  position: absolute;
+  bottom: 34px;
+  left: 0;
+  padding-bottom: 78.4375%;
 }
 
 body.product .card__sublabel {
@@ -1468,6 +1537,14 @@ body.product [class*=__title] {
 
   .footer {
     padding-top: 42px;
+  }
+
+  .product-left {
+    padding-bottom: 116.2666666667%;
+  }
+
+  .product-left__image {
+    bottom: 37px;
   }
 
   .quiz__content {

@@ -1,0 +1,17 @@
+.product-left {
+   background-color: #9c91e0;
+   padding-bottom: percent(386, 320);
+   position: relative;
+   @media (min-width: 375px) {
+      padding-bottom: percent(436, 375);
+   }
+   &__image {
+      position: absolute;
+      bottom: 34px;
+      left: 0;
+      padding-bottom: percent(251, 320);
+      @media (min-width: 375px) {
+         bottom: 37px;
+      }
+   }
+}
