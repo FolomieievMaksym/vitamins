@@ -1643,7 +1643,7 @@ body.catalog .card-item__discount-price {
   background-color: #faf8f6;
   padding: 30px 20px 20px;
   display: grid;
-  grid-template-rows: auto minmax(25px, 50px) 1fr auto;
+  grid-template-rows: auto auto 1fr auto;
 }
 
 .comment__stars {
@@ -1666,6 +1666,7 @@ body.catalog .card-item__discount-price {
   font-size: 0.875em;
   line-height: 1.7142857143;
   margin-bottom: 82px;
+  margin-bottom: 55px;
 }
 
 .comment__bottom {
@@ -1703,24 +1704,6 @@ body.catalog .card-item__discount-price {
 
 body.catalog {
   background-color: #fff;
-}
-
-body.catalog .quiz + .banner .swiper-slide .banner__slide-body:after {
-  opacity: 0;
-}
-
-body.catalog .quiz + .banner .swiper-slide-prev .banner__slide-body:after,
-body.catalog .quiz + .banner .swiper-slide-next .banner__slide-body:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #e6e3f8;
-  z-index: 10;
-  border-radius: 24px;
-  opacity: 1 !important;
 }
 
 body.catalog .catalog__body {
@@ -1807,7 +1790,7 @@ body.catalog .catalog__body + .banner .banner__images {
 
 body.catalog .comments {
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 58px;
   padding-left: 20px;
 }
 
@@ -1817,6 +1800,11 @@ body.catalog .comments__title {
   font-weight: 500;
   margin-bottom: 30px;
   max-width: 272px;
+}
+
+body.catalog .comments__items {
+  display: grid !important;
+  grid-template-columns: repeat(3, auto) !important;
 }
 
 @media (min-width: 100px) {
@@ -1902,10 +1890,11 @@ body.catalog .comments__title {
 
   .comment {
     grid-template-rows: auto auto 1fr auto;
+    padding-right: 16px;
   }
 
   .comment__text {
-    margin-bottom: 123px;
+    margin-bottom: 100px;
   }
 
   body.catalog .products__body {
@@ -1949,6 +1938,10 @@ body.catalog .comments__title {
 
   .comment {
     max-width: 444px;
+  }
+
+  .comment__text {
+    margin-bottom: 40px;
   }
 }
 
@@ -2988,6 +2981,21 @@ body.catalog .comments__title {
 @media (min-width: 1625px) {
   .footer__first {
     margin-right: 16.4992826399%;
+  }
+}
+
+@media (min-width: 1799px) {
+  body.catalog .quiz + .banner .swiper-slide-prev .banner__slide-body:after,
+  body.catalog .quiz + .banner .swiper-slide-next .banner__slide-body:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #e6e3f8;
+    z-index: 10;
+    border-radius: 24px;
   }
 }
 

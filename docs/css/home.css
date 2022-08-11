@@ -1116,7 +1116,7 @@ input::placeholder {
   background-color: #faf8f6;
   padding: 30px 20px 20px;
   display: grid;
-  grid-template-rows: auto minmax(25px, 50px) 1fr auto;
+  grid-template-rows: auto auto 1fr auto;
 }
 
 .comment__stars {
@@ -1139,6 +1139,7 @@ input::placeholder {
   font-size: 0.875em;
   line-height: 1.7142857143;
   margin-bottom: 82px;
+  margin-bottom: 55px;
 }
 
 .comment__bottom {
@@ -1544,10 +1545,11 @@ main.home .card__summ {
 
   .comment {
     grid-template-rows: auto auto 1fr auto;
+    padding-right: 16px;
   }
 
   .comment__text {
-    margin-bottom: 123px;
+    margin-bottom: 100px;
   }
 
   .quiz__content {
@@ -1573,6 +1575,10 @@ main.home .card__summ {
 
   .comment {
     max-width: 444px;
+  }
+
+  .comment__text {
+    margin-bottom: 40px;
   }
 
   .quiz__step_9 .quiz__title {

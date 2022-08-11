@@ -205,7 +205,7 @@ window.addEventListener("load", () => {
    }
 
    if (qs("body.catalog")) {
-      const swiper = new Swiper(".banner__slider", {
+      const swiperBanner = new Swiper(".banner__slider", {
          // loop: true,
          // centeredSlides: false,
          slideToClickedSlide: true,
@@ -291,7 +291,7 @@ window.addEventListener("load", () => {
          slidesPerView: 1.07,
          spaceBetween: 10,
          breakpoints: {
-            375: {
+            380: {
                slidesPerView: 1.06,
             },
             400: {
@@ -318,6 +318,7 @@ window.addEventListener("load", () => {
             },
             750: {
                slidesPerView: 2.1,
+               spaceBetween: 25,
             },
             800: {
                slidesPerView: 2.2,
@@ -332,8 +333,20 @@ window.addEventListener("load", () => {
                slidesPerView: 2.5,
             },
             1000: {
-               slidesPerView: 3,
+               slidesPerView: 2.6,
                spaceBetween: 32,
+            },
+            1100: {
+               slidesPerView: 2.7,
+            },
+            1200: {
+               slidesPerView: 2.8,
+            },
+            1300: {
+               slidesPerView: 2.9,
+            },
+            1400: {
+               slidesPerView: 3,
             },
          },
       });
