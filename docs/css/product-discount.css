@@ -1417,6 +1417,10 @@ body.product .item-icon-row__num {
   position: relative;
 }
 
+.product-left svg {
+  display: none;
+}
+
 .product-left__image {
   position: absolute;
   top: 25.9067357513%;
@@ -1946,6 +1950,28 @@ body.product .product-right__title {
   }
 }
 
+@media (min-width: 1023px) {
+  .product-left {
+    padding-bottom: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    left: 0;
+  }
+
+  .product-left svg {
+    display: block;
+    position: absolute;
+    top: 32px;
+    right: 0;
+  }
+
+  .product-left__image {
+    top: 19.6678321678%;
+    top: 225px;
+  }
+}
+
 @media (min-width: 1025px) {
   body.product .header .ic-logo .path1:before,
   body.product .header .ic-logo .path2:before,
@@ -2431,12 +2457,6 @@ body.product .product-right__title {
   .quiz__title {
     padding-left: 30px;
     padding-right: 30px;
-  }
-}
-
-@media (min-width: 1439px) {
-  .product-left__image {
-    top: 10.603204524%;
   }
 }
 

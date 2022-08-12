@@ -1417,6 +1417,10 @@ body.product .item-icon-row__num {
   position: relative;
 }
 
+.product-left svg {
+  display: none;
+}
+
 .product-left__image {
   position: absolute;
   top: 25.9067357513%;
@@ -1764,6 +1768,8 @@ body.product .product-right__title {
 
 body.product .product__body {
   position: relative;
+  max-height: 100vh;
+  overflow: auto;
 }
 
 @media (min-width: 375px) {
@@ -1847,7 +1853,6 @@ body.product .product__body {
 
   body.product .product__body {
     display: flex;
-    align-items: start;
   }
 
   body.product .product__body section:first-child {
@@ -1980,6 +1985,28 @@ body.product .product__body {
 @media (min-width: 1000px) {
   .footer {
     padding-top: 74px;
+  }
+}
+
+@media (min-width: 1023px) {
+  .product-left {
+    padding-bottom: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    left: 0;
+  }
+
+  .product-left svg {
+    display: block;
+    position: absolute;
+    top: 32px;
+    right: 0;
+  }
+
+  .product-left__image {
+    top: 19.6678321678%;
+    top: 225px;
   }
 }
 
@@ -2468,12 +2495,6 @@ body.product .product__body {
   .quiz__title {
     padding-left: 30px;
     padding-right: 30px;
-  }
-}
-
-@media (min-width: 1439px) {
-  .product-left__image {
-    top: 10.603204524%;
   }
 }
 

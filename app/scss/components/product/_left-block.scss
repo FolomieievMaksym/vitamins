@@ -2,8 +2,23 @@
    background-color: #9c91e0;
    padding-bottom: percent(386, 320);
    position: relative;
+   svg {
+      display: none;
+   }
    @media (min-width: 375px) {
       padding-bottom: percent(436, 375);
+   }
+   @media (min-width: 1023px) {
+      padding-bottom: 0;
+      position: sticky;
+      top: 0px;
+      left: 0;
+      svg {
+         display: block;
+         position: absolute;
+         top: 32px;
+         right: 0;
+      }
    }
    &__image {
       position: absolute;
@@ -19,8 +34,9 @@
       @media (min-width: 767px) {
          padding-bottom: percent(479, 900);
       }
-      @media (min-width: 1439px) {
-         top: percent(225, 2122);
+      @media (min-width: 1023px) {
+         top: percent(225, 1144);
+         top: 225px;
       }
    }
 }
