@@ -1,0 +1,21 @@
+<section class="product-right @@if (context.addToCart.discountPrice) {product-right_discount}">
+	<h3 class="product-right__label @@if (context.labelModify) {product-right__label_@@labelModify}">@@label</h3>
+	<h2 class="product-right__title">@@title</h2>
+	@@include('./item-icon-row.html', {
+	'image': '@@iconRow.image',
+	'subtitle': '@@iconRow.subtitle',
+	'text': '@@iconRow.text'
+	})
+	@@if (context.addToCart.discountAmount && context.addToCart.discountPrice) {
+	@@include('./add-to-cart.html', {
+	'fullPrice': '@@addToCart.fullPrice',
+	'discountPrice' : '@@addToCart.discountPrice',
+	'discountAmount' : '@@addToCart.discountAmount'
+	})
+	}
+	@@if (!context.addToCart.discountAmount || !context.addToCart.discountPrice) {
+	@@include('./add-to-cart.html', {
+	'fullPrice': '@@addToCart.fullPrice',
+	})
+	}
+</section>

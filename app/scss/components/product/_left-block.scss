@@ -7,11 +7,11 @@
    }
    &__image {
       position: absolute;
-      bottom: 34px;
+      top: percent(100, 386);
       left: 0;
       padding-bottom: percent(251, 320);
       @media (min-width: 375px) {
-         bottom: 37px;
+         top: percent(105, 436);
       }
    }
 }

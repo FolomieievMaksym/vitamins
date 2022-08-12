@@ -1,29 +1,212 @@
 body.product {
    .add-to-cart {
+      padding-top: 25px;
+      padding-left: 19px;
+      padding-right: 19px;
+      padding-bottom: 25px;
+      border: 1px solid #e6e6e6;
+      border-radius: 16px;
+      margin-bottom: 120px;
+      position: relative;
+      &:after {
+         content: "";
+         position: absolute;
+         top: calc(100% + 60px);
+         left: 0;
+         width: 100%;
+         height: 1px;
+         background: #f2f2f2;
+         @media (min-width: 1441px) {
+            display: none;
+         }
+      }
+      @media (min-width: 1441px) {
+         display: flex;
+         flex-direction: column;
+         padding-left: 30px;
+         padding-right: 30px;
+         padding-top: 28px;
+      }
+      &__top {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         position: relative;
+         margin-bottom: 50px;
+         @media (min-width: 1441px) {
+            order: 2;
+            margin-bottom: 0;
+         }
+         &:after {
+            content: "";
+            position: absolute;
+            top: calc(100% + 25px);
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: #f2f2f2;
+            @media (min-width: 1441px) {
+               top: -26px;
+            }
+         }
+         .btn {
+            max-width: 144px;
+            @media (min-width: 375px) {
+               max-width: 190px;
+            }
+            @media (min-width: 562px) {
+               max-width: 330px;
+            }
+         }
+      }
+
+      &__money {
+      }
+
       &__summ {
-         font-family: $ff2;
-         font-weight: 700;
+         font-weight: 500;
          @include fl(20, 27.24);
          @media (min-width: 1441px) {
             @include fl(30, 40.85);
          }
-         &.red {
-            color: #d32d2c;
+         &_full-price {
          }
-         &.small {
-            font-weight: 600;
-            @include fl(12, 16.34);
-            @media (min-width: 1441px) {
-               @include fl(16, 21.79);
+         &_discount-price {
+            display: none;
+         }
+      }
+      &__discount {
+         display: none;
+      }
+
+      &__bottom {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         @media (min-width: 1441px) {
+            order: 1;
+            margin-bottom: 60px;
+         }
+      }
+
+      &__content {
+         display: flex;
+         align-items: center;
+         p {
+            &:not(:last-child) {
+               margin-right: 8px;
+               @media (min-width: 1441px) {
+                  margin-right: 15px;
+               }
+            }
+            &:nth-child(2) {
+               padding: 8px 12px;
+               background-color: #f5f5f5;
+               border-radius: 8px;
+               @media (min-width: 1441px) {
+                  padding: 8px 14px 8px 16px;
+               }
             }
          }
       }
+
       &__text {
          font-family: $ff2;
          font-weight: 400;
          @include fl(14, 19.07);
-         &.b {
+         &_b {
+            cursor: pointer;
             font-weight: 600;
+            i {
+               display: none;
+            }
+            @media (min-width: 1441px) {
+               display: flex;
+               align-items: center;
+               span {
+                  margin-right: 11px;
+               }
+               i {
+                  font-size: 10px;
+                  display: block;
+               }
+            }
+         }
+      }
+
+      &__switch {
+         cursor: pointer;
+         border: 2px solid $orange;
+         padding: 5px;
+         border-radius: 30px;
+         align-self: center;
+         position: relative;
+         width: 62px;
+         height: 36px;
+         span {
+            display: block;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background-color: $orange;
+            position: absolute;
+            top: 3px;
+            right: 3px;
+         }
+      }
+
+      // При активной скидке
+      &_discount {
+         .add-to-cart {
+            &__bottom {
+               @media (min-width: 1441px) {
+                  margin-bottom: 57px;
+               }
+            }
+            &__money {
+               position: relative;
+               padding-right: 21px;
+               margin-right: 11px;
+               @media (min-width: 1441px) {
+                  padding-right: 0;
+               }
+            }
+            &__summ {
+               font-family: $ff2;
+               &_full-price {
+                  font-weight: 600;
+                  @include fl(12, 16.34);
+                  text-decoration: line-through;
+                  margin-bottom: 7px;
+                  margin-top: 4px;
+                  @media (min-width: 1441px) {
+                     @include fl(16, 21.79);
+                     margin-top: 6px;
+                     margin-bottom: 0;
+                  }
+               }
+               &_discount-price {
+                  font-weight: 700;
+                  display: block;
+                  color: #d32d2c;
+               }
+            }
+            &__discount {
+               display: block;
+               font-weight: 600;
+               @include fl(8, 10.89);
+               position: absolute;
+               top: 2px;
+               right: 0;
+               border-radius: 4px;
+               background-color: #d32d2c;
+               color: #fff;
+               padding: 4px 6px;
+               @media (min-width: 1441px) {
+                  @include fl(10, 13.62);
+                  top: 5px;
+               }
+            }
          }
       }
    }

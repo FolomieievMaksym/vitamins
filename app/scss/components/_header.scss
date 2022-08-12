@@ -22,6 +22,9 @@ body.product {
       }
       .ic-cart:before {
          color: #fff;
+         @media (min-width: 1441px) {
+            color: #000;
+         }
       }
       .burger {
          &__wrapper {

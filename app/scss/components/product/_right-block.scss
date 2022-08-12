@@ -1,19 +1,58 @@
- body.product {
-	.card__sublabel {
-		font-family: $ff2;
-		@include fl(14, 19.07);
-		opacity: 1;
-		font-weight: 600; 
-		@media (min-width: 1441px) {
-			@include fl(16, 21.79);
-		}
-	}
-	 
-	[class*=__title] {
-		font-weight: 500;
-		@include fl(24, 28.94);
-		@media (min-width: 1441px) {
-			@include fl(40, 48.24);
-		 }
-	}
- }
+body.product {
+   .product-right {
+      padding-top: 40px;
+      padding-left: 20px;
+      padding-right: 20px;
+      @media (min-width: 1600px) {
+         padding-left: 135px;
+         padding-right: 203px;
+         padding-top: 161px;
+         padding-left: percent(135, 1800);
+         padding-right: percent(203, 1800);
+         padding-top: percent(161, 1800);
+      }
+      &__label {
+         font-family: $ff2;
+         @include fl(14, 19.07);
+         opacity: 1;
+         font-weight: 600;
+         margin-bottom: 15px;
+         @media (min-width: 1441px) {
+            @include fl(16, 21.79);
+            margin-bottom: 12px;
+         }
+         &_purple {
+            color: $purpleLabel;
+         }
+         &_mint {
+            color: $mintLabel;
+         }
+         &_blue {
+            color: $blueLabel;
+         }
+         &_red {
+            color: $redLabel;
+         }
+         &_gold {
+            color: $goldLabel;
+         }
+         &_pink {
+            color: $pinkLabel;
+         }
+         &_green-label {
+            color: $greenLabel;
+         }
+         &_catalog-green {
+            color: #71bb5e;
+         }
+      }
+      &__title {
+         font-weight: 500;
+         @include fl(24, 28.94);
+         margin-bottom: 40px;
+         @media (min-width: 1441px) {
+            @include fl(40, 48.24);
+         }
+      }
+   }
+}

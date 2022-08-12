@@ -2165,6 +2165,10 @@ body.hide-content .icons-row {
 }
 
 @media (min-width: 1441px) {
+  body.product .header .ic-cart:before {
+    color: #000;
+  }
+
   .footer__container {
     padding-left: 11.2777777778%;
     padding-right: 11.2777777778%;

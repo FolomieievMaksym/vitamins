@@ -2386,6 +2386,10 @@ main.subscriptions .card__title {
 }
 
 @media (min-width: 1441px) {
+  body.product .header .ic-cart:before {
+    color: #000;
+  }
+
   .footer__container {
     padding-left: 11.2777777778%;
     padding-right: 11.2777777778%;

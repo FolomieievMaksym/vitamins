@@ -175,13 +175,7 @@ window.addEventListener("load", () => {
                wholesaleInput.classList.remove("disabled");
                wholesaleHeading.classList.remove("disabled");
                const inputs = qa("input");
-               if (
-                  inputs[0].value &&
-                  inputs[1].value &&
-                  inputs[2].value &&
-                  inputs[3].value &&
-                  inputs[4].value
-               ) {
+               if (inputs[0].value && inputs[1].value && inputs[2].value && inputs[3].value && inputs[4].value) {
                   lastButton.classList.remove("disabled");
                }
             }
@@ -197,10 +191,7 @@ window.addEventListener("load", () => {
       }
 
       if (window.innerWidth > 1441) {
-         wholesaleInput.firstElementChild.setAttribute(
-            "placeholder",
-            "Wholesale purchase permission"
-         );
+         wholesaleInput.firstElementChild.setAttribute("placeholder", "Wholesale purchase permission");
       }
    }
 

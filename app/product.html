@@ -10,10 +10,25 @@
 		@@include('components/each-page-blocks/_header.html')
 		<main class="product">
 			@@include('./components/_quiz.html')
-			@@include('./components/product/left-block.html', {
-			'image': '02',
-			'modify': 'purple'
-			})
+			<div class="product__body">
+				@@include('./components/product/left-block.html', {
+				'image': '02',
+				'modify': 'purple '
+				})
+				@@include('./components/product/right-block.html', {
+				'label': 'Vitamins & Dietary Supplements',
+				'labelModify' : 'purple',
+				'title': 'Metagenics - 500-C Methoxyflavone',
+				'iconRow': {
+				'image': 'bottle_01',
+				'subtitle': '90 Capsules',
+				'text': '500 mg plastic can'
+				},
+				'addToCart': {
+				'fullPrice': '$61.98',
+				}
+				})
+			</div>
 		</main>
 		@@include('components/each-page-blocks/_footer.html')
 	</div>
