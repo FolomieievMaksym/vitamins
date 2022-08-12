@@ -17,12 +17,17 @@ body.product {
          .path1:before,
          .path2:before,
          .path3:before {
-            color: #fff;
+            @media (max-width: 567px) {
+               color: #fff;
+            }
+            @media (min-width: 1025px) {
+               color: #fff;
+            }
          }
       }
       .ic-cart:before {
          color: #fff;
-         @media (min-width: 1441px) {
+         @media (min-width: 567px) {
             color: #000;
          }
       }

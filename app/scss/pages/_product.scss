@@ -1,11 +1,37 @@
 body.product {
    .product {
       &__body {
-         @media (min-width: 1441px) {
+         position: relative;
+         @media (min-width: 567px) {
             display: flex;
-
+            align-items: start;
             section {
-               flex: 0 0 50%;
+               &:first-child {
+                  flex: 0 0 30%;
+               }
+               &:last-child {
+                  flex: 1 1 auto;
+               }
+            }
+            @media (min-width: 767px) {
+               section {
+                  &:first-child {
+                     flex: 0 0 40%;
+                  }
+                  &:last-child {
+                     flex: 1 1 auto;
+                  }
+               }
+            }
+            @media (min-width: 1400px) {
+               section {
+                  &:first-child {
+                     flex: 0 0 50%;
+                  }
+                  &:last-child {
+                     flex: 0 0 50%;
+                  }
+               }
             }
          }
       }

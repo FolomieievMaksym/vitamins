@@ -3,13 +3,18 @@ body.product {
       padding-top: 40px;
       padding-left: 20px;
       padding-right: 20px;
-      @media (min-width: 1600px) {
-         padding-left: 135px;
-         padding-right: 203px;
-         padding-top: 161px;
+      @media (min-width: 567px) {
+         max-width: 563px;
+         margin: 0 auto;
+         padding-top: 100px;
+      }
+      @media (min-width: 1025px) {
          padding-left: percent(135, 1800);
          padding-right: percent(203, 1800);
          padding-top: percent(161, 1800);
+         max-width: none;
+      }
+      @media (min-width: 1600px) {
       }
       &__label {
          font-family: $ff2;

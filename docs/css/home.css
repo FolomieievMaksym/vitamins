@@ -493,12 +493,6 @@ body.product .header:after {
   display: none;
 }
 
-body.product .header .ic-logo .path1:before,
-body.product .header .ic-logo .path2:before,
-body.product .header .ic-logo .path3:before {
-  color: #fff;
-}
-
 body.product .header .ic-cart:before {
   color: #fff;
 }
@@ -1624,6 +1618,12 @@ main.home .card__summ {
   }
 }
 
+@media (min-width: 567px) {
+  body.product .header .ic-cart:before {
+    color: #000;
+  }
+}
+
 @media (min-width: 569px) {
   .btn {
     max-width: 330px;
@@ -1751,6 +1751,12 @@ main.home .card__summ {
 }
 
 @media (min-width: 1025px) {
+  body.product .header .ic-logo .path1:before,
+  body.product .header .ic-logo .path2:before,
+  body.product .header .ic-logo .path3:before {
+    color: #fff;
+  }
+
   .header__container {
     padding-left: 35px;
     padding-right: 30px;
@@ -2226,10 +2232,6 @@ main.home .card__summ {
 }
 
 @media (min-width: 1441px) {
-  body.product .header .ic-cart:before {
-    color: #000;
-  }
-
   .footer__container {
     padding-left: 11.2777777778%;
     padding-right: 11.2777777778%;
@@ -2360,6 +2362,14 @@ main.home .card__summ {
 @media (max-width: 568px) {
   .quiz__question p:hover {
     transform: scale(1.05);
+  }
+}
+
+@media (max-width: 567px) {
+  body.product .header .ic-logo .path1:before,
+  body.product .header .ic-logo .path2:before,
+  body.product .header .ic-logo .path3:before {
+    color: #fff;
   }
 }
 

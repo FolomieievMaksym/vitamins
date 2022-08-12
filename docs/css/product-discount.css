@@ -493,12 +493,6 @@ body.product .header:after {
   display: none;
 }
 
-body.product .header .ic-logo .path1:before,
-body.product .header .ic-logo .path2:before,
-body.product .header .ic-logo .path3:before {
-  color: #fff;
-}
-
 body.product .header .ic-cart:before {
   color: #fff;
 }
@@ -1824,9 +1818,27 @@ body.product .product-right__title {
   }
 }
 
-@media (min-width: 562px) {
+@media (min-width: 567px) {
+  body.product .header .ic-cart:before {
+    color: #000;
+  }
+
   body.product .add-to-cart__top .btn {
     max-width: 330px;
+  }
+
+  body.product .add-to-cart__money {
+    margin-right: 30px;
+  }
+
+  .product-left__image {
+    top: 100px;
+  }
+
+  body.product .product-right {
+    max-width: 563px;
+    margin: 0 auto;
+    padding-top: 100px;
   }
 }
 
@@ -1851,6 +1863,12 @@ body.product .product-right__title {
     grid-template-columns: 1fr 1fr 1fr;
     -moz-column-gap: 50px;
     column-gap: 50px;
+  }
+}
+
+@media (min-width: 767px) {
+  .product-left__image {
+    padding-bottom: 53.2222222222%;
   }
 }
 
@@ -1929,6 +1947,12 @@ body.product .product-right__title {
 }
 
 @media (min-width: 1025px) {
+  body.product .header .ic-logo .path1:before,
+  body.product .header .ic-logo .path2:before,
+  body.product .header .ic-logo .path3:before {
+    color: #fff;
+  }
+
   .header__container {
     padding-left: 35px;
     padding-right: 30px;
@@ -2043,6 +2067,13 @@ body.product .product-right__title {
   .menu-footer__list_1.menu-footer__list li:nth-child(7) {
     transform: translate(0px, -24px);
     order: 6;
+  }
+
+  body.product .product-right {
+    padding-left: 7.5%;
+    padding-right: 11.2777777778%;
+    padding-top: 8.9444444444%;
+    max-width: none;
   }
 
   .quiz__header {
@@ -2403,11 +2434,13 @@ body.product .product-right__title {
   }
 }
 
-@media (min-width: 1441px) {
-  body.product .header .ic-cart:before {
-    color: #000;
+@media (min-width: 1439px) {
+  .product-left__image {
+    top: 10.603204524%;
   }
+}
 
+@media (min-width: 1441px) {
   .footer__container {
     padding-left: 11.2777777778%;
     padding-right: 11.2777777778%;
@@ -2561,17 +2594,6 @@ body.product .product-right__title {
   }
 }
 
-@media (min-width: 1600px) {
-  body.product .product-right {
-    padding-left: 135px;
-    padding-right: 203px;
-    padding-top: 161px;
-    padding-left: 7.5%;
-    padding-right: 11.2777777778%;
-    padding-top: 8.9444444444%;
-  }
-}
-
 @media (min-width: 1625px) {
   .footer__first {
     margin-right: 16.4992826399%;
@@ -2607,6 +2629,14 @@ body.product .product-right__title {
 @media (max-width: 568px) {
   .quiz__question p:hover {
     transform: scale(1.05);
+  }
+}
+
+@media (max-width: 567px) {
+  body.product .header .ic-logo .path1:before,
+  body.product .header .ic-logo .path2:before,
+  body.product .header .ic-logo .path3:before {
+    color: #fff;
   }
 }
 

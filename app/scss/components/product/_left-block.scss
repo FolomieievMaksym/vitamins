@@ -13,5 +13,14 @@
       @media (min-width: 375px) {
          top: percent(105, 436);
       }
+      @media (min-width: 567px) {
+         top: 100px;
+      }
+      @media (min-width: 767px) {
+         padding-bottom: percent(479, 900);
+      }
+      @media (min-width: 1439px) {
+         top: percent(225, 2122);
+      }
    }
 }
