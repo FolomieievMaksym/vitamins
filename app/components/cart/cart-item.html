@@ -1,9 +1,11 @@
 <div class="cart-item @@if (context.modify) {cart-item_@@modify}">
-	<div class='cart-item__image image hv @@if (context.background) {cart-item__image_@@background}'>
-		<picture>
-			<source type='image/webp' srcset='@img/gallery/@@image.webp'>
-			<img src='@img/gallery/@@image.png' alt='product image'>
-		</picture>
+	<div class="cart-item__left @@if (context.background) {cart-item__left_@@background}">
+		<div class='cart-item__image image hv '>
+			<picture>
+				<source type='image/webp' srcset='@img/gallery/@@image.webp'>
+				<img src='@img/gallery/@@image.png' alt='product image'>
+			</picture>
+		</div>
 	</div>
 	<div class="cart-item__body item-body">
 		<div class="item-body__top">
@@ -25,6 +27,12 @@
 		</div>
 		<div class="item-body__bottom">
 			<div class="item-body__content">
+				<div class="item-body__ok-icon">
+					<svg width="12" height="9" viewBox="0 0 12 9" fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path d="M1.5 4L4.5 7L10.5 1" stroke="white" stroke-width="2" />
+					</svg>
+				</div>
 				<p class="item-body__text">Deliver every</p>
 				<p class="item-body__text item-body__text_b"><span>30</span><i
 						class="ic-arrow-down"></i></p>

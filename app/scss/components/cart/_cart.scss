@@ -35,7 +35,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 23px 20px 22px;
+      padding: 20px 20px 21px;
       position: relative;
       &:after {
          content: "";
@@ -45,7 +45,7 @@
          width: 100%;
          height: 1px;
          transform: translate(0, -100%);
-         background: red;
+         background: rgba(0, 0, 0, 0.07);
       }
    }
    &__title {
@@ -71,8 +71,8 @@
       span {
          position: relative;
          display: inline-block;
-         width: 16px;
-         height: 16px;
+         width: 20px;
+         height: 20px;
          position: relative;
          transform: translate(0, 50%);
 
@@ -93,5 +93,9 @@
             transform: rotate(-45deg);
          }
       }
+   }
+   &__items {
+      display: grid;
+      row-gap: rem(1);
    }
 }
