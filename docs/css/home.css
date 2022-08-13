@@ -1512,7 +1512,7 @@ input::placeholder {
 
 .cart {
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.99);
+  background-color: rgba(0, 0, 0, 0.2);
   width: 100vw;
   height: 100vh;
   z-index: 100;
@@ -1538,6 +1538,8 @@ input::placeholder {
   overflow: auto;
   max-height: 100%;
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 .cart__top {
@@ -1607,9 +1609,49 @@ input::placeholder {
   transform: rotate(-45deg);
 }
 
+.cart__fix {
+  overflow: auto;
+  flex: 1 1 auto;
+}
+
 .cart__items {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   row-gap: 0.0625rem;
+  max-height: 324px;
+  max-height: calc(100vh - 71px - 84px);
+}
+
+.cart__bottom {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+  position: relative;
+  background-color: #fff;
+}
+
+.cart__bottom:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: red;
+  background-color: rgba(0, 0, 0, 0.07);
+}
+
+.cart__bottom .btn {
+  max-width: none;
+}
+
+.cart__bottom .btn p:first-child {
+  margin-right: 12px;
+}
+
+.cart__bottom .btn span {
+  margin-right: 12px;
 }
 
 .cart-item {
@@ -1798,11 +1840,13 @@ input::placeholder {
   font-size: 0.625em;
   line-height: 1.362;
   text-decoration: line-through;
+  transform: translate(0, 1px);
 }
 
 .item-body__price_discount .item-body__summ_discount-price {
   display: block;
   color: #d32d2c;
+  transform: translate(0, 1px);
 }
 
 .item-body__summ {
@@ -1810,6 +1854,10 @@ input::placeholder {
   font-weight: 600;
   font-size: 1em;
   line-height: 1.361875;
+}
+
+.item-body__summ_full-price {
+  transform: translate(0, 1px);
 }
 
 .item-body__summ_discount-price {
@@ -1984,11 +2032,92 @@ main.home .card__summ {
     padding-top: 1.875rem;
     padding-bottom: 2rem;
   }
+
+  .item-body__top {
+    margin-bottom: 0.8125rem;
+  }
 }
 
 @media (min-width: 376px) {
   .comment__text {
     margin-bottom: 80px;
+  }
+}
+
+@media (min-width: 468px) {
+  .cart__top {
+    padding-top: 2.4375rem;
+    padding-bottom: 2.4375rem;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+
+  .cart__fix {
+    padding-left: 2rem;
+    padding-right: 1.875rem;
+  }
+
+  .cart__items {
+    padding-top: 2rem;
+    row-gap: 3.75rem;
+  }
+
+  .cart__bottom {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+  }
+
+  .cart__bottom .btn p:first-child {
+    transform: translate(-4px, 0);
+  }
+
+  .cart__bottom .btn span {
+    transform: translate(-2px, 0);
+  }
+
+  .cart-item__left {
+    flex: 0 0 120px;
+    border-radius: 0.5rem;
+    transform: translate(-3px, 0);
+  }
+
+  .cart-item__image {
+    top: 28%;
+  }
+
+  .item-body {
+    padding-top: 0.5625rem;
+    padding-right: 0px;
+    padding-bottom: 0.5625rem;
+    transform: translate(-4px, 0);
+  }
+
+  .item-body__icon-wrapper {
+    top: -5px;
+    left: -28px;
+  }
+
+  .item-body__buttons {
+    max-width: 100px;
+  }
+
+  .item-body__price {
+    transform: translate(3px, 0);
+  }
+
+  .item-body__price_discount {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .item-body__summ_full-price {
+    transform: translate(0, 2px);
+  }
+
+  .item-body__bottom {
+    padding-top: 0.875rem;
   }
 }
 
@@ -2033,6 +2162,13 @@ main.home .card__summ {
     grid-template-columns: 1fr 1fr 1fr;
     -moz-column-gap: 50px;
     column-gap: 50px;
+  }
+}
+
+@media (min-width: 760px) {
+  .item-body__buttons {
+    -moz-column-gap: 1rem;
+    column-gap: 1rem;
   }
 }
 
@@ -2135,8 +2271,8 @@ main.home .card__summ {
   }
 
   .cart-item {
-    -moz-column-gap: 1.5625rem;
-    column-gap: 1.5625rem;
+    -moz-column-gap: 1.6875rem;
+    column-gap: 1.6875rem;
   }
 
   .item-body__price_discount .item-body__summ_full-price {
@@ -2680,19 +2816,9 @@ main.home .card__summ {
     line-height: 1.206;
   }
 
-  .item-body__buttons {
-    -moz-column-gap: 32px;
-    column-gap: 32px;
-    transform: translate(0, 1px);
-  }
-
   .item-body__summ {
     font-size: 1.125em;
     line-height: 1.3616666667;
-  }
-
-  .item-body__content p:not(:last-child) {
-    margin-right: 15px;
   }
 
   .item-body__content p:nth-child(3) {

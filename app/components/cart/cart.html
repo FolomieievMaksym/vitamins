@@ -7,23 +7,36 @@
 					<div class="icon-wrapper"><span></span></div>
 				</div>
 			</div>
-			<div class="cart__items">
-				<!-- 'modify': 'empty', -->
-				@@include('./cart-item.html', {
-				'image': '23',
-				'background': 'pink',
-				'title': 'Ortho Molecular Products CereVive Capsules',
-				'fullPrice': '$125.00',
-				'discountPrice': '$84.00',
-				})
-				@@include('./cart-item.html', {
-				'image': '02',
-				'background': 'purple',
-				'title': 'Standard Process Thymus PMG 90 Tablets',
-				'fullPrice': '$84.00',
-				})
-				<!-- 'disabled': 'disabled' -->
+			<div class="cart__fix">
+
+
+				<div class="cart__items">
+					<!-- 'modify': 'empty', -->
+					@@include('./cart-item.html', {
+					'image': '23',
+					'background': 'pink',
+					'title': 'Ortho Molecular Products CereVive Capsules',
+					'fullPrice': '$125.00',
+					'discountPrice': '$84.00',
+					})
+					@@include('./cart-item.html', {
+					'image': '02',
+					'background': 'purple',
+					'title': 'Standard Process Thymus PMG 90 Tablets',
+					'fullPrice': '$84.00',
+					})
+					<!-- 'disabled': 'disabled' -->
+				</div>
 			</div>
+			<div class="cart__bottom">
+				<div class="cart__bottom__btn btn">
+					<p>Check Out</p>
+					<span>•</span>
+					<p>$156.58</p>
+				</div>
+
+			</div>
+
 		</div>
 	</div>
 
