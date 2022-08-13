@@ -14,7 +14,7 @@ body.product {
          padding-right: percent(203, 1800);
          padding-top: percent(161, 1800);
          max-width: none;
-         padding-bottom: 130px;
+         padding-bottom: 135px;
       }
       position: relative;
       &:after {
@@ -26,6 +26,43 @@ body.product {
          height: 1px;
          transform: translate(0, -100%);
          background: #f2f2f2;
+      }
+      &__fix {
+         @media (min-width: 1000px) {
+            position: relative;
+         }
+      }
+      &__back-button {
+         display: none;
+         @media (min-width: 1025px) {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            position: absolute;
+            left: -4px;
+            top: -50px;
+            z-index: 20;
+            i {
+               margin-right: 11px;
+            }
+            p {
+               font-family: $ff2;
+               font-weight: 600;
+               @include fl(16, 21.79);
+            }
+         }
+         @media (min-width: 1200px) {
+            top: -66px;
+         }
+         @media (min-width: 1400px) {
+            top: -87px;
+         }
+         @media (min-width: 1600px) {
+            top: -107px;
+         }
+         @media (min-width: 1700px) {
+            top: -117px;
+         }
       }
       &__label {
          font-family: $ff2;

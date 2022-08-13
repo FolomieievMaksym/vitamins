@@ -38,4 +38,223 @@ body.product {
          }
       }
    }
+   .cards {
+      padding-top: 62px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 57px;
+      @media (min-width: 1000px) {
+         padding: 80px 50px;
+      }
+      @media (min-width: 1600px) {
+         padding-top: 100px;
+         padding-left: 202px;
+         padding-right: 202px;
+         padding-bottom: 100px;
+      }
+      &__body {
+         display: grid;
+         grid-template-columns: 1fr;
+         row-gap: 14px;
+         display: grid;
+         grid-template-columns: 1fr;
+         grid-auto-rows: 1fr;
+         @media (min-width: 375px) {
+            grid-template-columns: 1fr 1fr;
+            column-gap: 14px;
+         }
+         @media (min-width: 767px) {
+            gap: 25px;
+         }
+         @media (min-width: 999px) {
+            padding: 0;
+            max-width: 1396px;
+            margin: 0 auto;
+            column-gap: 32px;
+            row-gap: 32px;
+            grid-template-columns: repeat(4, 1fr);
+         }
+      }
+      &__title {
+         font-weight: 500;
+         @include fl(20, 24.12);
+         margin-bottom: 30px;
+         @media (min-width: 1000px) {
+            @include fl(30, 36.18);
+            margin-bottom: 40px;
+         }
+      }
+      .card-item {
+         cursor: pointer;
+         background-color: #faf8f6;
+         border-radius: 16px;
+         padding: 50px 20px 20px;
+         display: grid;
+         grid-auto-flow: row;
+         grid-template-columns: 1fr;
+         grid-template-rows: auto 1fr auto;
+         position: relative;
+         @media (min-width: 375px) {
+            padding-top: 22.25px;
+            padding-left: 15px;
+            padding-right: 15px;
+            border-radius: 8px;
+         }
+         @media (min-width: 999px) {
+            padding-top: 62px;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-bottom: 30px;
+            border-radius: 16px;
+         }
+         transition: all 0.3s ease;
+         &:hover {
+            overflow: hidden;
+            background-color: rgba(250, 248, 246, 0.85);
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+            img {
+               transform: scale(1.2);
+            }
+            &:nth-child(6) {
+               img {
+                  transform: translate(0, 11px) scale(1.2);
+               }
+            }
+         }
+         &_discount {
+            .card-item {
+               &__decor-discount {
+                  display: block;
+                  position: absolute;
+                  top: 20px;
+                  right: 20px;
+                  background-color: #d32d2c;
+                  @include fl(10, 13.62);
+                  padding: 4px 6px;
+                  border-radius: 4px;
+                  color: #fff;
+                  @media (min-width: 999px) {
+                     top: 30px;
+                     right: 30px;
+                     padding: 5px 11px;
+                     @include fl(12, 16);
+                  }
+               }
+               &__full-price {
+                  text-decoration: line-through;
+                  margin-right: 12px;
+               }
+               &__discount-price {
+                  display: block;
+                  color: #d32d2c;
+               }
+            }
+         }
+         &__decor-discount {
+            display: none;
+         }
+
+         &__image {
+            margin-bottom: 42px;
+            padding-bottom: calc(191 / 240 * 100%);
+            position: relative;
+            @media (min-width: 375px) {
+               margin-bottom: 15px;
+            }
+            @media (min-width: 999px) {
+               margin-bottom: 51px;
+            }
+            img {
+               transition: all 0.3s ease;
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               object-fit: contain;
+            }
+         }
+
+         &__body {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+         }
+
+         &__label {
+            font-family: $ff2;
+            @include fl(12, 16.34);
+            font-weight: 600;
+            opacity: 0.7;
+            margin-bottom: 10px;
+            @media (min-width: 999px) {
+               margin-bottom: 12px;
+            }
+            @media (min-width: 1441px) {
+               @include fl(14, 19.07);
+            }
+            &_purple {
+               color: $purpleLabel;
+            }
+            &_mint {
+               color: $mintLabel;
+            }
+            &_blue {
+               color: $blueLabel;
+            }
+            &_red {
+               color: $redLabel;
+            }
+            &_gold {
+               color: $goldLabel;
+            }
+            &_pink {
+               color: $pinkLabel;
+            }
+            &_green-label {
+               color: $greenLabel;
+            }
+            &_catalog-green {
+               color: #71bb5e;
+            }
+         }
+
+         &__title {
+            font-weight: 400;
+            @include fl(16, 19.3);
+            margin-bottom: 16.3px;
+            @media (max-width: 999px) {
+               max-height: 39px;
+               overflow: hidden;
+               text-overflow: ellipsis;
+               display: -webkit-box;
+               -webkit-line-clamp: 2;
+               -webkit-box-orient: vertical;
+            }
+            @media (min-width: 1441px) {
+               margin-bottom: 17px;
+               @include fl(20, 24.12);
+            }
+         }
+
+         &__summ {
+            display: flex;
+            align-items: center;
+            p {
+               font-family: $ff2;
+               font-weight: 700;
+               @include fl(16, 21.79);
+               @media (min-width: 999px) {
+                  @include fl(20, 27.24);
+               }
+            }
+         }
+
+         &__full-price {
+         }
+
+         &__discount-price {
+            display: none;
+         }
+      }
+   }
 }

@@ -12,25 +12,29 @@
 			@@include('./components/_quiz.html')
 			<div class="product__body">
 				@@include('./components/product/left-block.html', {
-				'image': '02',
-				'modify': 'purple '
+				'image': '05',
+				'modify': 'green'
 				})
 				@@include('./components/product/right-block.html', {
-				'label': 'Vitamins & Dietary Supplements',
-				'labelModify' : 'purple',
-				'title': 'Metagenics - 500-C Methoxyflavone',
+				'label': 'Weight Loss',
+				'labelModify' : 'green-label',
+				'title': 'Core Restore BT 1 Kit',
 				'iconRow': {
-				'image': 'bottle_01',
-				'subtitle': '90 Capsules',
-				'text': '500 mg plastic can'
+				'image': 'bottle_04',
+				'subtitle': '14 Day Kit',
+				'text': '14 x 8 x 6 inches ; 2.5 pounds'
 				},
 				'addToCart': {
 				'fullPrice': '$61.98',
 				}
 				})
 			</div>
-			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus repellat perferendis
-			nemo quidem mollitia nobis nulla, aspernatur consequuntur ad quas.
+			<section class="cards">
+				<h4 class="cards__title">You may also like</h4>
+				<div class="cards__body">
+					@@loop('./components/catalog/card-item.html', './json/product-card-item.json')
+				</div>
+			</section>
 		</main>
 		@@include('components/each-page-blocks/_footer.html')
 	</div>

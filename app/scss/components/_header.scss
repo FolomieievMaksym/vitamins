@@ -27,6 +27,7 @@ body.product {
       }
       .ic-cart:before {
          color: #fff;
+         transition: all 0.3s ease;
          @media (min-width: 567px) {
             color: #000;
          }
@@ -175,7 +176,7 @@ body.product {
       &:not(:last-child) {
          font-size: 26px; //Размер иконок
          &:hover {
-            color: $orange;
+            color: $orange !important;
          }
          @media (min-width: 1025px) {
             margin-right: 35px;
