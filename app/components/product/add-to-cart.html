@@ -1,8 +1,10 @@
 <div class="add-to-cart @@if (context.discountAmount) {add-to-cart_discount}">
 	<div class="add-to-cart__top">
 		<div class="add-to-cart__money">
-			<p class="add-to-cart__summ @@if (context.discountAmount) {add-to-cart__summ_full-price}">@@fullPrice</p>
-			@@if (context.discountAmount) {<p class="add-to-cart__summ add-to-cart__summ_discount-price">@@discountPrice</p>}
+			<p class="add-to-cart__summ @@if (context.discountAmount) {add-to-cart__summ_full-price}">
+				@@fullPrice</p>
+			@@if (context.discountAmount) {<p
+				class="add-to-cart__summ add-to-cart__summ_discount-price">@@discountPrice</p>}
 			@@if (context.discountAmount) {<p class="add-to-cart__discount">@@discountAmount</p>}
 		</div>
 		@@include('../_btn.html', {
@@ -11,8 +13,9 @@
 	</div>
 	<div class="add-to-cart__bottom">
 		<div class="add-to-cart__content">
-			<p class="add-to-cart__text">Autoship this item every</p>
-			<p class="add-to-cart__text add-to-cart__text_b"><span>30</span><i class="ic-arrow-down"></i></p>
+			<p class="add-to-cart__text">Deliver every</p>
+			<p class="add-to-cart__text add-to-cart__text_b"><span>30</span><i
+					class="ic-arrow-down"></i></p>
 			<p class="add-to-cart__text">days</p>
 		</div>
 		<div class="add-to-cart__switch">

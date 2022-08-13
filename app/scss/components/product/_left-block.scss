@@ -10,7 +10,8 @@
    }
    @media (min-width: 1023px) {
       padding-bottom: 0;
-      position: sticky;
+      // position: sticky;
+      position: relative;
       top: 0px;
       left: 0;
       svg {

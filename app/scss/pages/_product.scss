@@ -2,8 +2,9 @@ body.product {
    .product {
       &__body {
          position: relative;
-         max-height: 100vh;
-         overflow: auto;
+         // sticky
+         // max-height: 100vh;
+         // overflow: auto;
          @media (min-width: 567px) {
             display: flex;
             section {

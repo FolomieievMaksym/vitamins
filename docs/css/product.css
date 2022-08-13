@@ -1432,6 +1432,19 @@ body.product .product-right {
   padding-top: 40px;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+body.product .product-right:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transform: translate(0, -100%);
+  background: #f2f2f2;
 }
 
 body.product .product-right__label {
@@ -1480,6 +1493,73 @@ body.product .product-right__title {
   font-size: 1.5em;
   line-height: 1.2058333333;
   margin-bottom: 40px;
+}
+
+body.product .product-right__subtitle {
+  font-weight: 500;
+  font-size: 1.25em;
+  line-height: 1.206;
+  margin-bottom: 28px;
+}
+
+body.product .product-right__text-body:not(:last-child) {
+  position: relative;
+  margin-bottom: 28px;
+  padding-bottom: 2px;
+}
+
+body.product .product-right__text-body:not(:last-child):after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #f2f2f2;
+}
+
+body.product .product-right__text {
+  font-family: "OpenSans";
+  font-size: 0.875em;
+  line-height: 1.7142857143;
+  margin-bottom: 30px;
+}
+
+body.product .product-right__text_b {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+body.product .product-right__text_last {
+  margin-bottom: 0;
+  margin-top: -5px;
+  padding-right: 2px;
+}
+
+body.product .product-right__list {
+  margin-bottom: 62px;
+}
+
+body.product .product-right__list li {
+  font-family: "OpenSans";
+  font-size: 0.875em;
+  line-height: 1.7142857143;
+  padding-left: 40px;
+  position: relative;
+}
+
+body.product .product-right__list li:not(:last-of-type) {
+  margin-bottom: 25px;
+}
+
+body.product .product-right__list li:before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background: #ff7d4e;
 }
 
 .quiz {
@@ -1768,8 +1848,6 @@ body.product .product-right__title {
 
 body.product .product__body {
   position: relative;
-  max-height: 100vh;
-  overflow: auto;
 }
 
 @media (min-width: 375px) {
@@ -1800,6 +1878,10 @@ body.product .product__body {
 
   .product-left__image {
     top: 24.0825688073%;
+  }
+
+  body.product .product-right__text {
+    padding-right: 2px;
   }
 
   .quiz__content {
@@ -1986,13 +2068,69 @@ body.product .product__body {
   .footer {
     padding-top: 74px;
   }
+
+  body.product .add-to-cart {
+    margin-bottom: 95px;
+  }
+
+  body.product .product-right {
+    padding-left: 7.5%;
+    padding-right: 11.2777777778%;
+    padding-top: 8.9444444444%;
+    max-width: none;
+    padding-bottom: 130px;
+  }
+
+  body.product .product-right__subtitle {
+    font-size: 1.625em;
+    line-height: 1.2061538462;
+    margin-bottom: 26px;
+  }
+
+  body.product .product-right__subtitle_second {
+    margin-bottom: 34px;
+  }
+
+  body.product .product-right__text-body {
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 324px);
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+  }
+
+  body.product .product-right__text-body:not(:last-child) {
+    padding-bottom: 30px;
+    margin-bottom: 29px;
+  }
+
+  body.product .product-right__text-body:last-child {
+    transform: translate(0, 2px);
+  }
+
+  body.product .product-right__text {
+    font-size: 1em;
+    line-height: 1.75;
+    margin-bottom: 0;
+    padding-right: 0;
+  }
+
+  body.product .product-right__text_first {
+    margin-bottom: 35px;
+  }
+
+  body.product .product-right__text_last {
+    margin-top: 30px;
+  }
+
+  body.product .product-right__list {
+    margin-bottom: 95px;
+  }
 }
 
 @media (min-width: 1023px) {
   .product-left {
     padding-bottom: 0;
-    position: -webkit-sticky;
-    position: sticky;
+    position: relative;
     top: 0px;
     left: 0;
   }
@@ -2133,11 +2271,9 @@ body.product .product__body {
     order: 6;
   }
 
-  body.product .product-right {
-    padding-left: 7.5%;
-    padding-right: 11.2777777778%;
-    padding-top: 8.9444444444%;
-    max-width: none;
+  body.product .product-right__list li {
+    font-size: 1em;
+    line-height: 1.361875;
   }
 
   .quiz__header {
@@ -2635,6 +2771,14 @@ body.product .product__body {
   body.product .product-right__title {
     font-size: 2.5em;
     line-height: 1.206;
+  }
+
+  body.product .product-right__list li {
+    padding-left: 50px;
+  }
+
+  body.product .product-right__list li:before {
+    width: 30px;
   }
 
   .quiz__pages {

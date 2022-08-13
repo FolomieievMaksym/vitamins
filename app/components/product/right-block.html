@@ -1,5 +1,6 @@
 <section class="product-right @@if (context.addToCart.discountPrice) {product-right_discount}">
-	<h3 class="product-right__label @@if (context.labelModify) {product-right__label_@@labelModify}">@@label</h3>
+	<h3 class="product-right__label @@if (context.labelModify) {product-right__label_@@labelModify}">
+		@@label</h3>
 	<h2 class="product-right__title">@@title</h2>
 	@@include('./item-icon-row.html', {
 	'image': '@@iconRow.image',
@@ -18,4 +19,55 @@
 	'fullPrice': '@@addToCart.fullPrice',
 	})
 	}
+	<h4 class="product-right__subtitle">Description</h4>
+	<p class="product-right__text product-right__text_first">500-C Methoxyflavone is a synergistic
+		formula that features a
+		specialized complex of bioflavonoids combined with vitamin C.*</p>
+	<ul class="product-right__list">
+		<li>Citrus bioflavonoid complex</li>
+		<li>Provides potent antioxidant protection and supports healthy immune system function*</li>
+		<li>Supports healthy collagen production, the main component of connective tissue*</li>
+		<li>This product is non-GMO, gluten free, and vegetarian</li>
+	</ul>
+	<h4 class="product-right__subtitle product-right__subtitle_second">Important information</h4>
+	<div class="product-right__text-body">
+		<p class="product-right__text product-right__text_b">Safety information</p>
+		<p class="product-right__text">Keep out of the reach of children.</p>
+	</div>
+	<div class="product-right__text-body">
+		<p class="product-right__text product-right__text_b">Indications</p>
+		<p class="product-right__text">Deficient or weak Immune System Function</p>
+	</div>
+	<div class="product-right__text-body">
+		<p class="product-right__text product-right__text_b">Ingredients</p>
+		<p class="product-right__text">Vitamin C (as ascorbic acid), Citrus Bioflavonoid Complex
+			[standardized to 45% (225 mg)
+			bioflavonoids: hesperidin and other naturally occurring phenolic compounds]. Other
+			Ingredients:
+			Cellulose, silica, stearic acid (vegetable), croscarmellose sodium, magnesium stearate
+			(vegetable),
+			and coating (hypromellose, medium chain triglycerides, and hydroxypropylcellulose).</p>
+	</div>
+	<div class="product-right__text-body">
+		<p class="product-right__text product-right__text_b">Directions</p>
+		<p class="product-right__text">Take one tablet daily or as directed by your healthcare
+			practitioner.</p>
+	</div>
+	<div class="product-right__text-body">
+		<p class="product-right__text product-right__text_b">Legal Disclaimer</p>
+		<div class="product-right__sub-body">
+			<p class="product-right__text"> *These statements have not been evaluated by the Food and
+				Drug
+				Administration. This product is
+				not
+				intended to diagnose, treat, cure, or prevent any disease.
+			</p>
+			<p class="product-right__text product-right__text_last">Statements regarding dietary
+				supplements have not been
+				evaluated
+				by the FDA and are not
+				intended to
+				diagnose, treat, cure, or prevent any disease or health condition.</p>
+		</div>
+	</div>
 </section>

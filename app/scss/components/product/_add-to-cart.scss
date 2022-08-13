@@ -20,7 +20,9 @@ body.product {
             display: none;
          }
       }
-
+      @media (min-width: 1000px) {
+         margin-bottom: 95px;
+      }
       @media (min-width: 1441px) {
          display: flex;
          flex-direction: column;
