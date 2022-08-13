@@ -443,7 +443,6 @@ main {
 }
 
 .image {
-  transition: all 0.3s ease;
   overflow: hidden;
   position: relative;
   padding-bottom: 100%;
@@ -451,6 +450,7 @@ main {
 }
 
 .image img {
+  transition: all 0.3s ease;
   position: absolute;
   top: 0;
   left: 0;

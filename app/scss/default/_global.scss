@@ -32,12 +32,12 @@ main {
    flex: 1 1 auto;
 }
 .image {
-   transition: all 0.3s ease;
    overflow: hidden;
    position: relative;
    padding-bottom: 100%;
    width: 100%;
    img {
+      transition: all 0.3s ease;
       position: absolute;
       top: 0;
       left: 0;

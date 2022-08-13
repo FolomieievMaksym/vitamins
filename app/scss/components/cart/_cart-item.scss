@@ -1,43 +1,100 @@
-// Text styles
-.cart {
-	[class*=__title] {
-		font-weight: 400;
-		@include fl(16, 19.3);
-		@media (min-width: 1441px) {
-			@include fl(20, 24.12);
-		}
-	}
-	[class*=__summ] { //personal pack
-		font-family: $ff2;
-		font-weight: 600;
-		@include fl(16, 21.79);
-		@media (min-width: 1441px) {
-			@include fl(18, 24/51);
-		}
-		&.small {
-			@include fl(10, 13.62);
-		}
-		&.red {
-			color: #D32D2C;
-		}
-	}
-	[class*=__text] { //personal pack
-		font-family: $ff2;
-		font-weight: 400;
-		@include fl(12, 16.34);
-		opacity: 0.5;
-		&.b {
-			font-weight: 600;
-			opacity: 1;
-			&.op {
-				opacity: 0.5;
-			}
-		}
-	}
-	.btn.grey {
-		background-color: #C4BDB6;;
-	}
-	.empty {
-		@include fl(16, 16);
-	}
+.cart-item {
+   // .cart-item__image
+   &__image {
+      &_pink {
+         background-color: $pinkLabel;
+      }
+   }
+   .btn.disabled {
+      background-color: #c4bdb6;
+   }
+}
+
+.item-body {
+   // .item-body__top
+
+   &__top {
+   }
+
+   // .item-body__title
+
+   &__title {
+      font-weight: 400;
+      @include fl(16, 19.3);
+      @media (min-width: 1441px) {
+         @include fl(20, 24.12);
+      }
+   }
+
+   // .item-body__close-icon
+
+   &__close-icon {
+   }
+
+   // .item-body__icon-wrapper
+
+   &__icon-wrapper {
+   }
+
+   // .item-body__center
+
+   &__center {
+   }
+
+   // .item-body__buttons
+
+   &__buttons {
+   }
+
+   // .item-body__num
+
+   &__num {
+   }
+
+   // .item-body__price
+
+   &__price {
+      font-family: $ff2;
+      font-weight: 600;
+      @include fl(16, 21.79);
+      @media (min-width: 1441px) {
+         @include fl(18, 24.51);
+      }
+      &.small {
+         @include fl(10, 13.62);
+      }
+   }
+   // .item-body__summ
+   &__item-body__summ {
+      &_full-price {
+      }
+      &_discount-price {
+      }
+   }
+
+   // .item-body__bottom
+
+   &__bottom {
+   }
+
+   // .item-body__content
+
+   &__content {
+   }
+
+   // .item-body__text
+
+   &__text {
+      font-family: $ff2;
+      font-weight: 400;
+      @include fl(12, 16.34);
+      opacity: 0.5;
+      &__b {
+         font-weight: 600;
+         opacity: 1;
+         &.op {
+            opacity: 0.5;
+         }
+      }
+   }
 }

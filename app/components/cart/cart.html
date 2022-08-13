@@ -1,0 +1,24 @@
+<div class="cart">
+	<div class="cart__wrapper">
+		<div class="cart__body">
+			<div class="cart__top">
+				<div class="cart__title">Cart</div>
+				<div class="cart__close-icon">
+					<div class="icon-wrapper"><span></span></div>
+				</div>
+			</div>
+			<div class="cart__items">
+				<!-- 'modify': 'empty', -->
+				@@include('./cart-item.html', {
+				'image': '23',
+				'background': 'pink',
+				'title': 'Ortho Molecular Products CereVive Capsules',
+				'fullPrice': '$125.00',
+				'discountPrice': '$84.00',
+				})
+				<!-- 'disabled': 'disabled' -->
+			</div>
+		</div>
+	</div>
+
+</div>
