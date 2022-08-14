@@ -410,17 +410,12 @@ window.addEventListener("load", () => {
          if (e.target.closest(".ordering-card__top")) {
             qs(".ordering-card").classList.toggle("opened");
             if (!qs(".ordering-card").classList.contains("opened")) {
-               console.log("closed");
-               let cardHeight = qs(".ordering-card__content").getBoundingClientRect().height;
                let cardScrollHeight = qs(".ordering-card__content").scrollHeight;
-               console.log("closed height = " + cardHeight);
-               console.log("closed scroll height = " + cardScrollHeight);
+               qs(".ordering-card__content").style.height = null;
             } else {
                console.log("opened");
-               let cardHeight = qs(".ordering-card__content").getBoundingClientRect().height;
                let cardScrollHeight = qs(".ordering-card__content").scrollHeight;
-               console.log("opened height = " + cardHeight);
-               console.log("opened scroll height = " + cardScrollHeight);
+               qs(".ordering-card__content").style.height = cardScrollHeight + "px";
             }
          }
       }

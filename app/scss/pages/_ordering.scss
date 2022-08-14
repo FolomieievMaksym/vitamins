@@ -30,102 +30,6 @@ body.ordering {
          padding-top: 50px;
       }
       .ordering-card {
-         &.opened {
-            .ordering-card__content {
-               padding-bottom: 27px;
-               @media (min-width: 1000px) {
-                  padding-left: 40px;
-                  padding-right: 40px;
-                  padding-bottom: 38px;
-               }
-            }
-            .ordering-card {
-               &__top {
-                  &:after {
-                     content: "";
-                     position: absolute;
-                     top: 100%;
-                     left: 0;
-                     width: 100%;
-                     height: 1px;
-                     transform: translate(0, 0);
-                     background-color: rgba(0, 0, 0, 0.07);
-                  }
-                  @media (min-width: 1600px) {
-                     display: none;
-                  }
-               }
-               &__arrow {
-                  transform: rotate(0deg);
-               }
-               &__items {
-                  padding-top: 30px;
-                  padding-bottom: 30px;
-                  display: grid;
-                  row-gap: 15px;
-                  position: relative;
-                  margin-bottom: 31px;
-                  @media (min-width: 769px) {
-                     padding-top: 40px;
-                     padding-bottom: 40px;
-                     margin-bottom: 41px;
-                  }
-                  &:after {
-                     content: "";
-                     position: absolute;
-                     top: 100%;
-                     left: 0;
-                     width: 100%;
-                     height: 1px;
-                     transform: translate(0, 0);
-                     background-color: rgba(0, 0, 0, 0.07);
-                  }
-               }
-               &__bottom {
-               }
-               &__line {
-                  display: flex;
-                  align-items: center;
-                  justify-content: space-between;
-                  &:not(:last-child) {
-                     margin-bottom: 18px;
-                     @media (min-width: 769px) {
-                        margin-bottom: 22px;
-                     }
-                  }
-                  &_1 {
-                  }
-                  &_2 {
-                     p {
-                        color: #d32d2c;
-                     }
-                  }
-                  &_3 {
-                  }
-                  &_4 {
-                     transform: translate(0, -2px);
-                  }
-               }
-               &__text {
-                  font-family: $ff2;
-                  @include fl(14, 19.07);
-                  @media (min-width: 1441px) {
-                     @include fl(16, 26.15);
-                  }
-               }
-
-               &__subtitle {
-                  font-family: $ff2;
-                  @include fl(16, 21.79);
-                  font-weight: 600;
-                  @media (min-width: 1441px) {
-                     @include fl(20, 27.24);
-                  }
-               }
-            }
-         }
-         .ordering-card__content {
-         }
          padding-left: 20px;
          padding-right: 20px;
          border-top: 1px solid rgba(0, 0, 0, 0.07);
@@ -161,6 +65,111 @@ body.ordering {
 
             margin-right: 17px;
             transform: rotate(180deg);
+         }
+         // &.opened {
+         // ! ANIMATE
+         .ordering-card__content {
+            transition: all 0.5s ease;
+
+            height: 0;
+            overflow: hidden;
+            // padding-bottom: 27px;
+            @media (min-width: 1000px) {
+               padding-left: 40px;
+               padding-right: 40px;
+               padding-bottom: 38px;
+            }
+         }
+         // .ordering-card {
+
+         &__items {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            display: grid;
+            row-gap: 15px;
+            position: relative;
+            margin-bottom: 31px;
+            @media (min-width: 769px) {
+               padding-top: 40px;
+               padding-bottom: 40px;
+               margin-bottom: 41px;
+            }
+            &:after {
+               content: "";
+               position: absolute;
+               top: 100%;
+               left: 0;
+               width: 100%;
+               height: 1px;
+               transform: translate(0, 0);
+               background-color: rgba(0, 0, 0, 0.07);
+            }
+         }
+         &__bottom {
+            margin-bottom: 27px;
+         }
+         &__line {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &:not(:last-child) {
+               margin-bottom: 18px;
+               @media (min-width: 769px) {
+                  margin-bottom: 22px;
+               }
+            }
+            &_1 {
+            }
+            &_2 {
+               p {
+                  color: #d32d2c;
+               }
+            }
+            &_3 {
+            }
+            &_4 {
+               transform: translate(0, -2px);
+            }
+         }
+         &__text {
+            font-family: $ff2;
+            @include fl(14, 19.07);
+            @media (min-width: 1441px) {
+               @include fl(16, 26.15);
+            }
+         }
+
+         &__subtitle {
+            font-family: $ff2;
+            @include fl(16, 21.79);
+            font-weight: 600;
+            @media (min-width: 1441px) {
+               @include fl(20, 27.24);
+            }
+         }
+         // }
+         // }
+         &.opened {
+            .ordering-card__top {
+               &:after {
+                  content: "";
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  width: 100%;
+                  height: 1px;
+                  transform: translate(0, 0);
+                  background-color: rgba(0, 0, 0, 0.07);
+               }
+               @media (min-width: 1600px) {
+                  display: none;
+               }
+            }
+            .ordering-card__arrow {
+               transform: rotate(0deg);
+            }
+            .ordering-card__content {
+            }
          }
       }
       .hero {
