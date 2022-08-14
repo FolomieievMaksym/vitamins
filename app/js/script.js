@@ -383,12 +383,15 @@ window.addEventListener("load", () => {
          if (window.innerWidth <= 768) {
             qs(".cards").classList.add("hidden");
             qs(".cards__button").classList.add("grey");
+            qs(".hero").classList.add("hidden");
          } else {
             qs(".cards").classList.remove("hidden");
+            qs(".hero").classList.remove("hidden");
             qs(".cards__button").classList.remove("grey");
             qs(".cards__button").classList.add("regular");
          }
       }
+
       function showSection(e) {
          if (e.target.closest(".cards__button")) {
             qs(".hero").classList.remove("hidden");

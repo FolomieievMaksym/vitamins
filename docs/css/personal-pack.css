@@ -1586,8 +1586,44 @@ body.catalog .card-item__discount-price {
   display: none;
 }
 
+body.lock .personal-pack__decor {
+  z-index: 0 !important;
+}
+
 body.personal-pack .header {
   padding-top: 2px;
+}
+
+body.personal-pack main {
+  position: relative;
+}
+
+body.personal-pack .personal-pack__decor {
+  position: absolute;
+  width: 100%;
+  max-width: 100vw;
+  z-index: 11;
+  overflow: hidden;
+  height: 100vh;
+  pointer-events: none;
+}
+
+body.personal-pack .personal-pack__decor svg {
+  position: absolute;
+}
+
+body.personal-pack .personal-pack__decor svg:first-child {
+  top: 56px;
+  left: 60%;
+}
+
+body.personal-pack .personal-pack__decor svg:nth-child(2) {
+  top: 193px;
+  right: 0;
+}
+
+body.personal-pack .personal-pack__decor svg:last-child {
+  display: none;
 }
 
 body.personal-pack .hero {
@@ -1619,11 +1655,19 @@ body.personal-pack .hero__text {
 }
 
 body.personal-pack .cards {
-  background-color: #faf8f6;
+  position: relative;
   padding-top: 62px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 57px;
+}
+
+body.personal-pack .cards svg {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 70.3125%;
+  transform: translate(0, -50%);
 }
 
 body.personal-pack .cards.hidden {
@@ -1631,9 +1675,17 @@ body.personal-pack .cards.hidden {
   padding: 0;
 }
 
+body.personal-pack .cards.hidden svg {
+  display: none;
+}
+
 body.personal-pack .cards.hidden .cards__title,
 body.personal-pack .cards.hidden .cards__body {
   display: none;
+}
+
+body.personal-pack .cards__fix {
+  background-color: #faf8f6;
 }
 
 body.personal-pack .cards__body {
@@ -1884,6 +1936,10 @@ body.personal-pack .cards__button.grey {
     max-width: 227px;
   }
 
+  body.personal-pack .cards svg {
+    left: 74.6666666667%;
+  }
+
   body.personal-pack .cards__body {
     grid-template-columns: 1fr 1fr;
     -moz-column-gap: 14px;
@@ -1904,11 +1960,18 @@ body.personal-pack .cards__button.grey {
 
 @media (min-width: 468px) {
   body.personal-pack .hero__title {
+    font-size: 2em;
+    line-height: 1.21875;
     max-width: 80%;
   }
 
   body.personal-pack .hero__text {
     max-width: 80%;
+  }
+
+  body.personal-pack .cards__title {
+    font-size: 1.4375em;
+    line-height: 1.2173913043;
   }
 }
 
@@ -1944,7 +2007,19 @@ body.personal-pack .cards__button.grey {
 
 @media (min-width: 760px) {
   body.personal-pack .hero__title {
+    font-size: 2.25em;
+    line-height: 1.2222222222;
     max-width: 682px;
+  }
+
+  body.personal-pack .hero__subtitle {
+    font-size: 1.375em;
+    line-height: 1.1818181818;
+  }
+
+  body.personal-pack .cards__title {
+    font-size: 1.625em;
+    line-height: 1.2307692308;
   }
 }
 
@@ -2109,14 +2184,47 @@ body.personal-pack .cards__button.grey {
   }
 
   body.personal-pack main {
-    padding-left: 7.8888888889%;
-    padding-right: 7.8888888889%;
-    padding-bottom: 5.5555555556%;
+    padding-bottom: 5.4444444444%;
+  }
+
+  body.personal-pack .personal-pack__decor svg:first-child {
+    width: 90px;
+    height: 90px;
+    top: 36px;
+    left: 55%;
+  }
+
+  body.personal-pack .personal-pack__decor svg:nth-child(2) {
+    display: none;
+    top: 36px;
+    left: 990px;
+  }
+
+  body.personal-pack .personal-pack__decor svg:last-child {
+    display: block;
+    right: -49px;
+    top: 263px;
+    width: 168px;
+    height: 84.6px;
+  }
+
+  body.personal-pack .hero {
+    padding-top: 11.25rem;
+    padding-bottom: 5.3125rem;
+    padding-left: 11.2777777778%;
+    padding-right: 11.2777777778%;
   }
 
   body.personal-pack .cards {
+    padding-right: 7.8888888889%;
+    padding-left: 7.8888888889%;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  body.personal-pack .cards__fix {
     border-radius: 1rem;
-    padding-top: 3.75rem;
+    padding-top: 3.875rem;
     padding-left: 3.75rem;
     padding-right: 3.75rem;
     padding-bottom: 3.125rem;
@@ -2202,28 +2310,57 @@ body.personal-pack .cards__button.grey {
     padding-top: 74px;
   }
 
+  body.personal-pack .personal-pack__decor svg:first-child {
+    width: 120px;
+    height: 120px;
+  }
+
+  body.personal-pack .personal-pack__decor svg:last-child {
+    width: 168px;
+    height: 84.6px;
+  }
+
   body.personal-pack .hero__title {
-    font-size: 3.125em;
-    line-height: 1.206;
-    margin-bottom: 60px;
+    font-size: 2.625em;
+    line-height: 1.1666666667;
+    margin-bottom: 3.125rem;
   }
 
   body.personal-pack .hero__subtitle {
-    margin-bottom: 25px;
-    font-size: 1.625em;
-    line-height: 1.2061538462;
+    font-size: 1.5em;
+    line-height: 1.1666666667;
   }
 
   body.personal-pack .hero__text {
-    font-size: 1.125em;
-    line-height: 1.5555555556;
-    max-width: 919px;
+    font-size: 1em;
+    line-height: 1.625;
+    max-width: 918px;
+  }
+
+  body.personal-pack .cards svg {
+    width: 80px;
+    height: 80px;
+    left: 66.4444444444%;
   }
 
   body.personal-pack .cards__title {
+    margin-bottom: 40px;
     font-size: 1.875em;
     line-height: 1.206;
-    margin-bottom: 40px;
+  }
+
+  body.personal-pack .cards .card-item__title {
+    font-size: 1.125em;
+    line-height: 1.2222222222;
+  }
+
+  body.personal-pack .cards__button.regular {
+    margin-top: 40px;
+  }
+
+  body.personal-pack .cards__button.regular .btn {
+    font-size: 1.125em;
+    line-height: 1.3888888889;
   }
 }
 
@@ -2708,6 +2845,56 @@ body.personal-pack .cards__button.grey {
   }
 }
 
+@media (min-width: 1400px) {
+  body.personal-pack .personal-pack__decor svg:first-child {
+    width: 145px;
+    height: 145px;
+  }
+
+  body.personal-pack .personal-pack__decor svg:last-child {
+    width: 224px;
+    height: 112.8px;
+  }
+
+  body.personal-pack .hero__title {
+    font-size: 3.125em;
+    line-height: 1.206;
+    margin-bottom: 60px;
+  }
+
+  body.personal-pack .hero__subtitle {
+    margin-bottom: 25px;
+    font-size: 1.625em;
+    line-height: 1.2061538462;
+  }
+
+  body.personal-pack .hero__text {
+    font-size: 1.125em;
+    line-height: 1.5555555556;
+  }
+
+  body.personal-pack .cards svg {
+    width: 100px;
+    height: 100px;
+  }
+
+  body.personal-pack .cards__title {
+    font-size: 2.25em;
+    line-height: 1.2061111111;
+    margin-bottom: 50px;
+  }
+
+  body.personal-pack .cards__button.regular {
+    margin-top: 50px;
+  }
+
+  body.personal-pack .cards__button.regular .btn {
+    font-size: 1.25em;
+    line-height: 1.634;
+    font-family: "OpenSans";
+  }
+}
+
 @media (min-width: 1441px) {
   .footer__container {
     padding-left: 11.2777777778%;
@@ -2780,6 +2967,23 @@ body.personal-pack .cards__button.grey {
   }
 }
 
+@media (min-width: 1600px) {
+  body.personal-pack .personal-pack__decor svg:first-child {
+    width: 158px;
+    height: 158px;
+  }
+
+  body.personal-pack .personal-pack__decor svg:last-child {
+    width: 279px;
+    height: 141px;
+  }
+
+  body.personal-pack .cards svg {
+    width: 122px;
+    height: 122px;
+  }
+}
+
 @media (min-width: 1625px) {
   .footer__first {
     margin-right: 16.4992826399%;
@@ -2823,6 +3027,10 @@ body.personal-pack .cards__button.grey {
 
   .menu-footer__list_3 li:last-child a {
     transform: translate(0, -3px);
+  }
+
+  body.personal-pack .cards {
+    background-color: #faf8f6;
   }
 }
 
