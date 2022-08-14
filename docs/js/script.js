@@ -401,4 +401,14 @@ window.addEventListener("load", () => {
          }
       }
    }
+   //ordering.html
+   if (qs("body.ordering")) {
+      body.addEventListener("click", switchCard);
+
+      function switchCard(e) {
+         if (e.target.closest(".ordering-card__top")) {
+            qs(".ordering-card").classList.toggle("opened");
+         }
+      }
+   }
 });

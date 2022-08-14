@@ -1,0 +1,15 @@
+<div class="card-item @@if (context.discountPrice) {card-item_discount}">
+	<div class='card-item__image card-item__image_@@modifyBackground image'>
+		<picture>
+			<source type='image/webp' srcset='@img/gallery/@@image.webp'>
+			<img src='@img/gallery/@@image.png' alt='product image'>
+		</picture>
+	</div>
+	<div class="card-item__body">
+		<h3 class="card-item__title">@@title</h3>
+		<div class="card-item__price">
+			<p class="card-item__full-price">@@fullPrice</p>
+			@@if (context.discountPrice) {<p class="card-item__discount-price">@@discountPrice</p>}
+		</div>
+	</div>
+</div>
