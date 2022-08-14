@@ -1,105 +1,100 @@
 // Text styles
-.body.ordering {
-}
-.card-item {
-   // .card-item__image
-   display: flex;
-   align-items: center;
-   &__image {
-      flex: 0 0 70px;
-      padding-bottom: 0;
-      width: 70px;
-      height: 70px;
-      margin-right: 20px;
-      border-radius: rem(8);
-      &_pink {
-         background-color: #d189dc;
-      }
-      &_purple {
-         background-color: #9085d3;
-      }
-      &_green {
-         background-color: #6bb0a4;
-      }
-      img {
-         width: 49px;
-         height: 53px;
-         top: 60%;
-         left: 50%;
-         transform: translate(-50%, -50%);
-      }
-   }
-
-   // .card-item__body
-
-   &__body {
+body.ordering {
+   .card-item {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      column-gap: 25px;
-      @media (min-width: 375px) {
-         column-gap: 30px;
-      }
-   }
-
-   // .card-item__title
-
-   &__title {
-      @include fl(14, 17);
-      font-weight: 400;
-      @media (min-width: 375px) {
-         transform: translate(0, -1px);
-      }
-      @media (min-width: 1441px) {
-         @include fl(16, 19.3);
-      }
-   }
-
-   // .card-item__price
-
-   &__price {
-   }
-
-   // .card-item__full-price
-
-   &__full-price {
-      font-family: $ff2;
-      @include fl(14, 19.07);
-      @media (min-width: 1441px) {
-         @include fl(16, 21.79);
-      }
-   }
-
-   // .card-item__discount-price
-
-   &_discount {
-      .card-item {
-         &__price {
-            font-family: $ff2;
+      // .card-item__image
+      &__image {
+         flex: 0 0 70px;
+         padding-bottom: 0;
+         width: 70px;
+         height: 70px;
+         margin-right: 20px;
+         border-radius: rem(8);
+         &_pink {
+            background-color: #d189dc;
          }
-         // .card-item__full-price
-
-         &__full-price {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            opacity: 0.5;
-            @include fl(10, 13.62);
-            text-decoration: line-through;
-            margin-bottom: 2px;
-            @media (min-width: 769px) {
-               @include fl(12, 16.34);
-            }
+         &_purple {
+            background-color: #9085d3;
          }
+         &_green {
+            background-color: #6bb0a4;
+         }
+         img {
+            width: 49px;
+            height: 53px;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+         }
+      }
 
-         // .card-item__discount-price
+      // .card-item__body
 
-         &__discount-price {
-            @include fl(14, 19.07);
-            @media (min-width: 769px) {
-               @include fl(16, 21.79);
+      &__body {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         column-gap: 25px;
+         @media (min-width: 375px) {
+            column-gap: 30px;
+         }
+      }
+
+      // .card-item__title
+
+      &__title {
+         @include fl(14, 17);
+         font-weight: 400;
+         @media (min-width: 375px) {
+            transform: translate(0, -1px);
+         }
+         @media (min-width: 1441px) {
+            @include fl(16, 19.3);
+         }
+      }
+
+      // .card-item__full-price
+
+      &__full-price {
+         font-family: $ff2;
+         @include fl(14, 19.07);
+         @media (min-width: 1441px) {
+            @include fl(16, 21.79);
+         }
+      }
+
+      // .card-item__discount-price
+
+      &_discount {
+         .card-item {
+            &__price {
+               font-family: $ff2;
             }
-            color: #d32d2c;
+            // .card-item__full-price
+
+            &__full-price {
+               display: flex;
+               flex-direction: column;
+               align-items: flex-end;
+               opacity: 0.5;
+               @include fl(10, 13.62);
+               text-decoration: line-through;
+               margin-bottom: 2px;
+               @media (min-width: 769px) {
+                  @include fl(12, 16.34);
+               }
+            }
+
+            // .card-item__discount-price
+
+            &__discount-price {
+               @include fl(14, 19.07);
+               @media (min-width: 769px) {
+                  @include fl(16, 21.79);
+               }
+               color: #d32d2c;
+            }
          }
       }
    }

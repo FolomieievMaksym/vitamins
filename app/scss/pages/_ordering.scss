@@ -31,11 +31,13 @@ body.ordering {
       }
       .ordering-card {
          &.opened {
-            padding-bottom: 30px;
-            @media (min-width: 1000px) {
-               padding-left: 40px;
-               padding-right: 40px;
-               padding-bottom: 38px;
+            .ordering-card__content {
+               padding-bottom: 27px;
+               @media (min-width: 1000px) {
+                  padding-left: 40px;
+                  padding-right: 40px;
+                  padding-bottom: 38px;
+               }
             }
             .ordering-card {
                &__top {
@@ -62,9 +64,11 @@ body.ordering {
                   display: grid;
                   row-gap: 15px;
                   position: relative;
-                  @media (min-width: 760px) {
+                  margin-bottom: 31px;
+                  @media (min-width: 769px) {
                      padding-top: 40px;
                      padding-bottom: 40px;
+                     margin-bottom: 41px;
                   }
                   &:after {
                      content: "";
@@ -77,10 +81,35 @@ body.ordering {
                      background-color: rgba(0, 0, 0, 0.07);
                   }
                }
+               &__bottom {
+               }
+               &__line {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  &:not(:last-child) {
+                     margin-bottom: 18px;
+                     @media (min-width: 769px) {
+                        margin-bottom: 22px;
+                     }
+                  }
+                  &_1 {
+                  }
+                  &_2 {
+                     // display: none;
+                     p {
+                        color: #d32d2c;
+                     }
+                  }
+                  &_3 {
+                  }
+                  &_4 {
+                     transform: translate(0, -2px);
+                  }
+               }
                &__text {
                   font-family: $ff2;
                   @include fl(14, 19.07);
-                  opacity: 0.7;
                   @media (min-width: 1441px) {
                      @include fl(16, 26.15);
                   }
@@ -95,6 +124,8 @@ body.ordering {
                   }
                }
             }
+         }
+         .ordering-card__content {
          }
          padding-left: 20px;
          padding-right: 20px;

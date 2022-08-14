@@ -31,30 +31,50 @@
 						<div class="ordering-card__arrow"><i class="ic-arrow-up"></i></div>
 						<p class="ordering-card__label">$129.66</p>
 					</div>
-					<div class="ordering-card__items">
-						@@include('./components/ordering/ordering-item.html', {
-						'image': '23',
-						'modifyBackground': 'pink',
-						'title': '1 x Ortho Molecular Products 5-HTP Capsules',
-						'fullPrice': '$61.98',
-						})
-						@@include('./components/ordering/ordering-item.html', {
-						'image': '02',
-						'modifyBackground': 'purple',
-						'title': '3 x Standard Process Thymus PMG 90 Tablets',
-						'fullPrice': '$125.00',
-						'discountPrice': '$61.98',
-						})
-						@@include('./components/ordering/ordering-item.html', {
-						'image': '16',
-						'modifyBackground': 'green',
-						'title': '1 x Ortho Molecular Products 5-HTP Capsules',
-						'fullPrice': '$125.00',
-						'discountPrice': '$61.98',
-						})
-					</div>
-					<div class="ordering-card__bottom">
+					<div class="ordering-card__content">
 
+
+						<div class="ordering-card__items">
+							@@include('./components/ordering/ordering-item.html', {
+							'image': '23',
+							'modifyBackground': 'pink',
+							'title': '1 x Ortho Molecular Products 5-HTP Capsules',
+							'fullPrice': '$61.98',
+							})
+							@@include('./components/ordering/ordering-item.html', {
+							'image': '02',
+							'modifyBackground': 'purple',
+							'title': '3 x Standard Process Thymus PMG 90 Tablets',
+							'fullPrice': '$125.00',
+							'discountPrice': '$61.98',
+							})
+							@@include('./components/ordering/ordering-item.html', {
+							'image': '16',
+							'modifyBackground': 'green',
+							'title': '1 x Ortho Molecular Products 5-HTP Capsules',
+							'fullPrice': '$125.00',
+							'discountPrice': '$61.98',
+							})
+						</div>
+						<div class="ordering-card__bottom">
+							<div class="ordering-card__line ordering-card__line_1">
+								<h6 class="ordering-card__text">Subtotal:</h6>
+								<p class="ordering-card__text">$120.46</p>
+							</div>
+							<div class="ordering-card__line ordering-card__line_2">
+								<h6 class="ordering-card__text">Discount</h6>
+								<p class="ordering-card__text">-$31.20</p>
+							</div>
+							<div class="ordering-card__line ordering-card__line_3">
+								<h6 class="ordering-card__text">Shipping</h6>
+								<p class="ordering-card__text">$9.20</p>
+							</div>
+							<div class="ordering-card__line ordering-card__line_4">
+								<h6 class="ordering-card__subtitle">Today’s Total:</h6>
+								<p class="ordering-card__subtitle">$129.66</p>
+							</div>
+
+						</div>
 					</div>
 				</section>
 				<section class="hero">

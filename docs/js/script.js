@@ -403,11 +403,25 @@ window.addEventListener("load", () => {
    }
    //ordering.html
    if (qs("body.ordering")) {
+      //Show/hide Card
       body.addEventListener("click", switchCard);
 
       function switchCard(e) {
          if (e.target.closest(".ordering-card__top")) {
             qs(".ordering-card").classList.toggle("opened");
+            if (!qs(".ordering-card").classList.contains("opened")) {
+               console.log("closed");
+               let cardHeight = qs(".ordering-card__content").getBoundingClientRect().height;
+               let cardScrollHeight = qs(".ordering-card__content").scrollHeight;
+               console.log("closed height = " + cardHeight);
+               console.log("closed scroll height = " + cardScrollHeight);
+            } else {
+               console.log("opened");
+               let cardHeight = qs(".ordering-card__content").getBoundingClientRect().height;
+               let cardScrollHeight = qs(".ordering-card__content").scrollHeight;
+               console.log("opened height = " + cardHeight);
+               console.log("opened scroll height = " + cardScrollHeight);
+            }
          }
       }
    }
