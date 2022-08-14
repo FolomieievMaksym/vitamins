@@ -368,6 +368,8 @@ window.addEventListener("load", () => {
             qs(".cart").classList.remove("active");
          } else if (e.target.closest(".ic-cart")) {
             qs(".cart").classList.add("active");
+         } else if (!e.target.closest(".cart__wrapper")) {
+            qs(".cart").classList.remove("active");
          }
       }
    }
