@@ -9,9 +9,29 @@
 	<div class="wrapper">
 		@@include('components/each-page-blocks/_header.html')
 		<main class="personal-pack">
-			<section class="hero">
-				@@include('./components/_quiz.html')
+			@@include('./components/_quiz.html')
+			<section class="hero hidden">
+				<h2 class="hero__title">Alex, we made personalized pack for you!</h2>
+				<h3 class="hero__subtitle">Recommenadation</h3>
+				<p class="hero__text">Your recommendation is based on your answers and our database of
+					clinical research. This health
+					plan, made just for you, is recommended for you to feel your best today while
+					supporting long-term
+					health.</p>
 			</section>
+			<section class="cards">
+				<h4 class="cards__title">Your Personalized Pack</h4>
+				<div class="cards__body">
+					@@loop('./components/catalog/card-item.html', './json/product-card-item.json')
+				</div>
+				<div class="cards__button">
+					@@include('./components/_btn.html', {
+					'text': 'Continue'
+					})
+				</div>
+			</section>
+
+
 		</main>
 		@@include('components/each-page-blocks/_footer.html')
 	</div>
