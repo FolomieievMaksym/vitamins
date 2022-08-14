@@ -194,7 +194,7 @@ window.addEventListener("load", () => {
          wholesaleInput.firstElementChild.setAttribute("placeholder", "Wholesale purchase permission");
       }
    }
-
+   //Catalog.html
    if (qs("body.catalog")) {
       const swiperBanner = new Swiper(".banner__slider", {
          // loop: true,
@@ -345,5 +345,30 @@ window.addEventListener("load", () => {
             },
          },
       });
+   }
+   //Cart.html
+   if (qs(".cart")) {
+      const cartDeliver = qa(".item-body__content"),
+         checkbox = qa(".item-body__ok-icon");
+      body.addEventListener("click", checkboxToggle);
+
+      function checkboxToggle(e) {
+         if (e.target.closest(".item-body__ok-icon")) {
+            e.target.closest(".item-body__content").classList.toggle("disabled");
+         } else if (e.target.closest(".cart__bottom__btn")) {
+            qs(".cart__bottom").classList.add("disabled");
+         } else if (e.target.closest(".item-body__icon-wrapper")) {
+            e.target.closest(".cart-item ").remove();
+            if (qs(".cart__items").children.length == 0) {
+               qs(".cart__fix").remove();
+               qs(".cart__bottom").remove();
+               qs(".cart__empty").classList.add("active");
+            }
+         } else if (e.target.closest(".cart__close-icon")) {
+            qs(".cart").classList.remove("active");
+         } else if (e.target.closest(".ic-cart")) {
+            qs(".cart").classList.add("active");
+         }
+      }
    }
 });
