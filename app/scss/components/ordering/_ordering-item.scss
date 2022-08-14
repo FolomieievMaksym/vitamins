@@ -1,22 +1,5 @@
 // Text styles
 .body.ordering {
-   &__text {
-      font-family: $ff2;
-      @include fl(14, 19.07);
-      opacity: 0.7;
-      @media (min-width: 1441px) {
-         @include fl(16, 26.15);
-      }
-   }
-
-   &__subtitle {
-      font-family: $ff2;
-      @include fl(16, 21.79);
-      font-weight: 600;
-      @media (min-width: 1441px) {
-         @include fl(20, 27.24);
-      }
-   }
 }
 .card-item {
    // .card-item__image
@@ -53,8 +36,10 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      column-gap: rem(25);
-      column-gap: 30px;
+      column-gap: 25px;
+      @media (min-width: 375px) {
+         column-gap: 30px;
+      }
    }
 
    // .card-item__title

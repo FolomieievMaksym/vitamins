@@ -1165,20 +1165,6 @@ input::placeholder {
   line-height: 1.3621428571;
 }
 
-.body.ordering__text {
-  font-family: "OpenSans";
-  font-size: 0.875em;
-  line-height: 1.3621428571;
-  opacity: 0.7;
-}
-
-.body.ordering__subtitle {
-  font-family: "OpenSans";
-  font-size: 1em;
-  line-height: 1.361875;
-  font-weight: 600;
-}
-
 .card-item {
   display: flex;
   align-items: center;
@@ -1217,10 +1203,8 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  -moz-column-gap: 1.5625rem;
-  column-gap: 1.5625rem;
-  -moz-column-gap: 30px;
-  column-gap: 30px;
+  -moz-column-gap: 25px;
+  column-gap: 25px;
 }
 
 .card-item__title {
@@ -1553,11 +1537,20 @@ body.ordering .ordering__header {
   text-align: center;
 }
 
+body.ordering .ordering__header svg {
+  transform: translate(0, 4px);
+}
+
 body.ordering form .ordering-card {
   padding-left: 20px;
   padding-right: 20px;
   border-top: 1px solid rgba(0, 0, 0, 0.07);
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  margin-bottom: 60px;
+}
+
+body.ordering form .ordering-card.opened {
+  padding-bottom: 30px;
 }
 
 body.ordering form .ordering-card.opened .ordering-card__top:after {
@@ -1577,8 +1570,35 @@ body.ordering form .ordering-card.opened .ordering-card__arrow {
 
 body.ordering form .ordering-card.opened .ordering-card__items {
   padding-top: 30px;
+  padding-bottom: 30px;
   display: grid;
   row-gap: 15px;
+  position: relative;
+}
+
+body.ordering form .ordering-card.opened .ordering-card__items:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transform: translate(0, 0);
+  background-color: rgba(0, 0, 0, 0.07);
+}
+
+body.ordering form .ordering-card.opened .ordering-card__text {
+  font-family: "OpenSans";
+  font-size: 0.875em;
+  line-height: 1.3621428571;
+  opacity: 0.7;
+}
+
+body.ordering form .ordering-card.opened .ordering-card__subtitle {
+  font-family: "OpenSans";
+  font-size: 1em;
+  line-height: 1.361875;
+  font-weight: 600;
 }
 
 body.ordering form .ordering-card__top {
@@ -1650,6 +1670,11 @@ body.ordering form .hero__container:after {
     padding-top: 42px;
   }
 
+  .card-item__body {
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+  }
+
   .card-item__title {
     transform: translate(0, -1px);
   }
@@ -1661,6 +1686,10 @@ body.ordering form .hero__container:after {
 
   .quiz__question_grid div {
     padding: 10px 18px;
+  }
+
+  body.ordering .ordering__header svg {
+    transform: translate(-1px, 4px);
   }
 }
 
@@ -1704,6 +1733,11 @@ body.ordering form .hero__container:after {
   body.ordering .ordering__header svg {
     width: 42px;
     height: 50px;
+  }
+
+  body.ordering form .ordering-card.opened .ordering-card__items {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 
@@ -1783,6 +1817,12 @@ body.ordering form .hero__container:after {
 @media (min-width: 1000px) {
   .footer {
     padding-top: 74px;
+  }
+
+  body.ordering form .ordering-card.opened {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 38px;
   }
 }
 
@@ -2307,16 +2347,6 @@ body.ordering form .hero__container:after {
     line-height: 1.2061111111;
   }
 
-  .body.ordering__text {
-    font-size: 1em;
-    line-height: 1.634375;
-  }
-
-  .body.ordering__subtitle {
-    font-size: 1.25em;
-    line-height: 1.362;
-  }
-
   .card-item__title {
     font-size: 1em;
     line-height: 1.20625;
@@ -2349,6 +2379,16 @@ body.ordering form .hero__container:after {
 
   .quiz__title {
     padding: 0;
+  }
+
+  body.ordering form .ordering-card.opened .ordering-card__text {
+    font-size: 1em;
+    line-height: 1.634375;
+  }
+
+  body.ordering form .ordering-card.opened .ordering-card__subtitle {
+    font-size: 1.25em;
+    line-height: 1.362;
   }
 }
 
