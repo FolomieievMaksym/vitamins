@@ -9,9 +9,27 @@
 	<div class="wrapper">
 		@@include('components/each-page-blocks/_header.html')
 		<main class="profile">
-			<section class="hero">
-				@@include('./components/_quiz.html')
-			</section>
+			@@include('./components/_quiz.html')
+			<div class="profile__body">
+				<aside class="profile__sidebar sidebar">
+					<nav class="sidebar__menu">
+						<ul class="sidebar__list">
+							<li class="active">Subscriptions</li>
+							<li class="">Orders</li>
+							<li class="">Account Overview</li>
+							<li class="">Payment methods</li>
+							<li class="">Change Password</li>
+							<li class="">Sign out</li>
+						</ul>
+					</nav>
+
+				</aside>
+				<section class="profile__subscriptions subscriptions"></section>
+				<section class="profile__orders orders"></section>
+				<section class="profile__account-overview account-overview"></section>
+				<section class="profile__payment-methods payment-methods"></section>
+				<section class="profile__change-password change-password"></section>
+			</div>
 		</main>
 		@@include('components/each-page-blocks/_footer.html')
 	</div>

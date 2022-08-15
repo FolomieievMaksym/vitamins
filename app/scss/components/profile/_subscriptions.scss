@@ -1,41 +1,40 @@
 // Text styles
 main.subscriptions {
-	[class*=__title] {
-		// font-weight: 500;
-		// @include fl(24, 28.94);
-		@media (min-width: 1441px) {
-			@include fl(36, 43.42);
-			
-		}
-	}
+   [class*="__title"] {
+      // font-weight: 500;
+      // @include fl(24, 28.94);
+      @media (min-width: 1441px) {
+         @include fl(36, 43.42);
+      }
+   }
 
-	.card__label {
-		opacity: 1; 
-	}
-	.card__title {
-		font-weight: 400;
-		@include fl(16, 19.3);
-		@media (min-width: 1441px) {
-			@include fl(20, 24.12);
- 		}
-	}
-	.card__text {
-		font-family: $ff2;
-		@include fl(12, 16.34);
-		opacity: 0.5;
-		@media (min-width: 1441px) {
-			@include fl(14, 19.07);
-		}
-	}
-	.card__summ { 
-		font-family: $ff2;
-		font-weight: 600;
-		@include fl(16, 21.79);
-		@media (min-width: 1441px) {
-			@include fl(18, 24.51);
-		}
-	}
-	.btn {
-		color:#D32D2C;
-	}
+   .card__label {
+      opacity: 1;
+   }
+   .card__title {
+      font-weight: 400;
+      @include fl(16, 19.3);
+      @media (min-width: 1441px) {
+         @include fl(20, 24.12);
+      }
+   }
+   .card__text {
+      font-family: $ff2;
+      @include fl(12, 16.34);
+      opacity: 0.5;
+      @media (min-width: 1441px) {
+         @include fl(14, 19.07);
+      }
+   }
+   .card__summ {
+      font-family: $ff2;
+      font-weight: 600;
+      @include fl(16, 21.79);
+      @media (min-width: 1441px) {
+         @include fl(18, 24.51);
+      }
+   }
+   .btn {
+      color: #d32d2c;
+   }
 }

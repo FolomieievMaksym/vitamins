@@ -1,0 +1,89 @@
+body.profile {
+   .header {
+      padding-top: 2px;
+   }
+   .profile {
+      // .profile__body
+      &__body {
+         padding-top: 120px;
+         padding-left: 20px;
+         padding-right: 20px;
+         padding-bottom: 60px;
+         @media (min-width: 1000px) {
+            padding-top: 160px;
+            padding-bottom: 100px;
+         }
+      }
+
+      // .profile__sidebar
+      &__sidebar {
+      }
+      // .profile__subscriptions
+      &__subscriptions {
+      }
+
+      // .profile__orders
+      &__orders {
+      }
+
+      // .profile__account-overview
+      &__account-overview {
+      }
+
+      // .profile__payment-methods
+      &__payment-methods {
+      }
+
+      // .profile__change-password
+      &__change-password {
+      }
+   }
+   .sidebar {
+      @media (min-width: 1000px) {
+         position: relative;
+         top: 7px;
+      }
+      // .sidebar__menu
+      &__menu {
+      }
+
+      // .sidebar__list
+      &__list {
+         li {
+            font-weight: 500;
+            @include fl(24, 28.94);
+            margin-bottom: 30px;
+
+            @media (min-width: 1000px) {
+               font-weight: 400;
+               cursor: pointer;
+               @include fl(22, 40);
+               &.active {
+                  font-weight: 700;
+               }
+               &:not(:last-child) {
+                  margin-bottom: 30px;
+               }
+               &:last-child {
+                  color: #d32d2c;
+               }
+            }
+            @media (max-width: 1000px) {
+               &:not(li.active) {
+                  display: none;
+               }
+            }
+         }
+      }
+   }
+   .subscriptions {
+   }
+   .orders {
+   }
+   .account-overview {
+   }
+   .payment-methods {
+   }
+   .change-password {
+   }
+}

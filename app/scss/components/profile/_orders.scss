@@ -1,63 +1,61 @@
 // Text styles
 main.orders {
-	[class*=__title] {
-		// font-weight: 500;
-		// @include fl(24, 28.94);
-		@media (min-width: 1441px) {
-			@include fl(36, 43.42);
-			
-		}
-	}
-	.card__date { 
-		font-family: $ff2;
-		font-weight: 600;
-		@include fl(14, 19.07);
-		opacity: 0.5;
-		@media (min-width: 1441px) {
-			@include fl(18, 24.51);
-		}
-	}
-	.card__number {
-		font-weight: 500;
-		@include fl(20, 24.12);
-		@media (min-width: 1441px) {
-			@include fl(22, 26.53);
- 		}
-		
-	}
-	.card__label {
-		opacity: 1; 
-	}
-	.card__title {
-		font-weight: 400;
-		@include fl(14, 16.88);
-		@media (min-width: 1441px) {
-			@include fl(20, 24.12);
- 		}
-	}
-	.card__text {
-		font-family: $ff2;
-		@include fl(12, 16.34);
-		opacity: 0.5;
-		@media (min-width: 1441px) {
-			@include fl(14, 19.07);
-		}
-	}
-	.card__summ { 
-		font-family: $ff2;
-		font-weight: 600;
-		@include fl(14, 19.07);
-		
-		@media (min-width: 1441px) {
-			@include fl(18, 24.51);
-		}
-	}
-	.block__summ {
-		font-family: $ff2;
-		font-weight: 600;
-		@include fl(16, 21.79);
-		@media (min-width: 1441px) {
-			@include fl( 20, 27.24);
-		}
-	}
+   [class*="__title"] {
+      // font-weight: 500;
+      // @include fl(24, 28.94);
+      @media (min-width: 1441px) {
+         @include fl(36, 43.42);
+      }
+   }
+   .card__date {
+      font-family: $ff2;
+      font-weight: 600;
+      @include fl(14, 19.07);
+      opacity: 0.5;
+      @media (min-width: 1441px) {
+         @include fl(18, 24.51);
+      }
+   }
+   .card__number {
+      font-weight: 500;
+      @include fl(20, 24.12);
+      @media (min-width: 1441px) {
+         @include fl(22, 26.53);
+      }
+   }
+   .card__label {
+      opacity: 1;
+   }
+   .card__title {
+      font-weight: 400;
+      @include fl(14, 16.88);
+      @media (min-width: 1441px) {
+         @include fl(20, 24.12);
+      }
+   }
+   .card__text {
+      font-family: $ff2;
+      @include fl(12, 16.34);
+      opacity: 0.5;
+      @media (min-width: 1441px) {
+         @include fl(14, 19.07);
+      }
+   }
+   .card__summ {
+      font-family: $ff2;
+      font-weight: 600;
+      @include fl(14, 19.07);
+
+      @media (min-width: 1441px) {
+         @include fl(18, 24.51);
+      }
+   }
+   .block__summ {
+      font-family: $ff2;
+      font-weight: 600;
+      @include fl(16, 21.79);
+      @media (min-width: 1441px) {
+         @include fl(20, 27.24);
+      }
+   }
 }

@@ -1,22 +1,22 @@
- // Text styles
+// Text styles
 .body.account-overview {
-	[class*=__title] {
-		// font-weight: 500;
-		// @include fl(24, 28.94);
-		@media (min-width: 1441px) {
-			@include fl(36, 43.42);
-		}
-	}
-	[class*=__subtitle] {
-		@include fl(18, 21.71);
-		font-weight: 500;
-		@media (min-width: 1441px) {
-			@include fl(22, 26.53);
-		}
-	} 
-	[class*=__saved] {
-		font-family: $ff2;
-		@include fl(16, 21.79);
-		font-weight: 600;
-	} 
+   [class*="__title"] {
+      // font-weight: 500;
+      // @include fl(24, 28.94);
+      @media (min-width: 1441px) {
+         @include fl(36, 43.42);
+      }
+   }
+   [class*="__subtitle"] {
+      @include fl(18, 21.71);
+      font-weight: 500;
+      @media (min-width: 1441px) {
+         @include fl(22, 26.53);
+      }
+   }
+   [class*="__saved"] {
+      font-family: $ff2;
+      @include fl(16, 21.79);
+      font-weight: 600;
+   }
 }

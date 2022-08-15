@@ -435,8 +435,8 @@ window.addEventListener("load", () => {
          }
       }
 
-      // Spoiler.html
-      if (qs(".spoiler")) {
+      // Spoiler.html & Buttons
+      if (qs(".spoiler") && qs("form .btn")) {
          body.addEventListener("click", switchClass);
 
          function switchClass(e) {
@@ -457,8 +457,10 @@ window.addEventListener("load", () => {
                body.classList.add("lock");
             } else if (e.target.closest(".pop-up .btn")) {
                e.preventDefault();
-               qs(".pop-up").classList.remove("active");
                document.location = "index.html";
+               setTimeout(() => {
+                  qs(".pop-up").classList.remove("active");
+               }, 10000);
             }
          }
       }

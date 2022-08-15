@@ -7,19 +7,14 @@ body {
    @include fz(16);
 }
 
-// [class*="__container"] {
-//    width: 100%;
-//    max-width: none;
-//    margin: 0 auto;
-//    // padding-left: calc(20 / 320 * 100%);
-//    // padding-right: calc(20 / 320 * 100%);
-//    padding-left: 20px;
-//    padding-right: 20px;
-//    @media (min-width: 375px) {
-//       // padding-left: calc(20 / 375 * 100%);
-//       // padding-right: calc(20 / 375 * 100%);
-//    }
-// }
+//Видел баги только в футере и subsccriptions.html (если закомментить конейтенр)
+[class*="__container"] {
+   width: 100%;
+   max-width: none;
+   margin: 0 auto;
+   padding-left: 20px;
+   padding-right: 20px;
+}
 .wrapper {
    display: flex;
    flex-direction: column;

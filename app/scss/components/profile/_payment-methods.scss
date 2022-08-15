@@ -1,13 +1,13 @@
- // Text styles
- .body.account-overview {
-	[class*=__title] {
-		// font-weight: 500;
-		// @include fl(24, 28.94);
-		@media (min-width: 1441px) {
-			@include fl(36, 43.42);
-		}
-	}
-	.btn {
-		background-color: #C4BDB6;
-	}
+// Text styles
+.body.account-overview {
+   [class*="__title"] {
+      // font-weight: 500;
+      // @include fl(24, 28.94);
+      @media (min-width: 1441px) {
+         @include fl(36, 43.42);
+      }
+   }
+   .btn {
+      background-color: #c4bdb6;
+   }
 }

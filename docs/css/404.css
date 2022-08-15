@@ -421,6 +421,14 @@ body {
   font-size: 1em;
 }
 
+[class*=__container] {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
