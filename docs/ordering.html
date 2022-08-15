@@ -15,7 +15,24 @@
 
 <body class="ordering">
 	<div class="wrapper">
-		<div class="ordering__header">
+		<div class="pop-up">
+			<div class="pop-up__wrapper">
+				<div class="pop-up__body">
+					<a class="pop-up__logo" href="ordering.html"><i class="ic-logo"><span
+								class="path1"></span><span class="path2"></span><span
+								class="path3"></span></i></a>
+					<h3 class="pop-up__title">Thanks for your order!</h3>
+					<p class="pop-up__text">Your order is now being processed, and will be despatched
+						shortly.
+					</p>
+					<button class="btn">Go to main page</button>
+					<p class="pop-up__text pop-up__text_op">If you have any problems with your order,
+						please contact us by telephone <br>
+						on&nbsp;+44&nbsp;(0)20 7424 2800 (Mon-Fri, 10am-&nbsp;6pm GMT).</p>
+				</div>
+			</div>
+		</div>
+		<div class="ordering-header">
 			<svg width="34" height="40" viewBox="0 0 34 40" fill="none"
 				xmlns="http://www.w3.org/2000/svg">
 				<path fill-rule="evenodd" clip-rule="evenodd"
@@ -111,15 +128,118 @@
 				</section>
 				<section class="hero">
 					<div class="hero__container">
+						<div class="form-block">
+	<h2 class="form-block__title">Delivery Information</h2>
+	
+	<div class="form-block__items">
 
 
-						<h2 class="hero__title">Delivery Information</h2>
+
+		<div class="form-block__line">
+			<label for="firstName">First Name</label>
+			<input id="firstName" type="text" value="John">
+		</div>
+		<div class="form-block__line">
+			<label for="lastName">Last Name</label>
+			<input id="lastName" type="text" value="Smith">
+		</div>
+		<div class="form-block__line">
+			<label for="address1">Address Line 1</label>
+			<input id="address1" type="text" value="Hilton st. 123">
+		</div>
+		<div class="form-block__line">
+			<label for="address2">Address Line 2</label>
+			<input id="address2" type="text" value="">
+		</div>
+		<div class="form-block__line">
+			<label for="city">City</label>
+			<input id="city" type="text" value="New York">
+		</div>
+		<div class="form-block__double-line">
+			<div class="form-block__line">
+				<label for="state">State / Province</label>
+				<div class="spoiler">
+					<div class="spoiler__preview">
+						<input id="state" type="text" value="NY">
+					</div>
+					<div class="spoiler__wrapper">
+						<div class="spoiler__body">
+							<ul class="spoiler__list">
+								<li>
+									<p>California</p>
+								</li>
+								<li>
+									<p>Texas</p>
+								</li>
+								<li>
+									<p>Virginia</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-block__line">
+				<label for="zip">ZIP / Postal Code</label>
+				<input id="zip" type="text" value="213 822">
+			</div>
+		</div>
+
+		<div class="form-block__line">
+			<label for="email">Email</label>
+			<input id="email" type="text" value="johnsmith@gmail.com">
+		</div>
+		<div class="form-block__line">
+			<label for="phone">Phone Number</label>
+			<input id="phone" type="tel" value="8 029 876 56 21">
+		</div>
+	</div>
+</div>
+						<div class="hero__billing">
+							<h2 class="hero__title">Biling</h2>
+							<div class="hero__items">
+								<div class="hero__line">
+									<label for="card">Card Number</label>
+									<input id="card" type="text" placeholder="XXXX XXXX XXXX XXXX">
+								</div>
+								<div class="hero__double-line">
+									<div class="hero__line">
+										<label for="expiration">Expiration</label>
+										<input id="expiration" type="text" placeholder="MM/YY">
+									</div>
+									<div class="hero__line">
+										<label for="cvc">CVC</label>
+										<input id="cvc" type="text" placeholder="CVC">
+									</div>
+								</div>
+							</div>
+							<button class="btn">Place order</button>
+						</div>
 					</div>
 				</section>
-
 			</form>
 		</main>
-		<div class="ordering__footer"></div>
+		<div class="ordering-footer">
+			<div class="ordering-footer__items">
+				<div class='ordering-footer__image'>
+					<picture>
+						<source type='image/webp' srcset='img/logos/stripe.webp'>
+						<img src='img/logos/stripe.png' alt='stripe logo'>
+					</picture>
+				</div>
+				<div class='ordering-footer__image'>
+					<picture>
+						<source type='image/webp' srcset='img/logos/5in1.webp'>
+						<img src='img/logos/5in1.png' alt='companies logo'>
+					</picture>
+				</div>
+			</div>
+			<ul class="ordering-footer__list">
+				<li><a href="subscriptions.html">Return Policy</a></li>
+				<li><a href="subscriptions.html">Privacy Policy</a></li>
+				<li><a href="subscriptions.html">Terms & Conditions</a></li>
+			</ul>
+		</div>
 	</div>
 	<script src="js/script.min.js"></script>
 <script src="js/swiper-bundle.min.js"></script>

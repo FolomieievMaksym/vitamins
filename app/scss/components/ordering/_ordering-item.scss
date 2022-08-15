@@ -27,17 +27,26 @@ body.ordering {
             left: 50%;
             transform: translate(-50%, -50%);
          }
+         @media (min-width: 769px) {
+            margin-right: 19px;
+         }
       }
 
       // .card-item__body
 
       &__body {
+         flex: 1 1 auto;
+
          display: flex;
          align-items: center;
          justify-content: space-between;
          column-gap: 25px;
          @media (min-width: 375px) {
             column-gap: 30px;
+         }
+         @media (min-width: 769px) {
+            column-gap: rem(25);
+            transform: translate(0, 1px);
          }
       }
 

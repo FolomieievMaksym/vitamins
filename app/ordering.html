@@ -8,7 +8,26 @@
 
 <body class="ordering">
 	<div class="wrapper">
-		<div class="ordering__header">
+		<div class="pop-up">
+			<div class="pop-up__wrapper">
+				<div class="pop-up__body">
+					<a class="pop-up__logo" href="ordering.html"><i class="ic-logo"><span
+								class="path1"></span><span class="path2"></span><span
+								class="path3"></span></i></a>
+					<h3 class="pop-up__title">Thanks for your order!</h3>
+					<p class="pop-up__text">Your order is now being processed, and will be despatched
+						shortly.
+					</p>
+					@@include('./components/_btn.html', {
+					'text': 'Go to main page'
+					})
+					<p class="pop-up__text pop-up__text_op">If you have any problems with your order,
+						please contact us by telephone <br>
+						on&nbsp;+44&nbsp;(0)20 7424 2800 (Mon-Fri, 10am-&nbsp;6pm GMT).</p>
+				</div>
+			</div>
+		</div>
+		<div class="ordering-header">
 			<svg width="34" height="40" viewBox="0 0 34 40" fill="none"
 				xmlns="http://www.w3.org/2000/svg">
 				<path fill-rule="evenodd" clip-rule="evenodd"
@@ -79,15 +98,56 @@
 				</section>
 				<section class="hero">
 					<div class="hero__container">
-
-
-						<h2 class="hero__title">Delivery Information</h2>
+						@@include('./components/ordering/ordering-form.html', {
+						'title': 'Delivery Information',
+						})
+						<div class="hero__billing">
+							<h2 class="hero__title">Biling</h2>
+							<div class="hero__items">
+								<div class="hero__line">
+									<label for="card">Card Number</label>
+									<input id="card" type="text" placeholder="XXXX XXXX XXXX XXXX">
+								</div>
+								<div class="hero__double-line">
+									<div class="hero__line">
+										<label for="expiration">Expiration</label>
+										<input id="expiration" type="text" placeholder="MM/YY">
+									</div>
+									<div class="hero__line">
+										<label for="cvc">CVC</label>
+										<input id="cvc" type="text" placeholder="CVC">
+									</div>
+								</div>
+							</div>
+							@@include('./components/_btn.html', {
+							'text': 'Place order'
+							})
+						</div>
 					</div>
 				</section>
-
 			</form>
 		</main>
-		<div class="ordering__footer"></div>
+		<div class="ordering-footer">
+			<div class="ordering-footer__items">
+				<div class='ordering-footer__image'>
+					<picture>
+						<source type='image/webp' srcset='@img/logos/stripe.webp'>
+						<img src='@img/logos/stripe.png' alt='stripe logo'>
+					</picture>
+				</div>
+				<div class='ordering-footer__image'>
+					<picture>
+						<source type='image/webp' srcset='@img/logos/5in1.webp'>
+						<img src='@img/logos/5in1.png' alt='companies logo'>
+					</picture>
+				</div>
+			</div>
+			<ul class="ordering-footer__list">
+				<li><a href="subscriptions.html">Return Policy</a></li>
+				<li><a href="subscriptions.html">Privacy Policy</a></li>
+				<li><a href="subscriptions.html">Terms & Conditions</a></li>
+			</ul>
+		</div>
 	</div>
 	@@include('components/each-page-blocks/_scripts.html')
 </body>

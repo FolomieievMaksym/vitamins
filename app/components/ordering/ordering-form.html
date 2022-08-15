@@ -1,0 +1,67 @@
+<div class="form-block">
+	<h2 class="form-block__title">@@title</h2>
+	@@if (context.subtitle) {<h3 class="form-block__subtitle">@@subtitle</h3>}
+	<div class="form-block__items">
+
+
+
+		<div class="form-block__line">
+			<label for="firstName">First Name</label>
+			<input id="firstName" type="text" value="John">
+		</div>
+		<div class="form-block__line">
+			<label for="lastName">Last Name</label>
+			<input id="lastName" type="text" value="Smith">
+		</div>
+		<div class="form-block__line">
+			<label for="address1">Address Line 1</label>
+			<input id="address1" type="text" value="Hilton st. 123">
+		</div>
+		<div class="form-block__line">
+			<label for="address2">Address Line 2</label>
+			<input id="address2" type="text" value="">
+		</div>
+		<div class="form-block__line">
+			<label for="city">City</label>
+			<input id="city" type="text" value="New York">
+		</div>
+		<div class="form-block__double-line">
+			<div class="form-block__line">
+				<label for="state">State / Province</label>
+				<div class="spoiler">
+					<div class="spoiler__preview">
+						<input id="state" type="text" value="NY">
+					</div>
+					<div class="spoiler__wrapper">
+						<div class="spoiler__body">
+							<ul class="spoiler__list">
+								<li>
+									<p>California</p>
+								</li>
+								<li>
+									<p>Texas</p>
+								</li>
+								<li>
+									<p>Virginia</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-block__line">
+				<label for="zip">ZIP / Postal Code</label>
+				<input id="zip" type="text" value="213 822">
+			</div>
+		</div>
+
+		<div class="form-block__line">
+			<label for="email">Email</label>
+			<input id="email" type="text" value="johnsmith@gmail.com">
+		</div>
+		<div class="form-block__line">
+			<label for="phone">Phone Number</label>
+			<input id="phone" type="tel" value="8 029 876 56 21">
+		</div>
+	</div>
+</div>

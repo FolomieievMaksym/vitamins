@@ -419,5 +419,48 @@ window.addEventListener("load", () => {
             }
          }
       }
+
+      //Position button
+      window.addEventListener("resize", changePosition);
+
+      changePosition();
+      function changePosition(e) {
+         if (window.innerWidth > 768) {
+            qs(".ordering-card").classList.add("opened");
+         }
+         if (window.innerWidth > 1000) {
+            qs(".ordering-card__content").append(qs("form .btn"));
+         } else {
+            qs(".hero__billing").append(qs("form .btn"));
+         }
+      }
+
+      // Spoiler.html
+      if (qs(".spoiler")) {
+         body.addEventListener("click", switchClass);
+
+         function switchClass(e) {
+            const spoiler = qs(".spoiler"),
+               spoilerBody = qs(".spoiler__wrapper");
+
+            if (e.target.closest(".spoiler__preview")) {
+               spoiler.classList.toggle("opened");
+               if (!spoiler.classList.contains("opened")) {
+                  spoilerBody.style.height = null;
+               } else {
+                  let spoilerWrapperScrollHeight = spoilerBody.scrollHeight;
+                  spoilerBody.style.height = spoilerWrapperScrollHeight + "px";
+               }
+            } else if (e.target.closest("form .btn")) {
+               e.preventDefault();
+               qs(".pop-up").classList.add("active");
+               body.classList.add("lock");
+            } else if (e.target.closest(".pop-up .btn")) {
+               e.preventDefault();
+               qs(".pop-up").classList.remove("active");
+               document.location = "index.html";
+            }
+         }
+      }
    }
 });
