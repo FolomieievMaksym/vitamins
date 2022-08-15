@@ -2,6 +2,9 @@ body.profile {
    .header {
       padding-top: 2px;
    }
+   .footer {
+      padding-top: 41px;
+   }
    .profile {
       // .profile__body
       &__body {
@@ -15,27 +18,44 @@ body.profile {
          }
       }
 
-      // .profile__sidebar
-      &__sidebar {
-      }
       // .profile__subscriptions
       &__subscriptions {
+         display: none;
+         &.active {
+            display: block;
+         }
       }
 
       // .profile__orders
       &__orders {
+         display: none;
+         &.active {
+            display: block;
+         }
       }
 
       // .profile__account-overview
       &__account-overview {
+         display: none;
+         &.active {
+            display: block;
+         }
       }
 
       // .profile__payment-methods
       &__payment-methods {
+         display: none;
+         &.active {
+            display: block;
+         }
       }
 
       // .profile__change-password
       &__change-password {
+         display: none;
+         &.active {
+            display: block;
+         }
       }
    }
    .sidebar {
@@ -75,15 +95,5 @@ body.profile {
             }
          }
       }
-   }
-   .subscriptions {
-   }
-   .orders {
-   }
-   .account-overview {
-   }
-   .payment-methods {
-   }
-   .change-password {
    }
 }
