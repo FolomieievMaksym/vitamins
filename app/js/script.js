@@ -470,6 +470,19 @@ window.addEventListener("load", () => {
    if (qs("body.profile")) {
       // Spoiler
       if (qa(".spoiler")) {
+         window.addEventListener("resize", addHeight);
+
+         addHeight();
+         function addHeight(e) {
+            if (window.innerWidth > 999) {
+               qa(".spoiler").forEach((el) => {
+                  el.classList.add("opened");
+               });
+               qa(".spoiler__wrapper").forEach((el) => {
+                  el.style.height = el.scrollHeight + "px";
+               });
+            }
+         }
          if (qs(".spoiler").classList.contains("opened")) {
             let spoilerWrapper = qa(".spoiler__wrapper")[0];
             spoilerWrapper.style.height = spoilerWrapper.scrollHeight + "px";
@@ -486,6 +499,41 @@ window.addEventListener("load", () => {
                } else {
                   spoilerWrapper.style.height = spoilerWrapper.scrollHeight + "px";
                }
+            }
+         }
+      }
+
+      //Табы
+      if (qs(".sidebar__list")) {
+         body.addEventListener("click", changeTab);
+
+         function changeTab(e) {
+            if (e.target.closest("li.active")) {
+               return;
+            } else if (e.target.closest("li#subscriptions")) {
+               removeActive(e.target);
+               qs(".profile__subscriptions").classList.add("active");
+            } else if (e.target.closest("li#orders")) {
+               removeActive(e.target);
+               qs(".profile__orders").classList.add("active");
+            } else if (e.target.closest("li#account")) {
+               removeActive(e.target);
+               qs(".profile__account-overview").classList.add("active");
+            } else if (e.target.closest("li#payment")) {
+               removeActive(e.target);
+               qs(".profile__payment-methods").classList.add("active");
+            } else if (e.target.closest("li#password")) {
+               removeActive(e.target);
+               qs(".profile__change-password").classList.add("active");
+            }
+            function removeActive(element) {
+               qa(".sidebar__list li").forEach((el) => {
+                  el.classList.remove("active");
+               });
+               element.classList.add("active");
+               qa("section").forEach((el) => {
+                  el.classList.remove("active");
+               });
             }
          }
       }

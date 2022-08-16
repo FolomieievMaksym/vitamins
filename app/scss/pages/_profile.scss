@@ -27,6 +27,7 @@ body.profile {
             column-gap: percent(178, 1394);
             padding-left: percent(202, 1800);
             padding-right: percent(202, 1800);
+            padding-bottom: 95px; // Orders PXP
          }
       }
 
@@ -51,44 +52,16 @@ body.profile {
             @include fl(36, 43.42);
          }
       }
-      // .profile__subscriptions
-      &__subscriptions {
+      // .profile__:
+      &__subscriptions,
+      &__orders,
+      &__account-overview,
+      &__payment-methods,
+      &__change-password {
          display: none;
          @media (min-width: 1000px) {
             flex: 1 1 auto;
          }
-         &.active {
-            display: block;
-         }
-      }
-
-      // .profile__orders
-      &__orders {
-         display: none;
-         &.active {
-            display: block;
-         }
-      }
-
-      // .profile__account-overview
-      &__account-overview {
-         display: none;
-         &.active {
-            display: block;
-         }
-      }
-
-      // .profile__payment-methods
-      &__payment-methods {
-         display: none;
-         &.active {
-            display: block;
-         }
-      }
-
-      // .profile__change-password
-      &__change-password {
-         display: none;
          &.active {
             display: block;
          }
