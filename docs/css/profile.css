@@ -1486,6 +1486,10 @@ body.profile .spoiler-block .btn {
   height: 50px;
 }
 
+body.profile .payment {
+  max-width: 444px;
+}
+
 body.profile .payment__items {
   display: flex;
   flex-direction: column;
@@ -1493,16 +1497,16 @@ body.profile .payment__items {
   margin-bottom: 35px;
 }
 
-body.profile .payment__line {
+body.profile .payment__items_mobile .payment__line {
   display: flex;
   flex-direction: column;
 }
 
-body.profile .payment__line input {
+body.profile .payment__items_mobile .payment__line input {
   width: 100%;
 }
 
-body.profile .payment label {
+body.profile .payment__items_mobile label {
   font-family: "OpenSans";
   font-size: 0.875em;
   line-height: 1.3621428571;
@@ -1511,10 +1515,14 @@ body.profile .payment label {
   max-width: 100%;
 }
 
-body.profile .payment__double-line {
+body.profile .payment__items_mobile .payment__double-line {
   display: flex;
   -moz-column-gap: 17px;
   column-gap: 17px;
+}
+
+body.profile .payment__items_desktop {
+  display: none;
 }
 
 body.profile .payment .btn {
@@ -2325,6 +2333,14 @@ body.profile .sidebar__list {
 
   .menu-footer__list_2 li:nth-child(5) {
     order: 5;
+  }
+
+  body.profile .payment__items_mobile {
+    display: none;
+  }
+
+  body.profile .payment__items_desktop {
+    display: block;
   }
 
   .form-block__double-line {
