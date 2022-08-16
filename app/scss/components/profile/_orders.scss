@@ -1,8 +1,10 @@
 body.profile {
    .spoiler__wrapper {
-      height: 0;
-      overflow: hidden;
-      transition: all 0.5s ease;
+      @media (max-width: 999px) {
+         height: 0;
+         overflow: hidden;
+         transition: all 0.5s ease;
+      }
    }
    .spoiler-block {
       &.opened {

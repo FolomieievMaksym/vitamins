@@ -1291,12 +1291,6 @@ body.profile .pass label {
   margin-bottom: 6px;
 }
 
-body.profile .spoiler__wrapper {
-  height: 0;
-  overflow: hidden;
-  transition: all 0.5s ease;
-}
-
 body.profile .spoiler-block {
   background-color: #faf8f6;
   border-radius: 1rem;
@@ -3325,6 +3319,12 @@ body.profile .sidebar__list {
 }
 
 @media (max-width: 999px) {
+  body.profile .spoiler__wrapper {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+
   body.profile .spoiler-block__card {
     align-items: center;
   }

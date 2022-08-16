@@ -470,23 +470,11 @@ window.addEventListener("load", () => {
    if (qs("body.profile")) {
       // Spoiler
       if (qa(".spoiler")) {
-         window.addEventListener("resize", addHeight);
-
-         addHeight();
-         function addHeight(e) {
-            if (window.innerWidth > 999) {
-               qa(".spoiler").forEach((el) => {
-                  el.classList.add("opened");
-               });
-               qa(".spoiler__wrapper").forEach((el) => {
-                  el.style.height = el.scrollHeight + "px";
-               });
+         window.addEventListener("resize", () => {
+            if (window.innerWidth <= 999) {
+               qa(".spoiler")[0].classList.remove("opened");
             }
-         }
-         if (qs(".spoiler").classList.contains("opened")) {
-            let spoilerWrapper = qa(".spoiler__wrapper")[0];
-            spoilerWrapper.style.height = spoilerWrapper.scrollHeight + "px";
-         }
+         });
 
          body.addEventListener("click", toggleSpoiler);
 
@@ -544,5 +532,25 @@ window.addEventListener("load", () => {
             qs(".profile__account-overview .saved").classList.remove("active");
          }, 5000);
       });
+   }
+
+   //header
+   qs(".header-aside_4 .second-menu").addEventListener("click", relocate);
+
+   function relocate(e) {
+      e.preventDefault();
+      if (e.target.closest(".second-menu li")) {
+         if (e.target.innerHTML == "Subscriptions") {
+            document.location.href = "profile.html";
+         } else if (e.target.innerHTML == "Orders") {
+            document.location.href = "profile.html";
+         } else if (e.target.innerHTML == "Account Overview") {
+            document.location.href = "profile.html";
+         } else if (e.target.innerHTML == "Payment methods") {
+            document.location.href = "profile.html";
+         } else if (e.target.innerHTML == "Change Password") {
+            document.location.href = "profile.html";
+         }
+      }
    }
 });
