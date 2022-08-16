@@ -1486,15 +1486,15 @@ body.profile .spoiler-block .btn {
   height: 50px;
 }
 
-body.profile .payment {
-  max-width: 444px;
-}
-
 body.profile .payment__items {
   display: flex;
   flex-direction: column;
   row-gap: 25px;
   margin-bottom: 35px;
+}
+
+body.profile .payment__items_mobile {
+  max-width: 444px;
 }
 
 body.profile .payment__items_mobile .payment__line {
@@ -1523,6 +1523,87 @@ body.profile .payment__items_mobile .payment__double-line {
 
 body.profile .payment__items_desktop {
   display: none;
+}
+
+body.profile .payment__items_desktop .payment__top-item {
+  position: relative;
+  z-index: 1;
+  background-color: #f3efea;
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+  padding-left: 42px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+body.profile .payment__items_desktop .payment__number {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+body.profile .payment__items_desktop .payment__logos {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  opacity: 0.25;
+  max-width: 239px;
+  -moz-column-gap: 5px;
+  column-gap: 5px;
+}
+
+body.profile .payment__items_desktop .payment__logos div:first-child {
+  flex: 0 0 83px;
+  width: 83px;
+}
+
+body.profile .payment__items_desktop .payment__image img {
+  max-width: 100%;
+}
+
+body.profile .payment__items_desktop .payment__expiration {
+  justify-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  max-width: 104px;
+  transform: translate(0, -4px);
+}
+
+body.profile .payment__items_desktop .payment__bottom-item {
+  position: absolute;
+  top: 49px;
+  left: 186px;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ece8e2;
+  border-radius: 1rem;
+  padding-right: 40px;
+}
+
+body.profile .payment__items_desktop .payment__decor {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 63px;
+  background-color: #c2bfbb;
+}
+
+body.profile .payment__items_desktop .payment__cvc {
+  position: relative;
+  top: calc(100% - 48px);
+  right: 0;
+  transform: translate(0, -100%);
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 104px;
 }
 
 body.profile .payment .btn {
@@ -2341,6 +2422,22 @@ body.profile .sidebar__list {
 
   body.profile .payment__items_desktop {
     display: block;
+    position: relative;
+    height: 288px;
+    width: 490px;
+    margin-bottom: 88px;
+  }
+
+  body.profile .payment__items_desktop input {
+    background-color: #fff;
+  }
+
+  body.profile .payment__items_desktop label {
+    opacity: 0.5;
+    font-family: "OpenSans";
+    font-size: 0.875em;
+    line-height: 1.3621428571;
+    margin-bottom: 8px;
   }
 
   .form-block__double-line {

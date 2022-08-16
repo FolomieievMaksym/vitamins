@@ -1,7 +1,6 @@
 // Text styles
 body.profile {
    .payment {
-      max-width: 444px;
       &__title {
       }
       &__items {
@@ -10,6 +9,7 @@ body.profile {
          row-gap: 25px;
          margin-bottom: 35px;
          &_mobile {
+            max-width: 444px;
             .payment__line {
                display: flex;
                flex-direction: column;
@@ -36,6 +36,117 @@ body.profile {
             display: none;
             @media (min-width: 769px) {
                display: block;
+               position: relative;
+               height: 288px;
+               width: 490px;
+               margin-bottom: 88px;
+               input {
+                  background-color: #fff;
+               }
+               label {
+                  opacity: 0.5;
+                  font-family: $ff2;
+                  @include fl(14, 19.07);
+                  margin-bottom: 8px;
+               }
+            }
+            .payment {
+               // .payment__top-item
+
+               &__top-item {
+                  position: relative;
+                  z-index: 1;
+                  background-color: #f3efea;
+                  border-radius: rem(16);
+                  width: 100%;
+                  height: 100%;
+                  padding-top: 50px;
+                  padding-left: 42px;
+                  padding-right: 40px;
+                  padding-bottom: 40px;
+                  display: flex;
+                  flex-direction: column;
+               }
+
+               // .payment__number
+
+               &__number {
+                  display: flex;
+                  flex-direction: column;
+                  width: 100%;
+                  margin-bottom: 10px;
+               }
+
+               // .payment__logos
+
+               &__logos {
+                  align-self: flex-end;
+                  display: flex;
+                  align-items: center;
+                  opacity: 0.25;
+                  max-width: 239px;
+                  column-gap: 5px;
+                  div:first-child {
+                     flex: 0 0 83px;
+                     width: 83px;
+                  }
+               }
+
+               // .payment__image
+
+               &__image {
+                  img {
+                     max-width: 100%;
+                  }
+               }
+
+               // .payment__expiration
+
+               &__expiration {
+                  justify-self: flex-end;
+                  display: flex;
+                  flex-direction: column;
+                  max-width: 104px;
+                  transform: translate(0, -4px);
+               }
+
+               // .payment__bottom-item
+
+               &__bottom-item {
+                  position: absolute;
+                  top: 49px;
+                  left: 186px;
+                  z-index: 0;
+                  width: 100%;
+                  height: 100%;
+                  background-color: #ece8e2;
+                  border-radius: rem(16);
+                  padding-right: 40px;
+               }
+
+               // .payment__decor
+
+               &__decor {
+                  position: absolute;
+                  top: 40px;
+                  left: 0;
+                  width: 100%;
+                  height: 63px;
+                  background-color: #c2bfbb;
+               }
+
+               // .payment__cvc
+
+               &__cvc {
+                  position: relative;
+                  top: calc(100% - 48px);
+                  right: 0;
+                  transform: translate(0, -100%);
+                  margin-left: auto;
+                  display: flex;
+                  flex-direction: column;
+                  max-width: 104px;
+               }
             }
          }
       }
