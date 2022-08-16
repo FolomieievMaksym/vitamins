@@ -1,61 +1,134 @@
-// Text styles
-main.orders {
-   [class*="__title"] {
-      // font-weight: 500;
-      // @include fl(24, 28.94);
-      @media (min-width: 1441px) {
-         @include fl(36, 43.42);
+body.profile {
+   .spoiler__wrapper {
+      height: 0;
+      overflow: hidden;
+      transition: all 0.5s ease;
+   }
+   .spoiler-block {
+      // .spoiler-block__preview
+      &__preview {
       }
-   }
-   .card__date {
-      font-family: $ff2;
-      font-weight: 600;
-      @include fl(14, 19.07);
-      opacity: 0.5;
-      @media (min-width: 1441px) {
-         @include fl(18, 24.51);
-      }
-   }
-   .card__number {
-      font-weight: 500;
-      @include fl(20, 24.12);
-      @media (min-width: 1441px) {
-         @include fl(22, 26.53);
-      }
-   }
-   .card__label {
-      opacity: 1;
-   }
-   .card__title {
-      font-weight: 400;
-      @include fl(14, 16.88);
-      @media (min-width: 1441px) {
-         @include fl(20, 24.12);
-      }
-   }
-   .card__text {
-      font-family: $ff2;
-      @include fl(12, 16.34);
-      opacity: 0.5;
-      @media (min-width: 1441px) {
-         @include fl(14, 19.07);
-      }
-   }
-   .card__summ {
-      font-family: $ff2;
-      font-weight: 600;
-      @include fl(14, 19.07);
 
-      @media (min-width: 1441px) {
-         @include fl(18, 24.51);
+      // .spoiler-block__left
+      &__left {
       }
-   }
-   .block__summ {
-      font-family: $ff2;
-      font-weight: 600;
-      @include fl(16, 21.79);
-      @media (min-width: 1441px) {
-         @include fl(20, 27.24);
+
+      // .spoiler-block__date
+      &__date {
+         font-family: $ff2;
+         font-weight: 600;
+         @include fl(14, 19.07);
+         opacity: 0.5;
+         @media (min-width: 1441px) {
+            @include fl(18, 24.51);
+         }
+      }
+
+      // .spoiler-block__number
+      &__number {
+         font-weight: 500;
+         @include fl(20, 24.12);
+         @media (min-width: 1441px) {
+            @include fl(22, 26.53);
+         }
+      }
+
+      // .spoiler-block__right
+      &__right {
+      }
+
+      // .spoiler-block__text
+      &__text {
+         font-family: $ff2;
+         @include fl(12, 16.34);
+         opacity: 0.5;
+         @media (min-width: 1441px) {
+            @include fl(14, 19.07);
+         }
+         &_op-1 {
+         }
+      }
+
+      // .spoiler-block__arrow
+      &__arrow {
+      }
+
+      // .spoiler-block__body
+      &__body {
+      }
+
+      // .spoiler-block__cards
+      &__cards {
+      }
+
+      // .spoiler-block__card
+      &__card {
+      }
+
+      // .spoiler-block__image
+      &__image {
+      }
+
+      // .spoiler-block__content
+      &__content {
+      }
+
+      // .spoiler-block__label
+      &__label {
+         font-family: $ff2;
+         font-weight: 600;
+         @include fl(12, 16.34);
+         margin-bottom: 7px;
+         @media (min-width: 1000px) {
+            @include fl(14, 19.07);
+         }
+         &_mint {
+            color: $mintLabel;
+         }
+         &_pink {
+            color: $pinkLabel;
+         }
+         &_purple {
+            color: $purpleLabel;
+         }
+      }
+
+      // .spoiler-block__title
+      &__title {
+         font-weight: 400;
+         @include fl(16, 19.3);
+         @media (min-width: 1441px) {
+            @include fl(20, 24.12);
+         }
+      }
+
+      // .spoiler-block__price
+      &__price {
+         font-family: $ff2;
+         font-weight: 600;
+         @include fl(14, 19.07);
+
+         @media (min-width: 1441px) {
+            @include fl(18, 24.51);
+         }
+      }
+
+      // .spoiler-block__bottom
+      &__bottom {
+      }
+
+      // .spoiler-block__total-price
+      &__total-price {
+         font-family: $ff2;
+         font-weight: 600;
+         @include fl(16, 21.79);
+         @media (min-width: 1441px) {
+            @include fl(20, 27.24);
+         }
+      }
+
+      .btn {
+         max-width: 154px;
       }
    }
 }

@@ -465,4 +465,29 @@ window.addEventListener("load", () => {
          }
       }
    }
+
+   //profile.html
+   if (qs("body.profile")) {
+      // Spoiler
+      if (qa(".spoiler")) {
+         if (qs(".spoiler").classList.contains("opened")) {
+            let spoilerWrapper = qa(".spoiler__wrapper")[0];
+            spoilerWrapper.style.height = spoilerWrapper.scrollHeight + "px";
+         }
+
+         body.addEventListener("click", toggleSpoiler);
+
+         function toggleSpoiler(e) {
+            if (e.target.closest(".spoiler__preview")) {
+               e.target.closest(".spoiler").classList.toggle("opened");
+               let spoilerWrapper = e.target.closest(".spoiler__preview").nextElementSibling;
+               if (!e.target.closest(".spoiler").classList.contains("opened")) {
+                  spoilerWrapper.style.height = null;
+               } else {
+                  spoilerWrapper.style.height = spoilerWrapper.scrollHeight + "px";
+               }
+            }
+         }
+      }
+   }
 });

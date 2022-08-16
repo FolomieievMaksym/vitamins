@@ -30,6 +30,27 @@ body.profile {
          }
       }
 
+      .main-title {
+         font-weight: 500;
+         @include fl(24, 28.94);
+         margin-bottom: 30px;
+         @media (min-width: 468px) {
+            @include fl(26, 32);
+         }
+         @media (min-width: 760px) {
+            @include fl(28, 35);
+         }
+         @media (min-width: 1000px) {
+            margin-bottom: 40px;
+            @include fl(30, 38);
+         }
+         @media (min-width: 1400px) {
+            @include fl(32, 41);
+         }
+         @media (min-width: 1600px) {
+            @include fl(36, 43.42);
+         }
+      }
       // .profile__subscriptions
       &__subscriptions {
          display: none;
@@ -78,10 +99,6 @@ body.profile {
          position: relative;
          top: 7px;
       }
-      // .sidebar__menu
-      &__menu {
-      }
-
       // .sidebar__list
       &__list {
          display: none;

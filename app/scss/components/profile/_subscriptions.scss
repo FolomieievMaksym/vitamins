@@ -1,26 +1,5 @@
 body.profile {
    .subscriptions {
-      &__main-title {
-         font-weight: 500;
-         @include fl(24, 28.94);
-         margin-bottom: 30px;
-         @media (min-width: 468px) {
-            @include fl(26, 32);
-         }
-         @media (min-width: 760px) {
-            @include fl(28, 35);
-         }
-         @media (min-width: 1000px) {
-            margin-bottom: 40px;
-            @include fl(30, 38);
-         }
-         @media (min-width: 1400px) {
-            @include fl(32, 41);
-         }
-         @media (min-width: 1600px) {
-            @include fl(36, 43.42);
-         }
-      }
       // .subscriptions__items
       &__items {
          display: grid;
@@ -204,11 +183,6 @@ body.profile {
             justify-content: space-between;
             column-gap: 30px;
          }
-      }
-
-      // .subscriptions__about
-
-      &__about {
       }
 
       // .subscriptions__subtext

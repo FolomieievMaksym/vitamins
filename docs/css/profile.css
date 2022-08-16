@@ -1185,7 +1185,13 @@ input::placeholder {
   line-height: 1.3621428571;
 }
 
-main.orders .card__date {
+body.profile .spoiler__wrapper {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+body.profile .spoiler-block__date {
   font-family: "OpenSans";
   font-weight: 600;
   font-size: 0.875em;
@@ -1193,52 +1199,65 @@ main.orders .card__date {
   opacity: 0.5;
 }
 
-main.orders .card__number {
+body.profile .spoiler-block__number {
   font-weight: 500;
   font-size: 1.25em;
   line-height: 1.206;
 }
 
-main.orders .card__label {
-  opacity: 1;
-}
-
-main.orders .card__title {
-  font-weight: 400;
-  font-size: 0.875em;
-  line-height: 1.2057142857;
-}
-
-main.orders .card__text {
+body.profile .spoiler-block__text {
   font-family: "OpenSans";
   font-size: 0.75em;
   line-height: 1.3616666667;
   opacity: 0.5;
 }
 
-main.orders .card__summ {
+body.profile .spoiler-block__label {
+  font-family: "OpenSans";
+  font-weight: 600;
+  font-size: 0.75em;
+  line-height: 1.3616666667;
+  margin-bottom: 7px;
+}
+
+body.profile .spoiler-block__label_mint {
+  color: #6bb0a4;
+}
+
+body.profile .spoiler-block__label_pink {
+  color: #9448a0;
+}
+
+body.profile .spoiler-block__label_purple {
+  color: #6b5ebb;
+}
+
+body.profile .spoiler-block__title {
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.20625;
+}
+
+body.profile .spoiler-block__price {
   font-family: "OpenSans";
   font-weight: 600;
   font-size: 0.875em;
   line-height: 1.3621428571;
 }
 
-main.orders .block__summ {
+body.profile .spoiler-block__total-price {
   font-family: "OpenSans";
   font-weight: 600;
   font-size: 1em;
   line-height: 1.361875;
 }
 
-.body.account-overview .btn {
-  background-color: #c4bdb6;
+body.profile .spoiler-block .btn {
+  max-width: 154px;
 }
 
-body.profile .subscriptions__main-title {
-  font-weight: 500;
-  font-size: 1.5em;
-  line-height: 1.2058333333;
-  margin-bottom: 30px;
+.body.account-overview .btn {
+  background-color: #c4bdb6;
 }
 
 body.profile .subscriptions__items {
@@ -1684,6 +1703,13 @@ body.profile .profile__body {
   padding-bottom: 60px;
 }
 
+body.profile .profile .main-title {
+  font-weight: 500;
+  font-size: 1.5em;
+  line-height: 1.2058333333;
+  margin-bottom: 30px;
+}
+
 body.profile .profile__subscriptions {
   display: none;
 }
@@ -1775,7 +1801,7 @@ body.profile .sidebar__list {
 }
 
 @media (min-width: 468px) {
-  body.profile .subscriptions__main-title {
+  body.profile .profile .main-title {
     font-size: 1.625em;
     line-height: 1.2307692308;
   }
@@ -1812,7 +1838,7 @@ body.profile .sidebar__list {
 }
 
 @media (min-width: 760px) {
-  body.profile .subscriptions__main-title {
+  body.profile .profile .main-title {
     font-size: 1.75em;
     line-height: 1.25;
   }
@@ -1886,10 +1912,9 @@ body.profile .sidebar__list {
     padding-top: 74px;
   }
 
-  body.profile .subscriptions__main-title {
-    margin-bottom: 40px;
-    font-size: 1.875em;
-    line-height: 1.2666666667;
+  body.profile .spoiler-block__label {
+    font-size: 0.875em;
+    line-height: 1.3621428571;
   }
 
   body.profile .subscriptions__items {
@@ -1973,6 +1998,12 @@ body.profile .sidebar__list {
     column-gap: 7.1736011478%;
     padding-left: 2.7777777778%;
     padding-right: 2.7777777778%;
+  }
+
+  body.profile .profile .main-title {
+    margin-bottom: 40px;
+    font-size: 1.875em;
+    line-height: 1.2666666667;
   }
 
   body.profile .profile__subscriptions {
@@ -2491,16 +2522,16 @@ body.profile .sidebar__list {
 }
 
 @media (min-width: 1400px) {
-  body.profile .subscriptions__main-title {
-    font-size: 2em;
-    line-height: 1.28125;
-  }
-
   body.profile .profile__body {
     -moz-column-gap: 12.769010043%;
     column-gap: 12.769010043%;
     padding-left: 11.2222222222%;
     padding-right: 11.2222222222%;
+  }
+
+  body.profile .profile .main-title {
+    font-size: 2em;
+    line-height: 1.28125;
   }
 }
 
@@ -2554,37 +2585,32 @@ body.profile .sidebar__list {
     line-height: 1.2061111111;
   }
 
-  main.orders [class*=__title] {
-    font-size: 2.25em;
-    line-height: 1.2061111111;
-  }
-
-  main.orders .card__date {
+  body.profile .spoiler-block__date {
     font-size: 1.125em;
     line-height: 1.3616666667;
   }
 
-  main.orders .card__number {
+  body.profile .spoiler-block__number {
     font-size: 1.375em;
     line-height: 1.2059090909;
   }
 
-  main.orders .card__title {
-    font-size: 1.25em;
-    line-height: 1.206;
-  }
-
-  main.orders .card__text {
+  body.profile .spoiler-block__text {
     font-size: 0.875em;
     line-height: 1.3621428571;
   }
 
-  main.orders .card__summ {
+  body.profile .spoiler-block__title {
+    font-size: 1.25em;
+    line-height: 1.206;
+  }
+
+  body.profile .spoiler-block__price {
     font-size: 1.125em;
     line-height: 1.3616666667;
   }
 
-  main.orders .block__summ {
+  body.profile .spoiler-block__total-price {
     font-size: 1.25em;
     line-height: 1.362;
   }
@@ -2615,7 +2641,7 @@ body.profile .sidebar__list {
 }
 
 @media (min-width: 1600px) {
-  body.profile .subscriptions__main-title {
+  body.profile .profile .main-title {
     font-size: 2.25em;
     line-height: 1.2061111111;
   }
