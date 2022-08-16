@@ -1,7 +1,27 @@
 body.profile {
    .subscriptions {
+      &__main-title {
+         font-weight: 500;
+         @include fl(24, 28.94);
+         margin-bottom: 30px;
+         @media (min-width: 468px) {
+            @include fl(26, 32);
+         }
+         @media (min-width: 760px) {
+            @include fl(28, 35);
+         }
+         @media (min-width: 1000px) {
+            margin-bottom: 40px;
+            @include fl(30, 38);
+         }
+         @media (min-width: 1400px) {
+            @include fl(32, 41);
+         }
+         @media (min-width: 1600px) {
+            @include fl(36, 43.42);
+         }
+      }
       // .subscriptions__items
-
       &__items {
          display: grid;
          row-gap: 15px;
@@ -12,6 +32,7 @@ body.profile {
          }
          @media (min-width: 1000px) {
             row-gap: 20px;
+            grid-template-columns: 1fr;
          }
       }
 
@@ -23,9 +44,17 @@ body.profile {
          padding: 20px;
          display: flex;
          flex-direction: column;
-
          @media (min-width: 1000px) {
             padding: 30px 40px;
+            flex-direction: row;
+            align-items: center;
+            column-gap: 30px;
+         }
+         transition: all 0.3s ease;
+         &:hover {
+            img {
+               transform: translate(-50%, -50%) scale(1.2);
+            }
          }
       }
 
@@ -40,6 +69,8 @@ body.profile {
          }
          @media (min-width: 1000px) {
             margin-bottom: 0;
+            max-width: 120px;
+            padding-bottom: percent(170, 959);
          }
          &_mint {
             background-color: #94d6be;
@@ -54,8 +85,14 @@ body.profile {
             top: 53%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: percent(84.23, 240);
-            height: percent(95.54, 132);
+            @media (max-width: 1000px) {
+               width: percent(84.23, 240);
+               height: percent(95.54, 132);
+            }
+            @media (min-width: 1000px) {
+               width: percent(84.23, 120);
+               height: percent(95.54, 170);
+            }
          }
       }
 
@@ -65,6 +102,9 @@ body.profile {
          flex: 1 1 auto;
          display: flex;
          flex-direction: column;
+         @media (min-width: 1000px) {
+            justify-content: center;
+         }
       }
 
       // .subscriptions__top
@@ -114,7 +154,7 @@ body.profile {
          font-family: $ff2;
          font-weight: 600;
          @include fl(12, 16.34);
-         margin-bottom: 6px;
+         margin-bottom: 7px;
          @media (min-width: 1000px) {
             @include fl(14, 19.07);
          }
@@ -150,6 +190,7 @@ body.profile {
          @media (min-width: 1000px) {
             @include fl(18, 24.51);
             top: 0;
+            align-self: flex-end;
          }
       }
 
@@ -161,6 +202,7 @@ body.profile {
             padding-top: 25px;
             display: flex;
             justify-content: space-between;
+            column-gap: 30px;
          }
       }
 
@@ -177,8 +219,9 @@ body.profile {
          margin-bottom: 2px;
          opacity: 0.5;
          @media (min-width: 1000px) {
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             @include fl(14, 19.07);
+            transform: translate(0, 2px);
          }
       }
 

@@ -4,6 +4,9 @@ body.profile {
    }
    .footer {
       padding-top: 41px;
+      @media (min-width: 1000px) {
+         padding-top: 70px;
+      }
    }
    .profile {
       // .profile__body
@@ -15,12 +18,24 @@ body.profile {
          @media (min-width: 1000px) {
             padding-top: 160px;
             padding-bottom: 100px;
+            display: flex;
+            column-gap: percent(100, 1394);
+            padding-left: percent(50, 1800);
+            padding-right: percent(50, 1800);
+         }
+         @media (min-width: 1400px) {
+            column-gap: percent(178, 1394);
+            padding-left: percent(202, 1800);
+            padding-right: percent(202, 1800);
          }
       }
 
       // .profile__subscriptions
       &__subscriptions {
          display: none;
+         @media (min-width: 1000px) {
+            flex: 1 1 auto;
+         }
          &.active {
             display: block;
          }
@@ -69,13 +84,12 @@ body.profile {
 
       // .sidebar__list
       &__list {
+         display: none;
+         @media (min-width: 1001px) {
+            display: block;
+         }
          li {
-            font-weight: 500;
-            @include fl(24, 28.94);
-            margin-bottom: 30px;
-
             @media (min-width: 1000px) {
-               font-weight: 400;
                cursor: pointer;
                @include fl(22, 40);
                &.active {
