@@ -781,11 +781,30 @@
 </div>
 
 				</section>
-				<section class="profile__payment-methods ">
-					
+				<section class="profile__payment-methods active">
+					<div class="payment">
+	<h3 class="payment__title main-title">Payment methods</h3>
+	<div class="payment__items">
+		<div class="payment__line">
+			<label for="card-number">Card Number</label>
+			<input id="card-number" type="text" value="6477 1693 3042 6031">
+		</div>
+		<div class="payment__double-line">
+			<div class="payment__line">
+				<label for="card-expiration">Expiration</label>
+				<input id="card-expiration" type="text" value="12/21">
+			</div>
+			<div class="payment__line">
+				<label for="card-cvc">CVC</label>
+				<input id="card-cvc" type="password" value="111">
+			</div>
+		</div>
+	</div>
+	<button class="btn">Save</button>
+</div>
 
 				</section>
-				<section class="profile__change-password active">
+				<section class="profile__change-password ">
 					<form class="pass" action="#">
 	<h3 class="pass__title main-title">Change Password</h3>
 	<div class="pass__items">

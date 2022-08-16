@@ -1486,8 +1486,43 @@ body.profile .spoiler-block .btn {
   height: 50px;
 }
 
-.body.account-overview .btn {
-  background-color: #c4bdb6;
+body.profile .payment__items {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  margin-bottom: 35px;
+}
+
+body.profile .payment__line {
+  display: flex;
+  flex-direction: column;
+}
+
+body.profile .payment__line input {
+  width: 100%;
+}
+
+body.profile .payment label {
+  font-family: "OpenSans";
+  font-size: 0.875em;
+  line-height: 1.3621428571;
+  margin-bottom: 6px;
+  opacity: 0.5;
+  max-width: 100%;
+}
+
+body.profile .payment__double-line {
+  display: flex;
+  -moz-column-gap: 17px;
+  column-gap: 17px;
+}
+
+body.profile .payment .btn {
+  background-color: #e1deda;
+  border: 1px solid #e1deda;
+  height: 50px;
+  font-size: 1em;
+  line-height: 1.20625;
 }
 
 body.profile .subscriptions__items {
@@ -2148,6 +2183,10 @@ body.profile .sidebar__list {
 
 @media (min-width: 441px) {
   body.profile .pass .btn {
+    max-width: 154px;
+  }
+
+  body.profile .payment .btn {
     max-width: 154px;
   }
 }
@@ -3106,11 +3145,6 @@ body.profile .sidebar__list {
     line-height: 1.362;
   }
 
-  .body.account-overview [class*=__title] {
-    font-size: 2.25em;
-    line-height: 1.2061111111;
-  }
-
   body.profile .subscriptions__title {
     font-size: 1.25em;
     line-height: 1.206;
@@ -3231,6 +3265,10 @@ body.profile .sidebar__list {
 
 @media (max-width: 440px) {
   body.profile .pass .btn {
+    max-width: 335px;
+  }
+
+  body.profile .payment .btn {
     max-width: 335px;
   }
 }

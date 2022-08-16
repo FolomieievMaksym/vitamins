@@ -1,15 +1,44 @@
 // Text styles
 body.profile {
-}
-.body.account-overview {
-   [class*="__title"] {
-      // font-weight: 500;
-      // @include fl(24, 28.94);
-      @media (min-width: 1441px) {
-         @include fl(36, 43.42);
+   .payment {
+      &__title {
       }
-   }
-   .btn {
-      background-color: #c4bdb6;
+      &__items {
+         display: flex;
+         flex-direction: column;
+         row-gap: 25px;
+         margin-bottom: 35px;
+      }
+      &__line {
+         display: flex;
+         flex-direction: column;
+         input {
+            width: 100%;
+         }
+      }
+      label {
+         font-family: $ff2;
+         @include fl(14, 19.07);
+         margin-bottom: 6px;
+         opacity: 0.5;
+         max-width: 100%;
+      }
+      &__double-line {
+         display: flex;
+         column-gap: 17px;
+      }
+      .btn {
+         background-color: #e1deda;
+         border: 1px solid #e1deda;
+         height: 50px;
+         @include fl(16, 19.3);
+
+         @media (max-width: 440px) {
+            max-width: 335px;
+         }
+         @media (min-width: 441px) {
+            max-width: 154px;
+         }
+      }
    }
 }
