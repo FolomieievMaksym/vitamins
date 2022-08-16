@@ -1191,6 +1191,11 @@ input::placeholder {
   width: 100%;
 }
 
+.form-block__extra-line {
+  display: none;
+  transform: translate(1px, 0);
+}
+
 .form-block .spoiler {
   background-color: #faf8f6;
   border-radius: 0.75rem;

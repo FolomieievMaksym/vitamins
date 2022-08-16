@@ -46,10 +46,6 @@ body.profile {
          }
       }
 
-      // .spoiler-block__left
-      &__left {
-      }
-
       // .spoiler-block__date
       &__date {
          font-family: $ff2;
@@ -72,10 +68,6 @@ body.profile {
          @media (min-width: 1441px) {
             @include fl(22, 26.53);
          }
-      }
-
-      // .spoiler-block__right
-      &__right {
       }
 
       // .spoiler-block__text
@@ -128,10 +120,6 @@ body.profile {
          @media (min-width: 1000px) {
             display: none;
          }
-      }
-
-      // .spoiler-block__body
-      &__body {
       }
 
       // .spoiler-block__cards
@@ -281,12 +269,6 @@ body.profile {
          display: flex;
          flex-direction: column;
          justify-content: space-between;
-         p {
-            // justify-self: flex-start;
-         }
-         h4 {
-            // justify-self: flex-end;
-         }
       }
       // .spoiler-block__total-price
       &__total-price {

@@ -1,24 +1,130 @@
 // Text styles
-.body.profile {
-}
-.body.account-overview {
-   [class*="__title"] {
-      // font-weight: 500;
-      // @include fl(24, 28.94);
-      @media (min-width: 1441px) {
-         @include fl(36, 43.42);
+body.profile {
+   .form-block {
+      margin-bottom: 36px;
+      @media (min-width: 1000px) {
+         transform: translate(2px, 0);
+         max-width: 920px;
+      }
+      &__titles {
+         @media (min-width: 1000px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 42px;
+         }
+      }
+      &__title {
+         @include fl(24, 28.94);
+         margin-bottom: 11px;
+         @media (min-width: 1000px) {
+            margin: 0;
+         }
+         @media (min-width: 1600px) {
+            transform: translate(-2px, 0);
+            @include fl(36, 43.42);
+         }
+      }
+      &__subtitle {
+         @include fl(18, 21.71);
+         font-weight: 500;
+         margin-bottom: 29px;
+         @media (min-width: 1000px) {
+            margin: 0;
+            transform: translate(0, 5px);
+         }
+         @media (min-width: 1600px) {
+            @include fl(22, 26.53);
+         }
+      }
+      label {
+         opacity: 0.5;
+      }
+      &__extra-line {
+         input {
+            @include fl(16, 21.79);
+         }
+         display: flex;
+         & > div {
+            border-radius: rem(12);
+            background-color: #faf8f6;
+            transform: translate(0, 1px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+         }
+         p {
+            position: relative;
+            right: 9px;
+            flex: 0 0 104px;
+            width: 104px;
+            height: 36px;
+            line-height: 36px;
+            @include fz(12);
+            font-family: $ff2;
+            font-weight: 700;
+            text-align: center;
+            background-color: $orange;
+            border-radius: rem(12);
+            color: #fff;
+            @media (min-width: 375px) {
+               right: 10px;
+            }
+         }
       }
    }
-   [class*="__subtitle"] {
-      @include fl(18, 21.71);
-      font-weight: 500;
-      @media (min-width: 1441px) {
-         @include fl(22, 26.53);
+   .profile__account-overview {
+      .btn {
+         height: 50px;
+         background-color: #e1deda;
+         border: 1px solid #e1deda;
+         @include fl(16, 19.3);
+
+         @media (min-width: 1000px) {
+            max-width: 154px;
+            transform: translate(3px, 7px);
+         }
       }
    }
-   [class*="__saved"] {
+
+   .saved {
+      &.active {
+         opacity: 1;
+      }
+      transition: all 0.3s ease;
+      opacity: 0;
+      pointer-events: none;
+      & > div {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         column-gap: 15px;
+         @media (min-width: 468px) {
+            transform: translate(-5px, 1px);
+         }
+      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
       font-family: $ff2;
       @include fl(16, 21.79);
       font-weight: 600;
+      height: 70px;
+      width: 100%;
+      z-index: 20;
+      background-color: #a2c94f;
+      padding: 10px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      @media (min-width: 468px) {
+         border-radius: rem(12);
+         max-width: 336px;
+         height: 56px;
+         top: 27px;
+         left: 50%;
+         transform: translate(-50%, 0);
+      }
    }
 }

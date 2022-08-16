@@ -1,6 +1,8 @@
 <div class="form-block">
-	<h2 class="form-block__title">@@title</h2>
-	@@if (context.subtitle) {<h3 class="form-block__subtitle">@@subtitle</h3>}
+	<div class="form-block__titles">
+		<h2 class="form-block__title">@@title</h2>
+		@@if (context.subtitle) {<h3 class="form-block__subtitle">@@subtitle</h3>}
+	</div>
 	<div class="form-block__items">
 
 
@@ -62,6 +64,12 @@
 		<div class="form-block__line">
 			<label for="phone">Phone Number</label>
 			<input id="phone" type="tel" value="8 029 876 56 21">
+		</div>
+		<div class="form-block__line form-block__extra-line">
+			<label for="permission">Wholesale purchase permission</label>
+			<div class="extra"><input id="permission" type="text" value="123qwer.pdf">
+				<p>Update</p>
+			</div>
 		</div>
 	</div>
 </div>

@@ -537,5 +537,12 @@ window.addEventListener("load", () => {
             }
          }
       }
+      //Всплывающая кнопка успешного сохранения
+      qs(".profile__account-overview .btn").addEventListener("click", () => {
+         qs(".profile__account-overview .saved").classList.add("active");
+         setTimeout(() => {
+            qs(".profile__account-overview .saved").classList.remove("active");
+         }, 5000);
+      });
    }
 });

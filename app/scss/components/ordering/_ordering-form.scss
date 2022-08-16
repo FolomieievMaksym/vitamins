@@ -44,6 +44,10 @@
          width: 100%;
       }
    }
+   &__extra-line {
+      display: none;
+      transform: translate(1px, 0);
+   }
    .spoiler {
       background-color: #faf8f6;
       border-radius: rem(12);
