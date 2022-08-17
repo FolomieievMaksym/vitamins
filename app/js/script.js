@@ -1,4 +1,4 @@
-"use strict";
+("use strict");
 const burger = document.querySelector(".burger"),
    // menu = document.querySelector(".menu"),
    header = document.querySelector(".header"),
