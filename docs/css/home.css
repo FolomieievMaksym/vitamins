@@ -477,7 +477,7 @@ main {
   background-color: #f7906e;
 }
 
-.decor-circle_purple {
+.decor-circle_p {
   background-color: #8172dd;
 }
 
@@ -1999,6 +1999,32 @@ input::placeholder {
   cursor: pointer;
 }
 
+body.home .hero {
+  position: relative;
+}
+
+body.home .hero svg.decor-1 {
+  position: absolute;
+  top: 39.8305084746%;
+  left: 100%;
+  transform: translate(-100%, 0);
+}
+
+body.home .hero svg.decor-2 {
+  position: absolute;
+  top: 59.7142857143%;
+  left: 0;
+  z-index: -1;
+}
+
+body.home .hero svg.decor-3 {
+  display: none;
+}
+
+body.home .hero svg.decor-4 {
+  display: none;
+}
+
 body.home .hero__top {
   padding-left: 20px;
   padding-right: 20px;
@@ -2047,6 +2073,22 @@ body.home .hero__button svg {
   transform: translate(-4px, 0);
 }
 
+body.home .hero__bottom {
+  position: relative;
+}
+
+body.home .hero__bottom .decor-circle_o {
+  width: 60px;
+  height: 60px;
+  top: 100%;
+  right: 11.5625%;
+  transform: translate(0, -93%);
+}
+
+body.home .hero__bottom .decor-circle_p {
+  display: none;
+}
+
 body.home .hero__image {
   position: relative;
   padding-bottom: 100%;
@@ -2063,6 +2105,11 @@ body.home .hero__image img {
   object-fit: contain;
   -o-object-position: center;
   object-position: center;
+}
+
+body.home .second {
+  background-color: #000;
+  height: 300px;
 }
 
 body.home__subtitle {
@@ -2253,10 +2300,18 @@ body.home .card__summ {
     display: flex;
   }
 
+  body.home .hero svg.decor-1 {
+    top: 17.1428571429%;
+  }
+
   body.home .hero__title {
     font-size: 1.875em;
     line-height: 1.2333333333;
     margin-bottom: 19px;
+  }
+
+  body.home .hero__bottom .decor-circle_o {
+    display: none;
   }
 
   body.home .hero__bottom {
@@ -2318,6 +2373,30 @@ body.home .card__summ {
     grid-template-columns: 1fr 1fr 1fr;
     -moz-column-gap: 50px;
     column-gap: 50px;
+  }
+
+  body.home .hero__bottom .decor-circle_o {
+    display: block;
+    height: 9.9580712788%;
+    width: 10.5555555556%;
+    top: 260px;
+    top: 27.2536687631%;
+    left: 16.6666666667%;
+  }
+
+  body.home .hero__bottom .decor-circle_p {
+    display: block;
+    width: 58.1111111111%;
+    height: 54.821802935%;
+    top: 50%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 600px) and (min-width: 1200px) {
+  body.home .hero__bottom .decor-circle_o {
+    left: 81.2222222222%;
   }
 }
 
@@ -2457,6 +2536,16 @@ body.home .card__summ {
   .menu-footer__list_2 li:nth-child(5) {
     order: 5;
   }
+
+  body.home .header {
+    padding-top: 4px;
+  }
+
+  body.home .header .btn {
+    font-size: 1em;
+    line-height: 1.20625;
+    font-family: "Effra";
+  }
 }
 
 @media (min-width: 800px) {
@@ -2519,6 +2608,33 @@ body.home .card__summ {
     line-height: 1.3616666667;
   }
 
+  body.home .hero svg.decor-1 {
+    display: none;
+  }
+
+  body.home .hero svg.decor-2 {
+    display: none;
+  }
+
+  body.home .hero svg.decor-3 {
+    width: 8.5vmax;
+    height: 8.5vmax;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 30.6666666667%;
+  }
+
+  body.home .hero svg.decor-4 {
+    display: block;
+    position: absolute;
+    top: 81.9706498952%;
+    left: 42.2777777778%;
+    z-index: 1;
+    width: 15.2vmax;
+    height: 8.1vmax;
+  }
+
   body.home .hero__top {
     padding-left: 5.5555555556%;
   }
@@ -2537,6 +2653,7 @@ body.home .card__summ {
     font-size: 1.125em;
     line-height: 1.5555555556;
     margin-bottom: 38px;
+    max-width: 480px;
   }
 
   body.home .hero__buttons {
@@ -2548,6 +2665,11 @@ body.home .card__summ {
     max-width: 260px;
     font-family: "OpenSans";
     height: 74px;
+  }
+
+  body.home .hero__button svg {
+    width: 9px;
+    height: 15px;
   }
 
   body.home .hero__bottom {
@@ -3041,6 +3163,10 @@ body.home .card__summ {
 }
 
 @media (min-width: 1200px) {
+  body.home .hero__bottom .decor-circle_p {
+    left: 50%;
+  }
+
   body.home .hero__image img {
     -o-object-fit: contain;
     object-fit: contain;
@@ -3061,11 +3187,13 @@ body.home .card__summ {
     font-size: 1.25em;
     line-height: 1.634;
     margin-bottom: 48px;
+    transform: translate(0, -6px);
   }
 
   body.home .hero__buttons {
     -moz-column-gap: 33px;
     column-gap: 33px;
+    transform: translate(0, -3px);
   }
 }
 
@@ -3197,6 +3325,7 @@ body.home .card__summ {
     font-size: 3.5em;
     line-height: 1.2060714286;
     margin-bottom: 38px;
+    transform: translate(0, -3px);
   }
 
   body.home .hero__button a {
@@ -3245,7 +3374,7 @@ body.home .card__summ {
 
 @media (max-width: 569px) {
   body.home .hero .btn {
-    margin-bottom: 20px;
+    margin-bottom: 21px;
   }
 }
 
@@ -3281,7 +3410,13 @@ body.home .card__summ {
   }
 
   body.home .hero .btn {
-    margin: 0 auto 20px;
+    margin: 0 auto 21px;
+  }
+
+  body.home .second {
+    margin-top: -27px;
+    position: relative;
+    z-index: 1;
   }
 }
 

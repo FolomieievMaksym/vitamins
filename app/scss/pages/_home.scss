@@ -1,5 +1,14 @@
 body.home {
    .header {
+      @media (min-width: 769px) {
+         padding-top: 4px;
+      }
+      .btn {
+         @media (min-width: 769px) {
+            @include fl(16, 19.3);
+            font-family: $ff1;
+         }
+      }
       &:before {
          @media (min-width: 680px) {
             background-color: transparent;
@@ -12,6 +21,7 @@ body.home {
       }
    }
    .hero {
+      position: relative;
       // .hero__top
       @media (max-width: 679px) {
          padding-top: 110px;
@@ -19,11 +29,60 @@ body.home {
       @media (min-width: 468px) {
          display: flex;
       }
+      svg {
+         &.decor-1 {
+            position: absolute;
+            top: percent(282, 708);
+            // left: percent(257, 320);
+            left: 100%;
+            transform: translate(-100%, 0);
+            @media (min-width: 468px) {
+               top: percent(120, 700);
+            }
+            @media (min-width: 1000px) {
+               display: none;
+            }
+         }
+         &.decor-2 {
+            position: absolute;
+            top: percent(418, 700);
+            left: 0;
+            z-index: -1;
+            @media (min-width: 1000px) {
+               display: none;
+            }
+         }
+         &.decor-3 {
+            display: none;
+            @media (min-width: 1000px) {
+               width: 8.5vmax;
+               height: 8.5vmax;
+               display: block;
+               position: absolute;
+               top: 0;
+               left: percent(552, 1800);
+            }
+         }
+         &.decor-4 {
+            display: none;
+            @media (min-width: 1000px) {
+               display: block;
+               position: absolute;
+               top: percent(782, 954);
+               left: percent(761, 1800);
+               z-index: 1;
+               width: 15.2vmax;
+               height: 8.1vmax;
+            }
+         }
+      }
       &__top {
          padding-left: 20px;
          padding-right: 20px;
          @media (max-width: 467px) {
             text-align: center;
+         }
+         @media (min-width: 1000px) {
          }
          @media (min-width: 680px) {
             align-self: center;
@@ -70,6 +129,7 @@ body.home {
          @media (min-width: 1600px) {
             @include fl(56, 67.54);
             margin-bottom: 38px;
+            transform: translate(0, -3px);
          }
          span {
             color: $orange;
@@ -90,10 +150,12 @@ body.home {
          @media (min-width: 1000px) {
             @include fl(18, 28);
             margin-bottom: 38px;
+            max-width: 480px;
          }
          @media (min-width: 1400px) {
             @include fl(20, 32.68);
             margin-bottom: 48px;
+            transform: translate(0, -6px);
          }
       }
       &__buttons {
@@ -114,6 +176,7 @@ body.home {
          }
          @media (min-width: 1400px) {
             column-gap: 33px;
+            transform: translate(0, -3px);
          }
       }
       .btn {
@@ -122,10 +185,10 @@ body.home {
          height: 50px;
          max-width: 154px;
          @media (max-width: 467px) {
-            margin: 0 auto 20px;
+            margin: 0 auto 21px;
          }
          @media (max-width: 569px) {
-            margin-bottom: 20px;
+            margin-bottom: 21px;
          }
          @media (min-width: 1000px) {
             max-width: 260px;
@@ -152,12 +215,54 @@ body.home {
          }
          svg {
             transform: translate(-4px, 0);
+            @media (min-width: 1000px) {
+               width: 9px;
+               height: 15px;
+            }
          }
       }
 
       // .hero__bottom
 
       &__bottom {
+         .decor-circle {
+            &_o {
+               width: 60px;
+               height: 60px;
+               top: 100%;
+               right: percent(37, 320);
+               transform: translate(0, -93%);
+               @media (min-width: 468px) {
+                  display: none;
+               }
+               @media (min-width: 600px) {
+                  display: block;
+                  height: percent(95, 954);
+                  width: percent(95, 900);
+                  top: 260px;
+                  top: percent(260, 954);
+                  left: percent(150, 900);
+                  @media (min-width: 1200px) {
+                     left: percent(731, 900);
+                  }
+               }
+            }
+            &_p {
+               display: none;
+               @media (min-width: 600px) {
+                  display: block;
+                  width: percent(523, 900);
+                  height: percent(523, 954);
+                  top: 50%;
+                  left: 63%;
+                  transform: translate(-50%, -50%);
+               }
+               @media (min-width: 1200px) {
+                  left: 50%;
+               }
+            }
+         }
+         position: relative;
          @media (max-width: 468px) {
             align-self: center;
          }
@@ -218,7 +323,15 @@ body.home {
          }
       }
    }
-
+   .second {
+      @media (max-width: 467px) {
+         margin-top: -27px;
+         position: relative;
+         z-index: 1;
+      }
+      background-color: #000;
+      height: 300px;
+   }
    .btn {
       @media (min-width: 1441px) {
          font-family: $ff2;
