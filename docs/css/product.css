@@ -477,6 +477,10 @@ main {
   background-color: #f7906e;
 }
 
+.decor-circle_purple {
+  background-color: #8172dd;
+}
+
 body.catalog .header:after {
   display: none;
 }

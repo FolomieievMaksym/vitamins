@@ -477,6 +477,10 @@ main {
   background-color: #f7906e;
 }
 
+.decor-circle_purple {
+  background-color: #8172dd;
+}
+
 body.catalog .header:after {
   display: none;
 }
@@ -1995,34 +1999,86 @@ input::placeholder {
   cursor: pointer;
 }
 
-main.home {
-  background-color: #6e5ddc;
+body.home .hero__top {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-main.home__title {
+body.home .hero__title {
   font-weight: 500;
   font-size: 1.5em;
   line-height: 1.2058333333;
+  margin-bottom: 15px;
 }
 
-main.home__title span {
+body.home .hero__title span {
+  color: #ff7d4e;
+}
+
+body.home .hero__text {
+  color: #808080;
+  font-family: "OpenSans";
+  font-size: 0.875em;
+  line-height: 1.6342857143;
+  margin-bottom: 20px;
+}
+
+body.home .hero .btn {
+  background-color: #6e5ddc;
+  border: 1px solid #6e5ddc;
+  height: 50px;
+  max-width: 154px;
+}
+
+body.home .hero__button {
   color: #f27e58;
+  display: inline-flex;
+  align-items: center;
 }
 
-main.home__subtitle {
+body.home .hero__button a {
+  font-size: 0.875em;
+  line-height: 1.2057142857;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+body.home .hero__button svg {
+  transform: translate(-4px, 0);
+}
+
+body.home .hero__image {
+  position: relative;
+  padding-bottom: 100%;
+  top: -16px;
+}
+
+body.home .hero__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center;
+}
+
+body.home__subtitle {
   font-size: 0.875em;
   line-height: 1.2057142857;
   font-weight: 500;
 }
 
-main.home__link {
+body.home__link {
   font-size: 0.875em;
   line-height: 1.2057142857;
   font-weight: 500;
   color: #f27e58;
 }
 
-main.home .card__label {
+body.home .card__label {
   font-family: "OpenSans";
   font-size: 0.75em;
   line-height: 1.3616666667;
@@ -2030,35 +2086,35 @@ main.home .card__label {
   opacity: 0.7;
 }
 
-main.home .card__label.purpleLabel {
+body.home .card__label.purpleLabel {
   color: #6b5ebb;
 }
 
-main.home .card__label.mintLabel {
+body.home .card__label.mintLabel {
   color: #6bb0a4;
 }
 
-main.home .card__sublabel {
+body.home .card__sublabel {
   font-family: "OpenSans";
   font-size: 0.875em;
   line-height: 1.3621428571;
   opacity: 0.7;
 }
 
-main.home .card__title {
+body.home .card__title {
   font-size: 1.125em;
   line-height: 1.2061111111;
   font-weight: 500;
 }
 
-main.home .card__text {
+body.home .card__text {
   font-family: "OpenSans";
   font-size: 0.875em;
   line-height: 1.3621428571;
   opacity: 0.7;
 }
 
-main.home .card__summ {
+body.home .card__summ {
   font-family: "OpenSans";
   font-weight: 600;
   font-size: 1em;
@@ -2104,6 +2160,10 @@ main.home .card__summ {
 
   .item-body__top {
     margin-bottom: 0.8125rem;
+  }
+
+  body.home .hero__image {
+    top: -20px;
   }
 }
 
@@ -2188,6 +2248,20 @@ main.home .card__summ {
   .item-body__bottom {
     padding-top: 0.875rem;
   }
+
+  body.home .hero {
+    display: flex;
+  }
+
+  body.home .hero__title {
+    font-size: 1.875em;
+    line-height: 1.2333333333;
+    margin-bottom: 19px;
+  }
+
+  body.home .hero__bottom {
+    width: 100%;
+  }
 }
 
 @media (min-width: 500px) {
@@ -2226,11 +2300,60 @@ main.home .card__summ {
   }
 }
 
+@media (min-width: 570px) {
+  body.home .hero__buttons {
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 15px;
+    column-gap: 15px;
+  }
+
+  body.home .hero__button {
+    transform: translate(0, 2px);
+  }
+}
+
 @media (min-width: 600px) {
   .footer__content {
     grid-template-columns: 1fr 1fr 1fr;
     -moz-column-gap: 50px;
     column-gap: 50px;
+  }
+}
+
+@media (min-width: 620px) {
+  body.home .hero__image {
+    top: -50px;
+  }
+}
+
+@media (min-width: 680px) {
+  body.home .header:before {
+    background-color: transparent;
+  }
+
+  body.home .header:after {
+    display: none;
+  }
+
+  body.home .hero__top {
+    align-self: center;
+    flex: 0 0 50%;
+    padding-top: 5%;
+  }
+
+  body.home .hero__bottom {
+    background-color: #f9f9f9;
+  }
+
+  body.home .hero__image {
+    padding-bottom: 110%;
+    top: 0;
+  }
+
+  body.home .hero__image img {
+    -o-object-fit: cover;
+    object-fit: cover;
   }
 }
 
@@ -2249,6 +2372,23 @@ main.home .card__summ {
   .item-body__buttons {
     -moz-column-gap: 1rem;
     column-gap: 1rem;
+  }
+
+  body.home .hero__title {
+    font-size: 2.25em;
+    line-height: 1.25;
+    margin-bottom: 23px;
+  }
+
+  body.home .hero__text {
+    font-size: 1em;
+    line-height: 1.5625;
+    margin-bottom: 28px;
+  }
+
+  body.home .hero__buttons {
+    -moz-column-gap: 20px;
+    column-gap: 20px;
   }
 }
 
@@ -2319,6 +2459,12 @@ main.home .card__summ {
   }
 }
 
+@media (min-width: 800px) {
+  body.home .hero__top {
+    padding-top: 0;
+  }
+}
+
 @media (min-width: 1000px) {
   .footer {
     padding-top: 74px;
@@ -2371,6 +2517,45 @@ main.home .card__summ {
   .item-body__price_discount .item-body__summ_full-price {
     font-size: 0.75em;
     line-height: 1.3616666667;
+  }
+
+  body.home .hero__top {
+    padding-left: 5.5555555556%;
+  }
+
+  body.home .hero__wrapper-top {
+    max-width: 660px;
+  }
+
+  body.home .hero__title {
+    font-size: 2.625em;
+    line-height: 1.2619047619;
+    margin-bottom: 27px;
+  }
+
+  body.home .hero__text {
+    font-size: 1.125em;
+    line-height: 1.5555555556;
+    margin-bottom: 38px;
+  }
+
+  body.home .hero__buttons {
+    -moz-column-gap: 25px;
+    column-gap: 25px;
+  }
+
+  body.home .hero .btn {
+    max-width: 260px;
+    font-family: "OpenSans";
+    height: 74px;
+  }
+
+  body.home .hero__bottom {
+    flex: 0 0 50%;
+  }
+
+  body.home .hero__image {
+    padding-bottom: 106%;
   }
 }
 
@@ -2855,6 +3040,35 @@ main.home .card__summ {
   }
 }
 
+@media (min-width: 1200px) {
+  body.home .hero__image img {
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 120%;
+    left: -20.3%;
+    top: 8%;
+  }
+}
+
+@media (min-width: 1400px) {
+  body.home .hero__title {
+    font-size: 3em;
+    line-height: 1.2708333333;
+    margin-bottom: 32px;
+  }
+
+  body.home .hero__text {
+    font-size: 1.25em;
+    line-height: 1.634;
+    margin-bottom: 48px;
+  }
+
+  body.home .hero__buttons {
+    -moz-column-gap: 33px;
+    column-gap: 33px;
+  }
+}
+
 @media (min-width: 1441px) {
   .footer__container {
     padding-left: 11.2777777778%;
@@ -2932,50 +3146,62 @@ main.home .card__summ {
     display: block;
   }
 
-  main.home .btn {
+  body.home .btn {
     font-family: "OpenSans";
     font-size: 1.25em;
     line-height: 1.634;
   }
 
-  main.home__title {
-    font-size: 3.5em;
-    line-height: 1.2060714286;
-  }
-
-  main.home__subtitle {
+  body.home__subtitle {
     font-size: 1.875em;
     line-height: 1.206;
   }
 
-  main.home__link {
+  body.home__link {
     font-size: 1.25em;
     line-height: 1.206;
   }
 
-  main.home .card__label {
+  body.home .card__label {
     font-size: 0.875em;
     line-height: 1.3621428571;
   }
 
-  main.home .card__sublabel {
+  body.home .card__sublabel {
     font-size: 1em;
     line-height: 1.361875;
   }
 
-  main.home .card__title {
+  body.home .card__title {
     font-size: 1.5em;
     line-height: 1.2058333333;
   }
 
-  main.home .card__text {
+  body.home .card__text {
     font-size: 1em;
     line-height: 1.634375;
   }
 
-  main.home .card__summ {
+  body.home .card__summ {
     font-size: 1.25em;
     line-height: 1.362;
+  }
+}
+
+@media (min-width: 1600px) {
+  body.home .hero__top {
+    padding-left: 11.2222222222%;
+  }
+
+  body.home .hero__title {
+    font-size: 3.5em;
+    line-height: 1.2060714286;
+    margin-bottom: 38px;
+  }
+
+  body.home .hero__button a {
+    font-size: 1.25em;
+    line-height: 1.206;
   }
 }
 
@@ -3005,9 +3231,21 @@ main.home .card__summ {
   }
 }
 
+@media (max-width: 679px) {
+  body.home .hero {
+    padding-top: 110px;
+  }
+}
+
 @media (max-width: 600px) {
   .menu-footer:last-child {
     grid-column: span 2;
+  }
+}
+
+@media (max-width: 569px) {
+  body.home .hero .btn {
+    margin-bottom: 20px;
   }
 }
 
@@ -3028,6 +3266,22 @@ main.home .card__summ {
 @media (max-width: 500px) {
   .cart__wrapper {
     width: 100%;
+  }
+}
+
+@media (max-width: 468px) {
+  body.home .hero__bottom {
+    align-self: center;
+  }
+}
+
+@media (max-width: 467px) {
+  body.home .hero__top {
+    text-align: center;
+  }
+
+  body.home .hero .btn {
+    margin: 0 auto 20px;
   }
 }
 

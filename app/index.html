@@ -11,7 +11,46 @@
 		<main class="home">
 			@@include('./components/_quiz.html')
 			@@include('./components/cart/cart.html')
-			<section class="hero"></section>
+			<section class="hero">
+				<div class="hero__top">
+					<div class="hero__wrapper-top">
+						<h1 class="hero__title">Find out what <span>vitamins</span> your body needs right
+							now.
+						</h1>
+						<p class="hero__text">Answer a few simple questions and automatically get a
+							personalazed
+							list of vitamins in minutes</p>
+						<div class="hero__buttons">
+							@@include('./components/_btn.html', {
+							'text': 'Take the quiz'
+							})
+							<div class="hero__button">
+								<a href="catalog.html">Go to the shop</a>
+								<svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path d="M0.930664 8.86133L4.86133 4.93066L0.930663 1" stroke="#F27E58"
+										stroke-width="1.5" />
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hero__bottom">
+					<div class='hero__image'>
+						<picture>
+							<source type='image/webp' srcset='@img/gallery/main_01.1.webp'
+								media="(min-width: 680px)">
+							<source type='image/webp' srcset='@img/gallery/main_01.webp'
+								media="(min-width: 100px)">
+							<img src='@img/gallery/main_01.png' alt='product image'>
+						</picture>
+					</div>
+					<div class="decor-circle decor-circle_purple"></div>
+				</div>
+
+
+			</section>
+
 		</main>
 		@@include('components/each-page-blocks/_footer.html')
 	</div>
