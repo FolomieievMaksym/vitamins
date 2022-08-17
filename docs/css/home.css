@@ -2178,6 +2178,42 @@ body.home .healthy__text {
   font-weight: 500;
 }
 
+body.home .pills {
+  position: relative;
+  padding-top: 48px;
+  margin-top: 2px;
+}
+
+body.home .pills__image:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 52.575%;
+  padding-bottom: 44.640625%;
+  z-index: 1;
+}
+
+body.home .pills__image:last-child {
+  width: 80%;
+  padding-bottom: 46.41875%;
+  position: relative;
+  left: 100%;
+  top: 0;
+  transform: translate(-100%, 0);
+}
+
+body.home .pills__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
 body.home__link {
   font-size: 0.875em;
   line-height: 1.2057142857;
@@ -2287,6 +2323,21 @@ body.home .card__summ {
 
   body.home .healthy__item:last-child {
     transform: translate(0, 6px);
+  }
+
+  body.home .pills {
+    margin-top: 5px;
+    padding-top: 65px;
+  }
+
+  body.home .pills__image:first-child {
+    width: 53.9306666667%;
+    padding-bottom: 45.792%;
+  }
+
+  body.home .pills__image:last-child {
+    width: 78.3306666667%;
+    padding-bottom: 45.4506666667%;
   }
 }
 
@@ -2590,6 +2641,26 @@ body.home .card__summ {
     padding-bottom: 27.5555555556%;
     padding-left: 6.6666666667%;
     padding-right: 6.6666666667%;
+  }
+
+  body.home .pills {
+    padding-top: 9.8333333333%;
+    margin: 0;
+    margin-top: -272px;
+    margin-top: -15.1111111111%;
+  }
+
+  body.home .pills__image:first-child {
+    width: 29.4444444444%;
+    padding-bottom: 25%;
+    left: 11.2222222222%;
+  }
+
+  body.home .pills__image:last-child {
+    width: 44.5%;
+    padding-bottom: 26.1111111111%;
+    left: 37.6666666667%;
+    transform: translate(0, 0);
   }
 }
 
