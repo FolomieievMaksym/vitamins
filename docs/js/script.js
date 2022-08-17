@@ -534,6 +534,109 @@ window.addEventListener("load", () => {
       });
    }
 
+   //index.html
+   if (qs("body.home")) {
+      /* 
+      if (qs(".comments")) {
+         const swiperComments = new Swiper(".comments .swiper", {
+            initialSlide: 0,
+            slideToClickedSlide: true,
+            slidesPerView: 1.07,
+            spaceBetween: 10,
+            breakpoints: {
+               380: {
+                  slidesPerView: 1.06,
+               },
+               400: {
+                  slidesPerView: 1.3,
+                  spaceBetween: 20,
+               },
+               450: {
+                  slidesPerView: 1.4,
+               },
+               500: {
+                  slidesPerView: 1.5,
+               },
+               550: {
+                  slidesPerView: 1.6,
+               },
+               600: {
+                  slidesPerView: 1.8,
+               },
+               650: {
+                  slidesPerView: 1.9,
+               },
+               700: {
+                  slidesPerView: 2,
+               },
+               750: {
+                  slidesPerView: 2.1,
+                  spaceBetween: 25,
+               },
+               800: {
+                  slidesPerView: 2.2,
+               },
+               850: {
+                  slidesPerView: 2.3,
+               },
+               900: {
+                  slidesPerView: 2.4,
+               },
+               950: {
+                  slidesPerView: 2.5,
+               },
+               1000: {
+                  slidesPerView: 2.6,
+                  spaceBetween: 32,
+               },
+               1100: {
+                  slidesPerView: 2.7,
+                  spaceBetween: 32,
+               },
+               1200: {
+                  slidesPerView: 2.8,
+                  spaceBetween: 32,
+               },
+               1300: {
+                  slidesPerView: 2.9,
+                  spaceBetween: 32,
+               },
+               1400: {
+                  slidesPerView: 3,
+                  spaceBetween: 32,
+               },
+            },
+         });
+      }
+		*/
+      if (qs(".products")) {
+         const swiperCards = new Swiper(".slider-cards", {
+            initialSlide: 0,
+            slideToClickedSlide: true,
+            slidesPerView: 1.004,
+            spaceBetween: 10,
+            breakpoints: {
+               395: {
+                  slidesPerView: 1.2,
+                  spaceBetween: 15,
+               },
+               550: {
+                  slidesPerView: 1.5,
+               },
+               650: {
+                  slidesPerView: 1.8,
+               },
+               750: {
+                  spaceBetween: 20,
+                  slidesPerView: 2,
+               },
+               1000: {
+                  spaceBetween: 33,
+               },
+            },
+         });
+      }
+   }
    //header
    qs(".header-aside_4 .second-menu").addEventListener("click", relocate);
 

@@ -20,7 +20,8 @@ body.home {
          }
       }
    }
-   .home-title {
+   h2.home-title,
+   h1.home-title {
       font-weight: 500;
       @include fl(24, 28.94);
       @media (min-width: 468px) {
@@ -636,6 +637,8 @@ body.home {
    //  About===About===About===About===About====About===About===About===About===About===About
    // =======================================================================================
    .both {
+      @media (min-width: 1000px) {
+      }
    }
    .about {
       position: relative;
@@ -705,7 +708,7 @@ body.home {
       &__text {
          font-family: $ff2;
          @include fl(14, 22.88);
-         margin-bottom: 20px;
+         margin-bottom: 22px;
          color: #808080;
          @media (min-width: 375px) {
             margin-bottom: 28px;
@@ -789,7 +792,200 @@ body.home {
       }
    }
    .products {
-      background-color: red;
+      color: #fff;
+      @media (min-width: 1000px) {
+         display: flex;
+         align-items: center;
+      }
+      &__choose {
+         background-color: #e99478;
+         padding-top: 60px;
+         padding-bottom: 132px;
+         padding-left: 20px;
+         padding-right: 21px;
+         text-align: center;
+         @media (min-width: 375px) {
+            padding-top: 61px;
+            padding-bottom: 155px;
+         }
+         @media (min-width: 1000px) {
+            flex: 0 0 40%;
+            order: 2;
+            height: percent(825, 900);
+            text-align: left;
+         }
+         @media (min-width: 1200px) {
+            flex: 0 0 50%;
+         }
+      }
+      &__choose-body {
+         @media (min-width: 468px) {
+            max-width: 477px;
+            margin: 0 auto;
+         }
+         @media (min-width: 1000px) {
+            max-width: 444px;
+         }
+      }
+      &__title {
+         margin-bottom: 15px;
+      }
+      &__text {
+         margin-bottom: 18px;
+         font-family: $ff2;
+         @include fl(14, 22.88);
+      }
+      &__button {
+         display: inline-flex;
+         align-items: center;
+         @media (min-width: 570px) {
+            transform: translate(0, 2px);
+         }
+         a {
+            @include fl(14, 16.88);
+            font-weight: 500;
+            margin-right: 5px;
+            @media (min-width: 1600px) {
+               @include fl(20, 24.12);
+            }
+         }
+         i {
+            @include fl(9);
+         }
+      }
+
+      //  !===========
+      .slider-cards {
+         padding-left: 20px;
+         margin-top: -97px;
+         padding-right: 20px;
+         @media (min-width: 375px) {
+            margin-top: -120px;
+         }
+         @media (min-width: 1000px) {
+            order: 1;
+            margin-top: 0;
+            // left: percent(202, 1800);
+         }
+         @media (min-width: 1600px) {
+         }
+         // .slider__items
+
+         &__items {
+            @media (min-width: 750px) {
+               :first-child {
+                  order: 2;
+               }
+               :nth-child(2) {
+                  order: 1;
+               }
+               :nth-child(3) {
+                  order: 3;
+               }
+            }
+         }
+
+         // .slider__card
+
+         &__card {
+         }
+      }
+      .card {
+         padding-top: 30px;
+         padding-left: 20px;
+         padding-right: 20px;
+         padding-bottom: 29px;
+         border-radius: rem(16);
+         @media (min-width: 375px) {
+            padding-bottom: rem(33);
+         }
+         // .card_purple
+
+         &_purple {
+            background-color: #9c91e0;
+         }
+
+         // .card_mint
+
+         &_mint {
+            background-color: #89d4a7;
+         }
+
+         // .card__image
+
+         &__image {
+            margin-bottom: 29px;
+            padding-bottom: percent(159.33, 240);
+            @media (min-width: 375px) {
+               padding-bottom: percent(159.33, 295);
+            }
+
+            img {
+               object-fit: contain;
+            }
+         }
+
+         // .card__body
+
+         &__body {
+         }
+
+         // .card__label
+
+         &__label {
+            margin-bottom: 11px;
+            font-family: $ff2;
+            font-weight: 600;
+            @include fl(12, 16.34);
+            opacity: 0.7;
+            @media (min-width: 468px) {
+               @include fl(13, 18);
+            }
+            @media (min-width: 760px) {
+               @include fl(14, 19.07);
+            }
+         }
+
+         // .card__title
+
+         &__title {
+            margin-bottom: 15px;
+            font-weight: 500;
+            @include fl(18, 21.71);
+            @media (min-width: 468px) {
+               @include fl(19, 23);
+            }
+            @media (min-width: 760px) {
+               @include fl(20, 24);
+            }
+            @media (min-width: 1000px) {
+               @include fl(21, 25);
+            }
+            @media (min-width: 1200px) {
+               @include fl(22, 26);
+            }
+            @media (min-width: 1400px) {
+               @include fl(23, 27);
+            }
+            @media (min-width: 1600px) {
+               @include fl(24, 28.94);
+            }
+         }
+
+         // .card__text
+
+         &__text {
+            font-family: $ff2;
+            @include fl(14, 19.07);
+            opacity: 0.7;
+            @media (min-width: 468px) {
+               @include fl(15, 22);
+            }
+            @media (min-width: 760px) {
+               @include fl(16, 26.15);
+            }
+         }
+      }
    }
    .btn {
       @media (min-width: 1441px) {
