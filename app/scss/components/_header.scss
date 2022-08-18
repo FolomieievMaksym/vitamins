@@ -308,9 +308,6 @@ body.product {
    &.active {
       // Opening burger animation
       .burger__wrapper {
-         // justify-content: center;
-         animation: burgerWrapperActive 1.7s ease 0s 1;
-         animation-fill-mode: forwards;
          &:before {
             animation: burgerTopActive 0.7s ease 0s 1;
             animation-fill-mode: forwards;
