@@ -2215,6 +2215,24 @@ body.home .pills__image img {
   object-position: center;
 }
 
+body.home .both {
+  position: relative;
+}
+
+body.home .both > svg {
+  position: absolute;
+  z-index: 1;
+}
+
+body.home .both > svg.mobile {
+  top: 234px;
+  right: 0;
+}
+
+body.home .both > svg.desktop {
+  display: none;
+}
+
 body.home .about {
   position: relative;
   padding-top: 60px;
@@ -2267,6 +2285,8 @@ body.home .about svg {
 }
 
 body.home .products {
+  position: relative;
+  z-index: -1;
   color: #fff;
 }
 
@@ -3078,6 +3098,18 @@ body.home .card__summ {
     font-family: "Effra";
   }
 
+  body.home .both > svg.mobile {
+    display: none;
+  }
+
+  body.home .both > svg.desktop {
+    display: block;
+    top: -5.5555555556%;
+    right: 0;
+    height: 92.38vmax;
+    width: 31.1vmax;
+  }
+
   body.home .about {
     padding-top: 8.3333333333%;
     padding-bottom: 8.3888888889%;
@@ -3085,6 +3117,10 @@ body.home .card__summ {
 
   body.home .about__body {
     max-width: 800px;
+  }
+
+  body.home .about .decor-circle_p {
+    z-index: 2;
   }
 
   body.home .products .card__image {

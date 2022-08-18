@@ -634,12 +634,35 @@ body.home {
       }
    }
    // =======================================================================================
-   //  About===About===About===About===About====About===About===About===About===About===About
+   // Both===Both===Both===Both==Both===Both===Both===Both===Both===Both===Both===Both===Both
    // =======================================================================================
    .both {
+      position: relative;
+      & > svg {
+         position: absolute;
+         z-index: 1;
+         &.mobile {
+            top: 234px;
+            right: 0;
+            @media (min-width: 769px) {
+               display: none;
+            }
+         }
+         &.desktop {
+            display: none;
+            @media (min-width: 769px) {
+               display: block;
+               top: percent(-100, 1800);
+               right: 0;
+               height: 92.38vmax;
+               width: 31.1vmax;
+            }
+         }
+      }
       @media (min-width: 1000px) {
       }
    }
+   //  About===About===About===About===About===About===About===About===About===About====About
    .about {
       position: relative;
       padding-top: 60px;
@@ -766,6 +789,9 @@ body.home {
                left: percent(1483, 1800);
                transform: translate(0, 0);
             }
+            @media (min-width: 769px) {
+               z-index: 2;
+            }
             @media (min-width: 1000px) {
                top: percent(154, 806.39);
                width: 95px;
@@ -791,7 +817,10 @@ body.home {
          }
       }
    }
+   // Product===Product===Product===Product===Product===Product===Product===Product===Product
    .products {
+      position: relative;
+      z-index: -1;
       color: #fff;
       @media (min-width: 1000px) {
          display: flex;
@@ -908,7 +937,7 @@ body.home {
          }
       }
 
-      //  !===========
+      //  Slider ===Slider ===Slider ===Slider ===Slider ===Slider ===Slider ===
       .slider-cards {
          padding-left: 20px;
          margin-top: -97px;
@@ -944,11 +973,6 @@ body.home {
                   order: 3;
                }
             }
-         }
-
-         // .slider__card
-
-         &__card {
          }
       }
       .card {
@@ -1068,8 +1092,6 @@ body.home {
       }
    }
 
-   &__subtitle {
-   }
    &__link {
       @include fl(14, 16.88);
       font-weight: 500;
