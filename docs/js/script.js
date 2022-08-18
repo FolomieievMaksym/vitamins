@@ -126,10 +126,13 @@ window.addEventListener("load", () => {
             steps[8].classList.add("active");
             qs(".quiz__pages").innerHTML = "9/9";
          } else if (e.target.closest(".quiz__pages").innerHTML == "9/9") {
-            steps[8].classList.remove("active");
-            qs(".quiz").classList.remove("active");
-            qs(".quiz__pages").innerHTML = "1/9";
-            body.classList.remove("lock");
+            location.href = "personal-pack.html";
+            setTimeout(() => {
+               steps[8].classList.remove("active");
+               qs(".quiz").classList.remove("active");
+               qs(".quiz__pages").innerHTML = "1/9";
+               body.classList.remove("lock");
+            }, 3000);
          }
       }
    }
