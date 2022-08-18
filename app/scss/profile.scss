@@ -18,8 +18,10 @@
 @import "./components/profile/payment-methods";
 @import "./components/profile/sidebar";
 @import "./components/profile/subscriptions";
-@import "./components/quiz";
 @import "./components/ordering/ordering-form";
+@import "./components/quiz";
+@import "./components/cart/cart";
+@import "./components/cart/cart-item";
 
 //Подключение стилей конкретной страницы
 @import "./pages/profile";

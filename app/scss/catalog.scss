@@ -12,11 +12,13 @@
 // Подключение других стилей
 @import "./default/text";
 @import "./components/btn";
-@import "./components/quiz";
 @import "./components/catalog/banner";
 @import "./components/catalog/card-item";
 @import "./components/catalog/shop-menu";
 @import "./components/comment";
+@import "./components/quiz";
+@import "./components/cart/cart";
+@import "./components/cart/cart-item";
 
 //Подключение стилей конкретной страницы
 @import "./pages/catalog";

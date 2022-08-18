@@ -54,4 +54,10 @@
          top: 225px;
       }
    }
+   .hidden-heading {
+      height: 0;
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+   }
 }

@@ -265,15 +265,6 @@ window.addEventListener("load", () => {
                spaceBetween: 50,
             },
          },
-         // navigation: {
-         //    nextEl: ".swiper-button-next",
-         //    prevEl: ".swiper-button-prev",
-         // },
-         // autoplay: {
-         //    delay: 4000,
-         //    stopOnLastSlide: false,
-         //    disableOnIteraction: false,
-         // },
       });
 
       const swiperComments = new Swiper(".comments__slider", {
@@ -609,7 +600,6 @@ window.addEventListener("load", () => {
       }
       if (qs(".products")) {
          const swiperCards = new Swiper(".slider-cards", {
-            initialSlide: 0,
             slideToClickedSlide: true,
             slidesPerView: 1.004,
             spaceBetween: 10,
