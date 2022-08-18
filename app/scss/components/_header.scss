@@ -270,8 +270,8 @@ body.product {
       span {
          top: 50%;
          transform: translate(0, -150%);
-         transition: background-color 0.3s ease, transform 0.3s ease 0.35s; //! Interesting effect
-         // transition: background-color 0.3s ease, transform 0.3s ease 0s;
+         // transition: background-color 0.3s ease, transform 0.3s ease 0.35s; //! Interesting effect (on desktop)
+         transition: background-color 0.3s ease, transform 0.3s ease 0s;
       }
 
       @keyframes burgerTopDisabled {
@@ -317,8 +317,8 @@ body.product {
          }
          span {
             transform: translate(0, -150%) scale(0);
-            transition: background-color 0.3s ease, transform 0.3s ease 0s; //! Interesting effect
-            // transition: background-color 0.3s ease, transform 0.3s ease 0.3s;
+            // transition: background-color 0.3s ease, transform 0.3s ease 0s; //! Interesting effect (on desktop)
+            transition: background-color 0.3s ease, transform 0.3s ease 0.3s;
          }
          &:after {
             animation: burgerBottomActive 0.7s ease 0s 1;
