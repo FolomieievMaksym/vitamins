@@ -75,7 +75,7 @@ window.addEventListener("load", () => {
       }
    }
 
-   // ! Quiz
+   // ! Quiz starts
    body.addEventListener("click", quiz);
 
    function quiz(e) {
