@@ -80,11 +80,7 @@ window.addEventListener("load", () => {
    function quiz(e) {
       let steps = qa(".quiz__step");
       let backButton = qs(".quiz__footer > div");
-      if (e.target.innerHTML == "Take the quiz") {
-         qs(".quiz").classList.add("active");
-         steps[0].classList.add("active");
-         body.classList.add("lock");
-      }
+
       if (e.target.closest(".quiz__footer > div")) {
          qs(".quiz").classList.remove("active");
          qs(".quiz__pages").innerHTML = "1/9";
@@ -134,6 +130,12 @@ window.addEventListener("load", () => {
                body.classList.remove("lock");
             }, 3000);
          }
+      }
+      if (e.target.innerHTML == "Take the quiz") {
+         qs(".quiz").classList.add("active");
+         steps[0].classList.add("active");
+         body.classList.add("lock");
+         console.log(body);
       }
    }
 
@@ -382,17 +384,20 @@ window.addEventListener("load", () => {
             }
          } else if (e.target.closest(".cart__close-icon")) {
             qs(".cart").classList.remove("active");
+            body.classList.remove("lock");
          } else if (e.target.closest(".ic-cart")) {
             qs(".cart").classList.add("active");
-         } else if (!e.target.closest(".cart__wrapper")) {
+            body.classList.add("lock");
+         } else if (!e.target.closest(".cart__wrapper") && e.target.closest(".cart")) {
             qs(".cart").classList.remove("active");
+            body.classList.remove("lock");
          }
       }
    }
    //Personal-pack.html
    if (qs("body.personal-pack")) {
       body.addEventListener("click", showSection);
-      window.addEventListener("resize", isVisible);
+      // window.addEventListener("resize", isVisible);
 
       if (window.innerWidth <= 768) {
          qs(".cards").classList.add("hidden");
@@ -406,16 +411,16 @@ window.addEventListener("load", () => {
       }
       isVisible();
       function isVisible() {
-         // if (window.innerWidth <= 768) {
-         //    qs(".cards").classList.add("hidden");
-         //    qs(".cards__button").classList.add("grey");
-         //    qs(".hero").classList.add("hidden");
-         // } else {
-         //    qs(".cards").classList.remove("hidden");
-         //    qs(".hero").classList.remove("hidden");
-         //    qs(".cards__button").classList.remove("grey");
-         //    qs(".cards__button").classList.add("regular");
-         // }
+         if (window.innerWidth <= 768) {
+            qs(".cards").classList.add("hidden");
+            qs(".cards__button").classList.add("grey");
+            qs(".hero").classList.add("hidden");
+         } else {
+            qs(".cards").classList.remove("hidden");
+            qs(".hero").classList.remove("hidden");
+            qs(".cards__button").classList.remove("grey");
+            qs(".cards__button").classList.add("regular");
+         }
       }
 
       function showSection(e) {
