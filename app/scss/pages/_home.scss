@@ -662,7 +662,9 @@ body.home {
       @media (min-width: 1000px) {
       }
    }
-   //  About===About===About===About===About===About===About===About===About===About====About
+   // =======================================================================================
+   // About====About===About===About===About===About===About===About===About===About====About
+   // =======================================================================================
    .about {
       position: relative;
       padding-top: 60px;
@@ -738,7 +740,7 @@ body.home {
          }
          @media (min-width: 500px) {
             @include fl(15, 25);
-            margin-bottom: rem();
+            margin-bottom: rem(33);
          }
          @media (min-width: 700px) {
             @include fl(16, 27);
@@ -817,7 +819,9 @@ body.home {
          }
       }
    }
+   // =======================================================================================
    // Product===Product===Product===Product===Product===Product===Product===Product===Product
+   // =======================================================================================
    .products {
       position: relative;
       z-index: -1;
@@ -1082,6 +1086,173 @@ body.home {
             @media (min-width: 760px) {
                @include fl(16, 26.15);
             }
+         }
+      }
+   }
+   // =======================================================================================
+   // Comments====Comments===Comments===Comments===Comments===Comments===Comments====Comments
+   // =======================================================================================
+   .comments {
+      padding-top: 60px;
+      padding-bottom: 45px;
+      @media (min-width: 769px) {
+         position: relative;
+      }
+      @media (min-width: 1200px) {
+         padding-left: percent(203, 1800);
+      }
+      @media (min-width: 1600px) {
+         padding-right: percent(201, 1800);
+      }
+      &__image {
+         display: none;
+         @media (min-width: 769px) {
+            display: block;
+            position: absolute;
+            padding-bottom: percent(416, 1800);
+            width: percent(444, 1800);
+            left: percent(1154, 1800);
+            top: 50px;
+
+            @media (min-width: 1000px) {
+               top: percent(-50, 900);
+            }
+            @media (min-width: 1200px) {
+               top: percent(-105, 900);
+            }
+         }
+         img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+         }
+      }
+      &__body {
+         padding-left: 20px;
+         padding-right: 20.001px;
+         @media (min-width: 1200px) {
+            padding-left: 0;
+            padding-right: 0;
+         }
+      }
+      &__icon {
+         margin-bottom: 30px;
+         @include fl(57);
+         text-align: center;
+         @media (min-width: 500px) {
+            @include fl(63);
+         }
+         @media (min-width: 700px) {
+            @include fl(69);
+         }
+         @media (min-width: 769px) {
+            text-align: left;
+            margin-left: 0;
+         }
+         @media (min-width: 1000px) {
+            @include fl(75);
+         }
+         @media (min-width: 1200px) {
+            @include fl(82);
+         }
+         @media (min-width: 1400px) {
+            @include fl(90);
+         }
+         @media (min-width: 1600px) {
+            @include fl(98);
+            transform: translate(-8px, -8px);
+         }
+      }
+      &__title {
+         font-weight: 500;
+         @include fl(20, 24.12);
+         text-align: center;
+         max-width: 272px;
+         margin: 0 auto 15px;
+         @media (min-width: 500px) {
+            @include fl(24, 28);
+         }
+         @media (min-width: 700px) {
+            @include fl(29, 35);
+         }
+         @media (min-width: 769px) {
+            text-align: left;
+            margin-left: 0;
+            max-width: 46%;
+         }
+         @media (min-width: 1000px) {
+            @include fl(36, 45);
+            margin-bottom: 20px;
+         }
+         @media (min-width: 1200px) {
+            @include fl(42, 52);
+         }
+         @media (min-width: 1400px) {
+            @include fl(48, 59);
+            margin-bottom: 25px;
+         }
+         @media (min-width: 1600px) {
+            @include fl(56, 67.54);
+            margin-bottom: 32px;
+         }
+      }
+      &__text {
+         font-family: $ff2;
+         @include fl(14, 22.88);
+         color: #808080;
+         margin-bottom: 27px;
+         text-align: center;
+         @media (min-width: 375px) {
+            margin-bottom: 30px;
+            max-width: 335px;
+            margin: 0 auto 30px;
+         }
+         @media (min-width: 500px) {
+            @include fl(15, 25);
+         }
+         @media (min-width: 700px) {
+            @include fl(16, 27);
+            margin-bottom: 40px;
+         }
+         @media (min-width: 769px) {
+            text-align: left;
+            margin-left: 0;
+            max-width: 50%;
+         }
+         @media (min-width: 1000px) {
+            @include fl(17, 28);
+            margin-bottom: 50px;
+         }
+         @media (min-width: 1200px) {
+            @include fl(18, 30);
+            max-width: 46%;
+            margin-bottom: 60px;
+         }
+         @media (min-width: 1400px) {
+            @include fl(19, 32);
+            margin-bottom: 70px;
+         }
+         @media (min-width: 1600px) {
+            @include fl(20, 32.68);
+            margin-bottom: 80px;
+         }
+      }
+      &__slider {
+         padding-left: 20px;
+         @media (min-width: 1200px) {
+            padding-left: 0;
+         }
+      }
+      &__items {
+         display: grid !important;
+         // grid-template-columns: repeat(3, minmax(280px, 335px)) !important;
+         grid-template-columns: repeat(3, auto) !important;
+         @media (min-width: 1125px) {
+            // grid-template-columns: repeat(3, 1fr);
          }
       }
    }

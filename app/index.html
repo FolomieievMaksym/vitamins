@@ -273,8 +273,32 @@
 				</section>
 			</div>
 			<!-- ! Comments ==== Comments ===== Comments ===== Comments ==== Comments ==== Comments -->
-			<section class="comments"></section>
-			<!-- ! Get started ==== Get started ===== Get started ==== Get started ==== Get started -->
+			<section class="comments">
+				<div class='comments__image'>
+					<picture>
+						<source type='image/webp' srcset='@img/home/pills_02.webp'>
+						<img src='@img/home/pills_02.jpg' alt='pills image'>
+					</picture>
+				</div>
+				<div class="comments__body">
+					<div class="comments__icon">
+						<i class="ic-home_05"><span class="path1"></span><span class="path2"></span><span
+								class="path3"></span><span class="path4"></span><span
+								class="path5"></span><span class="path6"></span><span
+								class="path7"></span><span class="path8"></span></i></i>
+					</div>
+					<h2 class="comments__title">What healthy and happy customer says</h2>
+					<p class="comments__text">We'll help you create a health plan with vitamins,
+						supplements, and more that help you feel your
+						best today and support you long-term.</p>
+				</div>
+				<div class="swiper comments__slider">
+					<div class="swiper-wrapper comments__items">
+						@@loop('./components/_comment.html', './json/comments.json')
+					</div>
+				</div>
+			</section>
+			<!-- * Get started ==== Get started ===== Get started ==== Get started ==== Get started -->
 			<section class="get-started"></section>
 		</main>
 		@@include('components/each-page-blocks/_footer.html')

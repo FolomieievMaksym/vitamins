@@ -536,7 +536,6 @@ window.addEventListener("load", () => {
 
    //index.html
    if (qs("body.home")) {
-      /* 
       if (qs(".comments")) {
          const swiperComments = new Swiper(".comments .swiper", {
             initialSlide: 0,
@@ -608,7 +607,6 @@ window.addEventListener("load", () => {
             },
          });
       }
-		*/
       if (qs(".products")) {
          const swiperCards = new Swiper(".slider-cards", {
             initialSlide: 0,
