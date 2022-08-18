@@ -1999,73 +1999,6 @@ input::placeholder {
   cursor: pointer;
 }
 
-body.home {
-  /*
-  .btn {
-     @media (min-width: 1441px) {
-        font-family: $ff2;
-        @include fl(20, 32.68);
-     }
-  }
-  &__link {
-     @include fl(14, 16.88);
-     font-weight: 500;
-     color: $orangeSpan;
-     @media (min-width: 1441px) {
-        @include fl(20, 24.12);
-     }
-  }
-  .card__label {
-     font-family: $ff2;
-     @include fl(12, 16.34);
-     font-weight: 600;
-     opacity: 0.7;
-     @media (min-width: 1441px) {
-        @include fl(14, 19.07);
-     }
-     &.purpleLabel {
-        color: $purpleLabel;
-     }
-     &.mintLabel {
-        color: $mintLabel;
-     }
-  }
-  .card__sublabel {
-     //profile
-     font-family: $ff2;
-     @include fl(14, 19.07);
-     opacity: 0.7;
-     @media (min-width: 1441px) {
-        @include fl(16, 21.79);
-     }
-  }
-  .card__title {
-     @include fl(18, 21.71);
-     font-weight: 500;
-     @media (min-width: 1441px) {
-        @include fl(24, 28.94);
-     }
-  }
-  .card__text {
-     font-family: $ff2;
-     @include fl(14, 19.07);
-     opacity: 0.7;
-     @media (min-width: 1441px) {
-        @include fl(16, 26.15);
-     }
-  }
-  .card__summ {
-     //personal pack
-     font-family: $ff2;
-     font-weight: 600;
-     @include fl(16, 21.79);
-     @media (min-width: 1441px) {
-        @include fl(20, 27.24);
-     }
-  }
-  */
-}
-
 body.home h2.home-title,
 body.home h1.home-title {
   font-weight: 500;
@@ -2358,6 +2291,10 @@ body.home .products {
   position: relative;
   z-index: 1;
   color: #fff;
+}
+
+body.home .products .swiper {
+  cursor: pointer;
 }
 
 body.home .products__choose {
