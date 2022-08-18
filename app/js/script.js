@@ -75,9 +75,12 @@ window.addEventListener("load", () => {
       }
    }
 
+   // ! Quiz
    body.addEventListener("click", quiz);
 
    function quiz(e) {
+      console.log(e.target);
+
       let steps = qa(".quiz__step");
       let backButton = qs(".quiz__footer > div");
 
@@ -88,40 +91,40 @@ window.addEventListener("load", () => {
          steps.forEach((el) => {
             el.classList.remove("active");
          });
-      } else if (e.target.closest(".quiz__pages")) {
-         if (e.target.closest(".quiz__pages").innerHTML == "1/9") {
+      } else if (e.target.closest(".quiz__step")) {
+         if (e.target.closest(".quiz__step_1 .quiz__circle")) {
             steps[0].classList.remove("active");
             steps[1].classList.add("active");
             qs(".quiz__pages").innerHTML = "2/9";
-         } else if (e.target.closest(".quiz__pages").innerHTML == "2/9") {
+         } else if (e.target.closest(".quiz__step_2 .quiz__question p")) {
             steps[1].classList.remove("active");
             steps[2].classList.add("active");
             qs(".quiz__pages").innerHTML = "3/9";
-         } else if (e.target.closest(".quiz__pages").innerHTML == "3/9") {
+         } else if (e.target.closest(".quiz__step_3 .quiz__question p")) {
             steps[2].classList.remove("active");
             steps[3].classList.add("active");
             qs(".quiz__pages").innerHTML = "4/9";
-         } else if (e.target.closest(".quiz__pages").innerHTML == "4/9") {
+         } else if (e.target.closest(".quiz__step_4 .quiz__question p")) {
             steps[3].classList.remove("active");
             steps[4].classList.add("active");
             qs(".quiz__pages").innerHTML = "5/9";
-         } else if (e.target.closest(".quiz__pages").innerHTML == "5/9") {
+         } else if (e.target.closest(".quiz__step_5 .quiz__question p")) {
             steps[4].classList.remove("active");
             steps[5].classList.add("active");
             qs(".quiz__pages").innerHTML = "6/9";
-         } else if (e.target.closest(".quiz__pages").innerHTML == "6/9") {
+         } else if (e.target.closest(".quiz__step_6 .quiz__question p")) {
             steps[5].classList.remove("active");
             steps[6].classList.add("active");
             qs(".quiz__pages").innerHTML = "7/9";
-         } else if (e.target.closest(".quiz__pages").innerHTML == "7/9") {
+         } else if (e.target.closest(".quiz__step_7 .quiz__question p")) {
             steps[6].classList.remove("active");
             steps[7].classList.add("active");
             qs(".quiz__pages").innerHTML = "8/9";
-         } else if (e.target.closest(".quiz__pages").innerHTML == "8/9") {
+         } else if (e.target.closest(".quiz__step_8 .quiz__question p")) {
             steps[7].classList.remove("active");
             steps[8].classList.add("active");
             qs(".quiz__pages").innerHTML = "9/9";
-         } else if (e.target.closest(".quiz__pages").innerHTML == "9/9") {
+         } else if (e.target.closest(".quiz__step_9 .quiz__circle")) {
             location.href = "personal-pack.html";
             setTimeout(() => {
                steps[8].classList.remove("active");
@@ -135,7 +138,6 @@ window.addEventListener("load", () => {
          qs(".quiz").classList.add("active");
          steps[0].classList.add("active");
          body.classList.add("lock");
-         console.log(body);
       }
    }
 
@@ -152,6 +154,7 @@ window.addEventListener("load", () => {
          }
       }
    }
+   // Quiz end =============================================================================================================================
 
    //Sign-up.html
    if (qs("body.sign-up")) {
@@ -686,7 +689,7 @@ window.addEventListener("load", () => {
          });
       }
    }
-   //header
+   // ! header
    qs(".header-aside_4 .second-menu").addEventListener("click", relocate);
 
    function relocate(e) {
@@ -710,4 +713,5 @@ window.addEventListener("load", () => {
          location.href = "profile.html";
       }
    });
+   // Header end ======================================================================================================
 });
