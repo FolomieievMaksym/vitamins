@@ -394,18 +394,28 @@ window.addEventListener("load", () => {
       body.addEventListener("click", showSection);
       window.addEventListener("resize", isVisible);
 
+      if (window.innerWidth <= 768) {
+         qs(".cards").classList.add("hidden");
+         qs(".cards__button").classList.add("grey");
+         qs(".hero").classList.add("hidden");
+      } else {
+         qs(".cards").classList.remove("hidden");
+         qs(".hero").classList.remove("hidden");
+         qs(".cards__button").classList.remove("grey");
+         qs(".cards__button").classList.add("regular");
+      }
       isVisible();
       function isVisible() {
-         if (window.innerWidth <= 768) {
-            qs(".cards").classList.add("hidden");
-            qs(".cards__button").classList.add("grey");
-            qs(".hero").classList.add("hidden");
-         } else {
-            qs(".cards").classList.remove("hidden");
-            qs(".hero").classList.remove("hidden");
-            qs(".cards__button").classList.remove("grey");
-            qs(".cards__button").classList.add("regular");
-         }
+         // if (window.innerWidth <= 768) {
+         //    qs(".cards").classList.add("hidden");
+         //    qs(".cards__button").classList.add("grey");
+         //    qs(".hero").classList.add("hidden");
+         // } else {
+         //    qs(".cards").classList.remove("hidden");
+         //    qs(".hero").classList.remove("hidden");
+         //    qs(".cards__button").classList.remove("grey");
+         //    qs(".cards__button").classList.add("regular");
+         // }
       }
 
       function showSection(e) {
