@@ -708,7 +708,7 @@ body.product .header .burger.active .burger__wrapper:after {
 .burger__wrapper span {
   top: 50%;
   transform: translate(0, -150%);
-  transition: background-color 0.3s ease, transform 0.3s ease 0s;
+  transition: background-color 0.3s ease, transform 0.3s ease 0.35s;
 }
 
 @-webkit-keyframes burgerTopDisabled {
@@ -795,7 +795,7 @@ body.product .header .burger.active .burger__wrapper:after {
 
 .burger.active .burger__wrapper span {
   transform: translate(0, -150%) scale(0);
-  transition: background-color 0.3s ease, transform 0.3s ease 0.3s;
+  transition: background-color 0.3s ease, transform 0.3s ease 0s;
 }
 
 .burger.active .burger__wrapper:after {
