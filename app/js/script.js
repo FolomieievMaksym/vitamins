@@ -361,6 +361,18 @@ window.addEventListener("load", () => {
          }
       }
    }
+   //Product.html
+   if (qs("body.product")) {
+      body.addEventListener("click", relocateToPage);
+
+      function relocateToPage(e) {
+         if (e.target.closest(".card-item:not(.card-item_discount)")) {
+            location.href = "product-1.html";
+         } else if (e.target.closest(".card-item_discount")) {
+            location.href = "product-discount.html";
+         }
+      }
+   }
    //Cart.html
    if (qs(".cart")) {
       const cartDeliver = qa(".item-body__content"),

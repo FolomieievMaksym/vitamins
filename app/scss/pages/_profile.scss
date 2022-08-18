@@ -79,6 +79,7 @@ body.profile {
             display: block;
          }
          li {
+            white-space: nowrap;
             @media (min-width: 1000px) {
                cursor: pointer;
                @include fl(22, 40);

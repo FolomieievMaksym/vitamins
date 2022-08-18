@@ -2690,6 +2690,10 @@ body.profile .sidebar__list {
   display: none;
 }
 
+body.profile .sidebar__list li {
+  white-space: nowrap;
+}
+
 @media (min-width: 375px) {
   .header-aside {
     max-width: 375px;

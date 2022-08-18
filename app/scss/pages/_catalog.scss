@@ -34,8 +34,9 @@ body.catalog {
             padding-left: 20px;
             padding-right: 20px;
          }
-         @media (min-width: 765px) {
+         @media (min-width: 769px) {
             flex-direction: row;
+            padding-top: 40px;
          }
          @media (min-width: 1000px) {
             padding-left: calc(30 / 1000 * 100%);
