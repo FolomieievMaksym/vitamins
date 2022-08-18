@@ -811,11 +811,16 @@ body.home {
          @media (min-width: 1000px) {
             flex: 0 0 40%;
             order: 2;
-            height: percent(825, 900);
             text-align: left;
+            padding-left: percent(154, 1800);
+            padding-top: percent(134, 1800);
+            padding-bottom: percent(135, 1800);
          }
          @media (min-width: 1200px) {
             flex: 0 0 50%;
+            padding-left: percent(254, 1800);
+            padding-top: percent(234, 1800);
+            padding-bottom: percent(235, 1800);
          }
       }
       &__choose-body {
@@ -825,21 +830,67 @@ body.home {
          }
          @media (min-width: 1000px) {
             max-width: 444px;
+            margin: 0;
          }
       }
       &__title {
          margin-bottom: 15px;
+         @media (min-width: 500px) {
+            margin-bottom: rem(20);
+         }
+         @media (min-width: 700px) {
+            margin-bottom: rem(22);
+         }
+         @media (min-width: 1000px) {
+            margin-bottom: rem(24);
+         }
+         @media (min-width: 1200px) {
+            margin-bottom: rem(26);
+         }
+         @media (min-width: 1400px) {
+            margin-bottom: rem(29);
+         }
+         @media (min-width: 1600px) {
+            margin-bottom: 32px;
+         }
       }
       &__text {
          margin-bottom: 18px;
          font-family: $ff2;
          @include fl(14, 22.88);
+         @media (min-width: 500px) {
+            @include fl(15, 24);
+            margin-bottom: rem(20);
+         }
+         @media (min-width: 700px) {
+            @include fl(16, 25);
+            margin-bottom: rem(22);
+         }
+         @media (min-width: 1000px) {
+            @include fl(17, 26);
+            margin-bottom: rem(24);
+         }
+         @media (min-width: 1200px) {
+            @include fl(18, 28);
+            margin-bottom: rem(26);
+         }
+         @media (min-width: 1400px) {
+            @include fl(19, 30);
+            margin-bottom: rem(29);
+         }
+         @media (min-width: 1600px) {
+            @include fl(20, 32.68);
+            margin-bottom: 32px;
+         }
       }
       &__button {
          display: inline-flex;
          align-items: center;
          @media (min-width: 570px) {
             transform: translate(0, 2px);
+         }
+         @media (min-width: 1000px) {
+            transform: translate(4px, 2px);
          }
          a {
             @include fl(14, 16.88);
@@ -851,6 +902,9 @@ body.home {
          }
          i {
             @include fl(9);
+            @media (min-width: 1000px) {
+               @include fl(15);
+            }
          }
       }
 
@@ -865,9 +919,16 @@ body.home {
          @media (min-width: 1000px) {
             order: 1;
             margin-top: 0;
-            // left: percent(202, 1800);
+            // left: percent(20, 1800);
+         }
+         @media (min-width: 1200px) {
+            left: percent(168, 1800);
+            // left: percent(100, 1800);
          }
          @media (min-width: 1600px) {
+            max-width: 873px;
+            position: relative;
+            top: -15px;
          }
          // .slider__items
 
@@ -899,6 +960,12 @@ body.home {
          @media (min-width: 375px) {
             padding-bottom: rem(33);
          }
+         @media (min-width: 1000px) {
+            padding-top: percent(63, 400);
+            padding-left: percent(30, 400);
+            padding-right: percent(30, 400);
+            padding-bottom: percent(38, 400);
+         }
          // .card_purple
 
          &_purple {
@@ -919,15 +986,19 @@ body.home {
             @media (min-width: 375px) {
                padding-bottom: percent(159.33, 295);
             }
+            @media (min-width: 769px) {
+               margin-bottom: 40px;
+            }
 
+            @media (min-width: 1000px) {
+               padding-bottom: percent(211, 340);
+            }
+            @media (min-width: 1600px) {
+               margin-bottom: 51px;
+            }
             img {
                object-fit: contain;
             }
-         }
-
-         // .card__body
-
-         &__body {
          }
 
          // .card__label
@@ -943,6 +1014,7 @@ body.home {
             }
             @media (min-width: 760px) {
                @include fl(14, 19.07);
+               margin-bottom: 13px;
             }
          }
 
@@ -969,6 +1041,8 @@ body.home {
             }
             @media (min-width: 1600px) {
                @include fl(24, 28.94);
+               margin-bottom: 18px;
+               transform: translate(0, 1px);
             }
          }
 

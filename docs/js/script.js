@@ -632,6 +632,7 @@ window.addEventListener("load", () => {
                },
                1000: {
                   spaceBetween: 33,
+                  slidesPerView: 2,
                },
             },
          });
