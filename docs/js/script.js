@@ -343,9 +343,6 @@ window.addEventListener("load", () => {
          },
       });
 
-      const cardItems = qa(".card-item:not(.card-item_discount)");
-      cardItemsDiscount = qa(".card-item_discount");
-
       body.addEventListener("click", relocateToPage);
 
       function relocateToPage(e) {
@@ -396,6 +393,16 @@ window.addEventListener("load", () => {
    }
    //Personal-pack.html
    if (qs("body.personal-pack")) {
+      body.addEventListener("click", relocateToPage);
+
+      function relocateToPage(e) {
+         if (e.target.closest(".card-item:not(.card-item_discount)")) {
+            location.href = "product-1.html";
+         } else if (e.target.closest(".card-item_discount")) {
+            location.href = "product-discount.html";
+         }
+      }
+
       body.addEventListener("click", showSection);
       // window.addEventListener("resize", isVisible);
 
@@ -409,6 +416,7 @@ window.addEventListener("load", () => {
          qs(".cards__button").classList.remove("grey");
          qs(".cards__button").classList.add("regular");
       }
+
       isVisible();
       function isVisible() {
          if (window.innerWidth <= 768) {
