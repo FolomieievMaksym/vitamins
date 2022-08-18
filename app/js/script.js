@@ -196,6 +196,7 @@ window.addEventListener("load", () => {
    }
    //Catalog.html
    if (qs("body.catalog")) {
+      // Slider banners
       const swiperBanner = new Swiper(".banner__slider", {
          // loop: true,
          // centeredSlides: false,
@@ -266,7 +267,7 @@ window.addEventListener("load", () => {
             },
          },
       });
-
+      // Slider comments
       const swiperComments = new Swiper(".comments__slider", {
          initialSlide: 0,
          slideToClickedSlide: true,
@@ -336,6 +337,27 @@ window.addEventListener("load", () => {
             },
          },
       });
+
+      const cardItems = qa(".card-item:not(.card-item_discount)");
+      cardItemsDiscount = qa(".card-item_discount");
+
+      body.addEventListener("click", relocateToPage);
+
+      function relocateToPage(e) {
+         if (e.target.closest(".products__body .card-item:first-child")) {
+            location.href = "product-2.html";
+         } else if (e.target.closest(".products__body .card-item:nth-child(2)")) {
+            location.href = "product-1.html";
+         } else if (e.target.closest(".products__body .card-item:nth-child(4)")) {
+            location.href = "product-4.html";
+         } else if (e.target.closest(".products__body .card-item:nth-child(5)")) {
+            location.href = "product-5.html";
+         } else if (e.target.closest(".card-item:not(.card-item_discount)")) {
+            location.href = "product-1.html";
+         } else if (e.target.closest(".card-item_discount")) {
+            location.href = "product-discount.html";
+         }
+      }
    }
    //Cart.html
    if (qs(".cart")) {
@@ -645,4 +667,9 @@ window.addEventListener("load", () => {
          }
       }
    }
+   qs("#menu-profile").addEventListener("click", () => {
+      if (window.innerWidth >= 1025) {
+         location.href = "profile.html";
+      }
+   });
 });
