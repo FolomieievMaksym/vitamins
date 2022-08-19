@@ -65,7 +65,12 @@ body.home {
             // left: percent(257, 320);
             left: 100%;
             transform: translate(-100%, 0);
-            @media (min-width: 468px) {
+            @media (min-width: 375px) {
+               top: percent(259, 712.5);
+               width: 84px;
+               height: 76px;
+            }
+            @media (min-width: 400px) {
                top: percent(120, 700);
             }
             @media (min-width: 1000px) {
@@ -77,6 +82,10 @@ body.home {
             top: percent(418, 700);
             left: 0;
             z-index: -1;
+            @media (min-width: 375px) {
+               top: percent(381, 712.5);
+               width: 78px;
+            }
             @media (min-width: 1000px) {
                display: none;
             }
@@ -1104,6 +1113,7 @@ body.home {
       padding-bottom: 45px;
       @media (min-width: 769px) {
          position: relative;
+         z-index: 1;
       }
       @media (min-width: 1200px) {
          padding-left: percent(203, 1800);

@@ -548,10 +548,10 @@ body.product .header .burger.active .burger__wrapper:after {
 
 .header.active-cart #cart-circle {
   position: relative;
-  position: relative;
 }
 
 .header.active-cart #cart-circle:after {
+  pointer-events: none;
   content: "";
   position: absolute;
   top: 3px;
@@ -565,6 +565,7 @@ body.product .header .burger.active .burger__wrapper:after {
 }
 
 .header.active-cart #cart-circle:before {
+  pointer-events: none;
   content: "";
   position: absolute;
   top: 0;
@@ -1197,6 +1198,10 @@ input::placeholder {
 
 .btn:active {
   background-color: #ff6128;
+}
+
+body.profile .not-validated {
+  display: none;
 }
 
 body.profile .form-block {
@@ -3083,7 +3088,7 @@ body.profile .sidebar__list li {
   }
 
   body.profile .form-block {
-    transform: translate(2px, 0);
+    transform: translate(-4px, 0);
     max-width: 920px;
   }
 

@@ -32,6 +32,9 @@ body.personal-pack {
          &:first-child {
             top: 56px;
             left: percent(192, 320);
+            @media (min-width: 375px) {
+               left: percent(247, 375);
+            }
             @media (min-width: 769px) {
                width: 90px;
                height: 90px;
@@ -253,6 +256,7 @@ body.personal-pack {
          }
       }
       &__title {
+         letter-spacing: -0.2px;
          font-weight: 500;
          @include fl(20, 24.12);
          margin-bottom: 30px;
@@ -261,6 +265,7 @@ body.personal-pack {
          }
          @media (min-width: 760px) {
             @include fl(26, 32);
+            letter-spacing: -0.4px;
          }
          @media (min-width: 1000px) {
             margin-bottom: 40px;

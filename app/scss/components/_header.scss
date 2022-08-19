@@ -80,6 +80,7 @@ body.product {
    #cart-circle {
       position: relative;
       &:after {
+         pointer-events: none;
          content: "";
          position: absolute;
          top: 3px;
@@ -91,8 +92,8 @@ body.product {
          border-radius: 50%;
          z-index: 1;
       }
-      position: relative;
       &:before {
+         pointer-events: none;
          content: "";
          position: absolute;
          top: 0;

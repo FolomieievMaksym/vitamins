@@ -548,10 +548,10 @@ body.product .header .burger.active .burger__wrapper:after {
 
 .header.active-cart #cart-circle {
   position: relative;
-  position: relative;
 }
 
 .header.active-cart #cart-circle:after {
+  pointer-events: none;
   content: "";
   position: absolute;
   top: 3px;
@@ -565,6 +565,7 @@ body.product .header .burger.active .burger__wrapper:after {
 }
 
 .header.active-cart #cart-circle:before {
+  pointer-events: none;
   content: "";
   position: absolute;
   top: 0;
@@ -2601,6 +2602,17 @@ body.home .get-started__button svg {
     margin-bottom: 0.8125rem;
   }
 
+  body.home .hero svg.decor-1 {
+    top: 36.350877193%;
+    width: 84px;
+    height: 76px;
+  }
+
+  body.home .hero svg.decor-2 {
+    top: 53.4736842105%;
+    width: 78px;
+  }
+
   body.home .hero__image {
     top: -20px;
   }
@@ -2691,6 +2703,10 @@ body.home .get-started__button svg {
 }
 
 @media (min-width: 400px) {
+  body.home .hero svg.decor-1 {
+    top: 17.1428571429%;
+  }
+
   body.home .healthy__items {
     justify-items: center;
   }
@@ -2792,10 +2808,6 @@ body.home .get-started__button svg {
 
   body.home .hero {
     display: flex;
-  }
-
-  body.home .hero svg.decor-1 {
-    top: 17.1428571429%;
   }
 
   body.home .hero__title {
@@ -3334,6 +3346,7 @@ body.home .get-started__button svg {
 
   body.home .comments {
     position: relative;
+    z-index: 1;
   }
 
   body.home .comments__image {

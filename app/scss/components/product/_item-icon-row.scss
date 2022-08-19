@@ -30,6 +30,7 @@ body.product {
          font-family: $ff2;
          font-weight: 400;
          @include fl(14, 19.07);
+         opacity: 0.5;
       }
 
       &__product {

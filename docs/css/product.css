@@ -548,10 +548,10 @@ body.product .header .burger.active .burger__wrapper:after {
 
 .header.active-cart #cart-circle {
   position: relative;
-  position: relative;
 }
 
 .header.active-cart #cart-circle:after {
+  pointer-events: none;
   content: "";
   position: absolute;
   top: 3px;
@@ -565,6 +565,7 @@ body.product .header .burger.active .burger__wrapper:after {
 }
 
 .header.active-cart #cart-circle:before {
+  pointer-events: none;
   content: "";
   position: absolute;
   top: 0;
@@ -1385,6 +1386,7 @@ body.product .item-icon-row__text {
   font-weight: 400;
   font-size: 0.875em;
   line-height: 1.3621428571;
+  opacity: 0.5;
 }
 
 body.product .item-icon-row__product img {
@@ -2963,6 +2965,11 @@ body.product .cards .card-item__discount-price {
 
   body.product .add-to-cart {
     margin-bottom: 95px;
+  }
+
+  body.product .add-to-cart__summ:only-child {
+    font-family: "OpenSans";
+    font-weight: 600;
   }
 
   body.product .product-right {

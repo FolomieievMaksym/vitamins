@@ -548,10 +548,10 @@ body.product .header .burger.active .burger__wrapper:after {
 
 .header.active-cart #cart-circle {
   position: relative;
-  position: relative;
 }
 
 .header.active-cart #cart-circle:after {
+  pointer-events: none;
   content: "";
   position: absolute;
   top: 3px;
@@ -565,6 +565,7 @@ body.product .header .burger.active .burger__wrapper:after {
 }
 
 .header.active-cart #cart-circle:before {
+  pointer-events: none;
   content: "";
   position: absolute;
   top: 0;
@@ -2220,6 +2221,7 @@ body.personal-pack .cards__body {
 }
 
 body.personal-pack .cards__title {
+  letter-spacing: -0.2px;
   font-weight: 500;
   font-size: 1.25em;
   line-height: 1.206;
@@ -2463,6 +2465,10 @@ body.personal-pack .cards__button.grey {
     margin-bottom: 0.8125rem;
   }
 
+  body.personal-pack .personal-pack__decor svg:first-child {
+    left: 65.8666666667%;
+  }
+
   body.personal-pack .hero__title {
     max-width: 227px;
   }
@@ -2648,6 +2654,7 @@ body.personal-pack .cards__button.grey {
   body.personal-pack .cards__title {
     font-size: 1.625em;
     line-height: 1.2307692308;
+    letter-spacing: -0.4px;
   }
 }
 

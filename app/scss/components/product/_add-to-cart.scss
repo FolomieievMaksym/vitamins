@@ -81,6 +81,12 @@ body.product {
             display: none;
          }
       }
+      &__summ:only-child {
+         @media (min-width: 1000px) {
+            font-family: $ff2;
+            font-weight: 600;
+         }
+      }
       &__discount {
          display: none;
       }
@@ -177,8 +183,10 @@ body.product {
                   padding-right: 0;
                }
             }
+
             &__summ {
                font-family: $ff2;
+
                &_full-price {
                   font-weight: 600;
                   @include fl(12, 16.34);

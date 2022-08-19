@@ -3,6 +3,11 @@ body.subscriptions {
    .header {
       padding-top: 2px;
    }
+   main {
+      @media (max-width: 768px) {
+         padding-bottom: 30px;
+      }
+   }
    .hero {
       padding-top: 121px;
       padding-bottom: 60;

@@ -548,10 +548,10 @@ body.product .header .burger.active .burger__wrapper:after {
 
 .header.active-cart #cart-circle {
   position: relative;
-  position: relative;
 }
 
 .header.active-cart #cart-circle:after {
+  pointer-events: none;
   content: "";
   position: absolute;
   top: 3px;
@@ -565,6 +565,7 @@ body.product .header .burger.active .burger__wrapper:after {
 }
 
 .header.active-cart #cart-circle:before {
+  pointer-events: none;
   content: "";
   position: absolute;
   top: 0;
