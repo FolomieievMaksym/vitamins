@@ -308,6 +308,31 @@ body.ordering {
             padding: 0;
          }
          &__containe {
+            .not-validated {
+               display: none;
+            }
+            &.not-valid {
+               .not-validated {
+                  display: block;
+               }
+               input:not(#address2) {
+                  border: 1px solid #ff7d4e;
+                  height: 54px;
+               }
+               input + p.not-validated {
+                  // display: none;
+                  color: #ff7d4e;
+                  position: absolute;
+                  top: calc(100% + 6px);
+                  left: 2px;
+                  width: 100%;
+                  font-family: $ff2;
+                  @include fl(10, 13.62);
+                  @media (min-width: 769px) {
+                     @include fl(12, 16.34);
+                  }
+               }
+            }
             padding-bottom: 40px;
             @media (min-width: 1600px) {
                padding-bottom: 80px;
@@ -352,7 +377,7 @@ body.ordering {
             width: 100%;
             display: flex;
             flex-direction: column;
-
+            position: relative;
             label {
                font-family: $ff2;
                @include fl(14, 19.07);

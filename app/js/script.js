@@ -528,6 +528,11 @@ window.addEventListener("load", () => {
             }
          }
       }
+
+      // ! Validating ===========================================================
+      if (true) {
+         qs(".hero__containe").classList.add("not-valid");
+      }
    }
 
    //profile.html
@@ -700,28 +705,30 @@ window.addEventListener("load", () => {
       }
    }
    // ! header
-   qs(".header-aside_4 .second-menu").addEventListener("click", relocate);
+   if (qs(".header")) {
+      qs(".header-aside_4 .second-menu").addEventListener("click", relocate);
 
-   function relocate(e) {
-      e.preventDefault();
-      if (e.target.closest(".second-menu li")) {
-         if (e.target.innerHTML == "Subscriptions") {
-            document.location.href = "profile.html";
-         } else if (e.target.innerHTML == "Orders") {
-            document.location.href = "profile.html";
-         } else if (e.target.innerHTML == "Account Overview") {
-            document.location.href = "profile.html";
-         } else if (e.target.innerHTML == "Payment methods") {
-            document.location.href = "profile.html";
-         } else if (e.target.innerHTML == "Change Password") {
-            document.location.href = "profile.html";
+      function relocate(e) {
+         e.preventDefault();
+         if (e.target.closest(".second-menu li")) {
+            if (e.target.innerHTML == "Subscriptions") {
+               document.location.href = "profile.html";
+            } else if (e.target.innerHTML == "Orders") {
+               document.location.href = "profile.html";
+            } else if (e.target.innerHTML == "Account Overview") {
+               document.location.href = "profile.html";
+            } else if (e.target.innerHTML == "Payment methods") {
+               document.location.href = "profile.html";
+            } else if (e.target.innerHTML == "Change Password") {
+               document.location.href = "profile.html";
+            }
          }
       }
+      qs("#menu-profile").addEventListener("click", () => {
+         if (window.innerWidth >= 1025) {
+            location.href = "profile.html";
+         }
+      });
    }
-   qs("#menu-profile").addEventListener("click", () => {
-      if (window.innerWidth >= 1025) {
-         location.href = "profile.html";
-      }
-   });
    // Header end ======================================================================================================
 });

@@ -1215,6 +1215,7 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   width: 100%;
+  position: relative;
 }
 
 .form-block__line label {
@@ -1586,6 +1587,30 @@ body.ordering form .hero__containe {
   position: relative;
 }
 
+body.ordering form .hero__containe .not-validated {
+  display: none;
+}
+
+body.ordering form .hero__containe.not-valid .not-validated {
+  display: block;
+}
+
+body.ordering form .hero__containe.not-valid input:not(#address2) {
+  border: 1px solid #ff7d4e;
+  height: 54px;
+}
+
+body.ordering form .hero__containe.not-valid input + p.not-validated {
+  color: #ff7d4e;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 2px;
+  width: 100%;
+  font-family: "OpenSans";
+  font-size: 0.625em;
+  line-height: 1.362;
+}
+
 body.ordering form .hero__containe:after {
   content: "";
   position: absolute;
@@ -1614,6 +1639,7 @@ body.ordering form .hero__line {
   width: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 body.ordering form .hero__line label {
@@ -1923,6 +1949,11 @@ body.ordering .pop-up .btn {
 
   body.ordering form .ordering-card__line_3 p {
     transform: translate(0, -4px);
+  }
+
+  body.ordering form .hero__containe.not-valid input + p.not-validated {
+    font-size: 0.75em;
+    line-height: 1.3616666667;
   }
 
   body.ordering form .hero__double-line {

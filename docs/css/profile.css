@@ -1805,6 +1805,7 @@ body.profile .subscriptions__button:active {
   display: flex;
   flex-direction: column;
   width: 100%;
+  position: relative;
 }
 
 .form-block__line label {
