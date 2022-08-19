@@ -393,6 +393,11 @@ window.addEventListener("load", () => {
       function checkboxToggle(e) {
          if (e.target.closest(".item-body__ok-icon")) {
             e.target.closest(".item-body__content").classList.toggle("disabled");
+         } else if (e.target.closest(".cart__bottom.disabled")) {
+            qs(".cart__bottom").classList.remove("disabled");
+            setTimeout(() => {
+               document.location.href = "ordering.html";
+            }, 1000);
          } else if (e.target.closest(".cart__bottom__btn")) {
             qs(".cart__bottom").classList.add("disabled");
          } else if (e.target.closest(".item-body__icon-wrapper")) {
@@ -747,7 +752,7 @@ window.addEventListener("load", () => {
          });
       }
    }
-   // ! header
+   // header
    if (qs(".header")) {
       qs(".header-aside_4 .second-menu").addEventListener("click", relocate);
 
@@ -773,5 +778,4 @@ window.addEventListener("load", () => {
          }
       });
    }
-   // Header end ======================================================================================================
 });
