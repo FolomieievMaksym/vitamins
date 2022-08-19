@@ -89,8 +89,6 @@ window.addEventListener("load", () => {
    body.addEventListener("click", quiz);
 
    function quiz(e) {
-      console.log(e.target);
-
       let steps = qa(".quiz__step");
       let backButton = qs(".quiz__footer > div");
 
@@ -515,10 +513,6 @@ window.addEventListener("load", () => {
                   let spoilerWrapperScrollHeight = spoilerBody.scrollHeight;
                   spoilerBody.style.height = spoilerWrapperScrollHeight + "px";
                }
-            } else if (e.target.closest("form .btn")) {
-               e.preventDefault();
-               qs(".pop-up").classList.add("active");
-               body.classList.add("lock");
             } else if (e.target.closest(".pop-up .btn")) {
                e.preventDefault();
                document.location = "index.html";
@@ -530,8 +524,57 @@ window.addEventListener("load", () => {
       }
 
       // ! Validating ===========================================================
-      if (true) {
-         qs(".hero__containe").classList.add("not-valid");
+
+      qs("form .btn").addEventListener("click", validate);
+
+      function validate(e) {
+         e.preventDefault();
+         const regExpWords = /[a-zA-Z]+$/;
+         const regExpNumbers = /\d+$/;
+         // const regExpNumbers = /^[0-9]+$/; // Добавить проверку на пробел
+         const regExpAddress = /^[a-zA-Z0-9]+$/;
+         const regExpEmail = /^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$/;
+         const regExpCard = /[0-9\s?\-?]{16,20}/;
+         const regExpExpiration = /[0-9]{2}[\/\\\-]{1}[0-9]{2}/;
+         const regExpCvc = /[0-9]{3}/;
+
+         const firstName = qs("#firstName").value;
+         const lastName = qs("#lastName").value;
+         const address = qs("#address1").value;
+         const city = qs("#city").value;
+         const zip = qs("#zip").value;
+         const email = qs("#email").value;
+         const phone = qs("#phone").value;
+         const card = qs("#card").value;
+         const expiration = qs("#expiration").value;
+         const cvc = qs("#cvc").value;
+
+         //1234 1234 1234 1234
+
+         if (
+            validation(regExpWords, firstName) &&
+            validation(regExpWords, lastName) &&
+            validation(regExpWords, city) &&
+            validation(regExpNumbers, zip) &&
+            validation(regExpEmail, email) &&
+            validation(regExpNumbers, phone) &&
+            validation(regExpCard, card) &&
+            validation(regExpExpiration, expiration) &&
+            validation(regExpCvc, cvc)
+         ) {
+            qs(".pop-up").classList.add("active");
+            body.classList.add("lock");
+            qs(".hero__containe").classList.remove("not-valid");
+         } else {
+            qs("form .btn").style.backgroundColor = "#C3BDB6";
+            qs("form .btn").style.borderColor = "#C3BDB6";
+            qs(".hero__containe").classList.add("not-valid");
+         }
+
+         function validation(regex, inp) {
+            console.log(inp.value);
+            return regex.test(inp);
+         }
       }
    }
 
