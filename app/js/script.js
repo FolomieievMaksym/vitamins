@@ -9,6 +9,16 @@ const burger = document.querySelector(".burger"),
    headerAside4 = document.querySelector(".header-aside_4"),
    body = document.querySelector("body");
 
+if (document.querySelector(".swiper")) {
+   const swiperCss = document.createElement("link");
+   swiperCss.setAttribute("rel", "stylesheet");
+   swiperCss.setAttribute("href", "./css/swiper-bundle.min.css");
+   swiperScript = document.createElement("script");
+   swiperScript.setAttribute("src", "js/swiper-bundle.min.js");
+   document.querySelector("head").prepend(swiperCss);
+   body.append(swiperScript);
+}
+
 window.addEventListener("load", () => {
    function qs(element) {
       let newEl = document.querySelector(element);
